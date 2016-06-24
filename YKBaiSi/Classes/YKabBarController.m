@@ -44,7 +44,8 @@
 #pragma mark - 初始化子控制器
 
 - (void)setupOneChildViewController:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
-    vc.view.backgroundColor = [UIColor whiteColor];
+    
+    vc.view.backgroundColor = YKRandomColor;
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
