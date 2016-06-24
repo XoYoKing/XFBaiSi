@@ -18,6 +18,8 @@
 #define YKLog(...)
 #endif
 
+#define YKLogFunc YKLog(@"%s", __func__)
+
 /*** 颜色 ***/
 #define YKColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
 #define YKColor(r, g, b) YKColorA((r), (g), (b), 255)
