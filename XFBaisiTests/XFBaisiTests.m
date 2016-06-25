@@ -1,18 +1,18 @@
 //
-//  YKBaiSiTests.m
-//  YKBaiSiTests
+//  XFBaisiTests.m
+//  XFBaisiTests
 //
-//  Created by xiaofans on 16/6/24.
+//  Created by xiaofans on 16/6/25.
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface YKBaiSiTests : XCTestCase
+@interface XFBaisiTests : XCTestCase
 
 @end
 
-@implementation YKBaiSiTests
+@implementation XFBaisiTests
 
 - (void)setUp {
     [super setUp];

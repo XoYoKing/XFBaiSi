@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BDAFF96B1D1D0A350086816A"
-               BuildableName = "YKBaiSi.app"
-               BlueprintName = "YKBaiSi"
-               ReferencedContainer = "container:YKBaiSi.xcodeproj">
+               BlueprintIdentifier = "BDBDA1581D1E391B00BA01B1"
+               BuildableName = "XFBaisi.app"
+               BlueprintName = "XFBaisi"
+               ReferencedContainer = "container:XFBaisi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BDAFF9841D1D0A350086816A"
-               BuildableName = "YKBaiSiTests.xctest"
-               BlueprintName = "YKBaiSiTests"
-               ReferencedContainer = "container:YKBaiSi.xcodeproj">
+               BlueprintIdentifier = "BDBDA1711D1E391B00BA01B1"
+               BuildableName = "XFBaisiTests.xctest"
+               BlueprintName = "XFBaisiTests"
+               ReferencedContainer = "container:XFBaisi.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BDAFF98F1D1D0A360086816A"
-               BuildableName = "YKBaiSiUITests.xctest"
-               BlueprintName = "YKBaiSiUITests"
-               ReferencedContainer = "container:YKBaiSi.xcodeproj">
+               BlueprintIdentifier = "BDBDA17C1D1E391B00BA01B1"
+               BuildableName = "XFBaisiUITests.xctest"
+               BlueprintName = "XFBaisiUITests"
+               ReferencedContainer = "container:XFBaisi.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BDAFF96B1D1D0A350086816A"
-            BuildableName = "YKBaiSi.app"
-            BlueprintName = "YKBaiSi"
-            ReferencedContainer = "container:YKBaiSi.xcodeproj">
+            BlueprintIdentifier = "BDBDA1581D1E391B00BA01B1"
+            BuildableName = "XFBaisi.app"
+            BlueprintName = "XFBaisi"
+            ReferencedContainer = "container:XFBaisi.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BDAFF96B1D1D0A350086816A"
-            BuildableName = "YKBaiSi.app"
-            BlueprintName = "YKBaiSi"
-            ReferencedContainer = "container:YKBaiSi.xcodeproj">
+            BlueprintIdentifier = "BDBDA1581D1E391B00BA01B1"
+            BuildableName = "XFBaisi.app"
+            BlueprintName = "XFBaisi"
+            ReferencedContainer = "container:XFBaisi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BDAFF96B1D1D0A350086816A"
-            BuildableName = "YKBaiSi.app"
-            BlueprintName = "YKBaiSi"
-            ReferencedContainer = "container:YKBaiSi.xcodeproj">
+            BlueprintIdentifier = "BDBDA1581D1E391B00BA01B1"
+            BuildableName = "XFBaisi.app"
+            BlueprintName = "XFBaisi"
+            ReferencedContainer = "container:XFBaisi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

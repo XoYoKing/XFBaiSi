@@ -1,13 +1,14 @@
 //
 //  AppDelegate.m
-//  YKBaiSi
+//  XFBaisi
 //
-//  Created by xiaofans on 16/6/24.
+//  Created by xiaofans on 16/6/25.
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "YKabBarController.h"
+#import "XFTabBarController.h"
+
 
 @interface AppDelegate ()
 
@@ -18,19 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    /** 文字属性 **/
-    // 普通状态下的文字属性
-    NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
-    normalAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:14];
-    normalAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
-    // 选中状态下的文字属性
-    NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
-    selectedAttrs[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.window.rootViewController = [[YKabBarController alloc] init];
+    self.window.rootViewController = [[XFTabBarController alloc] init];
     
     [self.window makeKeyAndVisible];
     return YES;
