@@ -7,6 +7,7 @@
 //
 
 #import "XFMeViewController.h"
+#import "XFSettingViewController.h"
 
 @interface XFMeViewController ()
 
@@ -22,10 +23,10 @@
     self.navigationItem.title = @"我";
     
     // 右边 - 设置
-    UIBarButtonItem *settingItem = [XFItemManager itemWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" target:self action:@selector(settingClick)];
+    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" target:self action:@selector(settingClick)];
     
     // 右边 - 月亮
-    UIBarButtonItem *moonItem = [XFItemManager itemWithImage:@"mine-moon-icon" highImage:@"mine-moon-icon-click" target:self action:@selector(moonClick)];
+    UIBarButtonItem *moonItem = [UIBarButtonItem itemWithImage:@"mine-moon-icon" highImage:@"mine-moon-icon-click" target:self action:@selector(moonClick)];
     
     self.navigationItem.rightBarButtonItems = @[settingItem, moonItem];
     
@@ -34,6 +35,10 @@
 #pragma mark - 监听导航按钮
 - (void)settingClick {
     XFLogFunc;
+    
+    XFSettingViewController *settingVC = [[XFSettingViewController alloc] init];
+    settingVC.view.backgroundColor = XFRandomColor;
+    [self.navigationController pushViewController:settingVC animated:YES];
 }
 
 - (void)moonClick {

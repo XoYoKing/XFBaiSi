@@ -12,6 +12,7 @@
 #import "XFNewViewController.h"
 #import "XFFollowViewController.h"
 #import "XFMeViewController.h"
+#import "XFNavigationController.h"
 
 
 #define TabBar_Width 
@@ -65,13 +66,13 @@
  *  添加子控制器
  */
 - (void)setupChildViewController {
-    [self setupOneChildViewController:[[UINavigationController alloc] initWithRootViewController:[[XFEssenceViewController alloc] init]] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    [self setupOneChildViewController:[[XFNavigationController alloc] initWithRootViewController:[[XFEssenceViewController alloc] init]] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
     
-    [self setupOneChildViewController:[[UINavigationController alloc] initWithRootViewController:[[XFNewViewController alloc] init]] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
+    [self setupOneChildViewController:[[XFNavigationController alloc] initWithRootViewController:[[XFNewViewController alloc] init]] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
-    [self setupOneChildViewController:[[UINavigationController alloc] initWithRootViewController:[[XFFollowViewController alloc] init]] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    [self setupOneChildViewController:[[XFNavigationController alloc] initWithRootViewController:[[XFFollowViewController alloc] init]] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
-    [self setupOneChildViewController:[[UINavigationController alloc] initWithRootViewController:[[XFMeViewController alloc] init]] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setupOneChildViewController:[[XFNavigationController alloc] initWithRootViewController:[[XFMeViewController alloc] init]] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
 }
 
 /**

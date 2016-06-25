@@ -19,7 +19,10 @@
 		BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1C41D1E456F00BA01B1 /* XFTabBarController.m */; };
 		BDBDA1C81D1E458900BA01B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1C71D1E458900BA01B1 /* AppDelegate.m */; };
 		BDBDA1CC1D1E459400BA01B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1CA1D1E459400BA01B1 /* main.m */; };
-		BDBDA1D31D1E598100BA01B1 /* XFItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1D21D1E598100BA01B1 /* XFItemManager.m */; };
+		BDBDA1D61D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1D51D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.m */; };
+		BDBDA1D91D1E624F00BA01B1 /* XFRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1D81D1E624F00BA01B1 /* XFRecommendViewController.m */; };
+		BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1DB1D1E64B800BA01B1 /* XFSettingViewController.m */; };
+		BDBDA1E21D1E67B300BA01B1 /* XFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1E11D1E67B300BA01B1 /* XFNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +70,14 @@
 		BDBDA1C91D1E459400BA01B1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BDBDA1CA1D1E459400BA01B1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDBDA1CB1D1E459400BA01B1 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		BDBDA1D11D1E598100BA01B1 /* XFItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFItemManager.h; sourceTree = "<group>"; };
-		BDBDA1D21D1E598100BA01B1 /* XFItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFItemManager.m; sourceTree = "<group>"; };
+		BDBDA1D41D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XFExtension.h"; sourceTree = "<group>"; };
+		BDBDA1D51D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XFExtension.m"; sourceTree = "<group>"; };
+		BDBDA1D71D1E624F00BA01B1 /* XFRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRecommendViewController.h; sourceTree = "<group>"; };
+		BDBDA1D81D1E624F00BA01B1 /* XFRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRecommendViewController.m; sourceTree = "<group>"; };
+		BDBDA1DA1D1E64B800BA01B1 /* XFSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingViewController.h; sourceTree = "<group>"; };
+		BDBDA1DB1D1E64B800BA01B1 /* XFSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingViewController.m; sourceTree = "<group>"; };
+		BDBDA1E01D1E67B300BA01B1 /* XFNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNavigationController.h; sourceTree = "<group>"; };
+		BDBDA1E11D1E67B300BA01B1 /* XFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,8 +223,6 @@
 				BDBDA1B11D1E43FB00BA01B1 /* Category */,
 				BDBDA1AE1D1E43CE00BA01B1 /* Controller */,
 				BDBDA1B01D1E43CE00BA01B1 /* View */,
-				BDBDA1D11D1E598100BA01B1 /* XFItemManager.h */,
-				BDBDA1D21D1E598100BA01B1 /* XFItemManager.m */,
 			);
 			path = "Other-其他";
 			sourceTree = "<group>";
@@ -271,6 +278,8 @@
 			children = (
 				BDBDA1B81D1E447400BA01B1 /* XFFollowViewController.h */,
 				BDBDA1B91D1E447400BA01B1 /* XFFollowViewController.m */,
+				BDBDA1D71D1E624F00BA01B1 /* XFRecommendViewController.h */,
+				BDBDA1D81D1E624F00BA01B1 /* XFRecommendViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -294,6 +303,8 @@
 			children = (
 				BDBDA1BB1D1E447B00BA01B1 /* XFMeViewController.h */,
 				BDBDA1BC1D1E447B00BA01B1 /* XFMeViewController.m */,
+				BDBDA1DA1D1E64B800BA01B1 /* XFSettingViewController.h */,
+				BDBDA1DB1D1E64B800BA01B1 /* XFSettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -319,6 +330,8 @@
 				BDBDA1C21D1E456F00BA01B1 /* XFTabBar.m */,
 				BDBDA1C31D1E456F00BA01B1 /* XFTabBarController.h */,
 				BDBDA1C41D1E456F00BA01B1 /* XFTabBarController.m */,
+				BDBDA1E01D1E67B300BA01B1 /* XFNavigationController.h */,
+				BDBDA1E11D1E67B300BA01B1 /* XFNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -335,6 +348,8 @@
 			children = (
 				BDBDA1BE1D1E456500BA01B1 /* UIView+XFExtension.h */,
 				BDBDA1BF1D1E456500BA01B1 /* UIView+XFExtension.m */,
+				BDBDA1D41D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.h */,
+				BDBDA1D51D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -470,10 +485,13 @@
 			files = (
 				BDBDA1C51D1E456F00BA01B1 /* XFTabBar.m in Sources */,
 				BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */,
-				BDBDA1D31D1E598100BA01B1 /* XFItemManager.m in Sources */,
+				BDBDA1D61D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.m in Sources */,
+				BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */,
 				BDBDA1BA1D1E447400BA01B1 /* XFFollowViewController.m in Sources */,
 				BDBDA1C01D1E456500BA01B1 /* UIView+XFExtension.m in Sources */,
+				BDBDA1D91D1E624F00BA01B1 /* XFRecommendViewController.m in Sources */,
 				BDBDA1C81D1E458900BA01B1 /* AppDelegate.m in Sources */,
+				BDBDA1E21D1E67B300BA01B1 /* XFNavigationController.m in Sources */,
 				BDBDA1B71D1E446900BA01B1 /* XFNewViewController.m in Sources */,
 				BDBDA1BD1D1E447B00BA01B1 /* XFMeViewController.m in Sources */,
 				BDBDA1CC1D1E459400BA01B1 /* main.m in Sources */,

@@ -12,7 +12,7 @@
 #ifdef __OBJC__  // oc 才用一下宏定义
 
 #import "UIView+XFExtension.h"
-#import "XFItemManager.h"
+#import "UIBarButtonItem+XFExtension.h"
 
 /*** 日志 ***/
 #ifdef DEBUG
