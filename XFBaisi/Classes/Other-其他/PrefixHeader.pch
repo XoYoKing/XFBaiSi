@@ -11,6 +11,9 @@
 
 #ifdef __OBJC__  // oc 才用一下宏定义
 
+#import "UIView+XFExtension.h"
+#import "XFItemManager.h"
+
 /*** 日志 ***/
 #ifdef DEBUG
 #define XFLog(...) NSLog(__VA_ARGS__)
@@ -24,6 +27,8 @@
 #define XFColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
 #define XFColor(r, g, b) XFColorA((r), (g), (b), 255)
 #define XFRandomColor XFColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+#define XFGrayColor(v) XFColor((v), (v), (v))
+#define XFBaseBgColor XFGrayColor(206)
 
 #endif
 

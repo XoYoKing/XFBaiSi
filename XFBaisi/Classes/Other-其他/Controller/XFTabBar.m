@@ -39,8 +39,8 @@
     [super layoutSubviews];
     
     /**** 设置按钮的尺寸 ****/
-    CGFloat buttonW = self.frame.size.width / 5;
-    CGFloat buttonH = self.frame.size.height;
+    CGFloat buttonW = self.xf_width / 5;
+    CGFloat buttonH = self.xf_height;
     
     /**** 设置 UITabBarButton 的 frame ****/
     CGFloat tabBarButtonY = 0;
@@ -64,8 +64,11 @@
     }
     
     /**** 中间按钮的frame ****/
-    self.publishButton.frame = CGRectMake(0, 0, buttonW, buttonH);
-    self.publishButton.center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
+    //self.publishButton.frame = CGRectMake(0, 0, buttonW, buttonH);
+    self.publishButton.xf_width = buttonW;
+    self.publishButton.xf_height = buttonH;
+    self.publishButton.xf_centerX = self.xf_width * 0.5;
+    self.publishButton.xf_centerY = self.xf_height * 0.5;
 }
 
 #pragma mark - 监听发布按钮
