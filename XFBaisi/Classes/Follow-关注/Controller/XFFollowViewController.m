@@ -29,10 +29,8 @@
 
 #pragma mark - 监听导航左边按钮
 - (void)followClick {
-    XFLogFunc;
-    XFRecommendViewController *recoVC = [[XFRecommendViewController alloc] init];
-    recoVC.view.backgroundColor = XFRandomColor;
-    [self.navigationController pushViewController:recoVC animated:YES];
+    XFRecommendViewController *followVC = [[XFRecommendViewController alloc] init];
+    [self.navigationController pushViewController:followVC animated:YES];
 }
 
 

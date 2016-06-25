@@ -17,7 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = XFBaseBgColor;
     self.navigationItem.title = @"推荐关注";
+    
+    
     
 }
 

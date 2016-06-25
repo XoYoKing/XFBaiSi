@@ -8,7 +8,7 @@
 
 #import "XFNavigationController.h"
 
-@interface XFNavigationController ()
+@interface XFNavigationController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -17,7 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = XFRandomColor;
+    
+    self.interactivePopGestureRecognizer.delegate = self;
+    
+    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 }
 
 /**
@@ -54,7 +57,15 @@
     [self popViewControllerAnimated:YES];
 }
 
+#pragma mark - UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    // 手势何时有效 : 当导航控制器的子控制器个数 > 1就有效
+    return self.childViewControllers.count > 1;
+}
+
+
 @end
+
 
 
 

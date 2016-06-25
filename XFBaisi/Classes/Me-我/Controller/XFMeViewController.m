@@ -19,7 +19,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = XFBaseBgColor;
-    
     self.navigationItem.title = @"我";
     
     // 右边 - 设置
@@ -34,10 +33,7 @@
 
 #pragma mark - 监听导航按钮
 - (void)settingClick {
-    XFLogFunc;
-    
     XFSettingViewController *settingVC = [[XFSettingViewController alloc] init];
-    settingVC.view.backgroundColor = XFRandomColor;
     [self.navigationController pushViewController:settingVC animated:YES];
 }
 
