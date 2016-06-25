@@ -8,6 +8,7 @@
 
 #import "XFFollowViewController.h"
 #import "XFRecommendViewController.h"
+#import "XFLoginRegisterViewController.h"
 
 @interface XFFollowViewController ()
 
@@ -33,6 +34,11 @@
     [self.navigationController pushViewController:followVC animated:YES];
 }
 
+#pragma mark - 监听登录注册按钮
+- (IBAction)loginRegisterAction {
+    XFLoginRegisterViewController *loginRegisterVC = [[XFLoginRegisterViewController alloc] init];
+    [self presentViewController:loginRegisterVC animated:YES completion:nil];
+}
 
 
 @end

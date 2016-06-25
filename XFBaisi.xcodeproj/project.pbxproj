@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD660A401D1EF19B006E5BC0 /* XFLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BD660A3F1D1EF19B006E5BC0 /* XFLoginRegisterTextField.m */; };
 		BDBDA1771D1E391B00BA01B1 /* XFBaisiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1761D1E391B00BA01B1 /* XFBaisiTests.m */; };
 		BDBDA1821D1E391B00BA01B1 /* XFBaisiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1811D1E391B00BA01B1 /* XFBaisiUITests.m */; };
 		BDBDA1901D1E39B100BA01B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDBDA18F1D1E39B100BA01B1 /* Assets.xcassets */; };
@@ -15,7 +16,6 @@
 		BDBDA1BA1D1E447400BA01B1 /* XFFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1B91D1E447400BA01B1 /* XFFollowViewController.m */; };
 		BDBDA1BD1D1E447B00BA01B1 /* XFMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1BC1D1E447B00BA01B1 /* XFMeViewController.m */; };
 		BDBDA1C01D1E456500BA01B1 /* UIView+XFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1BF1D1E456500BA01B1 /* UIView+XFExtension.m */; };
-		BDBDA1C51D1E456F00BA01B1 /* XFTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1C21D1E456F00BA01B1 /* XFTabBar.m */; };
 		BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1C41D1E456F00BA01B1 /* XFTabBarController.m */; };
 		BDBDA1C81D1E458900BA01B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1C71D1E458900BA01B1 /* AppDelegate.m */; };
 		BDBDA1CC1D1E459400BA01B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1CA1D1E459400BA01B1 /* main.m */; };
@@ -23,6 +23,11 @@
 		BDBDA1D91D1E624F00BA01B1 /* XFRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1D81D1E624F00BA01B1 /* XFRecommendViewController.m */; };
 		BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1DB1D1E64B800BA01B1 /* XFSettingViewController.m */; };
 		BDBDA1E21D1E67B300BA01B1 /* XFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1E11D1E67B300BA01B1 /* XFNavigationController.m */; };
+		BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */; };
+		BDE490AB1D1EC8330029E919 /* XFLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE490A91D1EC8330029E919 /* XFLoginRegisterViewController.m */; };
+		BDE490AC1D1EC8330029E919 /* XFLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE490AA1D1EC8330029E919 /* XFLoginRegisterViewController.xib */; };
+		BDE490AF1D1ED6210029E919 /* XFTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE490AE1D1ED6210029E919 /* XFTabBar.m */; };
+		BDE490B21D1ED6690029E919 /* XFQuickLoginBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE490B11D1ED6690029E919 /* XFQuickLoginBtn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD660A3E1D1EF19B006E5BC0 /* XFLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLoginRegisterTextField.h; sourceTree = "<group>"; };
+		BD660A3F1D1EF19B006E5BC0 /* XFLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFLoginRegisterTextField.m; sourceTree = "<group>"; };
 		BDBDA1591D1E391B00BA01B1 /* XFBaisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XFBaisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBDA16D1D1E391B00BA01B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDBDA1721D1E391B00BA01B1 /* XFBaisiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XFBaisiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,8 +69,6 @@
 		BDBDA1BC1D1E447B00BA01B1 /* XFMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeViewController.m; sourceTree = "<group>"; };
 		BDBDA1BE1D1E456500BA01B1 /* UIView+XFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XFExtension.h"; sourceTree = "<group>"; };
 		BDBDA1BF1D1E456500BA01B1 /* UIView+XFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XFExtension.m"; sourceTree = "<group>"; };
-		BDBDA1C11D1E456F00BA01B1 /* XFTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTabBar.h; sourceTree = "<group>"; };
-		BDBDA1C21D1E456F00BA01B1 /* XFTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTabBar.m; sourceTree = "<group>"; };
 		BDBDA1C31D1E456F00BA01B1 /* XFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTabBarController.h; sourceTree = "<group>"; };
 		BDBDA1C41D1E456F00BA01B1 /* XFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTabBarController.m; sourceTree = "<group>"; };
 		BDBDA1C71D1E458900BA01B1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +83,14 @@
 		BDBDA1DB1D1E64B800BA01B1 /* XFSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingViewController.m; sourceTree = "<group>"; };
 		BDBDA1E01D1E67B300BA01B1 /* XFNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNavigationController.h; sourceTree = "<group>"; };
 		BDBDA1E11D1E67B300BA01B1 /* XFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNavigationController.m; sourceTree = "<group>"; };
+		BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFFollowViewController.xib; sourceTree = "<group>"; };
+		BDE490A81D1EC8330029E919 /* XFLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLoginRegisterViewController.h; sourceTree = "<group>"; };
+		BDE490A91D1EC8330029E919 /* XFLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFLoginRegisterViewController.m; sourceTree = "<group>"; };
+		BDE490AA1D1EC8330029E919 /* XFLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		BDE490AD1D1ED6210029E919 /* XFTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTabBar.h; sourceTree = "<group>"; };
+		BDE490AE1D1ED6210029E919 /* XFTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTabBar.m; sourceTree = "<group>"; };
+		BDE490B01D1ED6690029E919 /* XFQuickLoginBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFQuickLoginBtn.h; sourceTree = "<group>"; };
+		BDE490B11D1ED6690029E919 /* XFQuickLoginBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFQuickLoginBtn.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +291,7 @@
 			children = (
 				BDBDA1B81D1E447400BA01B1 /* XFFollowViewController.h */,
 				BDBDA1B91D1E447400BA01B1 /* XFFollowViewController.m */,
+				BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */,
 				BDBDA1D71D1E624F00BA01B1 /* XFRecommendViewController.h */,
 				BDBDA1D81D1E624F00BA01B1 /* XFRecommendViewController.m */,
 			);
@@ -326,12 +340,13 @@
 		BDBDA1AE1D1E43CE00BA01B1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BDBDA1C11D1E456F00BA01B1 /* XFTabBar.h */,
-				BDBDA1C21D1E456F00BA01B1 /* XFTabBar.m */,
 				BDBDA1C31D1E456F00BA01B1 /* XFTabBarController.h */,
 				BDBDA1C41D1E456F00BA01B1 /* XFTabBarController.m */,
 				BDBDA1E01D1E67B300BA01B1 /* XFNavigationController.h */,
 				BDBDA1E11D1E67B300BA01B1 /* XFNavigationController.m */,
+				BDE490A81D1EC8330029E919 /* XFLoginRegisterViewController.h */,
+				BDE490A91D1EC8330029E919 /* XFLoginRegisterViewController.m */,
+				BDE490AA1D1EC8330029E919 /* XFLoginRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -339,6 +354,12 @@
 		BDBDA1B01D1E43CE00BA01B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BDE490AD1D1ED6210029E919 /* XFTabBar.h */,
+				BDE490AE1D1ED6210029E919 /* XFTabBar.m */,
+				BDE490B01D1ED6690029E919 /* XFQuickLoginBtn.h */,
+				BDE490B11D1ED6690029E919 /* XFQuickLoginBtn.m */,
+				BD660A3E1D1EF19B006E5BC0 /* XFLoginRegisterTextField.h */,
+				BD660A3F1D1EF19B006E5BC0 /* XFLoginRegisterTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -459,6 +480,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDBDA1901D1E39B100BA01B1 /* Assets.xcassets in Resources */,
+				BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */,
+				BDE490AC1D1EC8330029E919 /* XFLoginRegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,19 +506,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDBDA1C51D1E456F00BA01B1 /* XFTabBar.m in Sources */,
 				BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */,
 				BDBDA1D61D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.m in Sources */,
 				BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */,
 				BDBDA1BA1D1E447400BA01B1 /* XFFollowViewController.m in Sources */,
 				BDBDA1C01D1E456500BA01B1 /* UIView+XFExtension.m in Sources */,
 				BDBDA1D91D1E624F00BA01B1 /* XFRecommendViewController.m in Sources */,
+				BDE490B21D1ED6690029E919 /* XFQuickLoginBtn.m in Sources */,
 				BDBDA1C81D1E458900BA01B1 /* AppDelegate.m in Sources */,
+				BDE490AF1D1ED6210029E919 /* XFTabBar.m in Sources */,
 				BDBDA1E21D1E67B300BA01B1 /* XFNavigationController.m in Sources */,
+				BD660A401D1EF19B006E5BC0 /* XFLoginRegisterTextField.m in Sources */,
 				BDBDA1B71D1E446900BA01B1 /* XFNewViewController.m in Sources */,
 				BDBDA1BD1D1E447B00BA01B1 /* XFMeViewController.m in Sources */,
 				BDBDA1CC1D1E459400BA01B1 /* main.m in Sources */,
 				BDBDA1B41D1E445700BA01B1 /* XFEssenceViewController.m in Sources */,
+				BDE490AB1D1EC8330029E919 /* XFLoginRegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
