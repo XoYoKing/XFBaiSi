@@ -13,6 +13,7 @@
 
 #import "UIView+XFExtension.h"
 #import "UIBarButtonItem+XFExtension.h"
+#import "UITextField+XFExtension.h"
 
 /*** 日志 ***/
 #ifdef DEBUG

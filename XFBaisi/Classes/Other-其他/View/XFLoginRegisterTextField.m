@@ -15,14 +15,13 @@
 
 @implementation XFLoginRegisterTextField
 
-static NSString * const XFPlaceholderColorKey = @"_placeholderLabel.textColor";
 
 - (void)awakeFromNib {
     // 设置光标颜色
     self.tintColor = [UIColor whiteColor];
     
     // 设置默认的占位文字颜色
-    [self setValue:[UIColor grayColor] forKeyPath:XFPlaceholderColorKey];
+    self.placeholderColor = [UIColor grayColor];
 }
 
 /**
@@ -30,7 +29,7 @@ static NSString * const XFPlaceholderColorKey = @"_placeholderLabel.textColor";
  */
 - (BOOL)becomeFirstResponder
 {
-    [self setValue:[UIColor whiteColor] forKeyPath:XFPlaceholderColorKey];
+    self.placeholderColor = [UIColor whiteColor];
     return [super becomeFirstResponder];
 }
 
@@ -39,7 +38,7 @@ static NSString * const XFPlaceholderColorKey = @"_placeholderLabel.textColor";
  */
 - (BOOL)resignFirstResponder
 {
-    [self setValue:[UIColor grayColor] forKeyPath:XFPlaceholderColorKey];
+    self.placeholderColor = [UIColor grayColor];
     return [super resignFirstResponder];
 }
 
