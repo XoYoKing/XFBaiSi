@@ -9,8 +9,7 @@
 #import "XFLoginRegisterTextField.h"
 
 
-
-@interface XFLoginRegisterTextField ()<UITextFieldDelegate>
+@interface XFLoginRegisterTextField ()
 
 @end
 
@@ -24,36 +23,25 @@ static NSString * const XFPlaceholderColorKey = @"_placeholderLabel.textColor";
     
     // 设置默认的占位文字颜色
     [self setValue:[UIColor grayColor] forKeyPath:XFPlaceholderColorKey];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(beginEditing) name:UITextFieldTextDidBeginEditingNotification object:self];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(endEditing) name:UITextFieldTextDidEndEditingNotification object:self];
 }
 
-#pragma mark - <UITextFieldDelegate>
-
 /**
- *  TextField 开始编辑
+ *  成为第一响应者
  */
-- (void)beginEditing {
-    XFLogFunc;
+- (BOOL)becomeFirstResponder
+{
     [self setValue:[UIColor whiteColor] forKeyPath:XFPlaceholderColorKey];
+    return [super becomeFirstResponder];
 }
 
 /**
- *  TextField 结束编辑
+ *  放弃第一响应者
  */
-- (void)endEditing {
-    XFLogFunc;
+- (BOOL)resignFirstResponder
+{
     [self setValue:[UIColor grayColor] forKeyPath:XFPlaceholderColorKey];
+    return [super resignFirstResponder];
 }
-
-/**
- *  移除通知中心
- */
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
 
 
 @end
