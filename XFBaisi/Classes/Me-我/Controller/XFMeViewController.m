@@ -9,6 +9,7 @@
 #import "XFMeViewController.h"
 #import "XFSettingViewController.h"
 #import "XFMeTableViewCell.h"
+#import "XFMeFooterView.h"
 
 @interface XFMeViewController ()
 
@@ -60,10 +61,7 @@
     self.tableView.contentInset = UIEdgeInsetsMake(XFMargin - 35, 0, 0, 0);
     
     // 设置 footer
-    UIView *footerView = [[UIView alloc] init];
-    footerView.backgroundColor = [UIColor greenColor];
-    footerView.xf_height = 200;
-    self.tableView.tableFooterView = footerView;
+    self.tableView.tableFooterView = [[XFMeFooterView alloc] init];
 }
 
 #pragma mark - 监听导航按钮
