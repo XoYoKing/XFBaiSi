@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD3830F11D201FDB0060CEB0 /* XFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F01D201FDB0060CEB0 /* XFConst.m */; };
+		BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F31D2020CE0060CEB0 /* XFMeTableViewCell.m */; };
 		BD660A401D1EF19B006E5BC0 /* XFLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BD660A3F1D1EF19B006E5BC0 /* XFLoginRegisterTextField.m */; };
 		BDBDA1771D1E391B00BA01B1 /* XFBaisiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1761D1E391B00BA01B1 /* XFBaisiTests.m */; };
 		BDBDA1821D1E391B00BA01B1 /* XFBaisiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1811D1E391B00BA01B1 /* XFBaisiUITests.m */; };
@@ -49,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD3830EF1D201FDB0060CEB0 /* XFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFConst.h; sourceTree = "<group>"; };
+		BD3830F01D201FDB0060CEB0 /* XFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFConst.m; sourceTree = "<group>"; };
+		BD3830F21D2020CE0060CEB0 /* XFMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeTableViewCell.h; sourceTree = "<group>"; };
+		BD3830F31D2020CE0060CEB0 /* XFMeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeTableViewCell.m; sourceTree = "<group>"; };
 		BD660A3E1D1EF19B006E5BC0 /* XFLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLoginRegisterTextField.h; sourceTree = "<group>"; };
 		BD660A3F1D1EF19B006E5BC0 /* XFLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFLoginRegisterTextField.m; sourceTree = "<group>"; };
 		BDBDA1591D1E391B00BA01B1 /* XFBaisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XFBaisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +242,8 @@
 				BDBDA1CA1D1E459400BA01B1 /* main.m */,
 				BDBDA1C91D1E459400BA01B1 /* AppDelegate.h */,
 				BDBDA1C71D1E458900BA01B1 /* AppDelegate.m */,
+				BD3830EF1D201FDB0060CEB0 /* XFConst.h */,
+				BD3830F01D201FDB0060CEB0 /* XFConst.m */,
 				BDBDA1B11D1E43FB00BA01B1 /* Category */,
 				BDBDA1AE1D1E43CE00BA01B1 /* Controller */,
 				BDBDA1B01D1E43CE00BA01B1 /* View */,
@@ -336,6 +344,8 @@
 		BDBDA1AD1D1E43C800BA01B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD3830F21D2020CE0060CEB0 /* XFMeTableViewCell.h */,
+				BD3830F31D2020CE0060CEB0 /* XFMeTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -515,10 +525,12 @@
 				BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */,
 				BDBDA1D61D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.m in Sources */,
 				BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */,
+				BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */,
 				BDBDA1BA1D1E447400BA01B1 /* XFFollowViewController.m in Sources */,
 				BDBDA1C01D1E456500BA01B1 /* UIView+XFExtension.m in Sources */,
 				BDBDA1D91D1E624F00BA01B1 /* XFRecommendViewController.m in Sources */,
 				BDE490B21D1ED6690029E919 /* XFQuickLoginBtn.m in Sources */,
+				BD3830F11D201FDB0060CEB0 /* XFConst.m in Sources */,
 				BDD544BA1D1FBDEC00DD2F9D /* UITextField+XFExtension.m in Sources */,
 				BDBDA1C81D1E458900BA01B1 /* AppDelegate.m in Sources */,
 				BDE490AF1D1ED6210029E919 /* XFTabBar.m in Sources */,

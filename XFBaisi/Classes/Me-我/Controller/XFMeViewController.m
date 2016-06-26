@@ -8,6 +8,7 @@
 
 #import "XFMeViewController.h"
 #import "XFSettingViewController.h"
+#import "XFMeTableViewCell.h"
 
 @interface XFMeViewController ()
 
@@ -15,10 +16,28 @@
 
 @implementation XFMeViewController
 
+/**
+ *  重写 init
+ */
+- (instancetype)init {
+    return [self initWithStyle:UITableViewStyleGrouped];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.view.backgroundColor = XFBaseBgColor;
+    
+    [self setupTableView];
+    
+    [self setupNav];
+    
+}
+
+#pragma mark - 初始化
+
+/**
+ *  导航栏
+ */
+- (void)setupNav {
     self.navigationItem.title = @"我";
     
     // 右边 - 设置
@@ -28,7 +47,23 @@
     UIBarButtonItem *moonItem = [UIBarButtonItem itemWithImage:@"mine-moon-icon" highImage:@"mine-moon-icon-click" target:self action:@selector(moonClick)];
     
     self.navigationItem.rightBarButtonItems = @[settingItem, moonItem];
+}
+
+/**
+ *  tableview
+ */
+- (void)setupTableView {
+    self.tableView.backgroundColor = XFBaseBgColor;
     
+    self.tableView.sectionHeaderHeight = 0;
+    self.tableView.sectionFooterHeight = XFMargin;
+    self.tableView.contentInset = UIEdgeInsetsMake(XFMargin - 35, 0, 0, 0);
+    
+    // 设置 footer
+    UIView *footerView = [[UIView alloc] init];
+    footerView.backgroundColor = [UIColor greenColor];
+    footerView.xf_height = 200;
+    self.tableView.tableFooterView = footerView;
 }
 
 #pragma mark - 监听导航按钮
@@ -41,19 +76,55 @@
     XFLogFunc;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UITableViewController 数据源
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *ID = @"meCell";
+    XFMeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (!cell) {
+        cell = [[XFMeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+    }
+    
+    // 设置数据
+    if (indexPath.section == 0) {
+        cell.textLabel.text = @"登录/注册";
+        cell.imageView.image = [UIImage imageNamed:@"setup-head-default"];
+    } else {
+        cell.textLabel.text = @"离线下载";
+        // 只要有其他cell设置过imageView.image, 其他不显示图片的cell都需要设置imageView.image = nil
+        cell.imageView.image = nil;
+    }
+    
+    return cell;
+}
+
+
+
+
+
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
