@@ -133,13 +133,14 @@
                                 <constraint firstAttribute="width" constant="266" id="kug-AV-YMM"/>
                             </constraints>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="hYA-77-PaV" userLabel="手机号">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="hYA-77-PaV" userLabel="手机号" customClass="XFLoginRegisterTextField">
                             <rect key="frame" x="65" y="0.0" width="246" height="46"/>
+                            <color key="tintColor" red="0.87090968589999995" green="0.085122931700000001" blue="0.097664049759999996" alpha="0.99426529259999996" colorSpace="calibratedRGB"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Yt7-a4-oo1" userLabel="密码">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Yt7-a4-oo1" userLabel="密码" customClass="XFLoginRegisterTextField">
                             <rect key="frame" x="65" y="46" width="246" height="46"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -196,13 +197,13 @@
                                 <constraint firstAttribute="width" constant="266" id="r0x-No-5v1"/>
                             </constraints>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Nbb-u1-xPJ" userLabel="手机号">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Nbb-u1-xPJ" userLabel="手机号" customClass="XFLoginRegisterTextField">
                             <rect key="frame" x="65" y="0.0" width="246" height="46"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="设置密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="mrE-ax-g56" userLabel="密码">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="设置密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="mrE-ax-g56" userLabel="密码" customClass="XFLoginRegisterTextField">
                             <rect key="frame" x="65" y="46" width="246" height="46"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
