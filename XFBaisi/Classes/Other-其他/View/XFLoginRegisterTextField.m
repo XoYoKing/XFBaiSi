@@ -18,7 +18,6 @@
 
 static NSString * const XFPlaceholderColorKey = @"_placeholderLabel.textColor";
 
-
 - (void)awakeFromNib {
     // 设置光标颜色
     self.tintColor = [UIColor whiteColor];
@@ -26,7 +25,8 @@ static NSString * const XFPlaceholderColorKey = @"_placeholderLabel.textColor";
     // 设置默认的占位文字颜色
     [self setValue:[UIColor grayColor] forKeyPath:XFPlaceholderColorKey];
     
-    self.delegate = self;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(beginEditing) name:UITextFieldTextDidBeginEditingNotification object:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(endEditing) name:UITextFieldTextDidEndEditingNotification object:self];
 }
 
 #pragma mark - <UITextFieldDelegate>
@@ -34,7 +34,7 @@ static NSString * const XFPlaceholderColorKey = @"_placeholderLabel.textColor";
 /**
  *  TextField 开始编辑
  */
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
+- (void)beginEditing {
     XFLogFunc;
     [self setValue:[UIColor whiteColor] forKeyPath:XFPlaceholderColorKey];
 }
@@ -42,11 +42,17 @@ static NSString * const XFPlaceholderColorKey = @"_placeholderLabel.textColor";
 /**
  *  TextField 结束编辑
  */
-- (void)textFieldDidEndEditing:(UITextField *)textField {
+- (void)endEditing {
     XFLogFunc;
     [self setValue:[UIColor grayColor] forKeyPath:XFPlaceholderColorKey];
 }
 
+/**
+ *  移除通知中心
+ */
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 
 
