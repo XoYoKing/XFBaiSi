@@ -16,7 +16,7 @@
 #import "UITextField+XFExtension.h"
 #import "XFConst.h"
 #import <AFNetworking.h>
-#import <UIImageView+WebCache.h>
+#import <UIButton+WebCache.h>
 #import <MJExtension.h>
 
 /*** 日志 ***/

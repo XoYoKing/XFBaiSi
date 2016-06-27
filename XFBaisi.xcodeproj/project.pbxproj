@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B251BA443D3181F21774C84 /* libPods-XFBaisiUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DF40AF7129666B974784DD /* libPods-XFBaisiUITests.a */; };
 		A345A2CC13DC52485FE1905D /* libPods-XFBaisiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2CE5070612EF3BD1AAAA2 /* libPods-XFBaisiTests.a */; };
+		BD2382E31D20B86B00DE1EB3 /* XFMeSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382E21D20B86A00DE1EB3 /* XFMeSquareButton.m */; };
 		BD3830F11D201FDB0060CEB0 /* XFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F01D201FDB0060CEB0 /* XFConst.m */; };
 		BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F31D2020CE0060CEB0 /* XFMeTableViewCell.m */; };
 		BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F61D20255B0060CEB0 /* XFMeFooterView.m */; };
@@ -34,6 +35,7 @@
 		BDE490AC1D1EC8330029E919 /* XFLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE490AA1D1EC8330029E919 /* XFLoginRegisterViewController.xib */; };
 		BDE490AF1D1ED6210029E919 /* XFTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE490AE1D1ED6210029E919 /* XFTabBar.m */; };
 		BDE490B21D1ED6690029E919 /* XFQuickLoginBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE490B11D1ED6690029E919 /* XFQuickLoginBtn.m */; };
+		BDF277C71D20A9E9006D1122 /* XFMeSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF277C61D20A9E9006D1122 /* XFMeSquare.m */; };
 		D82C942630EED7F0F1C4F766 /* libPods-XFBaisi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8564B4053D229525B01D725E /* libPods-XFBaisi.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		7232A17A3C37455A74E600F7 /* Pods-XFBaisiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFBaisiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XFBaisiUITests/Pods-XFBaisiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8564B4053D229525B01D725E /* libPods-XFBaisi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XFBaisi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		958DD80A83CB5E018CEDA6E4 /* Pods-XFBaisi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFBaisi.release.xcconfig"; path = "Pods/Target Support Files/Pods-XFBaisi/Pods-XFBaisi.release.xcconfig"; sourceTree = "<group>"; };
+		BD2382E11D20B86A00DE1EB3 /* XFMeSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeSquareButton.h; sourceTree = "<group>"; };
+		BD2382E21D20B86A00DE1EB3 /* XFMeSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeSquareButton.m; sourceTree = "<group>"; };
 		BD3830EF1D201FDB0060CEB0 /* XFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFConst.h; sourceTree = "<group>"; };
 		BD3830F01D201FDB0060CEB0 /* XFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFConst.m; sourceTree = "<group>"; };
 		BD3830F21D2020CE0060CEB0 /* XFMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeTableViewCell.h; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 		BDE490AE1D1ED6210029E919 /* XFTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTabBar.m; sourceTree = "<group>"; };
 		BDE490B01D1ED6690029E919 /* XFQuickLoginBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFQuickLoginBtn.h; sourceTree = "<group>"; };
 		BDE490B11D1ED6690029E919 /* XFQuickLoginBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFQuickLoginBtn.m; sourceTree = "<group>"; };
+		BDF277C51D20A9E9006D1122 /* XFMeSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeSquare.h; sourceTree = "<group>"; };
+		BDF277C61D20A9E9006D1122 /* XFMeSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeSquare.m; sourceTree = "<group>"; };
 		C0668AED95FBA2024822CE0C /* Pods-XFBaisiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFBaisiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XFBaisiTests/Pods-XFBaisiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FAF2CE5070612EF3BD1AAAA2 /* libPods-XFBaisiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XFBaisiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -365,6 +371,8 @@
 		BDBDA1AC1D1E43C800BA01B1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BDF277C51D20A9E9006D1122 /* XFMeSquare.h */,
+				BDF277C61D20A9E9006D1122 /* XFMeSquare.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -376,6 +384,8 @@
 				BD3830F31D2020CE0060CEB0 /* XFMeTableViewCell.m */,
 				BD3830F51D20255B0060CEB0 /* XFMeFooterView.h */,
 				BD3830F61D20255B0060CEB0 /* XFMeFooterView.m */,
+				BD2382E11D20B86A00DE1EB3 /* XFMeSquareButton.h */,
+				BD2382E21D20B86A00DE1EB3 /* XFMeSquareButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -706,6 +716,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD2382E31D20B86B00DE1EB3 /* XFMeSquareButton.m in Sources */,
 				BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */,
 				BDBDA1D61D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.m in Sources */,
 				BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */,
@@ -715,6 +726,7 @@
 				BDBDA1C01D1E456500BA01B1 /* UIView+XFExtension.m in Sources */,
 				BDBDA1D91D1E624F00BA01B1 /* XFRecommendViewController.m in Sources */,
 				BDE490B21D1ED6690029E919 /* XFQuickLoginBtn.m in Sources */,
+				BDF277C71D20A9E9006D1122 /* XFMeSquare.m in Sources */,
 				BD3830F11D201FDB0060CEB0 /* XFConst.m in Sources */,
 				BDD544BA1D1FBDEC00DD2F9D /* UITextField+XFExtension.m in Sources */,
 				BDBDA1C81D1E458900BA01B1 /* AppDelegate.m in Sources */,
