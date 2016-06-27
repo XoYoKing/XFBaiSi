@@ -13,6 +13,8 @@
 		BD2382EA1D20CB8A00DE1EB3 /* XFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382E81D20CB8A00DE1EB3 /* XFWebViewController.m */; };
 		BD2382EB1D20CB8A00DE1EB3 /* XFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2382E91D20CB8A00DE1EB3 /* XFWebViewController.xib */; };
 		BD2382F11D20FA2E00DE1EB3 /* XFMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382F01D20FA2E00DE1EB3 /* XFMoreViewController.m */; };
+		BD2382F41D2103AB00DE1EB3 /* NSString+XFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382F31D2103AB00DE1EB3 /* NSString+XFExtension.m */; };
+		BD2382F71D21146700DE1EB3 /* XFClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382F61D21146700DE1EB3 /* XFClearCacheCell.m */; };
 		BD3830F11D201FDB0060CEB0 /* XFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F01D201FDB0060CEB0 /* XFConst.m */; };
 		BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F31D2020CE0060CEB0 /* XFMeTableViewCell.m */; };
 		BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F61D20255B0060CEB0 /* XFMeFooterView.m */; };
@@ -74,6 +76,10 @@
 		BD2382E91D20CB8A00DE1EB3 /* XFWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFWebViewController.xib; sourceTree = "<group>"; };
 		BD2382EF1D20FA2E00DE1EB3 /* XFMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMoreViewController.h; sourceTree = "<group>"; };
 		BD2382F01D20FA2E00DE1EB3 /* XFMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMoreViewController.m; sourceTree = "<group>"; };
+		BD2382F21D2103AB00DE1EB3 /* NSString+XFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XFExtension.h"; sourceTree = "<group>"; };
+		BD2382F31D2103AB00DE1EB3 /* NSString+XFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XFExtension.m"; sourceTree = "<group>"; };
+		BD2382F51D21146700DE1EB3 /* XFClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFClearCacheCell.h; sourceTree = "<group>"; };
+		BD2382F61D21146700DE1EB3 /* XFClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFClearCacheCell.m; sourceTree = "<group>"; };
 		BD3830EF1D201FDB0060CEB0 /* XFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFConst.h; sourceTree = "<group>"; };
 		BD3830F01D201FDB0060CEB0 /* XFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFConst.m; sourceTree = "<group>"; };
 		BD3830F21D2020CE0060CEB0 /* XFMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeTableViewCell.h; sourceTree = "<group>"; };
@@ -399,6 +405,8 @@
 				BD3830F61D20255B0060CEB0 /* XFMeFooterView.m */,
 				BD2382E11D20B86A00DE1EB3 /* XFMeSquareButton.h */,
 				BD2382E21D20B86A00DE1EB3 /* XFMeSquareButton.m */,
+				BD2382F51D21146700DE1EB3 /* XFClearCacheCell.h */,
+				BD2382F61D21146700DE1EB3 /* XFClearCacheCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -439,6 +447,8 @@
 				BDBDA1D51D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.m */,
 				BDD544B81D1FBDEC00DD2F9D /* UITextField+XFExtension.h */,
 				BDD544B91D1FBDEC00DD2F9D /* UITextField+XFExtension.m */,
+				BD2382F21D2103AB00DE1EB3 /* NSString+XFExtension.h */,
+				BD2382F31D2103AB00DE1EB3 /* NSString+XFExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -734,6 +744,7 @@
 				BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */,
 				BDBDA1D61D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.m in Sources */,
 				BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */,
+				BD2382F71D21146700DE1EB3 /* XFClearCacheCell.m in Sources */,
 				BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */,
 				BDBDA1BA1D1E447400BA01B1 /* XFFollowViewController.m in Sources */,
 				BD2382EA1D20CB8A00DE1EB3 /* XFWebViewController.m in Sources */,
@@ -741,6 +752,7 @@
 				BDBDA1C01D1E456500BA01B1 /* UIView+XFExtension.m in Sources */,
 				BDBDA1D91D1E624F00BA01B1 /* XFRecommendViewController.m in Sources */,
 				BDE490B21D1ED6690029E919 /* XFQuickLoginBtn.m in Sources */,
+				BD2382F41D2103AB00DE1EB3 /* NSString+XFExtension.m in Sources */,
 				BDF277C71D20A9E9006D1122 /* XFMeSquare.m in Sources */,
 				BD3830F11D201FDB0060CEB0 /* XFConst.m in Sources */,
 				BDD544BA1D1FBDEC00DD2F9D /* UITextField+XFExtension.m in Sources */,

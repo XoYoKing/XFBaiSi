@@ -18,7 +18,8 @@
 #import <AFNetworking.h>
 #import <UIButton+WebCache.h>
 #import <MJExtension.h>
-
+#import "NSString+XFExtension.h"
+#import <SVProgressHUD.h>
 
 
 

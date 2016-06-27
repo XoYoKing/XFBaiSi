@@ -7,6 +7,7 @@
 //
 
 #import "XFSettingViewController.h"
+#import "XFClearCacheCell.h"
 
 
 @interface XFSettingViewController ()
@@ -14,6 +15,8 @@
 @end
 
 @implementation XFSettingViewController
+
+static NSString * const XFClearCacheCellID = @"XFClearCacheCell.h";
 
 - (instancetype)init {
     return [self initWithStyle:UITableViewStyleGrouped];
@@ -24,35 +27,9 @@
     self.navigationItem.title = @"设置";
     self.view.backgroundColor = XFBaseBgColor;
     
-    [self getCacheSize];
+    // 注册自定义 cell
+    [self.tableView registerClass:[XFClearCacheCell class] forCellReuseIdentifier:XFClearCacheCellID];
     
-}
-/**
- *  计算文件夹大小
- */
-- (void)getCacheSize {
-    // 总大小
-    unsigned long long size = 0;
-    
-    // 获得缓存文件夹路径
-    NSString *cachesPath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
-    NSString *dirpath = [cachesPath stringByAppendingPathComponent:@"default"];
-    //    XMGLog(@"%@", dirpath);
-    
-    // 文件管理者
-    NSFileManager *manager = [NSFileManager defaultManager];
-    
-    // 获得文件夹的大小  == 获得文件夹中所有文件的总大小
-    // Enumerator : 遍历器\迭代器
-    NSDirectoryEnumerator *enumerator = [manager enumeratorAtPath:dirpath];
-    for (NSString *subpath in enumerator) {
-        // 全路径
-        NSString *fullSubpath = [dirpath stringByAppendingPathComponent:subpath];
-        // 累加文件大小
-        size += [manager attributesOfItemAtPath:fullSubpath error:nil].fileSize;
-    }
-    
-    XFLog(@"%zd", size);
 }
 
 #pragma mark - UITableViewController 数据源
@@ -66,19 +43,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *ID = @"settingCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-    }
-    cell.textLabel.text = @"清除缓存";
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    // 取出 cell
+    XFClearCacheCell *cell = [tableView dequeueReusableCellWithIdentifier:XFClearCacheCellID];
     
-    XFLog(@"%@", NSHomeDirectory());
-    
+    // 返回 cell
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    XFLogFunc;
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
 
 
 @end

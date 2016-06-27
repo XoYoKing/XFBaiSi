@@ -30,7 +30,7 @@
         // 请求
         AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
         [manger GET:ME_HOME_URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
-            //XFLog(@"请求成功");
+            XFLog(@" me 页面数据请求成功");
             
             // 字典转模型
             NSArray *squares = [XFMeSquare mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];

@@ -8,6 +8,7 @@ target 'XFBaisi' do
 pod 'AFNetworking'
 pod 'MJExtension'
 pod 'SDWebImage'
+pod 'SVProgressHUD'
 
 end
 
