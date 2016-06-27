@@ -72,12 +72,11 @@
         button.xf_height = buttonH;
         
         // 设置数据
-        button.square = squares[i];;
+        button.square = squares[i];
     }
     
     // 计算出总行数
     NSUInteger rowsCount = (count + maxColosCount - 1) / maxColosCount;
-    
     // 设置 footer 的高度为行数 * 按钮高度
     self.xf_height = rowsCount * buttonH;
     

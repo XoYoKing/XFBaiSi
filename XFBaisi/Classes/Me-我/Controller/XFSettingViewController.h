@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface XFSettingViewController : UIViewController
+@interface XFSettingViewController : UITableViewController
 
 @end
