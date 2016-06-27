@@ -10,6 +10,8 @@
 #import "XFMeSquare.h"
 #import "XFMeSquareButton.h"
 #import "XFWebViewController.h"
+#import "XFMoreViewController.h"
+
 
 
 @implementation XFMeFooterView
@@ -21,23 +23,20 @@
     
     if (self) {
         // 参数
-        NSMutableDictionary *params = [NSMutableDictionary dictionary];
-        params[@"a"] = @"square";
-        params[@"c"] = @"topic";
+        //NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        //params[@"a"] = @"square";
+        //params[@"c"] = @"topic";
         
         // 请求
         AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
-        [manger GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
+        [manger GET:ME_HOME_URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
             //XFLog(@"请求成功");
             
             // 字典转模型
             NSArray *squares = [XFMeSquare mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];
             
             [self createSquares:squares];
-            
-            
             //XFLog(@"%@", squares);
-            
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             XFLog(@"请求失败 - %@", error);
@@ -89,14 +88,16 @@
 
     NSString *url = button.square.url;
     
+    // 获得 me 页面的导航控制器
+    UITabBarController *tabBarVC = (UITabBarController *)self.window.rootViewController;
+    UINavigationController *nav = tabBarVC.selectedViewController;
+    
     if ([url hasPrefix:@"http"]) {        // 利用webView加载url
         XFWebViewController *webView = [[XFWebViewController alloc] init];
         webView.url = url;
         webView.navigationItem.title = button.currentTitle;
         
         // 获得 me 页面的导航控制器
-        UITabBarController *tabBarVC = (UITabBarController *)self.window.rootViewController;
-        UINavigationController *nav = tabBarVC.selectedViewController;
         [nav pushViewController:webView animated:YES];
         
     } else if ([url hasPrefix:@"mod"]) {  // 另行处理
@@ -109,8 +110,9 @@
         } else {
             XFLog(@"跳转到其他界面");
         }
-    } else {
-        XFLog(@"不是http或者mod协议的");
+    } else {    // more 按钮
+        XFMoreViewController *moreVC = [[XFMoreViewController alloc] init];
+        [nav pushViewController:moreVC animated:YES];
     }
 }
 

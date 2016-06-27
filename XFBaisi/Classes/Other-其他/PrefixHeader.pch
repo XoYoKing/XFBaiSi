@@ -20,6 +20,15 @@
 #import <MJExtension.h>
 
 
+
+
+
+
+#define ME_MORE_URL @"http://api.budejie.com/api/api_open.php"
+#define ME_HOME_URL @"http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json"
+
+
+
 /*** 日志 ***/
 #ifdef DEBUG
 #define XFLog(...) NSLog(__VA_ARGS__)
@@ -39,3 +48,10 @@
 #endif
 
 #endif /* PrefixHeader_pch */
+
+
+
+
+
+
+

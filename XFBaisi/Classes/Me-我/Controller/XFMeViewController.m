@@ -39,7 +39,7 @@
  *  导航栏
  */
 - (void)setupNav {
-    self.navigationItem.title = @"我";
+    self.navigationItem.title = @"我的";
     
     // 右边 - 设置
     UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" target:self action:@selector(settingClick)];
@@ -97,8 +97,11 @@
         cell.imageView.image = [UIImage imageNamed:@"setup-head-default"];
     } else {
         cell.textLabel.text = @"离线下载";
-        // 只要有其他cell设置过imageView.image, 其他不显示图片的cell都需要设置imageView.image = nil
+         //只要有其他cell设置过imageView.image, 其他不显示图片的cell都需要设置imageView.image = nil
         cell.imageView.image = nil;
+        
+        //cell.textLabel.text = @"我的身份";
+        //cell.imageView.image = [UIImage imageNamed:@"Profile_AddV_authen"];
     }
     
     return cell;

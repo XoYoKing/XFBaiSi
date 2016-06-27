@@ -12,6 +12,7 @@
 		BD2382E31D20B86B00DE1EB3 /* XFMeSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382E21D20B86A00DE1EB3 /* XFMeSquareButton.m */; };
 		BD2382EA1D20CB8A00DE1EB3 /* XFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382E81D20CB8A00DE1EB3 /* XFWebViewController.m */; };
 		BD2382EB1D20CB8A00DE1EB3 /* XFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2382E91D20CB8A00DE1EB3 /* XFWebViewController.xib */; };
+		BD2382F11D20FA2E00DE1EB3 /* XFMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382F01D20FA2E00DE1EB3 /* XFMoreViewController.m */; };
 		BD3830F11D201FDB0060CEB0 /* XFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F01D201FDB0060CEB0 /* XFConst.m */; };
 		BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F31D2020CE0060CEB0 /* XFMeTableViewCell.m */; };
 		BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F61D20255B0060CEB0 /* XFMeFooterView.m */; };
@@ -71,6 +72,8 @@
 		BD2382E71D20CB8A00DE1EB3 /* XFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFWebViewController.h; sourceTree = "<group>"; };
 		BD2382E81D20CB8A00DE1EB3 /* XFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFWebViewController.m; sourceTree = "<group>"; };
 		BD2382E91D20CB8A00DE1EB3 /* XFWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFWebViewController.xib; sourceTree = "<group>"; };
+		BD2382EF1D20FA2E00DE1EB3 /* XFMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMoreViewController.h; sourceTree = "<group>"; };
+		BD2382F01D20FA2E00DE1EB3 /* XFMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMoreViewController.m; sourceTree = "<group>"; };
 		BD3830EF1D201FDB0060CEB0 /* XFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFConst.h; sourceTree = "<group>"; };
 		BD3830F01D201FDB0060CEB0 /* XFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFConst.m; sourceTree = "<group>"; };
 		BD3830F21D2020CE0060CEB0 /* XFMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeTableViewCell.h; sourceTree = "<group>"; };
@@ -372,6 +375,8 @@
 				BD2382E71D20CB8A00DE1EB3 /* XFWebViewController.h */,
 				BD2382E81D20CB8A00DE1EB3 /* XFWebViewController.m */,
 				BD2382E91D20CB8A00DE1EB3 /* XFWebViewController.xib */,
+				BD2382EF1D20FA2E00DE1EB3 /* XFMoreViewController.h */,
+				BD2382F01D20FA2E00DE1EB3 /* XFMoreViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -742,6 +747,7 @@
 				BDBDA1C81D1E458900BA01B1 /* AppDelegate.m in Sources */,
 				BDE490AF1D1ED6210029E919 /* XFTabBar.m in Sources */,
 				BDBDA1E21D1E67B300BA01B1 /* XFNavigationController.m in Sources */,
+				BD2382F11D20FA2E00DE1EB3 /* XFMoreViewController.m in Sources */,
 				BD660A401D1EF19B006E5BC0 /* XFLoginRegisterTextField.m in Sources */,
 				BDBDA1B71D1E446900BA01B1 /* XFNewViewController.m in Sources */,
 				BDBDA1BD1D1E447B00BA01B1 /* XFMeViewController.m in Sources */,
