@@ -7,6 +7,7 @@
 //
 
 #import "XFMeSquareButton.h"
+#import "XFMeSquare.h"
 
 @implementation XFMeSquareButton
 
@@ -35,4 +36,27 @@
     self.titleLabel.xf_height = self.imageView.xf_height * 0.5;
 }
 
+- (void)setSquare:(XFMeSquare *)square {
+    _square = square;
+    
+    [self setTitle:square.name forState:UIControlStateNormal];
+    [self sd_setImageWithURL:[NSURL URLWithString:square.icon] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"setup-head-default"]];
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

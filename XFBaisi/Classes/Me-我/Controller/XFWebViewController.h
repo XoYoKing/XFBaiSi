@@ -1,5 +1,5 @@
 //
-//  XFMeSquareButton.h
+//  XFWebViewController.h
 //  XFBaisi
 //
 //  Created by xiaofans on 16/6/27.
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class XFMeSquare;
+@interface XFWebViewController : UIViewController
 
-@interface XFMeSquareButton : UIButton
-
-@property (nonatomic, strong) XFMeSquare *square;
+@property (nonatomic, strong) NSString *url;
 
 @end

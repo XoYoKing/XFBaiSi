@@ -10,6 +10,8 @@
 		2B251BA443D3181F21774C84 /* libPods-XFBaisiUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DF40AF7129666B974784DD /* libPods-XFBaisiUITests.a */; };
 		A345A2CC13DC52485FE1905D /* libPods-XFBaisiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2CE5070612EF3BD1AAAA2 /* libPods-XFBaisiTests.a */; };
 		BD2382E31D20B86B00DE1EB3 /* XFMeSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382E21D20B86A00DE1EB3 /* XFMeSquareButton.m */; };
+		BD2382EA1D20CB8A00DE1EB3 /* XFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382E81D20CB8A00DE1EB3 /* XFWebViewController.m */; };
+		BD2382EB1D20CB8A00DE1EB3 /* XFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2382E91D20CB8A00DE1EB3 /* XFWebViewController.xib */; };
 		BD3830F11D201FDB0060CEB0 /* XFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F01D201FDB0060CEB0 /* XFConst.m */; };
 		BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F31D2020CE0060CEB0 /* XFMeTableViewCell.m */; };
 		BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F61D20255B0060CEB0 /* XFMeFooterView.m */; };
@@ -66,6 +68,9 @@
 		958DD80A83CB5E018CEDA6E4 /* Pods-XFBaisi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFBaisi.release.xcconfig"; path = "Pods/Target Support Files/Pods-XFBaisi/Pods-XFBaisi.release.xcconfig"; sourceTree = "<group>"; };
 		BD2382E11D20B86A00DE1EB3 /* XFMeSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeSquareButton.h; sourceTree = "<group>"; };
 		BD2382E21D20B86A00DE1EB3 /* XFMeSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeSquareButton.m; sourceTree = "<group>"; };
+		BD2382E71D20CB8A00DE1EB3 /* XFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFWebViewController.h; sourceTree = "<group>"; };
+		BD2382E81D20CB8A00DE1EB3 /* XFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFWebViewController.m; sourceTree = "<group>"; };
+		BD2382E91D20CB8A00DE1EB3 /* XFWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFWebViewController.xib; sourceTree = "<group>"; };
 		BD3830EF1D201FDB0060CEB0 /* XFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFConst.h; sourceTree = "<group>"; };
 		BD3830F01D201FDB0060CEB0 /* XFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFConst.m; sourceTree = "<group>"; };
 		BD3830F21D2020CE0060CEB0 /* XFMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeTableViewCell.h; sourceTree = "<group>"; };
@@ -364,6 +369,9 @@
 				BDBDA1BC1D1E447B00BA01B1 /* XFMeViewController.m */,
 				BDBDA1DA1D1E64B800BA01B1 /* XFSettingViewController.h */,
 				BDBDA1DB1D1E64B800BA01B1 /* XFSettingViewController.m */,
+				BD2382E71D20CB8A00DE1EB3 /* XFWebViewController.h */,
+				BD2382E81D20CB8A00DE1EB3 /* XFWebViewController.m */,
+				BD2382E91D20CB8A00DE1EB3 /* XFWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -569,6 +577,7 @@
 				BDBDA1901D1E39B100BA01B1 /* Assets.xcassets in Resources */,
 				BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */,
 				BDE490AC1D1EC8330029E919 /* XFLoginRegisterViewController.xib in Resources */,
+				BD2382EB1D20CB8A00DE1EB3 /* XFWebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +731,7 @@
 				BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */,
 				BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */,
 				BDBDA1BA1D1E447400BA01B1 /* XFFollowViewController.m in Sources */,
+				BD2382EA1D20CB8A00DE1EB3 /* XFWebViewController.m in Sources */,
 				BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */,
 				BDBDA1C01D1E456500BA01B1 /* UIView+XFExtension.m in Sources */,
 				BDBDA1D91D1E624F00BA01B1 /* XFRecommendViewController.m in Sources */,

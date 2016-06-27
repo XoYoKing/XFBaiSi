@@ -9,6 +9,7 @@
 #import "XFMeFooterView.h"
 #import "XFMeSquare.h"
 #import "XFMeSquareButton.h"
+#import "XFWebViewController.h"
 
 
 @implementation XFMeFooterView
@@ -59,12 +60,10 @@
     
     // 创建按钮
     for (NSUInteger i = 0; i < count; i++) {
-        // i 位置对应的模型数据
-        XFMeSquare *square = squares[i];
         
         XFMeSquareButton *button = [XFMeSquareButton buttonWithType:UIButtonTypeCustom];
         [button setBackgroundImage:[UIImage imageNamed:@"mainCellBackground"] forState:UIControlStateNormal];
-        [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+        [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button];
         
         button.xf_x = (i % maxColosCount) * buttonW;
@@ -73,19 +72,47 @@
         button.xf_height = buttonH;
         
         // 设置数据
-        [button setTitle:square.name forState:UIControlStateNormal];
-        [button sd_setImageWithURL:[NSURL URLWithString:square.icon] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"setup-head-default"]];
+        button.square = squares[i];;
     }
-    // 设置 footer 的高度为最后一个按钮的最大 y 值
-    self.xf_height = self.subviews.lastObject.xf_bottom;
+    
+    // 计算出总行数
+    NSUInteger rowsCount = (count + maxColosCount - 1) / maxColosCount;
+    
+    // 设置 footer 的高度为行数 * 按钮高度
+    self.xf_height = rowsCount * buttonH;
     
     UITableView *tableView = (UITableView *)self.superview;
     tableView.tableFooterView = self;
     [tableView reloadData];
 }
 
-- (void)buttonClick {
-    XFLogFunc;
+- (void)buttonClick:(XFMeSquareButton *)button {
+
+    NSString *url = button.square.url;
+    
+    if ([url hasPrefix:@"http"]) {        // 利用webView加载url
+        XFWebViewController *webView = [[XFWebViewController alloc] init];
+        webView.url = url;
+        webView.navigationItem.title = button.currentTitle;
+        
+        // 获得 me 页面的导航控制器
+        UITabBarController *tabBarVC = (UITabBarController *)self.window.rootViewController;
+        UINavigationController *nav = tabBarVC.selectedViewController;
+        [nav pushViewController:webView animated:YES];
+        
+    } else if ([url hasPrefix:@"mod"]) {  // 另行处理
+        if ([url hasSuffix:@"BDJ_To_Check"]) {
+            XFLog(@"跳转到[审帖]界面");
+            
+        } else if ([url hasSuffix:@"BDJ_To_RecentHot"]) {
+            XFLog(@"跳转到[每日排行]界面");
+            
+        } else {
+            XFLog(@"跳转到其他界面");
+        }
+    } else {
+        XFLog(@"不是http或者mod协议的");
+    }
 }
 
 
