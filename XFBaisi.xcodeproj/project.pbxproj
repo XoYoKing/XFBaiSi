@@ -22,6 +22,11 @@
 		BD94A67A1D2219AF00EC5208 /* XFOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A6781D2219AF00EC5208 /* XFOtherCell.m */; };
 		BD94A67B1D2219AF00EC5208 /* XFOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD94A6791D2219AF00EC5208 /* XFOtherCell.xib */; };
 		BD94A67E1D222B9C00EC5208 /* XFTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A67D1D222B9C00EC5208 /* XFTitleButton.m */; };
+		BD94A6811D223ACD00EC5208 /* XFAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A6801D223ACD00EC5208 /* XFAllViewController.m */; };
+		BD94A6841D223AE900EC5208 /* XFVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A6831D223AE900EC5208 /* XFVideoViewController.m */; };
+		BD94A6871D223AFA00EC5208 /* XFVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A6861D223AFA00EC5208 /* XFVoiceViewController.m */; };
+		BD94A68A1D223B1000EC5208 /* XFPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A6891D223B1000EC5208 /* XFPictureViewController.m */; };
+		BD94A68D1D223B2600EC5208 /* XFWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A68C1D223B2600EC5208 /* XFWordViewController.m */; };
 		BDBDA1771D1E391B00BA01B1 /* XFBaisiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1761D1E391B00BA01B1 /* XFBaisiTests.m */; };
 		BDBDA1821D1E391B00BA01B1 /* XFBaisiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1811D1E391B00BA01B1 /* XFBaisiUITests.m */; };
 		BDBDA1901D1E39B100BA01B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDBDA18F1D1E39B100BA01B1 /* Assets.xcassets */; };
@@ -96,6 +101,16 @@
 		BD94A6791D2219AF00EC5208 /* XFOtherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFOtherCell.xib; sourceTree = "<group>"; };
 		BD94A67C1D222B9C00EC5208 /* XFTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTitleButton.h; sourceTree = "<group>"; };
 		BD94A67D1D222B9C00EC5208 /* XFTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTitleButton.m; sourceTree = "<group>"; };
+		BD94A67F1D223ACD00EC5208 /* XFAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFAllViewController.h; sourceTree = "<group>"; };
+		BD94A6801D223ACD00EC5208 /* XFAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFAllViewController.m; sourceTree = "<group>"; };
+		BD94A6821D223AE900EC5208 /* XFVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFVideoViewController.h; sourceTree = "<group>"; };
+		BD94A6831D223AE900EC5208 /* XFVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFVideoViewController.m; sourceTree = "<group>"; };
+		BD94A6851D223AFA00EC5208 /* XFVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFVoiceViewController.h; sourceTree = "<group>"; };
+		BD94A6861D223AFA00EC5208 /* XFVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFVoiceViewController.m; sourceTree = "<group>"; };
+		BD94A6881D223B1000EC5208 /* XFPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFPictureViewController.h; sourceTree = "<group>"; };
+		BD94A6891D223B1000EC5208 /* XFPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFPictureViewController.m; sourceTree = "<group>"; };
+		BD94A68B1D223B2600EC5208 /* XFWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFWordViewController.h; sourceTree = "<group>"; };
+		BD94A68C1D223B2600EC5208 /* XFWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFWordViewController.m; sourceTree = "<group>"; };
 		BDBDA1591D1E391B00BA01B1 /* XFBaisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XFBaisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBDA16D1D1E391B00BA01B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDBDA1721D1E391B00BA01B1 /* XFBaisiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XFBaisiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,6 +350,16 @@
 			children = (
 				BDBDA1B21D1E445700BA01B1 /* XFEssenceViewController.h */,
 				BDBDA1B31D1E445700BA01B1 /* XFEssenceViewController.m */,
+				BD94A67F1D223ACD00EC5208 /* XFAllViewController.h */,
+				BD94A6801D223ACD00EC5208 /* XFAllViewController.m */,
+				BD94A6821D223AE900EC5208 /* XFVideoViewController.h */,
+				BD94A6831D223AE900EC5208 /* XFVideoViewController.m */,
+				BD94A6851D223AFA00EC5208 /* XFVoiceViewController.h */,
+				BD94A6861D223AFA00EC5208 /* XFVoiceViewController.m */,
+				BD94A6881D223B1000EC5208 /* XFPictureViewController.h */,
+				BD94A6891D223B1000EC5208 /* XFPictureViewController.m */,
+				BD94A68B1D223B2600EC5208 /* XFWordViewController.h */,
+				BD94A68C1D223B2600EC5208 /* XFWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -765,7 +790,9 @@
 				BDBDA1BA1D1E447400BA01B1 /* XFFollowViewController.m in Sources */,
 				BD2382EA1D20CB8A00DE1EB3 /* XFWebViewController.m in Sources */,
 				BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */,
+				BD94A6871D223AFA00EC5208 /* XFVoiceViewController.m in Sources */,
 				BDBDA1C01D1E456500BA01B1 /* UIView+XFExtension.m in Sources */,
+				BD94A68A1D223B1000EC5208 /* XFPictureViewController.m in Sources */,
 				BDBDA1D91D1E624F00BA01B1 /* XFRecommendViewController.m in Sources */,
 				BDE490B21D1ED6690029E919 /* XFQuickLoginBtn.m in Sources */,
 				BD2382F41D2103AB00DE1EB3 /* NSString+XFExtension.m in Sources */,
@@ -773,10 +800,13 @@
 				BD3830F11D201FDB0060CEB0 /* XFConst.m in Sources */,
 				BDD544BA1D1FBDEC00DD2F9D /* UITextField+XFExtension.m in Sources */,
 				BDBDA1C81D1E458900BA01B1 /* AppDelegate.m in Sources */,
+				BD94A6811D223ACD00EC5208 /* XFAllViewController.m in Sources */,
 				BDE490AF1D1ED6210029E919 /* XFTabBar.m in Sources */,
 				BDBDA1E21D1E67B300BA01B1 /* XFNavigationController.m in Sources */,
 				BD2382F11D20FA2E00DE1EB3 /* XFMoreViewController.m in Sources */,
+				BD94A68D1D223B2600EC5208 /* XFWordViewController.m in Sources */,
 				BD660A401D1EF19B006E5BC0 /* XFLoginRegisterTextField.m in Sources */,
+				BD94A6841D223AE900EC5208 /* XFVideoViewController.m in Sources */,
 				BDBDA1B71D1E446900BA01B1 /* XFNewViewController.m in Sources */,
 				BDBDA1BD1D1E447B00BA01B1 /* XFMeViewController.m in Sources */,
 				BDBDA1CC1D1E459400BA01B1 /* main.m in Sources */,

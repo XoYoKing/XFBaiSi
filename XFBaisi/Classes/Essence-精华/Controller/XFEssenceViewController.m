@@ -8,6 +8,11 @@
 
 #import "XFEssenceViewController.h"
 #import "XFTitleButton.h"
+#import "XFAllViewController.h"
+#import "XFVideoViewController.h"
+#import "XFVoiceViewController.h"
+#import "XFPictureViewController.h"
+#import "XFWordViewController.h"
 
 @interface XFEssenceViewController ()
 
@@ -26,12 +31,34 @@
     
     [self setupNav];
     
+    [self setupChildViewControllers];
+    
     [self setupScrollView];
     
     [self setupTitleView];
+    
+   
 }
 
 #pragma mark - 初始化
+
+- (void)setupChildViewControllers {
+    XFAllViewController *allView = [[XFAllViewController alloc] init];
+    [self addChildViewController:allView];
+    
+    XFVideoViewController *videoView = [[XFVideoViewController alloc] init];
+    [self addChildViewController:videoView];
+    
+    XFVoiceViewController *voiceView = [[XFVoiceViewController alloc] init];
+    [self addChildViewController:voiceView];
+    
+    XFPictureViewController *pictureView = [[XFPictureViewController alloc] init];
+    [self addChildViewController:pictureView];
+    
+    XFWordViewController *wordView = [[XFWordViewController alloc] init];
+    [self addChildViewController:wordView];
+    
+}
 
 /**
  *  创建导航栏
@@ -51,11 +78,34 @@
  *  创建 滚动视图
  */
 - (void)setupScrollView {
+    // 不允许自动调整 view 的内边距
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.backgroundColor = XFBaseBgColor;
     scrollView.frame = self.view.bounds;
     
     [self.view addSubview:scrollView];
+    
+    // 添加所有子控制器到滚动视图中
+    NSUInteger count = self.childViewControllers.count;
+    for (NSUInteger i = 0; i < count; i++) {
+        UITableView *chlidView = (UITableView *)self.childViewControllers[i].view;
+        chlidView.xf_x = i * chlidView.xf_width;
+        chlidView.xf_y = 0;
+        chlidView.xf_height = scrollView.xf_height;
+        chlidView.backgroundColor = XFBaseBgColor;
+        [scrollView addSubview:chlidView];
+        
+        // 内边距
+        chlidView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
+        chlidView.scrollIndicatorInsets = chlidView.contentInset;
+    }
+    
+    scrollView.contentSize = CGSizeMake(count * scrollView.xf_width, 0);
+    scrollView.pagingEnabled = YES;
+    scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.showsVerticalScrollIndicator = NO;
 }
 
 /**
@@ -63,7 +113,7 @@
  */
 - (void)setupTitleView {
     UIView *titleView = [[UIView alloc] init];
-    titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2];
+    titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
     titleView.frame = CGRectMake(0, 64, self.view.xf_width, 35);
     [self.view addSubview:titleView];
     
