@@ -48,7 +48,7 @@
                 sizeText = [NSString stringWithFormat:@"%zdB", size];
             }
             // 生成显示文字
-            NSString *text = [NSString stringWithFormat:@"清除缓存(%@)", sizeText];
+            NSString *text = [NSString stringWithFormat:@"清除缓存(已使用:%@)", sizeText];
             
             // 回到主线程显示文字
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -91,9 +91,8 @@
                 // 延迟2秒隐藏成功指示器
                 [self performSelector:@selector(dismissHUD) withObject:nil afterDelay:1.0];
                 
-                self.textLabel.text = @"清除缓存(0KB)";
+                self.textLabel.text = @"清除缓存";
             });
-            
         });
     }];
 }

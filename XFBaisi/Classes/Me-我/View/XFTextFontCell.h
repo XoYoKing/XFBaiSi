@@ -1,5 +1,5 @@
 //
-//  XFOtherCell.h
+//  XFTextFontCell.h
 //  XFBaisi
 //
 //  Created by xiaofans on 16/6/28.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XFOtherCell : UITableViewCell
+@interface XFTextFontCell : UITableViewCell
 
 @end

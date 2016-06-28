@@ -10,6 +10,7 @@
 #import "XFSettingViewController.h"
 #import "XFMeTableViewCell.h"
 #import "XFMeFooterView.h"
+#import "XFLoginRegisterViewController.h"
 
 @interface XFMeViewController ()
 
@@ -107,7 +108,13 @@
     return cell;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        XFLoginRegisterViewController *loginRegisterVC = [[XFLoginRegisterViewController alloc] init];
+        [self presentViewController:loginRegisterVC animated:YES completion:nil];
+    }
+    XFLog(@"离线下载");
+}
 
 
 

@@ -19,8 +19,6 @@
 		BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F31D2020CE0060CEB0 /* XFMeTableViewCell.m */; };
 		BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F61D20255B0060CEB0 /* XFMeFooterView.m */; };
 		BD660A401D1EF19B006E5BC0 /* XFLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BD660A3F1D1EF19B006E5BC0 /* XFLoginRegisterTextField.m */; };
-		BD94A67A1D2219AF00EC5208 /* XFOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A6781D2219AF00EC5208 /* XFOtherCell.m */; };
-		BD94A67B1D2219AF00EC5208 /* XFOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD94A6791D2219AF00EC5208 /* XFOtherCell.xib */; };
 		BD94A67E1D222B9C00EC5208 /* XFTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A67D1D222B9C00EC5208 /* XFTitleButton.m */; };
 		BD94A6811D223ACD00EC5208 /* XFAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A6801D223ACD00EC5208 /* XFAllViewController.m */; };
 		BD94A6841D223AE900EC5208 /* XFVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A6831D223AE900EC5208 /* XFVideoViewController.m */; };
@@ -49,6 +47,10 @@
 		BDE490AF1D1ED6210029E919 /* XFTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE490AE1D1ED6210029E919 /* XFTabBar.m */; };
 		BDE490B21D1ED6690029E919 /* XFQuickLoginBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE490B11D1ED6690029E919 /* XFQuickLoginBtn.m */; };
 		BDF277C71D20A9E9006D1122 /* XFMeSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF277C61D20A9E9006D1122 /* XFMeSquare.m */; };
+		BDF7C0C51D227B2D00947EAD /* XFTextFontCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF7C0C31D227B2D00947EAD /* XFTextFontCell.m */; };
+		BDF7C0C61D227B2D00947EAD /* XFTextFontCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF7C0C41D227B2D00947EAD /* XFTextFontCell.xib */; };
+		BDF7C0CA1D22836800947EAD /* XFDayOrNightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF7C0C81D22836800947EAD /* XFDayOrNightCell.m */; };
+		BDF7C0CB1D22836800947EAD /* XFDayOrNightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF7C0C91D22836800947EAD /* XFDayOrNightCell.xib */; };
 		D82C942630EED7F0F1C4F766 /* libPods-XFBaisi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8564B4053D229525B01D725E /* libPods-XFBaisi.a */; };
 /* End PBXBuildFile section */
 
@@ -96,9 +98,6 @@
 		BD3830F61D20255B0060CEB0 /* XFMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeFooterView.m; sourceTree = "<group>"; };
 		BD660A3E1D1EF19B006E5BC0 /* XFLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLoginRegisterTextField.h; sourceTree = "<group>"; };
 		BD660A3F1D1EF19B006E5BC0 /* XFLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFLoginRegisterTextField.m; sourceTree = "<group>"; };
-		BD94A6771D2219AF00EC5208 /* XFOtherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFOtherCell.h; sourceTree = "<group>"; };
-		BD94A6781D2219AF00EC5208 /* XFOtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFOtherCell.m; sourceTree = "<group>"; };
-		BD94A6791D2219AF00EC5208 /* XFOtherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFOtherCell.xib; sourceTree = "<group>"; };
 		BD94A67C1D222B9C00EC5208 /* XFTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTitleButton.h; sourceTree = "<group>"; };
 		BD94A67D1D222B9C00EC5208 /* XFTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTitleButton.m; sourceTree = "<group>"; };
 		BD94A67F1D223ACD00EC5208 /* XFAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFAllViewController.h; sourceTree = "<group>"; };
@@ -156,6 +155,12 @@
 		BDE490B11D1ED6690029E919 /* XFQuickLoginBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFQuickLoginBtn.m; sourceTree = "<group>"; };
 		BDF277C51D20A9E9006D1122 /* XFMeSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeSquare.h; sourceTree = "<group>"; };
 		BDF277C61D20A9E9006D1122 /* XFMeSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeSquare.m; sourceTree = "<group>"; };
+		BDF7C0C21D227B2D00947EAD /* XFTextFontCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTextFontCell.h; sourceTree = "<group>"; };
+		BDF7C0C31D227B2D00947EAD /* XFTextFontCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTextFontCell.m; sourceTree = "<group>"; };
+		BDF7C0C41D227B2D00947EAD /* XFTextFontCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFTextFontCell.xib; sourceTree = "<group>"; };
+		BDF7C0C71D22836800947EAD /* XFDayOrNightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDayOrNightCell.h; sourceTree = "<group>"; };
+		BDF7C0C81D22836800947EAD /* XFDayOrNightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDayOrNightCell.m; sourceTree = "<group>"; };
+		BDF7C0C91D22836800947EAD /* XFDayOrNightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFDayOrNightCell.xib; sourceTree = "<group>"; };
 		C0668AED95FBA2024822CE0C /* Pods-XFBaisiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFBaisiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XFBaisiTests/Pods-XFBaisiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FAF2CE5070612EF3BD1AAAA2 /* libPods-XFBaisiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XFBaisiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -442,9 +447,12 @@
 				BD2382E21D20B86A00DE1EB3 /* XFMeSquareButton.m */,
 				BD2382F51D21146700DE1EB3 /* XFClearCacheCell.h */,
 				BD2382F61D21146700DE1EB3 /* XFClearCacheCell.m */,
-				BD94A6771D2219AF00EC5208 /* XFOtherCell.h */,
-				BD94A6781D2219AF00EC5208 /* XFOtherCell.m */,
-				BD94A6791D2219AF00EC5208 /* XFOtherCell.xib */,
+				BDF7C0C21D227B2D00947EAD /* XFTextFontCell.h */,
+				BDF7C0C31D227B2D00947EAD /* XFTextFontCell.m */,
+				BDF7C0C41D227B2D00947EAD /* XFTextFontCell.xib */,
+				BDF7C0C71D22836800947EAD /* XFDayOrNightCell.h */,
+				BDF7C0C81D22836800947EAD /* XFDayOrNightCell.m */,
+				BDF7C0C91D22836800947EAD /* XFDayOrNightCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -628,10 +636,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDBDA1901D1E39B100BA01B1 /* Assets.xcassets in Resources */,
+				BDF7C0C61D227B2D00947EAD /* XFTextFontCell.xib in Resources */,
 				BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */,
-				BD94A67B1D2219AF00EC5208 /* XFOtherCell.xib in Resources */,
 				BDE490AC1D1EC8330029E919 /* XFLoginRegisterViewController.xib in Resources */,
 				BD2382EB1D20CB8A00DE1EB3 /* XFWebViewController.xib in Resources */,
+				BDF7C0CB1D22836800947EAD /* XFDayOrNightCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,10 +792,10 @@
 				BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */,
 				BD94A67E1D222B9C00EC5208 /* XFTitleButton.m in Sources */,
 				BDBDA1D61D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.m in Sources */,
+				BDF7C0CA1D22836800947EAD /* XFDayOrNightCell.m in Sources */,
 				BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */,
 				BD2382F71D21146700DE1EB3 /* XFClearCacheCell.m in Sources */,
 				BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */,
-				BD94A67A1D2219AF00EC5208 /* XFOtherCell.m in Sources */,
 				BDBDA1BA1D1E447400BA01B1 /* XFFollowViewController.m in Sources */,
 				BD2382EA1D20CB8A00DE1EB3 /* XFWebViewController.m in Sources */,
 				BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */,
@@ -810,6 +819,7 @@
 				BDBDA1B71D1E446900BA01B1 /* XFNewViewController.m in Sources */,
 				BDBDA1BD1D1E447B00BA01B1 /* XFMeViewController.m in Sources */,
 				BDBDA1CC1D1E459400BA01B1 /* main.m in Sources */,
+				BDF7C0C51D227B2D00947EAD /* XFTextFontCell.m in Sources */,
 				BDBDA1B41D1E445700BA01B1 /* XFEssenceViewController.m in Sources */,
 				BDE490AB1D1EC8330029E919 /* XFLoginRegisterViewController.m in Sources */,
 			);
@@ -932,7 +942,7 @@
 			baseConfigurationReference = 5B2303E04480110E01B60C9A /* Pods-XFBaisi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "XFBaisi/Classes/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = XFBaisi/Info.plist;
@@ -947,7 +957,7 @@
 			baseConfigurationReference = 958DD80A83CB5E018CEDA6E4 /* Pods-XFBaisi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "XFBaisi/Classes/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = XFBaisi/Info.plist;
