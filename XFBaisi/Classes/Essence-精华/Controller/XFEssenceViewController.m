@@ -14,13 +14,12 @@
 #import "XFPictureViewController.h"
 #import "XFWordViewController.h"
 
-@interface XFEssenceViewController ()
+@interface XFEssenceViewController () <UIScrollViewDelegate>
 
-// 当前选中的标题按钮
-@property (nonatomic, weak) XFTitleButton *selectedTitleBtn;
-
-// 标题按钮底部指示器
-@property (nonatomic, weak) UIView *indicatorView;
+@property (nonatomic, weak) XFTitleButton *selectedTitleBtn;    // 当前选中的标题按钮
+@property (nonatomic, weak) UIView *indicatorView;              // 标题按钮底部指示器
+@property (nonatomic, weak) UIScrollView *scrollView;           // 滚动视图
+@property (nonatomic, weak) UIView *titleView;                  // 顶部标题栏
 
 @end
 
@@ -37,7 +36,7 @@
     
     [self setupTitleView];
     
-   
+    [self addChildVcView];
 }
 
 #pragma mark - 初始化
@@ -83,29 +82,14 @@
     
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.backgroundColor = XFBaseBgColor;
-    scrollView.frame = self.view.bounds;
-    
-    [self.view addSubview:scrollView];
-    
-    // 添加所有子控制器到滚动视图中
-    NSUInteger count = self.childViewControllers.count;
-    for (NSUInteger i = 0; i < count; i++) {
-        UITableView *chlidView = (UITableView *)self.childViewControllers[i].view;
-        chlidView.xf_x = i * chlidView.xf_width;
-        chlidView.xf_y = 0;
-        chlidView.xf_height = scrollView.xf_height;
-        chlidView.backgroundColor = XFBaseBgColor;
-        [scrollView addSubview:chlidView];
-        
-        // 内边距
-        chlidView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
-        chlidView.scrollIndicatorInsets = chlidView.contentInset;
-    }
-    
-    scrollView.contentSize = CGSizeMake(count * scrollView.xf_width, 0);
     scrollView.pagingEnabled = YES;
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.frame = self.view.bounds;
+    scrollView.contentSize = CGSizeMake(self.childViewControllers.count * scrollView.xf_width, 0);
+    scrollView.delegate = self;
+    [self.view addSubview:scrollView];
+    self.scrollView = scrollView;
 }
 
 /**
@@ -116,6 +100,7 @@
     titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
     titleView.frame = CGRectMake(0, 64, self.view.xf_width, 35);
     [self.view addSubview:titleView];
+    self.titleView = titleView;
     
     // 添加按钮
     NSArray *titlesArray = @[@"全部", @"视频", @"声音", @"图片", @"段子"];
@@ -127,6 +112,7 @@
         XFTitleButton *titleBtn = [XFTitleButton buttonWithType:UIButtonTypeCustom];
         [titleBtn addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
         [titleView addSubview:titleBtn];
+        titleBtn.tag = i;
         
         // 设置数据
         [titleBtn setTitle:titlesArray[i] forState:UIControlStateNormal];
@@ -175,7 +161,10 @@
         self.indicatorView.xf_centerX = titleButton.xf_centerX;
     }];
     
-    
+    // 滚动视图滚动到指定位置
+    CGPoint offset = self.scrollView.contentOffset;
+    offset.x = titleButton.tag * self.scrollView.xf_width;
+    [self.scrollView setContentOffset:offset animated:YES]; 
 }
 
 /**
@@ -184,6 +173,45 @@
 - (void)tagClick {
     XFLogFunc;
 }
+
+#pragma mark - 添加子控制器的view
+- (void)addChildVcView {
+    // 添加子控制器的 view 到 scrollview 中
+    NSUInteger index = self.scrollView.contentOffset.x / self.scrollView.xf_width;
+    
+    // 取出子控制器
+    UIViewController *childVC = self.childViewControllers[index];
+    
+    if (childVC.view.window) return; // 如果窗口已经创建，就不需要再设置 frame
+    
+    childVC.view.frame = self.scrollView.bounds;
+    [self.scrollView addSubview:childVC.view];
+    
+    XFLogFunc;
+}
+
+#pragma mark - <UIScrollViewDelegate>
+
+/**
+ *  使用有动画的方法结束时才调用这个方法
+ */
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    [self addChildVcView];
+}
+
+/**
+ *  人为拖动滚动结束方法调用
+ */
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    // 选中对应按钮
+    NSUInteger index = scrollView.contentOffset.x / scrollView.xf_width;
+    XFTitleButton *titleBtn = self.titleView.subviews[index];
+    [self titleClick:titleBtn];
+    
+    // 添加子控制器 view
+    [self addChildVcView];
+}
+
 
 
 @end
