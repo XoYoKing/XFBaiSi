@@ -21,6 +21,7 @@
 		BD660A401D1EF19B006E5BC0 /* XFLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BD660A3F1D1EF19B006E5BC0 /* XFLoginRegisterTextField.m */; };
 		BD94A67A1D2219AF00EC5208 /* XFOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A6781D2219AF00EC5208 /* XFOtherCell.m */; };
 		BD94A67B1D2219AF00EC5208 /* XFOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD94A6791D2219AF00EC5208 /* XFOtherCell.xib */; };
+		BD94A67E1D222B9C00EC5208 /* XFTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A67D1D222B9C00EC5208 /* XFTitleButton.m */; };
 		BDBDA1771D1E391B00BA01B1 /* XFBaisiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1761D1E391B00BA01B1 /* XFBaisiTests.m */; };
 		BDBDA1821D1E391B00BA01B1 /* XFBaisiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1811D1E391B00BA01B1 /* XFBaisiUITests.m */; };
 		BDBDA1901D1E39B100BA01B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDBDA18F1D1E39B100BA01B1 /* Assets.xcassets */; };
@@ -93,6 +94,8 @@
 		BD94A6771D2219AF00EC5208 /* XFOtherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFOtherCell.h; sourceTree = "<group>"; };
 		BD94A6781D2219AF00EC5208 /* XFOtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFOtherCell.m; sourceTree = "<group>"; };
 		BD94A6791D2219AF00EC5208 /* XFOtherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFOtherCell.xib; sourceTree = "<group>"; };
+		BD94A67C1D222B9C00EC5208 /* XFTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTitleButton.h; sourceTree = "<group>"; };
+		BD94A67D1D222B9C00EC5208 /* XFTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTitleButton.m; sourceTree = "<group>"; };
 		BDBDA1591D1E391B00BA01B1 /* XFBaisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XFBaisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBDA16D1D1E391B00BA01B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDBDA1721D1E391B00BA01B1 /* XFBaisiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XFBaisiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -346,6 +349,8 @@
 		BDBDA1A71D1E43BA00BA01B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD94A67C1D222B9C00EC5208 /* XFTitleButton.h */,
+				BD94A67D1D222B9C00EC5208 /* XFTitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -751,6 +756,7 @@
 			files = (
 				BD2382E31D20B86B00DE1EB3 /* XFMeSquareButton.m in Sources */,
 				BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */,
+				BD94A67E1D222B9C00EC5208 /* XFTitleButton.m in Sources */,
 				BDBDA1D61D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.m in Sources */,
 				BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */,
 				BD2382F71D21146700DE1EB3 /* XFClearCacheCell.m in Sources */,

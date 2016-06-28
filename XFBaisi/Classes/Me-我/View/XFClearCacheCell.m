@@ -29,8 +29,6 @@
         
         // 子线程计算缓存大小
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-#warning sleep
-            [NSThread sleepForTimeInterval:5.0];
             
             // 获得缓存文件夹路径 (这个是比较耗时的)
             unsigned long long size = XFCustomCacheFile.fileSize;
