@@ -24,14 +24,20 @@
         // 计算时不可点击 cell
         self.userInteractionEnabled = NO;
         
+        // 弱引用 self
+        __weak typeof(self) weakSelf = self;
+        
         // 子线程计算缓存大小
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
+#warning sleep
+            [NSThread sleepForTimeInterval:5.0];
             
-            // 获得缓存文件夹路径
+            // 获得缓存文件夹路径 (这个是比较耗时的)
             unsigned long long size = XFCustomCacheFile.fileSize;
-            //unsigned long long size = @"/Users/zhyks/Desktop/Blog".fileSize;
             size += [SDImageCache sharedImageCache].getSize;
             
+            // 如果cell已经销毁了, 就直接返回
+            if (weakSelf == nil) return;
             
             NSString *sizeText = nil;
             if (size >= pow(10, 9)) {           // size >= 1GB
@@ -48,14 +54,14 @@
             
             // 回到主线程显示文字
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.textLabel.text = text;
-                self.accessoryView = nil;
-                self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                weakSelf.textLabel.text = text;
+                weakSelf.accessoryView = nil;
+                weakSelf.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
                 
                 // 添加手势点击识别
-                [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clearCache)]];
-                
-                self.userInteractionEnabled = YES;
+                [weakSelf addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:weakSelf action:@selector(clearCache)]];
+                // 恢复点击事件
+                weakSelf.userInteractionEnabled = YES;
             });
         });
         
@@ -99,6 +105,14 @@
  */
 - (void)dismissHUD {
     [SVProgressHUD dismiss];
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    // cell 重新出现时，如果还没计算完，继续转圈圈
+    UIActivityIndicatorView *loadingView = (UIActivityIndicatorView *) self.accessoryView;
+    [loadingView startAnimating];
 }
 
 
