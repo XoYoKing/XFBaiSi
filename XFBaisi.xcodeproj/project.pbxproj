@@ -44,6 +44,8 @@
 		BDBDA1D91D1E624F00BA01B1 /* XFRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1D81D1E624F00BA01B1 /* XFRecommendViewController.m */; };
 		BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1DB1D1E64B800BA01B1 /* XFSettingViewController.m */; };
 		BDBDA1E21D1E67B300BA01B1 /* XFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1E11D1E67B300BA01B1 /* XFNavigationController.m */; };
+		BDC0B31C1D240BD70068B2F5 /* XFTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC0B31A1D240BD70068B2F5 /* XFTopicCell.m */; };
+		BDC0B31D1D240BD70068B2F5 /* XFTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC0B31B1D240BD70068B2F5 /* XFTopicCell.xib */; };
 		BDD544BA1D1FBDEC00DD2F9D /* UITextField+XFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD544B91D1FBDEC00DD2F9D /* UITextField+XFExtension.m */; };
 		BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */; };
 		BDE490AB1D1EC8330029E919 /* XFLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE490A91D1EC8330029E919 /* XFLoginRegisterViewController.m */; };
@@ -155,6 +157,9 @@
 		BDBDA1DB1D1E64B800BA01B1 /* XFSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingViewController.m; sourceTree = "<group>"; };
 		BDBDA1E01D1E67B300BA01B1 /* XFNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNavigationController.h; sourceTree = "<group>"; };
 		BDBDA1E11D1E67B300BA01B1 /* XFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNavigationController.m; sourceTree = "<group>"; };
+		BDC0B3191D240BD70068B2F5 /* XFTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTopicCell.h; sourceTree = "<group>"; };
+		BDC0B31A1D240BD70068B2F5 /* XFTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTopicCell.m; sourceTree = "<group>"; };
+		BDC0B31B1D240BD70068B2F5 /* XFTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFTopicCell.xib; sourceTree = "<group>"; };
 		BDD544B81D1FBDEC00DD2F9D /* UITextField+XFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XFExtension.h"; sourceTree = "<group>"; };
 		BDD544B91D1FBDEC00DD2F9D /* UITextField+XFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XFExtension.m"; sourceTree = "<group>"; };
 		BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFFollowViewController.xib; sourceTree = "<group>"; };
@@ -397,6 +402,9 @@
 			children = (
 				BD94A67C1D222B9C00EC5208 /* XFTitleButton.h */,
 				BD94A67D1D222B9C00EC5208 /* XFTitleButton.m */,
+				BDC0B3191D240BD70068B2F5 /* XFTopicCell.h */,
+				BDC0B31A1D240BD70068B2F5 /* XFTopicCell.m */,
+				BDC0B31B1D240BD70068B2F5 /* XFTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -660,6 +668,7 @@
 				BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */,
 				BDE490AC1D1EC8330029E919 /* XFLoginRegisterViewController.xib in Resources */,
 				BD2382EB1D20CB8A00DE1EB3 /* XFWebViewController.xib in Resources */,
+				BDC0B31D1D240BD70068B2F5 /* XFTopicCell.xib in Resources */,
 				BDF7C0CB1D22836800947EAD /* XFDayOrNightCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -819,6 +828,7 @@
 				BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */,
 				BDBDA1BA1D1E447400BA01B1 /* XFFollowViewController.m in Sources */,
 				BD2382EA1D20CB8A00DE1EB3 /* XFWebViewController.m in Sources */,
+				BDC0B31C1D240BD70068B2F5 /* XFTopicCell.m in Sources */,
 				BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */,
 				BD94A6871D223AFA00EC5208 /* XFVoiceViewController.m in Sources */,
 				BDBDA1C01D1E456500BA01B1 /* UIView+XFExtension.m in Sources */,

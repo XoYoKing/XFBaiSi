@@ -27,10 +27,8 @@
 
 
 
-
-#define ME_MORE_URL @"http://api.budejie.com/api/api_open.php"
 #define ME_HOME_URL @"http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json"
-#define ALL_TOPIC_URL @"http://api.budejie.com/api/api_open.php"
+#define XFCommon_URL @"http://api.budejie.com/api/api_open.php"
 
 
 
@@ -45,7 +43,7 @@
 #define XFLog(...)
 #endif
 
-#define XFLogFunc XFLog(@"%s", __func__)
+#define XFLogFunc XFLog(@"%s", __func__);
 
 /*** 颜色 ***/
 #define XFColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]

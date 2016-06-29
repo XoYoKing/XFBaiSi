@@ -8,6 +8,7 @@
 
 #import "XFAllViewController.h"
 #import "XFTopic.h"
+#import "XFTopicCell.h"
 
 @interface XFAllViewController ()
 
@@ -18,8 +19,12 @@
 
 @end
 
+
+static NSString *const XFTopicCellId = @"topic";
+
 @implementation XFAllViewController
 
+#pragma mark - 懒加载
 - (XFHTTPSessionManager *)manager {
     if (!_manager) {
         _manager = [XFHTTPSessionManager manager];
@@ -27,13 +32,24 @@
     return _manager;
 }
 
+#pragma mark - 初始化
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
-    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    [self setupTabelView];
     
     [self setupRefresh];
+}
+
+- (void)setupTabelView {
+    self.tableView.backgroundColor = XFBaseBgColor;
+    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone; // 取消底部分割线
+    self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    self.tableView.rowHeight = 250;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XFTopicCell class]) bundle:nil] forCellReuseIdentifier:XFTopicCellId];
 }
 
 - (void)setupRefresh {
@@ -58,7 +74,7 @@
     params[@"c"] = @"data";
     
     // 请求
-    [self.manager GET:ALL_TOPIC_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
+    [self.manager GET:XFCommon_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
         // 存储maxtime(方便用来加载下一页数据)
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -90,7 +106,7 @@
     params[@"maxtime"] = self.maxtime;
     
     // 请求
-    [self.manager GET:ALL_TOPIC_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
+    [self.manager GET:XFCommon_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
         // 存储maxtime(方便用来加载下一页数据)
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -110,38 +126,50 @@
     }];
 }
 
-
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.topics.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *cellID = @"cell";
+    XFTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:XFTopicCellId];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
-    }
-    
-    XFTopic *topic = self.topics[indexPath.row];
-    cell.textLabel.text = topic.name;
-    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld", (long)topic.ding];
-    cell.detailTextLabel.text = topic.text;
-    
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"comment-bar-keyboard-click"]];
+    cell.topic = self.topics[indexPath.row];
     
     return cell;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    XFLogFunc
+}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //return 200;
+//}
 
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

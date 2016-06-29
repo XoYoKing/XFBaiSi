@@ -44,13 +44,11 @@
  *   获取服务器数据
  */
 - (void)getMoreDate {
-    // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"square";
     params[@"c"] = @"topic";
     
-    // 请求
-    [[XFHTTPSessionManager manager] GET:ME_MORE_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
+    [[XFHTTPSessionManager manager] GET:XFCommon_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
         
         // 字典转模型
         NSArray *squares = [XFMeSquare mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];
@@ -60,7 +58,6 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         XFLog(@"请求失败 - %@", error);
     }];
-    
 }
 
 /**
