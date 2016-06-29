@@ -17,9 +17,12 @@
 #import "XFConst.h"
 #import <AFNetworking.h>
 #import <UIButton+WebCache.h>
+#import <UIImageView+WebCache.h>
 #import <MJExtension.h>
 #import "NSString+XFExtension.h"
 #import <SVProgressHUD.h>
+#import "XFRefreshHeader.h"
+#import "XFRefreshFooter.h"
 
 
 
@@ -27,7 +30,12 @@
 
 #define ME_MORE_URL @"http://api.budejie.com/api/api_open.php"
 #define ME_HOME_URL @"http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json"
+#define ALL_TOPIC_URL @"http://api.budejie.com/api/api_open.php"
 
+
+
+/*** 将服务器返回的数据写入plist ***/
+#define XFWriteToPlist(data, filename) [data writeToFile:[NSString stringWithFormat:@"/Users/zhyks/Desktop/iOS开发/模仿项目和demo/百思不得姐/Plist文件/%@.plist", filename] atomically:YES];
 
 
 /*** 日志 ***/

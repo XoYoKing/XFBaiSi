@@ -22,7 +22,7 @@
 @property (nonatomic, weak) UIView *titleView;                  // 顶部标题栏
 
 @end
-
+ 
 @implementation XFEssenceViewController
 
 - (void)viewDidLoad {
@@ -186,8 +186,6 @@
     
     childVC.view.frame = self.scrollView.bounds;
     [self.scrollView addSubview:childVC.view];
-    
-    XFLogFunc;
 }
 
 #pragma mark - <UIScrollViewDelegate>

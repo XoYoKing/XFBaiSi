@@ -62,15 +62,13 @@
  */
 - (void)setupChildViewController {
     
-    [self setupOneChildViewController:[[XFNavigationController alloc] initWithRootViewController:[[XFMeViewController alloc] init]] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
-    
     [self setupOneChildViewController:[[XFNavigationController alloc] initWithRootViewController:[[XFEssenceViewController alloc] init]] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
     
     [self setupOneChildViewController:[[XFNavigationController alloc] initWithRootViewController:[[XFNewViewController alloc] init]] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
     [self setupOneChildViewController:[[XFNavigationController alloc] initWithRootViewController:[[XFFollowViewController alloc] init]] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
-    //[self setupOneChildViewController:[[XFNavigationController alloc] initWithRootViewController:[[XFMeViewController alloc] init]] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];  
+    [self setupOneChildViewController:[[XFNavigationController alloc] initWithRootViewController:[[XFMeViewController alloc] init]] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];  
 }
 
 /**

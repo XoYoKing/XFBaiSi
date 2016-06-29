@@ -25,6 +25,9 @@
 		BD94A6871D223AFA00EC5208 /* XFVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A6861D223AFA00EC5208 /* XFVoiceViewController.m */; };
 		BD94A68A1D223B1000EC5208 /* XFPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A6891D223B1000EC5208 /* XFPictureViewController.m */; };
 		BD94A68D1D223B2600EC5208 /* XFWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A68C1D223B2600EC5208 /* XFWordViewController.m */; };
+		BDA664351D235ED5004D5967 /* XFTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA664341D235ED5004D5967 /* XFTopic.m */; };
+		BDA664381D237475004D5967 /* XFRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA664371D237475004D5967 /* XFRefreshHeader.m */; };
+		BDA6643B1D237D99004D5967 /* XFRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6643A1D237D99004D5967 /* XFRefreshFooter.m */; };
 		BDBDA1771D1E391B00BA01B1 /* XFBaisiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1761D1E391B00BA01B1 /* XFBaisiTests.m */; };
 		BDBDA1821D1E391B00BA01B1 /* XFBaisiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1811D1E391B00BA01B1 /* XFBaisiUITests.m */; };
 		BDBDA1901D1E39B100BA01B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDBDA18F1D1E39B100BA01B1 /* Assets.xcassets */; };
@@ -110,6 +113,12 @@
 		BD94A6891D223B1000EC5208 /* XFPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFPictureViewController.m; sourceTree = "<group>"; };
 		BD94A68B1D223B2600EC5208 /* XFWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFWordViewController.h; sourceTree = "<group>"; };
 		BD94A68C1D223B2600EC5208 /* XFWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFWordViewController.m; sourceTree = "<group>"; };
+		BDA664331D235ED5004D5967 /* XFTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTopic.h; sourceTree = "<group>"; };
+		BDA664341D235ED5004D5967 /* XFTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTopic.m; sourceTree = "<group>"; };
+		BDA664361D237475004D5967 /* XFRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRefreshHeader.h; sourceTree = "<group>"; };
+		BDA664371D237475004D5967 /* XFRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRefreshHeader.m; sourceTree = "<group>"; };
+		BDA664391D237D99004D5967 /* XFRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRefreshFooter.h; sourceTree = "<group>"; };
+		BDA6643A1D237D99004D5967 /* XFRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRefreshFooter.m; sourceTree = "<group>"; };
 		BDBDA1591D1E391B00BA01B1 /* XFBaisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XFBaisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBDA16D1D1E391B00BA01B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDBDA1721D1E391B00BA01B1 /* XFBaisiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XFBaisiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -372,6 +381,8 @@
 		BDBDA1A61D1E43BA00BA01B1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BDA664331D235ED5004D5967 /* XFTopic.h */,
+				BDA664341D235ED5004D5967 /* XFTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -480,6 +491,10 @@
 				BDE490B11D1ED6690029E919 /* XFQuickLoginBtn.m */,
 				BD660A3E1D1EF19B006E5BC0 /* XFLoginRegisterTextField.h */,
 				BD660A3F1D1EF19B006E5BC0 /* XFLoginRegisterTextField.m */,
+				BDA664361D237475004D5967 /* XFRefreshHeader.h */,
+				BDA664371D237475004D5967 /* XFRefreshHeader.m */,
+				BDA664391D237D99004D5967 /* XFRefreshFooter.h */,
+				BDA6643A1D237D99004D5967 /* XFRefreshFooter.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -807,6 +822,7 @@
 				BD2382F41D2103AB00DE1EB3 /* NSString+XFExtension.m in Sources */,
 				BDF277C71D20A9E9006D1122 /* XFMeSquare.m in Sources */,
 				BD3830F11D201FDB0060CEB0 /* XFConst.m in Sources */,
+				BDA6643B1D237D99004D5967 /* XFRefreshFooter.m in Sources */,
 				BDD544BA1D1FBDEC00DD2F9D /* UITextField+XFExtension.m in Sources */,
 				BDBDA1C81D1E458900BA01B1 /* AppDelegate.m in Sources */,
 				BD94A6811D223ACD00EC5208 /* XFAllViewController.m in Sources */,
@@ -819,8 +835,10 @@
 				BDBDA1B71D1E446900BA01B1 /* XFNewViewController.m in Sources */,
 				BDBDA1BD1D1E447B00BA01B1 /* XFMeViewController.m in Sources */,
 				BDBDA1CC1D1E459400BA01B1 /* main.m in Sources */,
+				BDA664351D235ED5004D5967 /* XFTopic.m in Sources */,
 				BDF7C0C51D227B2D00947EAD /* XFTextFontCell.m in Sources */,
 				BDBDA1B41D1E445700BA01B1 /* XFEssenceViewController.m in Sources */,
+				BDA664381D237475004D5967 /* XFRefreshHeader.m in Sources */,
 				BDE490AB1D1EC8330029E919 /* XFLoginRegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
