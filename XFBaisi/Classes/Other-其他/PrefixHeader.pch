@@ -15,7 +15,7 @@
 #import "UIBarButtonItem+XFExtension.h"
 #import "UITextField+XFExtension.h"
 #import "XFConst.h"
-#import <AFNetworking.h>
+#import "XFHTTPSessionManager.h"
 #import <UIButton+WebCache.h>
 #import <UIImageView+WebCache.h>
 #import <MJExtension.h>

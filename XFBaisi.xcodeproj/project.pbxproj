@@ -28,6 +28,7 @@
 		BDA664351D235ED5004D5967 /* XFTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA664341D235ED5004D5967 /* XFTopic.m */; };
 		BDA664381D237475004D5967 /* XFRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA664371D237475004D5967 /* XFRefreshHeader.m */; };
 		BDA6643B1D237D99004D5967 /* XFRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6643A1D237D99004D5967 /* XFRefreshFooter.m */; };
+		BDA6643E1D239629004D5967 /* XFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6643D1D239629004D5967 /* XFHTTPSessionManager.m */; };
 		BDBDA1771D1E391B00BA01B1 /* XFBaisiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1761D1E391B00BA01B1 /* XFBaisiTests.m */; };
 		BDBDA1821D1E391B00BA01B1 /* XFBaisiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1811D1E391B00BA01B1 /* XFBaisiUITests.m */; };
 		BDBDA1901D1E39B100BA01B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDBDA18F1D1E39B100BA01B1 /* Assets.xcassets */; };
@@ -119,6 +120,8 @@
 		BDA664371D237475004D5967 /* XFRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRefreshHeader.m; sourceTree = "<group>"; };
 		BDA664391D237D99004D5967 /* XFRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRefreshFooter.h; sourceTree = "<group>"; };
 		BDA6643A1D237D99004D5967 /* XFRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRefreshFooter.m; sourceTree = "<group>"; };
+		BDA6643C1D239629004D5967 /* XFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFHTTPSessionManager.h; sourceTree = "<group>"; };
+		BDA6643D1D239629004D5967 /* XFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFHTTPSessionManager.m; sourceTree = "<group>"; };
 		BDBDA1591D1E391B00BA01B1 /* XFBaisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XFBaisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBDA16D1D1E391B00BA01B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDBDA1721D1E391B00BA01B1 /* XFBaisiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XFBaisiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,6 +332,8 @@
 				BDBDA1C71D1E458900BA01B1 /* AppDelegate.m */,
 				BD3830EF1D201FDB0060CEB0 /* XFConst.h */,
 				BD3830F01D201FDB0060CEB0 /* XFConst.m */,
+				BDA6643C1D239629004D5967 /* XFHTTPSessionManager.h */,
+				BDA6643D1D239629004D5967 /* XFHTTPSessionManager.m */,
 				BDBDA1B11D1E43FB00BA01B1 /* Category */,
 				BDBDA1AE1D1E43CE00BA01B1 /* Controller */,
 				BDBDA1B01D1E43CE00BA01B1 /* View */,
@@ -809,6 +814,7 @@
 				BDBDA1D61D1E5AA400BA01B1 /* UIBarButtonItem+XFExtension.m in Sources */,
 				BDF7C0CA1D22836800947EAD /* XFDayOrNightCell.m in Sources */,
 				BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */,
+				BDA6643E1D239629004D5967 /* XFHTTPSessionManager.m in Sources */,
 				BD2382F71D21146700DE1EB3 /* XFClearCacheCell.m in Sources */,
 				BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */,
 				BDBDA1BA1D1E447400BA01B1 /* XFFollowViewController.m in Sources */,

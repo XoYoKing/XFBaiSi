@@ -14,15 +14,15 @@
 @property (nonatomic, strong) NSMutableArray<XFTopic *> *topics;    // 所有帖子数量
 @property (nonatomic, copy) NSString *maxtime;                      // 加载下一页数据
 
-@property (nonatomic, strong) AFHTTPSessionManager *manager;        // 任务管理者
+@property (nonatomic, strong) XFHTTPSessionManager *manager;        // 任务管理者
 
 @end
 
 @implementation XFAllViewController
 
-- (AFHTTPSessionManager *)manager {
+- (XFHTTPSessionManager *)manager {
     if (!_manager) {
-        _manager = [AFHTTPSessionManager manager];
+        _manager = [XFHTTPSessionManager manager];
     }
     return _manager;
 }
@@ -58,8 +58,7 @@
     params[@"c"] = @"data";
     
     // 请求
-    AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
-    [manger GET:ALL_TOPIC_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
+    [self.manager GET:ALL_TOPIC_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
         // 存储maxtime(方便用来加载下一页数据)
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -91,8 +90,7 @@
     params[@"maxtime"] = self.maxtime;
     
     // 请求
-    AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
-    [manger GET:ALL_TOPIC_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
+    [self.manager GET:ALL_TOPIC_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
         // 存储maxtime(方便用来加载下一页数据)
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -132,7 +130,8 @@
     
     XFTopic *topic = self.topics[indexPath.row];
     cell.textLabel.text = topic.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld", (long)topic.ding];
+    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld", (long)topic.ding];
+    cell.detailTextLabel.text = topic.text;
     
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"comment-bar-keyboard-click"]];
     

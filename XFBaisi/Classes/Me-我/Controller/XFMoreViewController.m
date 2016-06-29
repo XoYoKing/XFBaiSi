@@ -50,8 +50,7 @@
     params[@"c"] = @"topic";
     
     // 请求
-    AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
-    [manger GET:ME_MORE_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
+    [[XFHTTPSessionManager manager] GET:ME_MORE_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
         
         // 字典转模型
         NSArray *squares = [XFMeSquare mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];

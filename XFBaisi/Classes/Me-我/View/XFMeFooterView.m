@@ -28,8 +28,7 @@
         //params[@"c"] = @"topic";
         
         // 请求
-        AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
-        [manger GET:ME_HOME_URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
+        [[XFHTTPSessionManager manager] GET:ME_HOME_URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
             XFLog(@" me 页面数据请求成功");
             
             // 字典转模型
