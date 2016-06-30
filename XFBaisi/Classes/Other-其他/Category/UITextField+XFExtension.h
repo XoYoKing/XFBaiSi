@@ -1,15 +1,16 @@
 //
 //  UITextField+XFExtension.h
-//  XFBaisi
+// 
 //
-//  Created by xiaofans on 16/6/26.
+//  Created by xiaofan
 //  Copyright © 2016年 xiaofan. All rights reserved.
+//
 //
 
 #import <UIKit/UIKit.h>
 
 @interface UITextField (XFExtension)
 
-@property (nonatomic, strong) UIColor *placeholderColor;
+@property (nonatomic, strong) UIColor *xf_placeholderColor;
 
 @end

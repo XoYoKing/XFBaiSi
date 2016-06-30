@@ -1,6 +1,5 @@
 //
-//  NSString+XFExtension.h
-//
+//  NSCalendar+XFExtension.h
 //
 //  Created by xiaofan
 //  Copyright © 2016年 xiaofan. All rights reserved.
@@ -8,8 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (XFExtension)
+@interface NSCalendar (XFExtension)
 
-- (unsigned long long)xf_fileSize;
++ (instancetype)xf_calendar;
 
 @end

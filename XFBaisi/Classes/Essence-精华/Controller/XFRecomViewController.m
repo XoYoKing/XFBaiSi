@@ -6,11 +6,11 @@
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
-#import "XFAllViewController.h"
+#import "XFRecomViewController.h"
 #import "XFTopic.h"
 #import "XFTopicCell.h"
 
-@interface XFAllViewController ()
+@interface XFRecomViewController ()
 
 @property (nonatomic, strong) NSMutableArray<XFTopic *> *topics;    // 所有帖子数量
 @property (nonatomic, copy) NSString *maxtime;                      // 加载下一页数据
@@ -22,7 +22,7 @@
 
 static NSString *const XFTopicCellId = @"topic";
 
-@implementation XFAllViewController
+@implementation XFRecomViewController
 
 #pragma mark - 懒加载
 - (XFHTTPSessionManager *)manager {

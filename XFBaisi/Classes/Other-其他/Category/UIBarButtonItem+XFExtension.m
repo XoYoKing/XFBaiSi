@@ -1,8 +1,8 @@
 //
 //  UIBarButtonItem+XFExtension.m
-//  XFBaisi
+//  
 //
-//  Created by xiaofans on 16/6/25.
+//  Created by xiaofan
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @implementation UIBarButtonItem (XFExtension)
 
-+ (instancetype)itemWithImage:(NSString *)image highImage:(NSString *)highImage target:(id)target action:(SEL)action
++ (instancetype)xf_itemWithImage:(NSString *)image highImage:(NSString *)highImage target:(id)target action:(SEL)action
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];

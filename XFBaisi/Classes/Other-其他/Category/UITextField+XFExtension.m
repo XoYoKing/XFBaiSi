@@ -1,8 +1,8 @@
 //
 //  UITextField+XFExtension.m
-//  XFBaisi
 //
-//  Created by xiaofans on 16/6/26.
+//
+//  Created by xiaofan
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
@@ -12,7 +12,7 @@ static NSString * const XFPlaceholderColorKey = @"_placeholderLabel.textColor";
 
 @implementation UITextField (XFExtension)
 
-- (void)setPlaceholderColor:(UIColor *)placeholderColor {
+- (void)setXf_placeholderColor:(UIColor *)xf_placeholderColor {
     
     // 先设置占位文字，可以提前创建placeholderLabel
     NSString *oldPlaceholder = self.placeholder;
@@ -20,16 +20,16 @@ static NSString * const XFPlaceholderColorKey = @"_placeholderLabel.textColor";
     self.placeholder = oldPlaceholder;
     
     // 恢复到默认的占位文字颜色
-    if (placeholderColor == nil) {
-        placeholderColor = [UIColor colorWithRed:0 green:0 blue:0.0980392 alpha:0.22];
+    if (xf_placeholderColor == nil) {
+        xf_placeholderColor = [UIColor colorWithRed:0 green:0 blue:0.0980392 alpha:0.22];
     }
     
     // 设置占位文字颜色
-    [self setValue:placeholderColor forKeyPath:XFPlaceholderColorKey];
+    [self setValue:xf_placeholderColor forKeyPath:XFPlaceholderColorKey];
     
 }
 
-- (UIColor *)placeholderColor
+- (UIColor *)xf_placeholderColor
 {
     return [self valueForKeyPath:XFPlaceholderColorKey];
 }

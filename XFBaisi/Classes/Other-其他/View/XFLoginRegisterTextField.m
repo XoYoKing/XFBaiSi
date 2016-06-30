@@ -21,7 +21,7 @@
     self.tintColor = [UIColor whiteColor];
     
     // 设置默认的占位文字颜色
-    self.placeholderColor = [UIColor grayColor];
+    self.xf_placeholderColor = [UIColor grayColor];
 }
 
 /**
@@ -29,7 +29,7 @@
  */
 - (BOOL)becomeFirstResponder
 {
-    self.placeholderColor = [UIColor whiteColor];
+    self.xf_placeholderColor = [UIColor whiteColor];
     return [super becomeFirstResponder];
 }
 
@@ -38,7 +38,7 @@
  */
 - (BOOL)resignFirstResponder
 {
-    self.placeholderColor = [UIColor grayColor];
+    self.xf_placeholderColor = [UIColor grayColor];
     return [super resignFirstResponder];
 }
 

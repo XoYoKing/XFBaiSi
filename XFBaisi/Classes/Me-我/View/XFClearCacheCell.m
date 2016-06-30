@@ -31,7 +31,7 @@
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             
             // 获得缓存文件夹路径 (这个是比较耗时的)
-            unsigned long long size = XFCustomCacheFile.fileSize;
+            unsigned long long size = XFCustomCacheFile.xf_fileSize;
             size += [SDImageCache sharedImageCache].getSize;
             
             // 如果cell已经销毁了, 就直接返回

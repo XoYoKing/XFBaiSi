@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XFAllViewController : UITableViewController
+@interface XFRecomViewController : UITableViewController
 
 @end

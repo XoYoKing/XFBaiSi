@@ -43,10 +43,10 @@
     self.navigationItem.title = @"我的";
     
     // 右边 - 设置
-    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" target:self action:@selector(settingClick)];
+    UIBarButtonItem *settingItem = [UIBarButtonItem xf_itemWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" target:self action:@selector(settingClick)];
     
     // 右边 - 月亮
-    UIBarButtonItem *moonItem = [UIBarButtonItem itemWithImage:@"mine-moon-icon" highImage:@"mine-moon-icon-click" target:self action:@selector(moonClick)];
+    UIBarButtonItem *moonItem = [UIBarButtonItem xf_itemWithImage:@"mine-moon-icon" highImage:@"mine-moon-icon-click" target:self action:@selector(moonClick)];
     
     self.navigationItem.rightBarButtonItems = @[settingItem, moonItem];
 }

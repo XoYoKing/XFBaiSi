@@ -8,7 +8,7 @@
 
 #import "XFEssenceViewController.h"
 #import "XFTitleButton.h"
-#import "XFAllViewController.h"
+#import "XFRecomViewController.h"
 #import "XFVideoViewController.h"
 #import "XFVoiceViewController.h"
 #import "XFPictureViewController.h"
@@ -42,7 +42,7 @@
 #pragma mark - 初始化
 
 - (void)setupChildViewControllers {
-    XFAllViewController *allView = [[XFAllViewController alloc] init];
+    XFRecomViewController *allView = [[XFRecomViewController alloc] init];
     [self addChildViewController:allView];
     
     XFVideoViewController *videoView = [[XFVideoViewController alloc] init];
@@ -69,7 +69,7 @@
     // 顶部标题
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
     // 左边按钮
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem xf_itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
     
 }
 
@@ -103,7 +103,7 @@
     self.titleView = titleView;
     
     // 添加按钮
-    NSArray *titlesArray = @[@"全部", @"视频", @"声音", @"图片", @"段子"];
+    NSArray *titlesArray = @[@"推荐", @"视频", @"声音", @"图片", @"段子"];
     NSInteger count = titlesArray.count;
     CGFloat titleBtnW = titleView.xf_width / count;
     CGFloat titleBtnH = titleView.xf_height;

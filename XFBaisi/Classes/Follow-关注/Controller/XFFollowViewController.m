@@ -24,7 +24,7 @@
     self.navigationItem.title = @"我的关注";
     
     // 左边
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon-click" target:self action:@selector(followClick)];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem xf_itemWithImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon-click" target:self action:@selector(followClick)];
     
 }
 

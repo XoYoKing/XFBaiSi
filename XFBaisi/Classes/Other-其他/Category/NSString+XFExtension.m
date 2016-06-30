@@ -2,15 +2,16 @@
 //  NSString+XFExtension.m
 //  
 //
-//  Created by xiaofans on 16/6/27.
+//  Created by xiaofan
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
+
 
 #import "NSString+XFExtension.h"
 
 @implementation NSString (XFExtension)
 
-- (unsigned long long)fileSize {
+- (unsigned long long)xf_fileSize {
     unsigned long long size = 0;
     
     NSFileManager *manager = [NSFileManager defaultManager];
