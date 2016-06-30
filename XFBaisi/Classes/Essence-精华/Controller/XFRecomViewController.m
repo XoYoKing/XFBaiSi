@@ -80,6 +80,7 @@ static NSString *const XFTopicCellId = @"topic";
         
         // 字典转模型
         self.topics  = [XFTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
         // 刷新表格
         [self.tableView reloadData];
         
@@ -111,8 +112,16 @@ static NSString *const XFTopicCellId = @"topic";
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
         // 字典转模型
-        NSArray *moreTopics  = [XFTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        NSArray<XFTopic *> *moreTopics  = [XFTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.topics addObjectsFromArray:moreTopics];
+        
+        // 查找最热评论代码
+        //XFWriteToPlist(responseObject, @"dddd_topics");
+        //for (NSUInteger i = 0; i < moreTopics.count; i++) {
+            //if (moreTopics[i].top_cmt.count) {
+                //XFLog(@"xiala= %zd", i);
+            //}
+        //}
         
         // 刷新表格
         [self.tableView reloadData];

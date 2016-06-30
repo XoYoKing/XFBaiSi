@@ -46,6 +46,20 @@
     [self setupButton:self.caiButton number:topic.cai placeholder:@"踩"];
     [self setupButton:self.repostButton number:topic.repost placeholder:@"分享"];
     [self setupButton:self.commentButton number:topic.comment placeholder:@"评论"];
+    
+    // 判断是否显示最热评论
+    if (topic.top_cmt.count) {          // 有
+        self.topCmtView.hidden = NO;
+        
+        NSDictionary *comment = topic.top_cmt.firstObject;
+        NSString *username = comment[@"user"][@"username"];
+        NSString *content = comment[@"content"];
+        
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@: %@", username, content];
+        
+    } else {                            // 没有
+        self.topCmtView.hidden = YES;
+    }
 }
 
 /**

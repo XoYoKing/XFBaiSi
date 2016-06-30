@@ -19,4 +19,6 @@
 @property (nonatomic, assign) NSInteger repost;             // 转发\分享数量
 @property (nonatomic, assign) NSInteger comment;            // 评论数量
 
+@property (nonatomic, strong) NSArray *top_cmt;             // 最热评论
+
 @end
