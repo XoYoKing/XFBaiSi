@@ -7,6 +7,7 @@
 //
 
 #import "XFTopic.h"
+#import "XFComment.h"
 
 
 

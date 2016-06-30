@@ -47,7 +47,6 @@ static NSString *const XFTopicCellId = @"topic";
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone; // 取消底部分割线
     self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
-    self.tableView.rowHeight = 250;
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XFTopicCell class]) bundle:nil] forCellReuseIdentifier:XFTopicCellId];
 }
@@ -72,6 +71,7 @@ static NSString *const XFTopicCellId = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
+    params[@"type"] = @"1";
     
     // 请求
     [self.manager GET:XFCommon_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
@@ -94,7 +94,7 @@ static NSString *const XFTopicCellId = @"topic";
 }
 
 /**
- *  加载更多数据
+ *  加载更多数据 
  */
 -(void)loadMoreTopics {
     // 取消所有请求
@@ -105,6 +105,7 @@ static NSString *const XFTopicCellId = @"topic";
     params[@"a"] = @"list";
     params[@"c"] = @"data";
     params[@"maxtime"] = self.maxtime;
+    params[@"type"] = @"1";
     
     // 请求
     [self.manager GET:XFCommon_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
@@ -114,14 +115,6 @@ static NSString *const XFTopicCellId = @"topic";
         // 字典转模型
         NSArray<XFTopic *> *moreTopics  = [XFTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.topics addObjectsFromArray:moreTopics];
-        
-        // 查找最热评论代码
-        //XFWriteToPlist(responseObject, @"dddd_topics");
-        //for (NSUInteger i = 0; i < moreTopics.count; i++) {
-            //if (moreTopics[i].top_cmt.count) {
-                //XFLog(@"xiala= %zd", i);
-            //}
-        //}
         
         // 刷新表格
         [self.tableView reloadData];
@@ -153,9 +146,10 @@ static NSString *const XFTopicCellId = @"topic";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     XFLogFunc
 }
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //return 200;
-//}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 250;
+}
 
 
 @end

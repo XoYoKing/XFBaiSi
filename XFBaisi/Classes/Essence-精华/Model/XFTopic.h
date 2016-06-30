@@ -8,6 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
+@class XFComment;
+
+/**
+ *  枚举 cell 中间内容类型
+ */
+typedef NS_ENUM(NSUInteger, XFTopicType) {
+    /** 图片 */
+    XFTopicTypePicture = 10,
+    /** 段子 */
+    XFTopicTypeWord = 29,
+    /** 音频 */
+    XFTopicTypeVoice = 31,
+    /** 视频 */
+    XFTopicTypeVideo = 41,
+};
+
 @interface XFTopic : NSObject
 
 @property (nonatomic, copy)   NSString  *name;              // 用户的名字
@@ -19,6 +35,8 @@
 @property (nonatomic, assign) NSInteger repost;             // 转发\分享数量
 @property (nonatomic, assign) NSInteger comment;            // 评论数量
 
-@property (nonatomic, strong) NSArray *top_cmt;             // 最热评论
+@property (nonatomic, strong) XFComment *top_cmt;           // 最热评论
+
+@property (nonatomic, assign) XFTopicType type;             // 帖子类型
 
 @end

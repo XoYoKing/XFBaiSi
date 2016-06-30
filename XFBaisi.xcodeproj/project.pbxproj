@@ -14,6 +14,9 @@
 		BD0A079B1D24D273004E9478 /* NSString+XFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0A079A1D24D273004E9478 /* NSString+XFExtension.m */; };
 		BD0A07A01D24D2BC004E9478 /* NSCalendar+XFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0A079D1D24D2BC004E9478 /* NSCalendar+XFExtension.m */; };
 		BD0A07A11D24D2BC004E9478 /* NSDate+XFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0A079F1D24D2BC004E9478 /* NSDate+XFExtension.m */; };
+		BD0A07A51D24E2DE004E9478 /* XFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0A07A41D24E2DE004E9478 /* XFUser.m */; };
+		BD0A07A81D24E307004E9478 /* XFComment.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0A07A71D24E307004E9478 /* XFComment.m */; };
+		BD0A07AB1D250BA6004E9478 /* XFModelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0A07AA1D250BA6004E9478 /* XFModelConfig.m */; };
 		BD2382E31D20B86B00DE1EB3 /* XFMeSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382E21D20B86A00DE1EB3 /* XFMeSquareButton.m */; };
 		BD2382EA1D20CB8A00DE1EB3 /* XFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382E81D20CB8A00DE1EB3 /* XFWebViewController.m */; };
 		BD2382EB1D20CB8A00DE1EB3 /* XFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2382E91D20CB8A00DE1EB3 /* XFWebViewController.xib */; };
@@ -97,6 +100,12 @@
 		BD0A079D1D24D2BC004E9478 /* NSCalendar+XFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+XFExtension.m"; sourceTree = "<group>"; };
 		BD0A079E1D24D2BC004E9478 /* NSDate+XFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+XFExtension.h"; sourceTree = "<group>"; };
 		BD0A079F1D24D2BC004E9478 /* NSDate+XFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+XFExtension.m"; sourceTree = "<group>"; };
+		BD0A07A31D24E2DE004E9478 /* XFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUser.h; sourceTree = "<group>"; };
+		BD0A07A41D24E2DE004E9478 /* XFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFUser.m; sourceTree = "<group>"; };
+		BD0A07A61D24E307004E9478 /* XFComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComment.h; sourceTree = "<group>"; };
+		BD0A07A71D24E307004E9478 /* XFComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFComment.m; sourceTree = "<group>"; };
+		BD0A07A91D250BA6004E9478 /* XFModelConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFModelConfig.h; sourceTree = "<group>"; };
+		BD0A07AA1D250BA6004E9478 /* XFModelConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFModelConfig.m; sourceTree = "<group>"; };
 		BD2382E11D20B86A00DE1EB3 /* XFMeSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeSquareButton.h; sourceTree = "<group>"; };
 		BD2382E21D20B86A00DE1EB3 /* XFMeSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeSquareButton.m; sourceTree = "<group>"; };
 		BD2382E71D20CB8A00DE1EB3 /* XFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFWebViewController.h; sourceTree = "<group>"; };
@@ -216,13 +225,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BD3830F81D202B460060CEB0 /* YKTools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = YKTools;
-			sourceTree = "<group>";
-		};
 		BDBDA1501D1E391B00BA01B1 = {
 			isa = PBXGroup;
 			children = (
@@ -336,7 +338,6 @@
 		BDBDA1A11D1E438000BA01B1 /* Other-其他 */ = {
 			isa = PBXGroup;
 			children = (
-				BD3830F81D202B460060CEB0 /* YKTools */,
 				BDBDA1CB1D1E459400BA01B1 /* PrefixHeader.pch */,
 				BDBDA1CA1D1E459400BA01B1 /* main.m */,
 				BDBDA1C91D1E459400BA01B1 /* AppDelegate.h */,
@@ -345,6 +346,8 @@
 				BD3830F01D201FDB0060CEB0 /* XFConst.m */,
 				BDA6643C1D239629004D5967 /* XFHTTPSessionManager.h */,
 				BDA6643D1D239629004D5967 /* XFHTTPSessionManager.m */,
+				BD0A07A91D250BA6004E9478 /* XFModelConfig.h */,
+				BD0A07AA1D250BA6004E9478 /* XFModelConfig.m */,
 				BDBDA1B11D1E43FB00BA01B1 /* Category */,
 				BDBDA1AE1D1E43CE00BA01B1 /* Controller */,
 				BDBDA1B01D1E43CE00BA01B1 /* View */,
@@ -399,6 +402,10 @@
 			children = (
 				BDA664331D235ED5004D5967 /* XFTopic.h */,
 				BDA664341D235ED5004D5967 /* XFTopic.m */,
+				BD0A07A31D24E2DE004E9478 /* XFUser.h */,
+				BD0A07A41D24E2DE004E9478 /* XFUser.m */,
+				BD0A07A61D24E307004E9478 /* XFComment.h */,
+				BD0A07A71D24E307004E9478 /* XFComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -831,11 +838,13 @@
 				BD0A07981D24D23A004E9478 /* UITextField+XFExtension.m in Sources */,
 				BD2382E31D20B86B00DE1EB3 /* XFMeSquareButton.m in Sources */,
 				BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */,
+				BD0A07A51D24E2DE004E9478 /* XFUser.m in Sources */,
 				BD94A67E1D222B9C00EC5208 /* XFTitleButton.m in Sources */,
 				BDF7C0CA1D22836800947EAD /* XFDayOrNightCell.m in Sources */,
 				BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */,
 				BDA6643E1D239629004D5967 /* XFHTTPSessionManager.m in Sources */,
 				BD2382F71D21146700DE1EB3 /* XFClearCacheCell.m in Sources */,
+				BD0A07A81D24E307004E9478 /* XFComment.m in Sources */,
 				BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */,
 				BDBDA1BA1D1E447400BA01B1 /* XFFollowViewController.m in Sources */,
 				BD2382EA1D20CB8A00DE1EB3 /* XFWebViewController.m in Sources */,
@@ -864,6 +873,7 @@
 				BDA664351D235ED5004D5967 /* XFTopic.m in Sources */,
 				BDF7C0C51D227B2D00947EAD /* XFTextFontCell.m in Sources */,
 				BD0A07A11D24D2BC004E9478 /* NSDate+XFExtension.m in Sources */,
+				BD0A07AB1D250BA6004E9478 /* XFModelConfig.m in Sources */,
 				BD0A07A01D24D2BC004E9478 /* NSCalendar+XFExtension.m in Sources */,
 				BDBDA1B41D1E445700BA01B1 /* XFEssenceViewController.m in Sources */,
 				BDA664381D237475004D5967 /* XFRefreshHeader.m in Sources */,

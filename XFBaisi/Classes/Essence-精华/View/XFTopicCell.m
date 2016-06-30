@@ -8,20 +8,22 @@
 
 #import "XFTopicCell.h"
 #import "XFTopic.h"
+#import "XFComment.h"
+#import "XFUser.h"
 
 
 @interface XFTopicCell ()
 
-@property (nonatomic, weak) IBOutlet UIImageView *profileImageView; // 头像
+@property (nonatomic, weak) IBOutlet UIImageView *profileImageView;  // 头像
 
-@property (nonatomic, weak) IBOutlet UILabel     *nameLabel;        // 名字
-@property (nonatomic, weak) IBOutlet UILabel     *createdAtLabel;   // 审核通过时间
-@property (nonatomic, weak) IBOutlet UILabel     *text_label;       // 内容文字
+@property (nonatomic, weak) IBOutlet UILabel     *nameLabel;         // 名字
+@property (nonatomic, weak) IBOutlet UILabel     *createdAtLabel;    // 审核通过时间
+@property (nonatomic, weak) IBOutlet UILabel     *text_label;        // 内容文字
 
-@property (nonatomic, weak) IBOutlet UIButton    *dingButton;       // 顶 按钮
-@property (nonatomic, weak) IBOutlet UIButton    *caiButton;        // 踩 按钮
-@property (nonatomic, weak) IBOutlet UIButton    *repostButton;     // 转发/分享 按钮
-@property (nonatomic, weak) IBOutlet UIButton    *commentButton;    // 评论按钮
+@property (nonatomic, weak) IBOutlet UIButton    *dingButton;        // 顶 按钮
+@property (nonatomic, weak) IBOutlet UIButton    *caiButton;         // 踩 按钮
+@property (nonatomic, weak) IBOutlet UIButton    *repostButton;      // 转发/分享 按钮
+@property (nonatomic, weak) IBOutlet UIButton    *commentButton;     // 评论按钮
 
 @property (nonatomic, weak) IBOutlet UIView      *topCmtView;        // 最热评论整体 view
 @property (nonatomic, weak) IBOutlet UILabel     *topCmtContentLabel;// 最热评论内容
@@ -29,6 +31,8 @@
 @end
 
 @implementation XFTopicCell
+
+#pragma mark - XFTopicCell
 
 - (void)awakeFromNib {
     self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
@@ -47,19 +51,44 @@
     [self setupButton:self.repostButton number:topic.repost placeholder:@"分享"];
     [self setupButton:self.commentButton number:topic.comment placeholder:@"评论"];
     
-    // 判断是否显示最热评论
-    if (topic.top_cmt.count) {          // 有
+#pragma mark - 是否显示最热评论
+    if (topic.top_cmt) {    // 有
         self.topCmtView.hidden = NO;
         
-        NSDictionary *comment = topic.top_cmt.firstObject;
-        NSString *username = comment[@"user"][@"username"];
-        NSString *content = comment[@"content"];
+        NSString *username = topic.top_cmt.user.username;
+        NSString *content = topic.top_cmt.content;
         
         self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@: %@", username, content];
         
-    } else {                            // 没有
+    } else {                // 没有
         self.topCmtView.hidden = YES;
     }
+    
+#pragma mark - 处理 cell 中间的内容
+    switch (topic.type) {
+        case XFTopicTypePicture:    // 图片
+        {
+            
+        }
+            break;
+        case XFTopicTypeWord:       // 段子
+        {
+            
+        }
+            break;
+        case XFTopicTypeVoice:      // 音频
+        {
+            
+        }
+            break;
+        case XFTopicTypeVideo:      // 视频
+        {
+            
+        }
+            break;
+    }
+    
+    
 }
 
 /**
