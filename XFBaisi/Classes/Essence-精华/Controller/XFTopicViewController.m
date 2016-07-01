@@ -79,17 +79,28 @@ static NSString *const XFTopicCellId = @"topic";
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
     /*
-     推荐：ttp://s.budejie.com/topic/list/ jingxuan/1/bs0315-iphone-4.2/0-20.json
-     视频：ttp://s.budejie.com/topic/list/ jingxuan/41/bs0315-iphone-4.2/0-20.json
-     图片：ttp://s.budejie.com/topic/list/ jingxuan/10/bs0315-iphone-4.2/0-20.json
-     排行：ttp://s.budejie.com/topic/list/ remen/1/bs0315-iphone-4.2/0-20.json
+     推荐：ttp://s.budejie.com/topic/  list/       jingxuan/   1     /bs0315-iphone-4.2/  0   -20.json
+     视频：ttp://s.budejie.com/topic/  list/       jingxuan/   41    /bs0315-iphone-4.2/  0   -20.json
+     图片：ttp://s.budejie.com/topic/  list/       jingxuan/   10    /bs0315-iphone-4.2/  0   -20.json
      
+     排行：ttp://s.budejie.com/topic/  list/       remen/      1     /bs0315-iphone-4.2/  0   -20.json
      
-     段子：ttp://s.budejie.com/topic/ tag-topic/ 64/hot/bs0315-iphone-4.2/0-20.json
-     网红：ttp://s.budejie.com/topic/ tag-topic/ 3096/hot/bs0315-iphone-4.2/0-20.json
+     段子：ttp://s.budejie.com/topic/  tag-topic/  64/         hot   /bs0315-iphone-4.2/  0   -20.json
+     网红：ttp://s.budejie.com/topic/  tag-topic/  3096/       hot   /bs0315-iphone-4.2/  0   -20.json
+     社会：ttp://s.budejie.com/topic/  tag-topic/  473/        hot   /bs0315-iphone-4.2/  0   -20.json
+     美女：ttp://s.budejie.com/topic/  tag-topic/  117/        hot   /bs0315-iphone-4.2/  0   -20.json
+     冷识：ttp://s.budejie.com/topic/  tag-topic/  3176/       hot   /bs0315-iphone-4.2/  0   -20.json
+    
      
      最新
-     全部：ttp://s.budejie.com/topic/list/zuixin/1/bs0315-iphone-4.2/0-20.json
+     全部：ttp://s.budejie.com/topic/  list/       zuixin/     1     /bs0315-iphone-4.2/  0   -20.json
+     视频：ttp://s.budejie.com/topic/  list/       zuixin/    41     /bs0315-iphone-4.2/  0   -20.json
+     图片：ttp://s.budejie.com/topic/  list/       zuixin/    10     /bs0315-iphone-4.2/  0   -20.json
+     段子：ttp://s.budejie.com/topic/  list/       zuixin/    29     /bs0315-iphone-4.2/  0   -20.json
+     
+     网红：ttp://s.budejie.com/topic/  tag-topic/  3096/      new    /bs0315-iphone-4.2/  0   -20.json
+     美女：ttp://s.budejie.com/topic/  tag-topic/  117/       new    /bs0315-iphone-4.2/  0   -20.json
+     冷识：
      */
     
     // 参数
