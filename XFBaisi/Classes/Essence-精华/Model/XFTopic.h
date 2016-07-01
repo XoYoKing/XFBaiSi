@@ -14,6 +14,8 @@
  *  枚举 cell 中间内容类型
  */
 typedef NS_ENUM(NSUInteger, XFTopicType) {
+    /** 推荐 */
+    XFTopicTypeRecom = 1,
     /** 图片 */
     XFTopicTypePicture = 10,
     /** 段子 */

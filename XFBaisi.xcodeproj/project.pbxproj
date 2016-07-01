@@ -36,6 +36,7 @@
 		BD9D04221D25FFC900692F89 /* XFTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD9D04211D25FFC900692F89 /* XFTopicPictureView.xib */; };
 		BD9D04291D26028900692F89 /* XFTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9D04281D26028900692F89 /* XFTopicVideoView.m */; };
 		BD9D042B1D26029200692F89 /* XFTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD9D042A1D26029200692F89 /* XFTopicVideoView.xib */; };
+		BD9D04331D265D8900692F89 /* XFTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9D04321D265D8900692F89 /* XFTopicViewController.m */; };
 		BDA664351D235ED5004D5967 /* XFTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA664341D235ED5004D5967 /* XFTopic.m */; };
 		BDA664381D237475004D5967 /* XFRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA664371D237475004D5967 /* XFRefreshHeader.m */; };
 		BDA6643B1D237D99004D5967 /* XFRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6643A1D237D99004D5967 /* XFRefreshFooter.m */; };
@@ -145,6 +146,8 @@
 		BD9D04271D26028900692F89 /* XFTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTopicVideoView.h; sourceTree = "<group>"; };
 		BD9D04281D26028900692F89 /* XFTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTopicVideoView.m; sourceTree = "<group>"; };
 		BD9D042A1D26029200692F89 /* XFTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFTopicVideoView.xib; sourceTree = "<group>"; };
+		BD9D04311D265D8900692F89 /* XFTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTopicViewController.h; sourceTree = "<group>"; };
+		BD9D04321D265D8900692F89 /* XFTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTopicViewController.m; sourceTree = "<group>"; };
 		BDA664331D235ED5004D5967 /* XFTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTopic.h; sourceTree = "<group>"; };
 		BDA664341D235ED5004D5967 /* XFTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTopic.m; sourceTree = "<group>"; };
 		BDA664361D237475004D5967 /* XFRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRefreshHeader.h; sourceTree = "<group>"; };
@@ -403,6 +406,8 @@
 				BD94A68C1D223B2600EC5208 /* XFWordViewController.m */,
 				BD94A6851D223AFA00EC5208 /* XFWangHotViewController.h */,
 				BD94A6861D223AFA00EC5208 /* XFWangHotViewController.m */,
+				BD9D04311D265D8900692F89 /* XFTopicViewController.h */,
+				BD9D04321D265D8900692F89 /* XFTopicViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -855,6 +860,7 @@
 				BD0A07951D24D1DD004E9478 /* UIBarButtonItem+XFExtension.m in Sources */,
 				BD0A07981D24D23A004E9478 /* UITextField+XFExtension.m in Sources */,
 				BD2382E31D20B86B00DE1EB3 /* XFMeSquareButton.m in Sources */,
+				BD9D04331D265D8900692F89 /* XFTopicViewController.m in Sources */,
 				BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */,
 				BD0A07A51D24E2DE004E9478 /* XFUser.m in Sources */,
 				BD94A67E1D222B9C00EC5208 /* XFTitleButton.m in Sources */,

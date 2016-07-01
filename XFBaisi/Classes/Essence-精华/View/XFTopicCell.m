@@ -93,34 +93,21 @@
     }
     
 #pragma mark - 处理 cell 中间的内容
-    switch (topic.type) {
-        case XFTopicTypePicture:    // 图片
-        {
-            self.pictureView.hidden = NO;
-            self.videoView.hidden   = YES;
-            
-            self.pictureView.frame = topic.contentFrame;
-            self.pictureView.topic = topic;
-        }
-            break;
-        case XFTopicTypeWord:       // 段子
-        {
-            self.pictureView.hidden = YES;
-            self.videoView.hidden   = YES;
-        }
-            break;
-        case XFTopicTypeVideo:      // 视频
-        {
-            self.videoView.hidden   = NO;
-            self.pictureView.hidden = YES;
-            
-            self.videoView.frame = topic.contentFrame;
-            self.videoView.topic = topic;
-        }
-            break;
+    
+    if (topic.type == XFTopicTypePicture) {         // 图片
+        self.pictureView.hidden = NO;
+        self.videoView.hidden   = YES;
+        self.pictureView.frame = topic.contentFrame;
+        self.pictureView.topic = topic;
+    } else if (topic.type == XFTopicTypeWord) {     // 段子
+        self.pictureView.hidden = YES;
+        self.videoView.hidden   = YES;
+    } else if (topic.type == XFTopicTypeVideo) {    // 视频
+        self.videoView.hidden   = NO;
+        self.pictureView.hidden = YES;
+        self.videoView.frame = topic.contentFrame;
+        self.videoView.topic = topic;
     }
-    
-    
 }
 
 /**
