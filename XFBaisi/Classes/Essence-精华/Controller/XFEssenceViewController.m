@@ -13,6 +13,11 @@
 #import "XFWangHotViewController.h"
 #import "XFPictureViewController.h"
 #import "XFWordViewController.h"
+#import "XFPaiHangViewController.h"
+#import "XFSheHuiViewController.h"
+#import "XFBeautyViewController.h"
+#import "XFLengMenViewController.h"
+#import "XFGameViewController.h"
 
 @interface XFEssenceViewController () <UIScrollViewDelegate>
 
@@ -61,7 +66,20 @@
     XFWangHotViewController *wangHotView = [[XFWangHotViewController alloc] init];
     [self addChildViewController:wangHotView];
     
+    XFPaiHangViewController *paiHangView = [[XFPaiHangViewController alloc] init];
+    [self addChildViewController:paiHangView];
     
+    XFSheHuiViewController *sheHuiView = [[XFSheHuiViewController alloc] init];
+    [self addChildViewController:sheHuiView];
+    
+    XFBeautyViewController *beautView = [[XFBeautyViewController alloc] init];
+    [self addChildViewController:beautView];
+    
+    XFLengMenViewController *lengMenView = [[XFLengMenViewController alloc] init];
+    [self addChildViewController:lengMenView];
+    
+    XFGameViewController *gameView = [[XFGameViewController alloc] init];
+    [self addChildViewController:gameView];
 }
 
 /**
@@ -74,7 +92,7 @@
     // 顶部标题
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
     // 左边按钮
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem xf_itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem xf_itemWithImage:@"nav_btn" highImage:@"nav_btn_click" target:self action:@selector(tagClick)];
     
 }
 
@@ -93,6 +111,7 @@
     scrollView.frame = self.view.bounds;
     scrollView.contentSize = CGSizeMake(self.childViewControllers.count * scrollView.xf_width, 0);
     scrollView.delegate = self;
+    scrollView.scrollEnabled = NO;
     [self.view addSubview:scrollView];
     self.scrollView = scrollView;
 }
@@ -101,30 +120,23 @@
  *  创建 顶部标题栏
  */
 - (void)setupTitleView {
-    UIView *titleView = [[UIView alloc] init];
-    titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
-    titleView.frame = CGRectMake(0, 64, self.view.xf_width, 35);
-    [self.view addSubview:titleView];
-    self.titleView = titleView;
     
     UIScrollView *titleSView = [[UIScrollView alloc] init];
-    titleSView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
+    titleSView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"]];
     titleSView.frame = CGRectMake(0, 64, self.view.xf_width, 35);
     [self.view addSubview:titleSView];
     self.titleSView = titleSView;
     
-    
-    
     // 添加按钮
     NSArray *titlesArray = @[@"推荐", @"视频", @"图片", @"段子", @"网红", @"排行", @"社会", @"美女", @"冷知识", @"游戏"];
     NSInteger count = titlesArray.count;
-    CGFloat titleBtnW = titleView.xf_width / count;
-    CGFloat titleBtnH = titleView.xf_height;
+    CGFloat titleBtnW = 55;
+    CGFloat titleBtnH = titleSView.xf_height;
     
     for (NSUInteger i = 0; i < count; i++) {
         XFTitleButton *titleBtn = [XFTitleButton buttonWithType:UIButtonTypeCustom];
         [titleBtn addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
-        [titleView addSubview:titleBtn];
+        [titleSView addSubview:titleBtn];
         titleBtn.tag = i;
         
         // 设置数据
@@ -135,14 +147,14 @@
     }
     
     // 按钮的选中颜色
-    XFTitleButton *firstTitleButton = titleView.subviews.firstObject;
+    XFTitleButton *firstTitleButton = titleSView.subviews.firstObject;
     
     // 底部选中指示器
     UIView *indicatorView = [[UIView alloc] init];
     indicatorView.backgroundColor = [firstTitleButton titleColorForState:UIControlStateSelected];
     indicatorView.xf_height = 1;
-    indicatorView.xf_y = titleView.xf_height - indicatorView.xf_height;
-    [titleView addSubview:indicatorView];
+    indicatorView.xf_y = titleSView.xf_height - indicatorView.xf_height;
+    [titleSView addSubview:indicatorView];
     self.indicatorView = indicatorView;
     
     // 立即根据文字内容计算 label 的宽度
@@ -154,6 +166,9 @@
     firstTitleButton.selected = YES;
     self.selectedTitleBtn = firstTitleButton;
     
+    titleSView.contentSize = CGSizeMake(count * titleBtnW, titleSView.xf_height);
+    titleSView.showsHorizontalScrollIndicator = NO;
+    titleSView.showsVerticalScrollIndicator = NO;
 }
 
 #pragma mark - 监听按钮点击
@@ -209,21 +224,6 @@
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
     [self addChildVcView];
 }
-
-/**
- *  人为拖动滚动结束方法调用
- */
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    // 选中对应按钮
-    NSUInteger index = scrollView.contentOffset.x / scrollView.xf_width;
-    XFTitleButton *titleBtn = self.titleView.subviews[index];
-    [self titleClick:titleBtn];
-    
-    // 添加子控制器 view
-    [self addChildVcView];
-}
-
-
 
 @end
 
