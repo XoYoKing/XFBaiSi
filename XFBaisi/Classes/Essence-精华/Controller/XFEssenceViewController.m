@@ -21,6 +21,10 @@
 @property (nonatomic, weak) UIScrollView *scrollView;           // 滚动视图
 @property (nonatomic, weak) UIView *titleView;                  // 顶部标题栏
 
+/** 滚动 */
+@property (nonatomic, weak) UIScrollView *titleSView;
+
+
 @end
  
 @implementation XFEssenceViewController
@@ -103,8 +107,16 @@
     [self.view addSubview:titleView];
     self.titleView = titleView;
     
+    UIScrollView *titleSView = [[UIScrollView alloc] init];
+    titleSView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
+    titleSView.frame = CGRectMake(0, 64, self.view.xf_width, 35);
+    [self.view addSubview:titleSView];
+    self.titleSView = titleSView;
+    
+    
+    
     // 添加按钮
-    NSArray *titlesArray = @[@"推荐", @"视频", @"图片", @"段子", @"网红"];
+    NSArray *titlesArray = @[@"推荐", @"视频", @"图片", @"段子", @"网红", @"排行", @"社会", @"美女", @"冷知识", @"游戏"];
     NSInteger count = titlesArray.count;
     CGFloat titleBtnW = titleView.xf_width / count;
     CGFloat titleBtnH = titleView.xf_height;

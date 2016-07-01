@@ -78,11 +78,29 @@ static NSString *const XFTopicCellId = @"topic";
     // 取消所有请求
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
+    /*
+     推荐：ttp://s.budejie.com/topic/list/ jingxuan/1/bs0315-iphone-4.2/0-20.json
+     视频：ttp://s.budejie.com/topic/list/ jingxuan/41/bs0315-iphone-4.2/0-20.json
+     图片：ttp://s.budejie.com/topic/list/ jingxuan/10/bs0315-iphone-4.2/0-20.json
+     排行：ttp://s.budejie.com/topic/list/ remen/1/bs0315-iphone-4.2/0-20.json
+     
+     
+     段子：ttp://s.budejie.com/topic/ tag-topic/ 64/hot/bs0315-iphone-4.2/0-20.json
+     网红：ttp://s.budejie.com/topic/ tag-topic/ 3096/hot/bs0315-iphone-4.2/0-20.json
+     
+     最新
+     全部：ttp://s.budejie.com/topic/list/zuixin/1/bs0315-iphone-4.2/0-20.json
+     */
+    
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
+    
+    
+    
+    //NSString *url = [NSString stringWithFormat:@"http://s.budejie.com/topic/list/jingxuan/1/bs0315-iphone-4.2/0-20.json"];
     
     // 请求
     [self.manager GET:XFCommon_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {

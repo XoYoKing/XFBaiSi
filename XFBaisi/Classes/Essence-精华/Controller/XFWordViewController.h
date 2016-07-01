@@ -6,8 +6,8 @@
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
-#import "XFTopicViewController.h"
+#import <UIKit/UIKit.h>   
 
-@interface XFWordViewController : XFTopicViewController
+@interface XFWordViewController : UITableViewController
 
 @end

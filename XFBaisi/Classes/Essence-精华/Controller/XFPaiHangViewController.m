@@ -1,18 +1,18 @@
 //
-//  XFWordViewController.m
+//  XFPaiHangViewController.m
 //  XFBaisi
 //
-//  Created by xiaofans on 16/6/28.
+//  Created by xiaofans on 16/7/1.
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
-#import "XFWordViewController.h"
+#import "XFPaiHangViewController.h"
 
-@interface XFWordViewController ()
+@interface XFPaiHangViewController ()
 
 @end
 
-@implementation XFWordViewController
+@implementation XFPaiHangViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);

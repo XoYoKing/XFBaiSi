@@ -1,18 +1,18 @@
 //
-//  XFWordViewController.m
+//  XFGameViewController.m
 //  XFBaisi
 //
-//  Created by xiaofans on 16/6/28.
+//  Created by xiaofans on 16/7/1.
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
-#import "XFWordViewController.h"
+#import "XFGameViewController.h"
 
-@interface XFWordViewController ()
+@interface XFGameViewController ()
 
 @end
 
-@implementation XFWordViewController
+@implementation XFGameViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);

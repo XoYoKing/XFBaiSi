@@ -1,18 +1,18 @@
 //
-//  XFWordViewController.m
+//  XFBeautyViewController.m
 //  XFBaisi
 //
-//  Created by xiaofans on 16/6/28.
+//  Created by xiaofans on 16/7/1.
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
-#import "XFWordViewController.h"
+#import "XFBeautyViewController.h"
 
-@interface XFWordViewController ()
+@interface XFBeautyViewController ()
 
 @end
 
-@implementation XFWordViewController
+@implementation XFBeautyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);

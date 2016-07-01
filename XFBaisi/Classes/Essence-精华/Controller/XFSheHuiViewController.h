@@ -1,5 +1,5 @@
 //
-//  XFTopicViewController.h
+//  XFSheHuiViewController.h
 //  XFBaisi
 //
 //  Created by xiaofans on 16/7/1.
@@ -7,12 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XFTopic.h"
 
-@interface XFTopicViewController : UITableViewController
-
-- (XFTopicType)type;
+@interface XFSheHuiViewController : UITableViewController
 
 @end
-
-
