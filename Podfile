@@ -10,6 +10,7 @@ pod 'MJExtension'
 pod 'SDWebImage'
 pod 'SVProgressHUD'
 pod 'MJRefresh'
+pod 'DACircularProgress'
 
 end
 

@@ -101,4 +101,11 @@
 {
     self.xf_y = xf_bottom - self.xf_height;
 }
+
++ (instancetype)xf_viewFromXib {
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self)
+                                         owner:nil
+                                       options:nil].lastObject;
+}
+
 @end

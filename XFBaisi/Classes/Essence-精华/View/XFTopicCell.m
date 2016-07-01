@@ -10,6 +10,8 @@
 #import "XFTopic.h"
 #import "XFComment.h"
 #import "XFUser.h"
+#import "XFTopicPictureView.h"
+#import "XFTopicVideoView.h"
 
 
 @interface XFTopicCell ()
@@ -28,11 +30,37 @@
 @property (nonatomic, weak) IBOutlet UIView      *topCmtView;        // 最热评论整体 view
 @property (nonatomic, weak) IBOutlet UILabel     *topCmtContentLabel;// 最热评论内容
 
+/** 中间控件 */
+@property (nonatomic, weak) XFTopicPictureView   *pictureView;       // 图片 view
+@property (nonatomic, weak) XFTopicVideoView     *videoView;         // 视频 view
+
+
+
 @end
 
 @implementation XFTopicCell
 
-#pragma mark - XFTopicCell
+#pragma mark - 懒加载
+
+- (XFTopicPictureView *)pictureView {
+    if (!_pictureView) {
+        XFTopicPictureView *pictureView = [XFTopicPictureView xf_viewFromXib];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
+
+- (XFTopicVideoView *)videoView {
+    if (!_pictureView) {
+        XFTopicVideoView *videoView = [XFTopicVideoView xf_viewFromXib];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
+}
+
+#pragma mark - 初始化
 
 - (void)awakeFromNib {
     self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
@@ -68,22 +96,26 @@
     switch (topic.type) {
         case XFTopicTypePicture:    // 图片
         {
+            self.pictureView.hidden = NO;
+            self.videoView.hidden   = YES;
             
+            self.pictureView.frame = topic.contentFrame;
+            self.pictureView.topic = topic;
         }
             break;
         case XFTopicTypeWord:       // 段子
         {
-            
-        }
-            break;
-        case XFTopicTypeVoice:      // 音频
-        {
-            
+            self.pictureView.hidden = YES;
+            self.videoView.hidden   = YES;
         }
             break;
         case XFTopicTypeVideo:      // 视频
         {
+            self.videoView.hidden   = NO;
+            self.pictureView.hidden = YES;
             
+            self.videoView.frame = topic.contentFrame;
+            self.videoView.topic = topic;
         }
             break;
     }

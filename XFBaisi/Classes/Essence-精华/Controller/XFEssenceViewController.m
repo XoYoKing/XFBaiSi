@@ -10,7 +10,7 @@
 #import "XFTitleButton.h"
 #import "XFRecomViewController.h"
 #import "XFVideoViewController.h"
-#import "XFVoiceViewController.h"
+#import "XFWangHotViewController.h"
 #import "XFPictureViewController.h"
 #import "XFWordViewController.h"
 
@@ -48,14 +48,15 @@
     XFVideoViewController *videoView = [[XFVideoViewController alloc] init];
     [self addChildViewController:videoView];
     
-    XFVoiceViewController *voiceView = [[XFVoiceViewController alloc] init];
-    [self addChildViewController:voiceView];
-    
     XFPictureViewController *pictureView = [[XFPictureViewController alloc] init];
     [self addChildViewController:pictureView];
     
     XFWordViewController *wordView = [[XFWordViewController alloc] init];
     [self addChildViewController:wordView];
+    
+    XFWangHotViewController *wangHotView = [[XFWangHotViewController alloc] init];
+    [self addChildViewController:wangHotView];
+    
     
 }
 
@@ -103,7 +104,7 @@
     self.titleView = titleView;
     
     // 添加按钮
-    NSArray *titlesArray = @[@"推荐", @"视频", @"声音", @"图片", @"段子"];
+    NSArray *titlesArray = @[@"推荐", @"视频", @"图片", @"段子", @"网红"];
     NSInteger count = titlesArray.count;
     CGFloat titleBtnW = titleView.xf_width / count;
     CGFloat titleBtnH = titleView.xf_height;

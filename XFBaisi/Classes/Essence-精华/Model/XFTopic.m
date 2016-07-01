@@ -83,6 +83,13 @@ static NSCalendar *calendar_;
     if (self.type != XFTopicTypeWord) { // 图片声音视频算中间内容
         // 中间图片真是宽度 * 图片真是高度 / 图片真是宽度
         CGFloat contentH = textMaxW * self.height / self.width;
+        
+        if (contentH > [UIScreen mainScreen].bounds.size.height) {
+            contentH = 200;
+            self.bigPicture = YES;
+        }
+        
+        self.contentFrame = CGRectMake(XFMargin, _cellHeight, textMaxW, contentH);
         _cellHeight += contentH + XFMargin;
     }
     

@@ -80,7 +80,7 @@ static NSString *const XFTopicCellId = @"topic";
         
         // 字典转模型
         self.topics  = [XFTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        
+        //XFWriteToPlist(responseObject, @"shipin");
         // 刷新表格
         [self.tableView reloadData];
         

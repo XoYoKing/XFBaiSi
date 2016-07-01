@@ -1,5 +1,5 @@
 //
-//  XFVoiceViewController.h
+//  XFWangHotViewController.h
 //  XFBaisi
 //
 //  Created by xiaofans on 16/6/28.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XFVoiceViewController : UITableViewController
+@interface XFWangHotViewController : UITableViewController
 
 @end

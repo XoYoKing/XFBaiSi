@@ -1,18 +1,18 @@
 //
-//  XFVoiceViewController.m
+//  XFWangHotViewController.m
 //  XFBaisi
 //
 //  Created by xiaofans on 16/6/28.
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
-#import "XFVoiceViewController.h"
+#import "XFWangHotViewController.h"
 
-@interface XFVoiceViewController ()
+@interface XFWangHotViewController ()
 
 @end
 
-@implementation XFVoiceViewController
+@implementation XFWangHotViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

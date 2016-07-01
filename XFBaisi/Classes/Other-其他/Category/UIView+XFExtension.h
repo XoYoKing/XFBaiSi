@@ -18,4 +18,7 @@
 
 @property (nonatomic, assign) CGFloat xf_right;
 @property (nonatomic, assign) CGFloat xf_bottom;
+
++ (instancetype)xf_viewFromXib;
+
 @end
