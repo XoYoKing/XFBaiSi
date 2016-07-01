@@ -12,6 +12,8 @@
 #import "XFUser.h"
 #import "XFTopicPictureView.h"
 #import "XFTopicVideoView.h"
+#import "XFUserHeader.h"
+#import "XFTopCmtUser.h"
 
 
 @interface XFTopicCell ()
@@ -68,23 +70,30 @@
 
 - (void)setTopic:(XFTopic *)topic {
     _topic = topic;
+    //XFLog(@"iii = %@", topic.user);
     
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
-    self.nameLabel.text = topic.name;
-    self.createdAtLabel.text = topic.created_at;
+    //XFLog(@"mmm = %@", topic.user.header.profileImage);
+    
+    
+    //[self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.user.header.item0] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    //self.profileImageView.image = [UIImage imageNamed:@"defaultUserIcon"];
+    self.nameLabel.text = topic.user.name;
+    //self.nameLabel.text = @"xiaofan";
+    
+    self.createdAtLabel.text = topic.passtime;
     self.text_label.text = topic.text;
     
-    [self setupButton:self.dingButton number:topic.ding placeholder:@"顶"];
-    [self setupButton:self.caiButton number:topic.cai placeholder:@"踩"];
-    [self setupButton:self.repostButton number:topic.repost placeholder:@"分享"];
+    [self setupButton:self.dingButton number:topic.up placeholder:@"顶"];
+    [self setupButton:self.caiButton number:topic.down placeholder:@"踩"];
+    [self setupButton:self.repostButton number:topic.forward placeholder:@"分享"];
     [self setupButton:self.commentButton number:topic.comment placeholder:@"评论"];
     
 #pragma mark - 是否显示最热评论
-    if (topic.top_cmt) {    // 有
+    if (topic.top_comment) {    // 有
         self.topCmtView.hidden = NO;
         
-        NSString *username = topic.top_cmt.user.username;
-        NSString *content = topic.top_cmt.content;
+        NSString *username = topic.top_comment.u.name;
+        NSString *content = topic.top_comment.content;
         
         self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@: %@", username, content];
         

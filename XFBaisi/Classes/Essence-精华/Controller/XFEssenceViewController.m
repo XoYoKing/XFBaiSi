@@ -51,8 +51,8 @@
 #pragma mark - 初始化
 
 - (void)setupChildViewControllers {
-    XFRecomViewController *allView = [[XFRecomViewController alloc] init];
-    [self addChildViewController:allView];
+    XFRecomViewController *recomView = [[XFRecomViewController alloc] init];
+    [self addChildViewController:recomView];
     
     XFVideoViewController *videoView = [[XFVideoViewController alloc] init];
     [self addChildViewController:videoView];

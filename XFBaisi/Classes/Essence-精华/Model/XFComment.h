@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class XFUser;
+@class XFTopCmtUser;
 
 @interface XFComment : NSObject
 
 @property (nonatomic, copy) NSString *content;      // 评论内容
-@property (nonatomic, strong) XFUser *user;         // 发表评论的用户
+@property (nonatomic, strong) XFTopCmtUser *u;         // 发表评论的用户
 
 @end

@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class XFUserHeader;
+
 @interface XFUser : NSObject
 
-@property (nonatomic, copy) NSString *username;
+@property (nonatomic, copy) NSString *name;
+
+/** header */
+@property (nonatomic, strong) XFUserHeader *header;
 
 @end

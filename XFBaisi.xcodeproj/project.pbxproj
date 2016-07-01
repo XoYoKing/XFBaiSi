@@ -62,6 +62,8 @@
 		BDC157931D26686D009E3DC6 /* XFBeautyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC157921D26686D009E3DC6 /* XFBeautyViewController.m */; };
 		BDC157961D2668CE009E3DC6 /* XFLengMenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC157951D2668CE009E3DC6 /* XFLengMenViewController.m */; };
 		BDC157991D2668D9009E3DC6 /* XFGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC157981D2668D9009E3DC6 /* XFGameViewController.m */; };
+		BDC1579C1D26C774009E3DC6 /* XFUserHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1579B1D26C774009E3DC6 /* XFUserHeader.m */; };
+		BDC1579F1D26D4DE009E3DC6 /* XFTopCmtUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1579E1D26D4DE009E3DC6 /* XFTopCmtUser.m */; };
 		BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */; };
 		BDE490AB1D1EC8330029E919 /* XFLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE490A91D1EC8330029E919 /* XFLoginRegisterViewController.m */; };
 		BDE490AC1D1EC8330029E919 /* XFLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE490AA1D1EC8330029E919 /* XFLoginRegisterViewController.xib */; };
@@ -205,6 +207,10 @@
 		BDC157951D2668CE009E3DC6 /* XFLengMenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFLengMenViewController.m; sourceTree = "<group>"; };
 		BDC157971D2668D9009E3DC6 /* XFGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFGameViewController.h; sourceTree = "<group>"; };
 		BDC157981D2668D9009E3DC6 /* XFGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFGameViewController.m; sourceTree = "<group>"; };
+		BDC1579A1D26C774009E3DC6 /* XFUserHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUserHeader.h; sourceTree = "<group>"; };
+		BDC1579B1D26C774009E3DC6 /* XFUserHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFUserHeader.m; sourceTree = "<group>"; };
+		BDC1579D1D26D4DE009E3DC6 /* XFTopCmtUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTopCmtUser.h; sourceTree = "<group>"; };
+		BDC1579E1D26D4DE009E3DC6 /* XFTopCmtUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTopCmtUser.m; sourceTree = "<group>"; };
 		BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFFollowViewController.xib; sourceTree = "<group>"; };
 		BDE490A81D1EC8330029E919 /* XFLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLoginRegisterViewController.h; sourceTree = "<group>"; };
 		BDE490A91D1EC8330029E919 /* XFLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFLoginRegisterViewController.m; sourceTree = "<group>"; };
@@ -444,8 +450,12 @@
 				BDA664341D235ED5004D5967 /* XFTopic.m */,
 				BD0A07A31D24E2DE004E9478 /* XFUser.h */,
 				BD0A07A41D24E2DE004E9478 /* XFUser.m */,
+				BDC1579A1D26C774009E3DC6 /* XFUserHeader.h */,
+				BDC1579B1D26C774009E3DC6 /* XFUserHeader.m */,
 				BD0A07A61D24E307004E9478 /* XFComment.h */,
 				BD0A07A71D24E307004E9478 /* XFComment.m */,
+				BDC1579D1D26D4DE009E3DC6 /* XFTopCmtUser.h */,
+				BDC1579E1D26D4DE009E3DC6 /* XFTopCmtUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -927,10 +937,12 @@
 				BDC157931D26686D009E3DC6 /* XFBeautyViewController.m in Sources */,
 				BDA664351D235ED5004D5967 /* XFTopic.m in Sources */,
 				BDF7C0C51D227B2D00947EAD /* XFTextFontCell.m in Sources */,
+				BDC1579F1D26D4DE009E3DC6 /* XFTopCmtUser.m in Sources */,
 				BD0A07A11D24D2BC004E9478 /* NSDate+XFExtension.m in Sources */,
 				BD0A07AB1D250BA6004E9478 /* XFModelConfig.m in Sources */,
 				BD0A07A01D24D2BC004E9478 /* NSCalendar+XFExtension.m in Sources */,
 				BD9D04291D26028900692F89 /* XFTopicVideoView.m in Sources */,
+				BDC1579C1D26C774009E3DC6 /* XFUserHeader.m in Sources */,
 				BDBDA1B41D1E445700BA01B1 /* XFEssenceViewController.m in Sources */,
 				BDA664381D237475004D5967 /* XFRefreshHeader.m in Sources */,
 				BDE490AB1D1EC8330029E919 /* XFLoginRegisterViewController.m in Sources */,

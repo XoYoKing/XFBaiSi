@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XFUser.h"
 
 @class XFComment;
 
@@ -24,15 +25,20 @@ typedef NS_ENUM(NSUInteger, XFTopicType) {
     XFTopicTypeVideo = 41,
 };
 
+
+    
+   
+
+
 @interface XFTopic : NSObject
 
-@property (nonatomic, copy)   NSString  *name;              // 用户的名字
-@property (nonatomic, copy)   NSString  *profile_image;     // 用户的头像
+//@property (nonatomic, copy)   NSString  *name;              // 用户的名字
+//@property (nonatomic, copy)   NSString  *profile_image;     // 用户的头像
 @property (nonatomic, copy)   NSString  *text;              // 帖子的文字内容
-@property (nonatomic, copy)   NSString  *created_at;        // 帖子审核通过的时间
-@property (nonatomic, assign) NSInteger ding;               // 顶数量
-@property (nonatomic, assign) NSInteger cai;                // 踩数量
-@property (nonatomic, assign) NSInteger repost;             // 转发\分享数量
+@property (nonatomic, copy)   NSString  *passtime;        // 帖子审核通过的时间
+@property (nonatomic, assign) NSInteger up;               // 顶数量
+@property (nonatomic, assign) NSInteger down;                // 踩数量
+@property (nonatomic, assign) NSInteger forward;             // 转发\分享数量
 @property (nonatomic, assign) NSInteger comment;            // 评论数量
 
 @property (nonatomic, copy) NSString *small_image;          // 小图
@@ -43,7 +49,10 @@ typedef NS_ENUM(NSUInteger, XFTopicType) {
 @property (nonatomic, assign) NSInteger videotime;          // 视频时间（秒）
 @property (nonatomic, assign) NSInteger playcount;          // 视频播放次数
 
-@property (nonatomic, strong) XFComment *top_cmt;           // 最热评论
+/** user */
+@property (nonatomic, strong) XFUser *user;
+
+@property (nonatomic, strong) XFComment *top_comment;           // 最热评论
 
 @property (nonatomic, assign) XFTopicType type;             // 帖子类型
 
