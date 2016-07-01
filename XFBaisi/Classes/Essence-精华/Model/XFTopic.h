@@ -39,4 +39,24 @@ typedef NS_ENUM(NSUInteger, XFTopicType) {
 
 @property (nonatomic, assign) XFTopicType type;             // 帖子类型
 
+@property (nonatomic, assign) CGFloat cellHeight;           // cell 高度
+
+@property (nonatomic, assign) CGFloat height;               // 图片 高度
+@property (nonatomic, assign) CGFloat width;                // 图片 高度
+
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
