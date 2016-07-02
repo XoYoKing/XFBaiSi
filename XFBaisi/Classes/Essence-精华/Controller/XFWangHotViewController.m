@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.url = @"http://s.budejie.com/topic/tag-topic/3096/hot/bs0315-iphone-4.2/";
+    self.url = JING_WANGHOT_URL;
 }
 
 

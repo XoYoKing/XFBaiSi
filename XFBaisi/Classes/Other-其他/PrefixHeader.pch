@@ -30,6 +30,16 @@
 #define ME_HOME_URL @"http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json"
 #define XFCommon_URL @"http://api.budejie.com/api/api_open.php"
 
+/*** 精华各个页面 URL ***/
+#define JING_RECO_URL    @"http://s.budejie.com/topic/list/jingxuan/1/bs0315-iphone-4.2/"
+#define JING_VIDEO_URL   @"http://s.budejie.com/topic/list/jingxuan/41/bs0315-iphone-4.2/"
+#define JING_PICTURE_URL @"http://s.budejie.com/topic/list/jingxuan/10/bs0315-iphone-4.2/"
+#define JING_WORD_URL    @"http://s.budejie.com/topic/tag-topic/64/hot/bs0315-iphone-4.2/"
+#define JING_WANGHOT_URL @"http://s.budejie.com/topic/tag-topic/3096/hot/bs0315-iphone-4.2/"
+#define JING_PAIHANG_URL @"http://s.budejie.com/topic/list/remen/1/bs0315-iphone-4.2/"
+#define JING_SHEHUI_URL  @"http://s.budejie.com/topic/tag-topic/473/hot/bs0315-iphone-4.2/"
+#define JING_BEAUTY_URL  @"http://s.budejie.com/topic/tag-topic/117/hot/bs0315-iphone-4.2/"
+
 
 
 /*** 将服务器返回的数据写入plist ***/
