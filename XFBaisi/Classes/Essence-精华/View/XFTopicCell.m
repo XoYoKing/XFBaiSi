@@ -12,7 +12,6 @@
 #import "XFUser.h"
 #import "XFTopicPictureView.h"
 #import "XFTopicVideoView.h"
-#import "XFUserHeader.h"
 #import "XFTopCmtUser.h"
 
 
@@ -70,15 +69,9 @@
 
 - (void)setTopic:(XFTopic *)topic {
     _topic = topic;
-    //XFLog(@"iii = %@", topic.user);
     
-    //XFLog(@"mmm = %@", topic.user.header.profileImage);
-    
-    
-    //[self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.user.header.item0] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
-    //self.profileImageView.image = [UIImage imageNamed:@"defaultUserIcon"];
+    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.user.header.firstObject] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.nameLabel.text = topic.user.name;
-    //self.nameLabel.text = @"xiaofan";
     
     self.createdAtLabel.text = topic.passtime;
     self.text_label.text = topic.text;
@@ -103,19 +96,32 @@
     
 #pragma mark - 处理 cell 中间的内容
     
-    if (topic.type == XFTopicTypePicture) {         // 图片
+    if ([topic.type isEqualToString:@"image"] ) {         // 图片
         self.pictureView.hidden = NO;
         self.videoView.hidden   = YES;
         self.pictureView.frame = topic.contentFrame;
         self.pictureView.topic = topic;
-    } else if (topic.type == XFTopicTypeWord) {     // 段子
+        //XFLog(@"这里是所有图片");
+        
+    } else if ([topic.type isEqualToString:@"text"]) {     // 段子
         self.pictureView.hidden = YES;
         self.videoView.hidden   = YES;
-    } else if (topic.type == XFTopicTypeVideo) {    // 视频
+        
+        //XFLog(@"段子");
+    } else if ([topic.type isEqualToString:@"video"]) {    // 视频
         self.videoView.hidden   = NO;
         self.pictureView.hidden = YES;
         self.videoView.frame = topic.contentFrame;
         self.videoView.topic = topic;
+        
+        //XFLog(@"视频");
+    } else if ([topic.type isEqualToString:@"gif"]) {       // gif
+        self.pictureView.hidden = NO;
+        self.videoView.hidden   = YES;
+        self.pictureView.frame = topic.contentFrame;
+        self.pictureView.topic = topic;
+        
+        //XFLog(@"GIF");
     }
 }
 

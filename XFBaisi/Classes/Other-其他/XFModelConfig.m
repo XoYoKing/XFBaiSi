@@ -10,21 +10,14 @@
 #import "XFTopic.h"
 #import "XFComment.h"
 #import "XFUser.h"
-#import "XFUserHeader.h"
 #import "XFTopCmtUser.h"
+#import "XFImage.h"
+#import "XFGif.h"
+#import "XFVideo.h"
 
 @implementation XFModelConfig
 
 + (void)load {
-    
-    [XFUser mj_setupObjectClassInArray:^NSDictionary *{
-        return @{@"header" : [XFUserHeader class]};
-    }];
-    
-    
-    [XFUserHeader mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
-        return @{@"profileImage" : @"header[0]"};
-    }];
     
     [XFComment mj_setupObjectClassInArray:^NSDictionary *{
         return @{@"u" : [XFTopCmtUser class]};
@@ -33,7 +26,10 @@
     
     [XFTopic mj_setupObjectClassInArray:^NSDictionary *{
         return @{@"top_comment" : [XFComment class],
-                 @"u" : [XFUser class]};
+                 @"u" : [XFUser class],
+                 @"image" : [XFImage class],
+                 @"gif" : [XFGif class],
+                 @"video" : [XFVideo class]};
         
     }];
     

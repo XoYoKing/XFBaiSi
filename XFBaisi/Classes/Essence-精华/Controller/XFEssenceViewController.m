@@ -16,8 +16,6 @@
 #import "XFPaiHangViewController.h"
 #import "XFSheHuiViewController.h"
 #import "XFBeautyViewController.h"
-#import "XFLengMenViewController.h"
-#import "XFGameViewController.h"
 
 @interface XFEssenceViewController () <UIScrollViewDelegate>
 
@@ -74,12 +72,6 @@
     
     XFBeautyViewController *beautView = [[XFBeautyViewController alloc] init];
     [self addChildViewController:beautView];
-    
-    XFLengMenViewController *lengMenView = [[XFLengMenViewController alloc] init];
-    [self addChildViewController:lengMenView];
-    
-    XFGameViewController *gameView = [[XFGameViewController alloc] init];
-    [self addChildViewController:gameView];
 }
 
 /**
@@ -128,7 +120,7 @@
     self.titleSView = titleSView;
     
     // 添加按钮
-    NSArray *titlesArray = @[@"推荐", @"视频", @"图片", @"段子", @"网红", @"排行", @"社会", @"美女", @"冷知识", @"游戏"];
+    NSArray *titlesArray = @[@"推荐", @"视频", @"图片", @"段子", @"网红", @"排行", @"社会", @"美女"];
     NSInteger count = titlesArray.count;
     CGFloat titleBtnW = 55;
     CGFloat titleBtnH = titleSView.xf_height;

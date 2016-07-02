@@ -7,61 +7,41 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XFUser.h"
 
-@class XFComment;
-
-/**
- *  枚举 cell 中间内容类型
- */
-typedef NS_ENUM(NSUInteger, XFTopicType) {
-    /** 推荐 */
-    XFTopicTypeRecom = 1,
-    /** 图片 */
-    XFTopicTypePicture = 10,
-    /** 段子 */
-    XFTopicTypeWord = 29,
-    /** 视频 */
-    XFTopicTypeVideo = 41,
-};
-
-
-    
-   
-
+@class XFComment, XFImage, XFUser, XFGif, XFVideo;
 
 @interface XFTopic : NSObject
 
-//@property (nonatomic, copy)   NSString  *name;              // 用户的名字
-//@property (nonatomic, copy)   NSString  *profile_image;     // 用户的头像
-@property (nonatomic, copy)   NSString  *text;              // 帖子的文字内容
-@property (nonatomic, copy)   NSString  *passtime;        // 帖子审核通过的时间
-@property (nonatomic, assign) NSInteger up;               // 顶数量
-@property (nonatomic, assign) NSInteger down;                // 踩数量
-@property (nonatomic, assign) NSInteger forward;             // 转发\分享数量
-@property (nonatomic, assign) NSInteger comment;            // 评论数量
-
-@property (nonatomic, copy) NSString *small_image;          // 小图
-@property (nonatomic, copy) NSString *middle_image;         // 中图
-@property (nonatomic, copy) NSString *large_image;          // 大图
-@property (nonatomic, assign) BOOL is_gif;                  // 是否是 gif 动画
-
-@property (nonatomic, assign) NSInteger videotime;          // 视频时间（秒）
-@property (nonatomic, assign) NSInteger playcount;          // 视频播放次数
-
-/** user */
+/** 帖子的文字内容 */
+@property (nonatomic, copy)   NSString  *text;
+/** 帖子审核通过的时间 */
+@property (nonatomic, copy)   NSString  *passtime;
+/** 顶数量 */
+@property (nonatomic, assign) NSInteger up;
+/** 踩数量 */
+@property (nonatomic, assign) NSInteger down;
+/** 转发\分享数量 */
+@property (nonatomic, assign) NSInteger forward;
+/** 评论数量 */
+@property (nonatomic, assign) NSInteger comment;
+/** 用户信息 */
 @property (nonatomic, strong) XFUser *user;
+/** 最热评论 */
+@property (nonatomic, strong) XFComment *top_comment;
+/** 图片 */
+@property (nonatomic, strong) XFImage *image;
+/**  GIF 图片 */
+@property (nonatomic, strong) XFGif *gif;
+/** 视频 */
+@property (nonatomic, strong) XFVideo *video;
 
-@property (nonatomic, strong) XFComment *top_comment;           // 最热评论
 
-@property (nonatomic, assign) XFTopicType type;             // 帖子类型
-
-@property (nonatomic, assign) CGFloat cellHeight;           // cell 高度
-
-@property (nonatomic, assign) CGFloat height;               // 图片 高度
-@property (nonatomic, assign) CGFloat width;                // 图片 高度
-
-@property (nonatomic, assign) CGRect contentFrame;          // 中间内容 frame
+/** 帖子类型 */
+@property (nonatomic, copy)   NSString  *type;
+/** cell 高度 */
+@property (nonatomic, assign) CGFloat cellHeight;
+/** 中间内容 frame */
+@property (nonatomic, assign) CGRect contentFrame;
 
 /** 中间是否为超长大图 */
 @property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;

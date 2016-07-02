@@ -26,6 +26,10 @@
 		BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F31D2020CE0060CEB0 /* XFMeTableViewCell.m */; };
 		BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F61D20255B0060CEB0 /* XFMeFooterView.m */; };
 		BD660A401D1EF19B006E5BC0 /* XFLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BD660A3F1D1EF19B006E5BC0 /* XFLoginRegisterTextField.m */; };
+		BD8382001D2775150093CF2D /* XFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8381FF1D2775150093CF2D /* XFImage.m */; };
+		BD8382021D2784250093CF2D /* XFTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8382011D2784250093CF2D /* XFTopicPictureView.xib */; };
+		BD8382051D278B100093CF2D /* XFGif.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8382041D278B100093CF2D /* XFGif.m */; };
+		BD8382081D27952D0093CF2D /* XFVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8382071D27952D0093CF2D /* XFVideo.m */; };
 		BD94A67E1D222B9C00EC5208 /* XFTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A67D1D222B9C00EC5208 /* XFTitleButton.m */; };
 		BD94A6811D223ACD00EC5208 /* XFRecomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A6801D223ACD00EC5208 /* XFRecomViewController.m */; };
 		BD94A6841D223AE900EC5208 /* XFVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A6831D223AE900EC5208 /* XFVideoViewController.m */; };
@@ -33,7 +37,6 @@
 		BD94A68A1D223B1000EC5208 /* XFPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A6891D223B1000EC5208 /* XFPictureViewController.m */; };
 		BD94A68D1D223B2600EC5208 /* XFWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD94A68C1D223B2600EC5208 /* XFWordViewController.m */; };
 		BD9D041E1D25FF8400692F89 /* XFTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9D041D1D25FF8400692F89 /* XFTopicPictureView.m */; };
-		BD9D04221D25FFC900692F89 /* XFTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD9D04211D25FFC900692F89 /* XFTopicPictureView.xib */; };
 		BD9D04291D26028900692F89 /* XFTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9D04281D26028900692F89 /* XFTopicVideoView.m */; };
 		BD9D042B1D26029200692F89 /* XFTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD9D042A1D26029200692F89 /* XFTopicVideoView.xib */; };
 		BD9D04331D265D8900692F89 /* XFTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9D04321D265D8900692F89 /* XFTopicViewController.m */; };
@@ -60,9 +63,6 @@
 		BDC1578D1D266811009E3DC6 /* XFPaiHangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1578C1D266811009E3DC6 /* XFPaiHangViewController.m */; };
 		BDC157901D26683F009E3DC6 /* XFSheHuiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1578F1D26683F009E3DC6 /* XFSheHuiViewController.m */; };
 		BDC157931D26686D009E3DC6 /* XFBeautyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC157921D26686D009E3DC6 /* XFBeautyViewController.m */; };
-		BDC157961D2668CE009E3DC6 /* XFLengMenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC157951D2668CE009E3DC6 /* XFLengMenViewController.m */; };
-		BDC157991D2668D9009E3DC6 /* XFGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC157981D2668D9009E3DC6 /* XFGameViewController.m */; };
-		BDC1579C1D26C774009E3DC6 /* XFUserHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1579B1D26C774009E3DC6 /* XFUserHeader.m */; };
 		BDC1579F1D26D4DE009E3DC6 /* XFTopCmtUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1579E1D26D4DE009E3DC6 /* XFTopCmtUser.m */; };
 		BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */; };
 		BDE490AB1D1EC8330029E919 /* XFLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE490A91D1EC8330029E919 /* XFLoginRegisterViewController.m */; };
@@ -135,6 +135,13 @@
 		BD3830F61D20255B0060CEB0 /* XFMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeFooterView.m; sourceTree = "<group>"; };
 		BD660A3E1D1EF19B006E5BC0 /* XFLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLoginRegisterTextField.h; sourceTree = "<group>"; };
 		BD660A3F1D1EF19B006E5BC0 /* XFLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFLoginRegisterTextField.m; sourceTree = "<group>"; };
+		BD8381FE1D2775150093CF2D /* XFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFImage.h; sourceTree = "<group>"; };
+		BD8381FF1D2775150093CF2D /* XFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFImage.m; sourceTree = "<group>"; };
+		BD8382011D2784250093CF2D /* XFTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFTopicPictureView.xib; sourceTree = "<group>"; };
+		BD8382031D278B100093CF2D /* XFGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFGif.h; sourceTree = "<group>"; };
+		BD8382041D278B100093CF2D /* XFGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFGif.m; sourceTree = "<group>"; };
+		BD8382061D27952D0093CF2D /* XFVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFVideo.h; sourceTree = "<group>"; };
+		BD8382071D27952D0093CF2D /* XFVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFVideo.m; sourceTree = "<group>"; };
 		BD94A67C1D222B9C00EC5208 /* XFTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTitleButton.h; sourceTree = "<group>"; };
 		BD94A67D1D222B9C00EC5208 /* XFTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTitleButton.m; sourceTree = "<group>"; };
 		BD94A67F1D223ACD00EC5208 /* XFRecomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRecomViewController.h; sourceTree = "<group>"; };
@@ -149,7 +156,6 @@
 		BD94A68C1D223B2600EC5208 /* XFWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFWordViewController.m; sourceTree = "<group>"; };
 		BD9D041C1D25FF8400692F89 /* XFTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTopicPictureView.h; sourceTree = "<group>"; };
 		BD9D041D1D25FF8400692F89 /* XFTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTopicPictureView.m; sourceTree = "<group>"; };
-		BD9D04211D25FFC900692F89 /* XFTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFTopicPictureView.xib; sourceTree = "<group>"; };
 		BD9D04271D26028900692F89 /* XFTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTopicVideoView.h; sourceTree = "<group>"; };
 		BD9D04281D26028900692F89 /* XFTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTopicVideoView.m; sourceTree = "<group>"; };
 		BD9D042A1D26029200692F89 /* XFTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFTopicVideoView.xib; sourceTree = "<group>"; };
@@ -203,12 +209,6 @@
 		BDC1578F1D26683F009E3DC6 /* XFSheHuiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSheHuiViewController.m; sourceTree = "<group>"; };
 		BDC157911D26686D009E3DC6 /* XFBeautyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFBeautyViewController.h; sourceTree = "<group>"; };
 		BDC157921D26686D009E3DC6 /* XFBeautyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFBeautyViewController.m; sourceTree = "<group>"; };
-		BDC157941D2668CE009E3DC6 /* XFLengMenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLengMenViewController.h; sourceTree = "<group>"; };
-		BDC157951D2668CE009E3DC6 /* XFLengMenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFLengMenViewController.m; sourceTree = "<group>"; };
-		BDC157971D2668D9009E3DC6 /* XFGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFGameViewController.h; sourceTree = "<group>"; };
-		BDC157981D2668D9009E3DC6 /* XFGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFGameViewController.m; sourceTree = "<group>"; };
-		BDC1579A1D26C774009E3DC6 /* XFUserHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUserHeader.h; sourceTree = "<group>"; };
-		BDC1579B1D26C774009E3DC6 /* XFUserHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFUserHeader.m; sourceTree = "<group>"; };
 		BDC1579D1D26D4DE009E3DC6 /* XFTopCmtUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTopCmtUser.h; sourceTree = "<group>"; };
 		BDC1579E1D26D4DE009E3DC6 /* XFTopCmtUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTopCmtUser.m; sourceTree = "<group>"; };
 		BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFFollowViewController.xib; sourceTree = "<group>"; };
@@ -435,10 +435,6 @@
 				BDC1578F1D26683F009E3DC6 /* XFSheHuiViewController.m */,
 				BDC157911D26686D009E3DC6 /* XFBeautyViewController.h */,
 				BDC157921D26686D009E3DC6 /* XFBeautyViewController.m */,
-				BDC157941D2668CE009E3DC6 /* XFLengMenViewController.h */,
-				BDC157951D2668CE009E3DC6 /* XFLengMenViewController.m */,
-				BDC157971D2668D9009E3DC6 /* XFGameViewController.h */,
-				BDC157981D2668D9009E3DC6 /* XFGameViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -450,12 +446,16 @@
 				BDA664341D235ED5004D5967 /* XFTopic.m */,
 				BD0A07A31D24E2DE004E9478 /* XFUser.h */,
 				BD0A07A41D24E2DE004E9478 /* XFUser.m */,
-				BDC1579A1D26C774009E3DC6 /* XFUserHeader.h */,
-				BDC1579B1D26C774009E3DC6 /* XFUserHeader.m */,
 				BD0A07A61D24E307004E9478 /* XFComment.h */,
 				BD0A07A71D24E307004E9478 /* XFComment.m */,
 				BDC1579D1D26D4DE009E3DC6 /* XFTopCmtUser.h */,
 				BDC1579E1D26D4DE009E3DC6 /* XFTopCmtUser.m */,
+				BD8381FE1D2775150093CF2D /* XFImage.h */,
+				BD8381FF1D2775150093CF2D /* XFImage.m */,
+				BD8382031D278B100093CF2D /* XFGif.h */,
+				BD8382041D278B100093CF2D /* XFGif.m */,
+				BD8382061D27952D0093CF2D /* XFVideo.h */,
+				BD8382071D27952D0093CF2D /* XFVideo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -470,7 +470,7 @@
 				BDC0B31B1D240BD70068B2F5 /* XFTopicCell.xib */,
 				BD9D041C1D25FF8400692F89 /* XFTopicPictureView.h */,
 				BD9D041D1D25FF8400692F89 /* XFTopicPictureView.m */,
-				BD9D04211D25FFC900692F89 /* XFTopicPictureView.xib */,
+				BD8382011D2784250093CF2D /* XFTopicPictureView.xib */,
 				BD9D04271D26028900692F89 /* XFTopicVideoView.h */,
 				BD9D04281D26028900692F89 /* XFTopicVideoView.m */,
 				BD9D042A1D26029200692F89 /* XFTopicVideoView.xib */,
@@ -739,11 +739,11 @@
 				BDBDA1901D1E39B100BA01B1 /* Assets.xcassets in Resources */,
 				BDF7C0C61D227B2D00947EAD /* XFTextFontCell.xib in Resources */,
 				BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */,
-				BD9D04221D25FFC900692F89 /* XFTopicPictureView.xib in Resources */,
 				BDE490AC1D1EC8330029E919 /* XFLoginRegisterViewController.xib in Resources */,
 				BD2382EB1D20CB8A00DE1EB3 /* XFWebViewController.xib in Resources */,
 				BD9D042B1D26029200692F89 /* XFTopicVideoView.xib in Resources */,
 				BDC0B31D1D240BD70068B2F5 /* XFTopicCell.xib in Resources */,
+				BD8382021D2784250093CF2D /* XFTopicPictureView.xib in Resources */,
 				BDF7C0CB1D22836800947EAD /* XFDayOrNightCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -895,16 +895,17 @@
 				BD0A07951D24D1DD004E9478 /* UIBarButtonItem+XFExtension.m in Sources */,
 				BD0A07981D24D23A004E9478 /* UITextField+XFExtension.m in Sources */,
 				BD2382E31D20B86B00DE1EB3 /* XFMeSquareButton.m in Sources */,
+				BD8382051D278B100093CF2D /* XFGif.m in Sources */,
 				BD9D04331D265D8900692F89 /* XFTopicViewController.m in Sources */,
 				BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */,
 				BD0A07A51D24E2DE004E9478 /* XFUser.m in Sources */,
 				BD94A67E1D222B9C00EC5208 /* XFTitleButton.m in Sources */,
+				BD8382001D2775150093CF2D /* XFImage.m in Sources */,
 				BDF7C0CA1D22836800947EAD /* XFDayOrNightCell.m in Sources */,
 				BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */,
 				BDC1578D1D266811009E3DC6 /* XFPaiHangViewController.m in Sources */,
 				BDA6643E1D239629004D5967 /* XFHTTPSessionManager.m in Sources */,
 				BD2382F71D21146700DE1EB3 /* XFClearCacheCell.m in Sources */,
-				BDC157991D2668D9009E3DC6 /* XFGameViewController.m in Sources */,
 				BD0A07A81D24E307004E9478 /* XFComment.m in Sources */,
 				BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */,
 				BDBDA1BA1D1E447400BA01B1 /* XFFollowViewController.m in Sources */,
@@ -932,17 +933,16 @@
 				BD94A6841D223AE900EC5208 /* XFVideoViewController.m in Sources */,
 				BDBDA1B71D1E446900BA01B1 /* XFNewViewController.m in Sources */,
 				BDBDA1BD1D1E447B00BA01B1 /* XFMeViewController.m in Sources */,
-				BDC157961D2668CE009E3DC6 /* XFLengMenViewController.m in Sources */,
 				BDBDA1CC1D1E459400BA01B1 /* main.m in Sources */,
 				BDC157931D26686D009E3DC6 /* XFBeautyViewController.m in Sources */,
 				BDA664351D235ED5004D5967 /* XFTopic.m in Sources */,
 				BDF7C0C51D227B2D00947EAD /* XFTextFontCell.m in Sources */,
 				BDC1579F1D26D4DE009E3DC6 /* XFTopCmtUser.m in Sources */,
 				BD0A07A11D24D2BC004E9478 /* NSDate+XFExtension.m in Sources */,
+				BD8382081D27952D0093CF2D /* XFVideo.m in Sources */,
 				BD0A07AB1D250BA6004E9478 /* XFModelConfig.m in Sources */,
 				BD0A07A01D24D2BC004E9478 /* NSCalendar+XFExtension.m in Sources */,
 				BD9D04291D26028900692F89 /* XFTopicVideoView.m in Sources */,
-				BDC1579C1D26C774009E3DC6 /* XFUserHeader.m in Sources */,
 				BDBDA1B41D1E445700BA01B1 /* XFEssenceViewController.m in Sources */,
 				BDA664381D237475004D5967 /* XFRefreshHeader.m in Sources */,
 				BDE490AB1D1EC8330029E919 /* XFLoginRegisterViewController.m in Sources */,

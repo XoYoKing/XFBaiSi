@@ -11,28 +11,19 @@
 
 @interface XFTopicViewController ()
 
+/** 所有帖子数量 */
 @property (nonatomic, strong) NSMutableArray<XFTopic *> *topics;    // 所有帖子数量
-@property (nonatomic, copy) NSString *maxtime;                      // 加载下一页数据
+/** 任务管理者 */
+@property (nonatomic, strong) XFHTTPSessionManager *manager;        //
 
-@property (nonatomic, strong) XFHTTPSessionManager *manager;        // 任务管理者
-
-/** np */
+/** np方便加载更多数据 */
 @property (nonatomic, copy) NSString *np;
-
-
-//- (NSString *)aParam;
 
 @end
 
 static NSString *const XFTopicCellId = @"topic";
 
 @implementation XFTopicViewController
-
-
-
-//- (XFTopicType)type {
-    //return 0;
-//}
 
 #pragma mark - 懒加载
 - (XFHTTPSessionManager *)manager {
@@ -68,10 +59,6 @@ static NSString *const XFTopicCellId = @"topic";
     self.tableView.mj_footer = [XFRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
 }
 
-//- (NSString *)aParam {
-    
-//}
-
 #pragma mark - 加载数据
 
 /**
@@ -81,55 +68,25 @@ static NSString *const XFTopicCellId = @"topic";
     // 取消所有请求
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
-    /*
-     推荐：ttp://s.budejie.com/topic/  list/       jingxuan/   1     /bs0315-iphone-4.2/  0   -20.json
-     视频：ttp://s.budejie.com/topic/  list/       jingxuan/   41    /bs0315-iphone-4.2/  0   -20.json
-     图片：ttp://s.budejie.com/topic/  list/       jingxuan/   10    /bs0315-iphone-4.2/  0   -20.json
-     
-     排行：ttp://s.budejie.com/topic/  list/       remen/      1     /bs0315-iphone-4.2/  0   -20.json
-     
-     段子：ttp://s.budejie.com/topic/  tag-topic/  64/         hot   /bs0315-iphone-4.2/  0   -20.json
-     网红：ttp://s.budejie.com/topic/  tag-topic/  3096/       hot   /bs0315-iphone-4.2/  0   -20.json
-     社会：ttp://s.budejie.com/topic/  tag-topic/  473/        hot   /bs0315-iphone-4.2/  0   -20.json
-     美女：ttp://s.budejie.com/topic/  tag-topic/  117/        hot   /bs0315-iphone-4.2/  0   -20.json
-     冷识：ttp://s.budejie.com/topic/  tag-topic/  3176/       hot   /bs0315-iphone-4.2/  0   -20.json
-    
-     
-     最新
-     全部：ttp://s.budejie.com/topic/  list/       zuixin/     1     /bs0315-iphone-4.2/  0   -20.json
-     视频：ttp://s.budejie.com/topic/  list/       zuixin/    41     /bs0315-iphone-4.2/  0   -20.json
-     图片：ttp://s.budejie.com/topic/  list/       zuixin/    10     /bs0315-iphone-4.2/  0   -20.json
-     段子：ttp://s.budejie.com/topic/  list/       zuixin/    29     /bs0315-iphone-4.2/  0   -20.json
-     
-     网红：ttp://s.budejie.com/topic/  tag-topic/  3096/      new    /bs0315-iphone-4.2/  0   -20.json
-     美女：ttp://s.budejie.com/topic/  tag-topic/  117/       new    /bs0315-iphone-4.2/  0   -20.json
-     冷识：
-     */
-    
     NSString *url = [NSString stringWithFormat:@"%@0-20.json", self.url];
-    
-    
-    XFLog(@"url = %@", url);
     
     // 请求
     [self.manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
-        // 存储maxtime(方便用来加载下一页数据)
+        // 存储np(方便用来加载下一页数据)
         self.np = responseObject[@"info"][@"np"];
         
-        XFLog(@"np = %@", self.np);
+        // 字典转模型
+        self.topics  = [XFTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
-        //// 字典转模型
-        //self.topics  = [XFTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        ////XFWriteToPlist(responseObject, @"shipin");
-        //// 刷新表格
-        //[self.tableView reloadData];
+        // 刷新表格
+        [self.tableView reloadData];
         
-        //// 控件结束刷新
-        //[self.tableView.mj_header endRefreshing];
+        // 控件结束刷新
+        [self.tableView.mj_header endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         XFLog(@"请求失败 - %@", error);
         // 控件结束刷新
-        //[self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_header endRefreshing];
     }];
 }
 
@@ -141,11 +98,10 @@ static NSString *const XFTopicCellId = @"topic";
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
     NSString *url = [NSString stringWithFormat:@"%@%@-20.json", self.url, self.np];
-    XFLog(@"next-url = %@", url);
     
     // 请求
-    [self.manager GET:XFCommon_URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
-        // 存储maxtime(方便用来加载下一页数据)
+    [self.manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
+        // 存储np(方便用来加载下一页数据)
         self.np = responseObject[@"info"][@"np"];
         
         // 字典转模型
@@ -155,7 +111,7 @@ static NSString *const XFTopicCellId = @"topic";
         // 刷新表格
         [self.tableView reloadData];
         
-         //控件结束刷新
+        //控件结束刷新
         [self.tableView.mj_footer endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         XFLog(@"请求失败 - %@", error);

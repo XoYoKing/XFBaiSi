@@ -6,8 +6,9 @@
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
-@interface XFPictureViewController : UITableViewController
+#import "XFTopicViewController.h"
+
+@interface XFPictureViewController : XFTopicViewController
 
 @end
