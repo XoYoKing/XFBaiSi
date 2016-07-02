@@ -11,25 +11,19 @@
 
 @interface XFTopicViewController ()
 
+/** 所有帖子数量 */
 @property (nonatomic, strong) NSMutableArray<XFTopic *> *topics;    // 所有帖子数量
-@property (nonatomic, copy) NSString *maxtime;                      // 加载下一页数据
+/** 任务管理者 */
+@property (nonatomic, strong) XFHTTPSessionManager *manager;        //
 
-@property (nonatomic, strong) XFHTTPSessionManager *manager;        // 任务管理者
-
-
-//- (NSString *)aParam;
+/** np方便加载更多数据 */
+@property (nonatomic, copy) NSString *np;
 
 @end
 
 static NSString *const XFTopicCellId = @"topic";
 
 @implementation XFTopicViewController
-
-
-
-- (XFTopicType)type {
-    return 0;
-}
 
 #pragma mark - 懒加载
 - (XFHTTPSessionManager *)manager {
@@ -65,10 +59,6 @@ static NSString *const XFTopicCellId = @"topic";
     self.tableView.mj_footer = [XFRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
 }
 
-//- (NSString *)aParam {
-    
-//}
-
 #pragma mark - 加载数据
 
 /**
@@ -78,20 +68,16 @@ static NSString *const XFTopicCellId = @"topic";
     // 取消所有请求
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
-    // 参数
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
-    params[@"c"] = @"data";
-    params[@"type"] = @(self.type);
+    NSString *url = [NSString stringWithFormat:@"%@0-20.json", self.url];
     
     // 请求
-    [self.manager GET:XFCommon_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
-        // 存储maxtime(方便用来加载下一页数据)
-        self.maxtime = responseObject[@"info"][@"maxtime"];
+    [self.manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
+        // 存储np(方便用来加载下一页数据)
+        self.np = responseObject[@"info"][@"np"];
         
         // 字典转模型
         self.topics  = [XFTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        //XFWriteToPlist(responseObject, @"shipin");
+        
         // 刷新表格
         [self.tableView reloadData];
         
@@ -111,17 +97,12 @@ static NSString *const XFTopicCellId = @"topic";
     // 取消所有请求
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
-    // 参数
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
-    params[@"c"] = @"data";
-    params[@"maxtime"] = self.maxtime;
-    params[@"type"] = @(self.type);
+    NSString *url = [NSString stringWithFormat:@"%@%@-20.json", self.url, self.np];
     
     // 请求
-    [self.manager GET:XFCommon_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
-        // 存储maxtime(方便用来加载下一页数据)
-        self.maxtime = responseObject[@"info"][@"maxtime"];
+    [self.manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
+        // 存储np(方便用来加载下一页数据)
+        self.np = responseObject[@"info"][@"np"];
         
         // 字典转模型
         NSArray<XFTopic *> *moreTopics  = [XFTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
@@ -130,7 +111,7 @@ static NSString *const XFTopicCellId = @"topic";
         // 刷新表格
         [self.tableView reloadData];
         
-        // 控件结束刷新
+        //控件结束刷新
         [self.tableView.mj_footer endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         XFLog(@"请求失败 - %@", error);

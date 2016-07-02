@@ -8,8 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface XFUser : NSObject
 
-@property (nonatomic, copy) NSString *username;
+@property (nonatomic, copy) NSString *name;
+
+/** 是否 vip */
+@property (nonatomic, assign) BOOL is_vip;
+
+/** header */
+@property (nonatomic, strong) NSArray *header;
 
 @end

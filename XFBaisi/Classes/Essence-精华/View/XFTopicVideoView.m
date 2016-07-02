@@ -8,6 +8,7 @@
 
 #import "XFTopicVideoView.h"
 #import "XFTopic.h"
+#import "XFVideo.h"
 
 @interface XFTopicVideoView ()
 
@@ -22,18 +23,16 @@
 
 - (void)awakeFromNib {
     self.autoresizingMask = UIViewAutoresizingNone;
-    
-    
 }
 
 - (void)setTopic:(XFTopic *)topic {
     _topic = topic;
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image]];
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.video.thumbnail.firstObject]];
     
-    self.playCountLabel.text = [NSString stringWithFormat:@"%zd播放", topic.playcount];
+    self.playCountLabel.text = [NSString stringWithFormat:@"%zd播放", topic.video.playcount];
     
-    NSInteger minute = topic.videotime / 60;
-    NSInteger second = topic.videotime % 60;
+    NSInteger minute = topic.video.duration / 60;
+    NSInteger second = topic.video.duration % 60;
     
     self.videoTimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minute, second];
 }

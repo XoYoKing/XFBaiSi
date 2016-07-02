@@ -12,6 +12,7 @@
 #import "XFUser.h"
 #import "XFTopicPictureView.h"
 #import "XFTopicVideoView.h"
+#import "XFTopCmtUser.h"
 
 
 @interface XFTopicCell ()
@@ -69,22 +70,23 @@
 - (void)setTopic:(XFTopic *)topic {
     _topic = topic;
     
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
-    self.nameLabel.text = topic.name;
-    self.createdAtLabel.text = topic.created_at;
+    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.user.header.firstObject] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    self.nameLabel.text = topic.user.name;
+    
+    self.createdAtLabel.text = topic.passtime;
     self.text_label.text = topic.text;
     
-    [self setupButton:self.dingButton number:topic.ding placeholder:@"顶"];
-    [self setupButton:self.caiButton number:topic.cai placeholder:@"踩"];
-    [self setupButton:self.repostButton number:topic.repost placeholder:@"分享"];
+    [self setupButton:self.dingButton number:topic.up placeholder:@"顶"];
+    [self setupButton:self.caiButton number:topic.down placeholder:@"踩"];
+    [self setupButton:self.repostButton number:topic.forward placeholder:@"分享"];
     [self setupButton:self.commentButton number:topic.comment placeholder:@"评论"];
     
 #pragma mark - 是否显示最热评论
-    if (topic.top_cmt) {    // 有
+    if (topic.top_comment) {    // 有
         self.topCmtView.hidden = NO;
         
-        NSString *username = topic.top_cmt.user.username;
-        NSString *content = topic.top_cmt.content;
+        NSString *username = topic.top_comment.u.name;
+        NSString *content = topic.top_comment.content;
         
         self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@: %@", username, content];
         
@@ -94,19 +96,32 @@
     
 #pragma mark - 处理 cell 中间的内容
     
-    if (topic.type == XFTopicTypePicture) {         // 图片
+    if ([topic.type isEqualToString:@"image"] ) {         // 图片
         self.pictureView.hidden = NO;
         self.videoView.hidden   = YES;
         self.pictureView.frame = topic.contentFrame;
         self.pictureView.topic = topic;
-    } else if (topic.type == XFTopicTypeWord) {     // 段子
+        //XFLog(@"这里是所有图片");
+        
+    } else if ([topic.type isEqualToString:@"text"]) {     // 段子
         self.pictureView.hidden = YES;
         self.videoView.hidden   = YES;
-    } else if (topic.type == XFTopicTypeVideo) {    // 视频
+        
+        //XFLog(@"段子");
+    } else if ([topic.type isEqualToString:@"video"]) {    // 视频
         self.videoView.hidden   = NO;
         self.pictureView.hidden = YES;
         self.videoView.frame = topic.contentFrame;
         self.videoView.topic = topic;
+        
+        //XFLog(@"视频");
+    } else if ([topic.type isEqualToString:@"gif"]) {       // gif
+        self.pictureView.hidden = NO;
+        self.videoView.hidden   = YES;
+        self.pictureView.frame = topic.contentFrame;
+        self.pictureView.topic = topic;
+        
+        //XFLog(@"GIF");
     }
 }
 

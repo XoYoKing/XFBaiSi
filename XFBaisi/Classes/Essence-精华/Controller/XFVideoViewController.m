@@ -16,11 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.url = @"http://s.budejie.com/topic/list/jingxuan/41/bs0315-iphone-4.2/";
 }
 
-- (XFTopicType)type {
-    return XFTopicTypeVideo;
-}
 
 @end
 

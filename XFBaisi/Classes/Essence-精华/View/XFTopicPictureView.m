@@ -9,13 +9,14 @@
 #import "XFTopicPictureView.h"
 #import "XFTopic.h"
 #import "DALabeledCircularProgressView.h"
+#import "XFImage.h"
+#import "XFGif.h"
 
 @interface XFTopicPictureView ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
 @property (weak, nonatomic) IBOutlet UIButton *seeBigButton;
-@property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *progressView;
 
 
 @end
@@ -25,18 +26,10 @@
 - (void)awakeFromNib {
     // 取消 xib 自动拉升宽高
     self.autoresizingMask = UIViewAutoresizingNone;
-    
-    //self.progressView.roundedCorners = 5;
-    //self.progressView.progressLabel.textColor = [UIColor whiteColor];
-    
-    
 }
 
 - (void)setTopic:(XFTopic *)topic {
     _topic = topic;
-    
-    // gif
-    self.gifView.hidden = !topic.is_gif;
     
     // 点击查看大图按钮
     self.seeBigButton.hidden = !topic.isBigPicture;
@@ -69,22 +62,14 @@
             break;
     }
      */
-    self.progressView.hidden = YES;
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image]];
-    //[self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-        
-        //CGFloat progress = 1.0 * receivedSize / expectedSize;
-        //self.progressView.progress = progress;
-        //self.progressView.hidden = NO;
-        //self.progressView.backgroundColor = XFRandomColor;
-        
-        //self.progressView.progressLabel.text = [NSString stringWithFormat:@"%.0f%%", progress * 100];
-        ////self.progressView.progressLabel.backgroundColor = XFRandomColor;
-        
-    //} completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        ////self.progressView.hidden = YES;
-    //}];
     
+    if ([topic.type isEqualToString:@"image"]) {
+        self.gifView.hidden = YES;
+        [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.image.big.firstObject]];
+    } else if ([topic.type isEqualToString:@"gif"]) {
+        self.gifView.hidden = NO;
+        [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.gif.images.firstObject]];
+    }
 }
 
 

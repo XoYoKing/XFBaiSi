@@ -20,11 +20,11 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="91t-WF-eST" userLabel="图片">
                     <rect key="frame" x="0.0" y="0.0" width="437" height="294"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="o7y-Sx-dKL" userLabel="gif标识">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="vkL-U6-alu" userLabel="gif标识">
                     <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="31" id="1X6-tM-sos"/>
-                        <constraint firstAttribute="height" constant="31" id="3Og-Lu-iQQ"/>
+                        <constraint firstAttribute="width" constant="31" id="2C0-qq-bNy"/>
+                        <constraint firstAttribute="height" constant="31" id="zn6-xD-2he"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxI-xi-CYh" userLabel="SeeBig Button">
@@ -38,41 +38,30 @@
                         <action selector="seeBigBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="LKU-9X-yYm"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qvr-rR-zYh" userLabel="加载进度" customClass="DALabeledCircularProgressView">
-                    <rect key="frame" x="168" y="97" width="100" height="100"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="FEq-qy-9cg"/>
-                        <constraint firstAttribute="width" constant="100" id="hHw-HP-Uv4"/>
-                    </constraints>
-                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Qvr-rR-zYh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0VQ-DH-cRZ"/>
-                <constraint firstItem="o7y-Sx-dKL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FbZ-cX-Fqc"/>
+                <constraint firstItem="vkL-U6-alu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EsS-Nk-Hg8"/>
+                <constraint firstItem="vkL-U6-alu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Lc3-pd-fY2"/>
                 <constraint firstItem="91t-WF-eST" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Nad-eQ-3ah"/>
                 <constraint firstAttribute="trailing" secondItem="8yx-js-VQZ" secondAttribute="trailing" id="Rjp-Ey-JFG"/>
                 <constraint firstItem="8yx-js-VQZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UJ5-0r-eNP"/>
                 <constraint firstAttribute="bottom" secondItem="TxI-xi-CYh" secondAttribute="bottom" id="av0-6u-uIi"/>
                 <constraint firstAttribute="trailing" secondItem="91t-WF-eST" secondAttribute="trailing" id="bKj-L3-W8e"/>
                 <constraint firstAttribute="bottom" secondItem="91t-WF-eST" secondAttribute="bottom" id="bMC-cU-q4E"/>
-                <constraint firstItem="Qvr-rR-zYh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gry-4i-eMe"/>
                 <constraint firstAttribute="trailing" secondItem="TxI-xi-CYh" secondAttribute="trailing" id="h04-7K-de9"/>
                 <constraint firstItem="TxI-xi-CYh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jeg-vr-qsx"/>
                 <constraint firstItem="91t-WF-eST" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="l72-0Q-6i7"/>
                 <constraint firstItem="8yx-js-VQZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="m1X-2g-ARE"/>
-                <constraint firstItem="o7y-Sx-dKL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mWn-6e-Pgb"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="gifView" destination="o7y-Sx-dKL" id="2qA-un-wrK"/>
+                <outlet property="gifView" destination="vkL-U6-alu" id="EPF-mL-rSc"/>
                 <outlet property="imageView" destination="91t-WF-eST" id="ZrT-qT-ZjX"/>
-                <outlet property="progressView" destination="Qvr-rR-zYh" id="ItD-IS-FQY"/>
                 <outlet property="seeBigButton" destination="TxI-xi-CYh" id="kXM-PI-Pow"/>
             </connections>
-            <point key="canvasLocation" x="190.5" y="331"/>
+            <point key="canvasLocation" x="219.5" y="335"/>
         </view>
     </objects>
     <resources>

@@ -11,6 +11,11 @@
 
 @interface XFTopicViewController : UITableViewController
 
-- (XFTopicType)type;
+/** url */
+@property (nonatomic, copy) NSString *url;
+
+//- (XFTopicType)type;
 
 @end
+
+

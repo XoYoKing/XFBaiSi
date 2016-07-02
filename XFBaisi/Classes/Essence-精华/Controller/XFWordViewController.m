@@ -16,11 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.url = @"http://s.budejie.com/topic/tag-topic/64/hot/bs0315-iphone-4.2/";
 }
 
-- (XFTopicType)type {
-    return XFTopicTypeWord;
-}
+
 
 
 @end

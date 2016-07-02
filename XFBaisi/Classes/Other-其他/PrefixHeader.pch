@@ -27,8 +27,6 @@
 #import "NSCalendar+XFExtension.h"
 
 
-
-
 #define ME_HOME_URL @"http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json"
 #define XFCommon_URL @"http://api.budejie.com/api/api_open.php"
 
