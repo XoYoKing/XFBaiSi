@@ -10,6 +10,7 @@
 #import "XFClearCacheCell.h"
 #import "XFTextFontCell.h"
 #import "XFDayOrNightCell.h"
+#import "XFWebViewController.h"
 
 
 @interface XFSettingViewController ()
@@ -113,15 +114,25 @@ static NSString * const XFOtherCellID = @"XFOtherCellID";
     } else if (indexPath.row == 1) {
         XFLog(@"推荐给朋友");
     } else if (indexPath.row == 2) {
-        XFLog(@"帮助");
+        XFWebViewController *webView = [[XFWebViewController alloc] init];
+        webView.navigationItem.title = @"帮助";
+        webView.url = SETTING_HELP_URL;
+        [self.navigationController pushViewController:webView animated:YES];
     } else if (indexPath.row == 3) {
         return;
     } else if (indexPath.row == 4) {
-        XFLog(@"关于我们");
+        XFWebViewController *webView = [[XFWebViewController alloc] init];
+        webView.navigationItem.title = @"关于我们";
+        webView.url = SETTING_ABOUTUS_URL;
+        [self.navigationController pushViewController:webView animated:YES];
     } else if (indexPath.row == 5) {
-        XFLog(@"隐私政策");
+        XFWebViewController *webView = [[XFWebViewController alloc] init];
+        webView.navigationItem.title = @"隐私政策";
+        webView.url = SETTING_POLICY_URL;
+        [self.navigationController pushViewController:webView animated:YES];
     } else {
         XFLog(@"打分支持不得姐！");
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/cn/app/bai-si-bu-jie-zui-da-gao-xiao/id1093382986?mt=8"]];
     }
 }
 

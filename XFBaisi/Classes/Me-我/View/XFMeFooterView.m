@@ -22,20 +22,13 @@
     //self.backgroundColor = [UIColor whiteColor];
     
     if (self) {
-        // 参数
-        //NSMutableDictionary *params = [NSMutableDictionary dictionary];
-        //params[@"a"] = @"square";
-        //params[@"c"] = @"topic";
         
         // 请求
         [[XFHTTPSessionManager manager] GET:ME_HOME_URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
-            XFLog(@" me 页面数据请求成功");
-            
             // 字典转模型
             NSArray *squares = [XFMeSquare mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];
             
             [self createSquares:squares];
-            //XFLog(@"%@", squares);
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             XFLog(@"请求失败 - %@", error);
