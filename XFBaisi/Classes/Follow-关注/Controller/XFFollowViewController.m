@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = XFBaseBgColor;
    
-    self.navigationItem.title = @"我的关注";
+    self.navigationItem.title = @"关注";
     
     // 左边
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem xf_itemWithImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon-click" target:self action:@selector(followClick)];

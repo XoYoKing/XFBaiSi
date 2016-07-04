@@ -83,7 +83,7 @@
     
     // 顶部标题
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
-    // 左边按钮
+    // 右边按钮
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem xf_itemWithImage:@"nav_btn" highImage:@"nav_btn_click" target:self action:@selector(tagClick)];
     
 }

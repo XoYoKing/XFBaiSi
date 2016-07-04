@@ -12,10 +12,9 @@
 @interface XFTopicViewController ()
 
 /** 所有帖子数量 */
-@property (nonatomic, strong) NSMutableArray<XFTopic *> *topics;    // 所有帖子数量
+@property (nonatomic, strong) NSMutableArray<XFTopic *> *topics;
 /** 任务管理者 */
-@property (nonatomic, strong) XFHTTPSessionManager *manager;        //
-
+@property (nonatomic, strong) XFHTTPSessionManager *manager;
 /** np方便加载更多数据 */
 @property (nonatomic, copy) NSString *np;
 

@@ -10,5 +10,4 @@
 
 
 @interface XFRecommendViewController : UIViewController
-
 @end

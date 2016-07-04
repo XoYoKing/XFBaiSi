@@ -1086,6 +1086,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "XFBaisi/Classes/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = XFBaisi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvxiaofan.XFBaisi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1103,6 +1104,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "XFBaisi/Classes/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = XFBaisi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvxiaofan.XFBaisi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
