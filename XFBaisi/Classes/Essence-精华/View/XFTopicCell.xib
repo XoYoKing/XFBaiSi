@@ -72,6 +72,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted" image="mainCellDingClick"/>
+                                <connections>
+                                    <action selector="dingBtnClick:" destination="sHK-aL-Es6" eventType="touchUpInside" id="QqV-E7-KFH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BG-Hx-Mnp">
                                 <rect key="frame" x="80" y="0.0" width="80" height="35"/>
@@ -84,6 +87,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted" image="mainCellCaiClick"/>
+                                <connections>
+                                    <action selector="caiBtnClick:" destination="sHK-aL-Es6" eventType="touchUpInside" id="lKp-go-JY4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8m9-7B-ft2">
                                 <rect key="frame" x="240" y="1" width="80" height="34"/>
@@ -96,6 +102,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted" image="mainCellCommentClick"/>
+                                <connections>
+                                    <action selector="commentBtnClick:" destination="sHK-aL-Es6" eventType="touchUpInside" id="uhx-sE-TiN"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="cNN-5Q-sCa" userLabel="按钮分割线">
                                 <rect key="frame" x="80" y="1" width="1" height="34"/>
@@ -126,6 +135,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted" image="mainCellShareClick"/>
+                                <connections>
+                                    <action selector="forwardBtnClick:" destination="sHK-aL-Es6" eventType="touchUpInside" id="0W1-o2-7Zp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

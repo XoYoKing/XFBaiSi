@@ -167,8 +167,25 @@
     [self.window.rootViewController presentViewController:controller animated:YES completion:nil];
 }
 
+- (IBAction)dingBtnClick:(UIButton *)sender {
+    
+    XFLog(@"顶");
+}
 
+- (IBAction)caiBtnClick:(UIButton *)sender {
+    
+    XFLog(@"踩");
+}
 
+- (IBAction)forwardBtnClick:(UIButton *)sender {
+    
+    XFLog(@"分享");
+}
+
+- (IBAction)commentBtnClick:(UIButton *)sender {
+    
+    XFLog(@"评论");
+}
 
 @end
 

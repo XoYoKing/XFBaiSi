@@ -11,6 +11,7 @@
 #import "DALabeledCircularProgressView.h"
 #import "XFImage.h"
 #import "XFGif.h"
+#import "XFSeeBigViewController.h"
 
 @interface XFTopicPictureView ()
 
@@ -26,6 +27,13 @@
 - (void)awakeFromNib {
     // 取消 xib 自动拉升宽高
     self.autoresizingMask = UIViewAutoresizingNone;
+    
+    self.imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigBtnClick:)];
+    [self.imageView addGestureRecognizer:tapGR];
+    
+    
+    
 }
 
 - (void)setTopic:(XFTopic *)topic {
@@ -72,10 +80,11 @@
     }
 }
 
-
 #pragma mark - 监听按钮点击
 - (IBAction)seeBigBtnClick:(UIButton *)sender {
-    XFLogFunc
+    XFSeeBigViewController *bigView = [[XFSeeBigViewController alloc] init];
+    bigView.topic = self.topic;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:bigView animated:YES completion:nil];
 }
 
 @end

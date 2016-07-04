@@ -44,6 +44,8 @@
 		BDA664381D237475004D5967 /* XFRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA664371D237475004D5967 /* XFRefreshHeader.m */; };
 		BDA6643B1D237D99004D5967 /* XFRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6643A1D237D99004D5967 /* XFRefreshFooter.m */; };
 		BDA6643E1D239629004D5967 /* XFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6643D1D239629004D5967 /* XFHTTPSessionManager.m */; };
+		BDB6C6551D29F86300F0E9D9 /* XFSeeBigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB6C6531D29F86300F0E9D9 /* XFSeeBigViewController.m */; };
+		BDB6C6561D29F86300F0E9D9 /* XFSeeBigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDB6C6541D29F86300F0E9D9 /* XFSeeBigViewController.xib */; };
 		BDBDA1771D1E391B00BA01B1 /* XFBaisiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1761D1E391B00BA01B1 /* XFBaisiTests.m */; };
 		BDBDA1821D1E391B00BA01B1 /* XFBaisiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDA1811D1E391B00BA01B1 /* XFBaisiUITests.m */; };
 		BDBDA1901D1E39B100BA01B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDBDA18F1D1E39B100BA01B1 /* Assets.xcassets */; };
@@ -169,6 +171,9 @@
 		BDA6643A1D237D99004D5967 /* XFRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRefreshFooter.m; sourceTree = "<group>"; };
 		BDA6643C1D239629004D5967 /* XFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFHTTPSessionManager.h; sourceTree = "<group>"; };
 		BDA6643D1D239629004D5967 /* XFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFHTTPSessionManager.m; sourceTree = "<group>"; };
+		BDB6C6521D29F86300F0E9D9 /* XFSeeBigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSeeBigViewController.h; sourceTree = "<group>"; };
+		BDB6C6531D29F86300F0E9D9 /* XFSeeBigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSeeBigViewController.m; sourceTree = "<group>"; };
+		BDB6C6541D29F86300F0E9D9 /* XFSeeBigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFSeeBigViewController.xib; sourceTree = "<group>"; };
 		BDBDA1591D1E391B00BA01B1 /* XFBaisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XFBaisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBDA16D1D1E391B00BA01B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDBDA1721D1E391B00BA01B1 /* XFBaisiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XFBaisiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -435,6 +440,9 @@
 				BDC1578F1D26683F009E3DC6 /* XFSheHuiViewController.m */,
 				BDC157911D26686D009E3DC6 /* XFBeautyViewController.h */,
 				BDC157921D26686D009E3DC6 /* XFBeautyViewController.m */,
+				BDB6C6521D29F86300F0E9D9 /* XFSeeBigViewController.h */,
+				BDB6C6531D29F86300F0E9D9 /* XFSeeBigViewController.m */,
+				BDB6C6541D29F86300F0E9D9 /* XFSeeBigViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -700,6 +708,11 @@
 					BDBDA1581D1E391B00BA01B1 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = V5T362FM3J;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					BDBDA1711D1E391B00BA01B1 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -737,6 +750,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDBDA1901D1E39B100BA01B1 /* Assets.xcassets in Resources */,
+				BDB6C6561D29F86300F0E9D9 /* XFSeeBigViewController.xib in Resources */,
 				BDF7C0C61D227B2D00947EAD /* XFTextFontCell.xib in Resources */,
 				BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */,
 				BDE490AC1D1EC8330029E919 /* XFLoginRegisterViewController.xib in Resources */,
@@ -940,6 +954,7 @@
 				BDC1579F1D26D4DE009E3DC6 /* XFTopCmtUser.m in Sources */,
 				BD0A07A11D24D2BC004E9478 /* NSDate+XFExtension.m in Sources */,
 				BD8382081D27952D0093CF2D /* XFVideo.m in Sources */,
+				BDB6C6551D29F86300F0E9D9 /* XFSeeBigViewController.m in Sources */,
 				BD0A07AB1D250BA6004E9478 /* XFModelConfig.m in Sources */,
 				BD0A07A01D24D2BC004E9478 /* NSCalendar+XFExtension.m in Sources */,
 				BD9D04291D26028900692F89 /* XFTopicVideoView.m in Sources */,
@@ -1068,11 +1083,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "XFBaisi/Classes/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = XFBaisi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvxiaofan.XFBaisi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1083,11 +1100,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "XFBaisi/Classes/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = XFBaisi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvxiaofan.XFBaisi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
