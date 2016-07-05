@@ -27,6 +27,8 @@
 		BD347AC51D2B59F4009C6F79 /* XFSubscribeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD347AC31D2B59F4009C6F79 /* XFSubscribeCell.m */; };
 		BD347AC61D2B59F4009C6F79 /* XFSubscribeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD347AC41D2B59F4009C6F79 /* XFSubscribeCell.xib */; };
 		BD347ACC1D2B6CFF009C6F79 /* XFSubscribeTag.m in Sources */ = {isa = PBXBuildFile; fileRef = BD347ACB1D2B6CFF009C6F79 /* XFSubscribeTag.m */; };
+		BD347ACF1D2B9729009C6F79 /* UIImage+XFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BD347ACE1D2B9729009C6F79 /* UIImage+XFExtension.m */; };
+		BD347AD21D2B9EE0009C6F79 /* UIImageView+XFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BD347AD11D2B9EE0009C6F79 /* UIImageView+XFExtension.m */; };
 		BD3830F11D201FDB0060CEB0 /* XFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F01D201FDB0060CEB0 /* XFConst.m */; };
 		BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F31D2020CE0060CEB0 /* XFMeTableViewCell.m */; };
 		BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F61D20255B0060CEB0 /* XFMeFooterView.m */; };
@@ -143,6 +145,10 @@
 		BD347AC41D2B59F4009C6F79 /* XFSubscribeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFSubscribeCell.xib; sourceTree = "<group>"; };
 		BD347ACA1D2B6CFF009C6F79 /* XFSubscribeTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSubscribeTag.h; sourceTree = "<group>"; };
 		BD347ACB1D2B6CFF009C6F79 /* XFSubscribeTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSubscribeTag.m; sourceTree = "<group>"; };
+		BD347ACD1D2B9729009C6F79 /* UIImage+XFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XFExtension.h"; sourceTree = "<group>"; };
+		BD347ACE1D2B9729009C6F79 /* UIImage+XFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XFExtension.m"; sourceTree = "<group>"; };
+		BD347AD01D2B9EE0009C6F79 /* UIImageView+XFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XFExtension.h"; sourceTree = "<group>"; };
+		BD347AD11D2B9EE0009C6F79 /* UIImageView+XFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XFExtension.m"; sourceTree = "<group>"; };
 		BD3830EF1D201FDB0060CEB0 /* XFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFConst.h; sourceTree = "<group>"; };
 		BD3830F01D201FDB0060CEB0 /* XFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFConst.m; sourceTree = "<group>"; };
 		BD3830F21D2020CE0060CEB0 /* XFMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeTableViewCell.h; sourceTree = "<group>"; };
@@ -627,6 +633,10 @@
 				BD0A079D1D24D2BC004E9478 /* NSCalendar+XFExtension.m */,
 				BD0A079E1D24D2BC004E9478 /* NSDate+XFExtension.h */,
 				BD0A079F1D24D2BC004E9478 /* NSDate+XFExtension.m */,
+				BD347ACD1D2B9729009C6F79 /* UIImage+XFExtension.h */,
+				BD347ACE1D2B9729009C6F79 /* UIImage+XFExtension.m */,
+				BD347AD01D2B9EE0009C6F79 /* UIImageView+XFExtension.h */,
+				BD347AD11D2B9EE0009C6F79 /* UIImageView+XFExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -965,11 +975,13 @@
 				BDA6643B1D237D99004D5967 /* XFRefreshFooter.m in Sources */,
 				BDBDA1C81D1E458900BA01B1 /* AppDelegate.m in Sources */,
 				BD94A6811D223ACD00EC5208 /* XFRecomViewController.m in Sources */,
+				BD347ACF1D2B9729009C6F79 /* UIImage+XFExtension.m in Sources */,
 				BDE490AF1D1ED6210029E919 /* XFTabBar.m in Sources */,
 				BDBDA1E21D1E67B300BA01B1 /* XFNavigationController.m in Sources */,
 				BD2382F11D20FA2E00DE1EB3 /* XFMoreViewController.m in Sources */,
 				BD94A68D1D223B2600EC5208 /* XFWordViewController.m in Sources */,
 				BD660A401D1EF19B006E5BC0 /* XFLoginRegisterTextField.m in Sources */,
+				BD347AD21D2B9EE0009C6F79 /* UIImageView+XFExtension.m in Sources */,
 				BDC157901D26683F009E3DC6 /* XFSheHuiViewController.m in Sources */,
 				BD94A6841D223AE900EC5208 /* XFVideoViewController.m in Sources */,
 				BDBDA1B71D1E446900BA01B1 /* XFNewViewController.m in Sources */,

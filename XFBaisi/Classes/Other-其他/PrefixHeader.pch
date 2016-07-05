@@ -25,6 +25,7 @@
 #import "XFRefreshFooter.h"
 #import "NSDate+XFExtension.h"
 #import "NSCalendar+XFExtension.h"
+#import "UIImageView+XFExtension.h"
 
 /*** 我 页面 URL ***/
 #define ME_HOME_URL      @"http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json"

@@ -70,7 +70,8 @@
 - (void)setTopic:(XFTopic *)topic {
     _topic = topic;
     
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.user.header.firstObject] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.profileImageView xf_setHeader:topic.user.header.firstObject];
+    
     self.nameLabel.text = topic.user.name;
     
     self.createdAtLabel.text = topic.passtime;
