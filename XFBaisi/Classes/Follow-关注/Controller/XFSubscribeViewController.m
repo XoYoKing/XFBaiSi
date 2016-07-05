@@ -65,16 +65,20 @@ static NSString *const XFSubscribeCellID = @"XFSubscribeCell";
 
 - (void)loadSubscribeTags {
     
+    [SVProgressHUD showWithStatus:@"加载中..."];
+    
     __weak typeof(self) weakSelf = self;
     
     [self.manager GET:SUBSCRIBE_URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         weakSelf.subscribeTags = [XFSubscribeTag mj_objectArrayWithKeyValuesArray:responseObject[@"rec_tags"]];
         
-        
         [self.tableView reloadData];
+        
+        [SVProgressHUD dismiss];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         XFLog(@"error:%@", error);
+        [SVProgressHUD showErrorWithStatus:@"网络繁忙，请稍候再试"];
     }];
     
     
@@ -82,6 +86,8 @@ static NSString *const XFSubscribeCellID = @"XFSubscribeCell";
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    
+    [SVProgressHUD dismiss];
     
     [self.manager invalidateSessionCancelingTasks:YES];
 }

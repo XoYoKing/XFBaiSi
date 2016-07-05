@@ -28,7 +28,6 @@
 
 /*** 我 页面 URL ***/
 #define ME_HOME_URL      @"http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json"
-#define ME_MOR_URL     @"http://api.budejie.com/api/api_open.php"
 
 #define SETTING_HELP_URL @"http://www.budejie.com/budejie/help.html"
 #define SETTING_ABOUTUS_URL @"http://www.budejie.com/budejie/aboutus.html?client=iphone&market=&ver=4.2&device=iPhone%204S&uid=&sex=m&udid=&mac=&openudid=dcadd482e5028525a8cd576d6dfec9dcfb486091&asid=24210121-1265-4989-A2E4-2F545FB432F4&jbk=0&appname=bs0315&1467301533"
