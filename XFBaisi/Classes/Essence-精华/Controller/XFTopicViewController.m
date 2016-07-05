@@ -136,13 +136,31 @@ static NSString *const XFTopicCellId = @"topic";
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    XFLogFunc
-}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     return self.topics[indexPath.row].cellHeight;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    XFLogFunc
+}
+
+
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

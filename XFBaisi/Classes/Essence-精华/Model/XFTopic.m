@@ -21,14 +21,6 @@ static NSCalendar *calendar_;
  
 @implementation XFTopic
 
-/**
- *  第一次使用XFTopic时调用一次
- */
-+ (void)initialize {
-    fmt_ = [[NSDateFormatter alloc] init];
-    calendar_ = [NSCalendar xf_calendar];
-}
-
 #pragma mark - cell 高度
 - (CGFloat)cellHeight {
     // 如果已经计算好 cell 高度，就直接返回
