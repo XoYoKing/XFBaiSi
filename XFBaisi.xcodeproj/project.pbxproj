@@ -30,6 +30,8 @@
 		BD3830F11D201FDB0060CEB0 /* XFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F01D201FDB0060CEB0 /* XFConst.m */; };
 		BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F31D2020CE0060CEB0 /* XFMeTableViewCell.m */; };
 		BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F61D20255B0060CEB0 /* XFMeFooterView.m */; };
+		BD5A11D71D2BBCB9002FD341 /* XFCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5A11D31D2BBCB9002FD341 /* XFCommentViewController.m */; };
+		BD5A11D81D2BBCB9002FD341 /* XFCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5A11D41D2BBCB9002FD341 /* XFCommentViewController.xib */; };
 		BD660A401D1EF19B006E5BC0 /* XFLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BD660A3F1D1EF19B006E5BC0 /* XFLoginRegisterTextField.m */; };
 		BD8382001D2775150093CF2D /* XFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8381FF1D2775150093CF2D /* XFImage.m */; };
 		BD8382021D2784250093CF2D /* XFTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8382011D2784250093CF2D /* XFTopicPictureView.xib */; };
@@ -149,6 +151,9 @@
 		BD3830F31D2020CE0060CEB0 /* XFMeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeTableViewCell.m; sourceTree = "<group>"; };
 		BD3830F51D20255B0060CEB0 /* XFMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeFooterView.h; sourceTree = "<group>"; };
 		BD3830F61D20255B0060CEB0 /* XFMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeFooterView.m; sourceTree = "<group>"; };
+		BD5A11D21D2BBCB9002FD341 /* XFCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFCommentViewController.h; sourceTree = "<group>"; };
+		BD5A11D31D2BBCB9002FD341 /* XFCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFCommentViewController.m; sourceTree = "<group>"; };
+		BD5A11D41D2BBCB9002FD341 /* XFCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFCommentViewController.xib; sourceTree = "<group>"; };
 		BD660A3E1D1EF19B006E5BC0 /* XFLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLoginRegisterTextField.h; sourceTree = "<group>"; };
 		BD660A3F1D1EF19B006E5BC0 /* XFLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFLoginRegisterTextField.m; sourceTree = "<group>"; };
 		BD8381FE1D2775150093CF2D /* XFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFImage.h; sourceTree = "<group>"; };
@@ -295,6 +300,40 @@
 			name = Main;
 			sourceTree = "<group>";
 		};
+		BD5A11D01D2BBCB9002FD341 /* Comment-评论 */ = {
+			isa = PBXGroup;
+			children = (
+				BD5A11D11D2BBCB9002FD341 /* Controller */,
+				BD5A11D51D2BBCB9002FD341 /* Model */,
+				BD5A11D61D2BBCB9002FD341 /* View */,
+			);
+			path = "Comment-评论";
+			sourceTree = "<group>";
+		};
+		BD5A11D11D2BBCB9002FD341 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD5A11D21D2BBCB9002FD341 /* XFCommentViewController.h */,
+				BD5A11D31D2BBCB9002FD341 /* XFCommentViewController.m */,
+				BD5A11D41D2BBCB9002FD341 /* XFCommentViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BD5A11D51D2BBCB9002FD341 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD5A11D61D2BBCB9002FD341 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BDBDA1501D1E391B00BA01B1 = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +395,7 @@
 		BDBDA19C1D1E430E00BA01B1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BD5A11D01D2BBCB9002FD341 /* Comment-评论 */,
 				BDBDA19D1D1E433400BA01B1 /* Essence-精华 */,
 				BDBDA19E1D1E434300BA01B1 /* New-新帖 */,
 				BDBDA19F1D1E438000BA01B1 /* Follow-关注 */,
@@ -780,6 +820,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5A11D81D2BBCB9002FD341 /* XFCommentViewController.xib in Resources */,
 				BDBDA1901D1E39B100BA01B1 /* Assets.xcassets in Resources */,
 				BDB6C6561D29F86300F0E9D9 /* XFSeeBigViewController.xib in Resources */,
 				BDF7C0C61D227B2D00947EAD /* XFTextFontCell.xib in Resources */,
@@ -946,6 +987,7 @@
 				BD9D04331D265D8900692F89 /* XFTopicViewController.m in Sources */,
 				BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */,
 				BD0A07A51D24E2DE004E9478 /* XFUser.m in Sources */,
+				BD5A11D71D2BBCB9002FD341 /* XFCommentViewController.m in Sources */,
 				BD94A67E1D222B9C00EC5208 /* XFTitleButton.m in Sources */,
 				BD8382001D2775150093CF2D /* XFImage.m in Sources */,
 				BDF7C0CA1D22836800947EAD /* XFDayOrNightCell.m in Sources */,
