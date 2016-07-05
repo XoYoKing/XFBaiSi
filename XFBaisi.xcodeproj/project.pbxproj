@@ -22,6 +22,11 @@
 		BD2382EB1D20CB8A00DE1EB3 /* XFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2382E91D20CB8A00DE1EB3 /* XFWebViewController.xib */; };
 		BD2382F11D20FA2E00DE1EB3 /* XFMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382F01D20FA2E00DE1EB3 /* XFMoreViewController.m */; };
 		BD2382F71D21146700DE1EB3 /* XFClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382F61D21146700DE1EB3 /* XFClearCacheCell.m */; };
+		BD347ABD1D2B513F009C6F79 /* XFFollwController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD347ABC1D2B513F009C6F79 /* XFFollwController.m */; };
+		BD347AC11D2B5238009C6F79 /* XFSubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD347AC01D2B5238009C6F79 /* XFSubscribeViewController.m */; };
+		BD347AC51D2B59F4009C6F79 /* XFSubscribeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD347AC31D2B59F4009C6F79 /* XFSubscribeCell.m */; };
+		BD347AC61D2B59F4009C6F79 /* XFSubscribeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD347AC41D2B59F4009C6F79 /* XFSubscribeCell.xib */; };
+		BD347ACC1D2B6CFF009C6F79 /* XFSubscribeTag.m in Sources */ = {isa = PBXBuildFile; fileRef = BD347ACB1D2B6CFF009C6F79 /* XFSubscribeTag.m */; };
 		BD3830F11D201FDB0060CEB0 /* XFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F01D201FDB0060CEB0 /* XFConst.m */; };
 		BD3830F41D2020CE0060CEB0 /* XFMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F31D2020CE0060CEB0 /* XFMeTableViewCell.m */; };
 		BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3830F61D20255B0060CEB0 /* XFMeFooterView.m */; };
@@ -129,6 +134,15 @@
 		BD2382F01D20FA2E00DE1EB3 /* XFMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMoreViewController.m; sourceTree = "<group>"; };
 		BD2382F51D21146700DE1EB3 /* XFClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFClearCacheCell.h; sourceTree = "<group>"; };
 		BD2382F61D21146700DE1EB3 /* XFClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFClearCacheCell.m; sourceTree = "<group>"; };
+		BD347ABB1D2B513F009C6F79 /* XFFollwController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFollwController.h; sourceTree = "<group>"; };
+		BD347ABC1D2B513F009C6F79 /* XFFollwController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFFollwController.m; sourceTree = "<group>"; };
+		BD347ABF1D2B5238009C6F79 /* XFSubscribeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSubscribeViewController.h; sourceTree = "<group>"; };
+		BD347AC01D2B5238009C6F79 /* XFSubscribeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSubscribeViewController.m; sourceTree = "<group>"; };
+		BD347AC21D2B59F4009C6F79 /* XFSubscribeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSubscribeCell.h; sourceTree = "<group>"; };
+		BD347AC31D2B59F4009C6F79 /* XFSubscribeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSubscribeCell.m; sourceTree = "<group>"; };
+		BD347AC41D2B59F4009C6F79 /* XFSubscribeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFSubscribeCell.xib; sourceTree = "<group>"; };
+		BD347ACA1D2B6CFF009C6F79 /* XFSubscribeTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSubscribeTag.h; sourceTree = "<group>"; };
+		BD347ACB1D2B6CFF009C6F79 /* XFSubscribeTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSubscribeTag.m; sourceTree = "<group>"; };
 		BD3830EF1D201FDB0060CEB0 /* XFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFConst.h; sourceTree = "<group>"; };
 		BD3830F01D201FDB0060CEB0 /* XFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFConst.m; sourceTree = "<group>"; };
 		BD3830F21D2020CE0060CEB0 /* XFMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeTableViewCell.h; sourceTree = "<group>"; };
@@ -489,6 +503,10 @@
 		BDBDA1A81D1E43C300BA01B1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BD347ABB1D2B513F009C6F79 /* XFFollwController.h */,
+				BD347ABC1D2B513F009C6F79 /* XFFollwController.m */,
+				BD347ABF1D2B5238009C6F79 /* XFSubscribeViewController.h */,
+				BD347AC01D2B5238009C6F79 /* XFSubscribeViewController.m */,
 				BDBDA1B81D1E447400BA01B1 /* XFFollowViewController.h */,
 				BDBDA1B91D1E447400BA01B1 /* XFFollowViewController.m */,
 				BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */,
@@ -501,6 +519,8 @@
 		BDBDA1A91D1E43C300BA01B1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BD347ACA1D2B6CFF009C6F79 /* XFSubscribeTag.h */,
+				BD347ACB1D2B6CFF009C6F79 /* XFSubscribeTag.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -508,6 +528,9 @@
 		BDBDA1AA1D1E43C300BA01B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD347AC21D2B59F4009C6F79 /* XFSubscribeCell.h */,
+				BD347AC31D2B59F4009C6F79 /* XFSubscribeCell.m */,
+				BD347AC41D2B59F4009C6F79 /* XFSubscribeCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -752,6 +775,7 @@
 				BDBDA1901D1E39B100BA01B1 /* Assets.xcassets in Resources */,
 				BDB6C6561D29F86300F0E9D9 /* XFSeeBigViewController.xib in Resources */,
 				BDF7C0C61D227B2D00947EAD /* XFTextFontCell.xib in Resources */,
+				BD347AC61D2B59F4009C6F79 /* XFSubscribeCell.xib in Resources */,
 				BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */,
 				BDE490AC1D1EC8330029E919 /* XFLoginRegisterViewController.xib in Resources */,
 				BD2382EB1D20CB8A00DE1EB3 /* XFWebViewController.xib in Resources */,
@@ -909,6 +933,7 @@
 				BD0A07951D24D1DD004E9478 /* UIBarButtonItem+XFExtension.m in Sources */,
 				BD0A07981D24D23A004E9478 /* UITextField+XFExtension.m in Sources */,
 				BD2382E31D20B86B00DE1EB3 /* XFMeSquareButton.m in Sources */,
+				BD347AC11D2B5238009C6F79 /* XFSubscribeViewController.m in Sources */,
 				BD8382051D278B100093CF2D /* XFGif.m in Sources */,
 				BD9D04331D265D8900692F89 /* XFTopicViewController.m in Sources */,
 				BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */,
@@ -926,8 +951,10 @@
 				BD2382EA1D20CB8A00DE1EB3 /* XFWebViewController.m in Sources */,
 				BD0A079B1D24D273004E9478 /* NSString+XFExtension.m in Sources */,
 				BDC0B31C1D240BD70068B2F5 /* XFTopicCell.m in Sources */,
+				BD347ABD1D2B513F009C6F79 /* XFFollwController.m in Sources */,
 				BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */,
 				BD9D041E1D25FF8400692F89 /* XFTopicPictureView.m in Sources */,
+				BD347ACC1D2B6CFF009C6F79 /* XFSubscribeTag.m in Sources */,
 				BD94A6871D223AFA00EC5208 /* XFWangHotViewController.m in Sources */,
 				BDBDA1C01D1E456500BA01B1 /* UIView+XFExtension.m in Sources */,
 				BD94A68A1D223B1000EC5208 /* XFPictureViewController.m in Sources */,
@@ -948,6 +975,7 @@
 				BDBDA1B71D1E446900BA01B1 /* XFNewViewController.m in Sources */,
 				BDBDA1BD1D1E447B00BA01B1 /* XFMeViewController.m in Sources */,
 				BDBDA1CC1D1E459400BA01B1 /* main.m in Sources */,
+				BD347AC51D2B59F4009C6F79 /* XFSubscribeCell.m in Sources */,
 				BDC157931D26686D009E3DC6 /* XFBeautyViewController.m in Sources */,
 				BDA664351D235ED5004D5967 /* XFTopic.m in Sources */,
 				BDF7C0C51D227B2D00947EAD /* XFTextFontCell.m in Sources */,

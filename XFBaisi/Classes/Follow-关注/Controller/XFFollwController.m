@@ -1,36 +1,32 @@
 //
-//  XFEssenceViewController.m
+//  XFFollwController.m
 //  XFBaisi
 //
-//  Created by xiaofans on 16/6/25.
+//  Created by xiaofans on 16/7/5.
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
-#import "XFEssenceViewController.h"
+#import "XFFollwController.h"
 #import "XFTitleButton.h"
-#import "XFRecomViewController.h"
-#import "XFVideoViewController.h"
-#import "XFWangHotViewController.h"
-#import "XFPictureViewController.h"
-#import "XFWordViewController.h"
-#import "XFPaiHangViewController.h"
-#import "XFSheHuiViewController.h"
-#import "XFBeautyViewController.h"
+#import "XFSubscribeViewController.h"
+#import "XFFollowViewController.h"
+#import "XFRecommendViewController.h"
 
-@interface XFEssenceViewController () <UIScrollViewDelegate>
+@interface XFFollwController () <UIScrollViewDelegate>
 
 @property (nonatomic, weak) XFTitleButton *selectedTitleBtn;    // 当前选中的标题按钮
 @property (nonatomic, weak) UIView *indicatorView;              // 标题按钮底部指示器
 @property (nonatomic, weak) UIScrollView *scrollView;           // 滚动视图
-@property (nonatomic, weak) UIView *titleView;                  // 顶部标题栏
 
-/** 滚动titleSView */
+/** 顶部滚动titleSView */
 @property (nonatomic, weak) UIScrollView *titleSView;
 
+/**  */
+@property (nonatomic, assign) CGFloat titleBtnX;
 
 @end
- 
-@implementation XFEssenceViewController
+
+@implementation XFFollwController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,32 +42,15 @@
     [self addChildVcView];
 }
 
+
 #pragma mark - 初始化
 
 - (void)setupChildViewControllers {
-    XFRecomViewController *recomView = [[XFRecomViewController alloc] init];
-    [self addChildViewController:recomView];
+    XFSubscribeViewController *subscribeView = [[XFSubscribeViewController alloc] init];
+    [self addChildViewController:subscribeView];
     
-    XFVideoViewController *videoView = [[XFVideoViewController alloc] init];
-    [self addChildViewController:videoView];
-    
-    XFPictureViewController *pictureView = [[XFPictureViewController alloc] init];
-    [self addChildViewController:pictureView];
-    
-    XFWordViewController *wordView = [[XFWordViewController alloc] init];
-    [self addChildViewController:wordView];
-    
-    XFWangHotViewController *wangHotView = [[XFWangHotViewController alloc] init];
-    [self addChildViewController:wangHotView];
-    
-    XFPaiHangViewController *paiHangView = [[XFPaiHangViewController alloc] init];
-    [self addChildViewController:paiHangView];
-    
-    XFSheHuiViewController *sheHuiView = [[XFSheHuiViewController alloc] init];
-    [self addChildViewController:sheHuiView];
-    
-    XFBeautyViewController *beautView = [[XFBeautyViewController alloc] init];
-    [self addChildViewController:beautView];
+    XFFollowViewController *followView = [[XFFollowViewController alloc] init];
+    [self addChildViewController:followView];
 }
 
 /**
@@ -81,10 +60,9 @@
     
     self.view.backgroundColor = XFBaseBgColor;
     
-    // 顶部标题
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
-    // 右边按钮
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem xf_itemWithImage:@"nav_btn" highImage:@"nav_btn_click" target:self action:@selector(tagClick)];
+    // 左边
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem xf_itemWithImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon-click" target:self action:@selector(followClick)];
+    
     
 }
 
@@ -106,6 +84,8 @@
     scrollView.scrollEnabled = NO;
     [self.view addSubview:scrollView];
     self.scrollView = scrollView;
+    
+    
 }
 
 /**
@@ -120,22 +100,30 @@
     self.titleSView = titleSView;
     
     // 添加按钮
-    NSArray *titlesArray = @[@"推荐", @"视频", @"图片", @"段子", @"网红", @"排行", @"社会", @"美女"];
+    NSArray *titlesArray = @[@"订阅", @"关注"];
     NSInteger count = titlesArray.count;
-    CGFloat titleBtnW = 55;
+    CGFloat titleBtnW = 80;
     CGFloat titleBtnH = titleSView.xf_height;
     
     for (NSUInteger i = 0; i < count; i++) {
         XFTitleButton *titleBtn = [XFTitleButton buttonWithType:UIButtonTypeCustom];
         [titleBtn addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
+        [titleBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [titleSView addSubview:titleBtn];
         titleBtn.tag = i;
+        
+        if (i == 0) {
+            self.titleBtnX = self.titleSView.xf_width / 2 - titleBtnW;
+        } else {
+            self.titleBtnX = self.titleSView.xf_width / 2;
+        }
+        
         
         // 设置数据
         [titleBtn setTitle:titlesArray[i] forState:UIControlStateNormal];
         
         // 设置 frame
-        titleBtn.frame = CGRectMake(i * titleBtnW, 0, titleBtnW, titleBtnH);
+        titleBtn.frame = CGRectMake(self.titleBtnX, 0, titleBtnW, titleBtnH);
     }
     
     // 按钮的选中颜色
@@ -148,6 +136,12 @@
     indicatorView.xf_y = titleSView.xf_height - indicatorView.xf_height;
     [titleSView addSubview:indicatorView];
     self.indicatorView = indicatorView;
+    
+    // 底部分割线
+    UIView *lineView = [[UIView alloc] init];
+    lineView.frame = CGRectMake(0, (CGRectGetMaxY(indicatorView.frame) + self.navigationController.navigationBar.xf_height + 20), titleSView.xf_width, 1);
+    lineView.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:lineView];
     
     // 立即根据文字内容计算 label 的宽度
     [firstTitleButton.titleLabel sizeToFit];
@@ -184,15 +178,19 @@
     // 滚动视图滚动到指定位置
     CGPoint offset = self.scrollView.contentOffset;
     offset.x = titleButton.tag * self.scrollView.xf_width;
-    [self.scrollView setContentOffset:offset animated:YES]; 
+    [self.scrollView setContentOffset:offset animated:YES];
 }
 
 /**
- *  导航栏左边按钮点击事件  
+ *  导航栏左边按钮点击事件
  */
-- (void)tagClick {
-    XFLogFunc;
+
+#pragma mark - 监听导航左边按钮
+- (void)followClick {
+    XFRecommendViewController *followVC = [[XFRecommendViewController alloc] init];
+    [self.navigationController pushViewController:followVC animated:YES];
 }
+
 
 #pragma mark - 添加子控制器的view
 - (void)addChildVcView {
@@ -217,18 +215,8 @@
     [self addChildVcView];
 }
 
+
 @end
-
-
-
-
-
-
-
-
-
-
-
 
 
 

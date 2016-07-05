@@ -79,7 +79,7 @@
 #define XFColor(r, g, b) XFColorA((r), (g), (b), 255)
 #define XFRandomColor XFColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 #define XFGrayColor(v) XFColor((v), (v), (v))
-#define XFBaseBgColor XFGrayColor(206)
+#define XFBaseBgColor XFGrayColor(246)
 
 #endif
 

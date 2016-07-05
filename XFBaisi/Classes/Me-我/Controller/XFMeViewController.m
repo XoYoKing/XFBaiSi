@@ -112,8 +112,9 @@
     if (indexPath.section == 0) {
         XFLoginRegisterViewController *loginRegisterVC = [[XFLoginRegisterViewController alloc] init];
         [self presentViewController:loginRegisterVC animated:YES completion:nil];
+    } else {
+        XFLog(@"离线下载");
     }
-    XFLog(@"离线下载");
 }
 
 

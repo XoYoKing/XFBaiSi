@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="93" id="KGk-i7-Jjw" customClass="XFSubscribeCell">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="377" height="92"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fho-8q-iv2" userLabel="头像">
+                        <rect key="frame" x="18" y="21" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Ggp-2n-57U"/>
+                            <constraint firstAttribute="height" constant="50" id="yOg-MM-GK5"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9r-rA-GES" userLabel="名称">
+                        <rect key="frame" x="78" y="21" width="40" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="556.6万人订阅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ve-Mn-y0a" userLabel="订阅数">
+                        <rect key="frame" x="78" y="55" width="90" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="CuX-aa-ra6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go4-MQ-F9a">
+                        <rect key="frame" x="298" y="34" width="51" height="25"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="+ 订阅" backgroundImage="FollowBtnBg">
+                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="FollowBtnClickBg"/>
+                        <connections>
+                            <action selector="sucscribeBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bRt-6I-Y72"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总帖数 246798" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDM-Ac-Ldk" userLabel="订阅数">
+                        <rect key="frame" x="185" y="55" width="91" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="91" id="MTb-kY-XvO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ue9-pr-VQ0">
+                        <rect key="frame" x="173" y="55" width="1" height="16"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="G3W-12-0Je"/>
+                            <constraint firstAttribute="width" constant="1" id="cZm-Ha-ieE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fho-8q-iv2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="7hb-JM-WmP"/>
+                    <constraint firstItem="XDM-Ac-Ldk" firstAttribute="leading" secondItem="5ve-Mn-y0a" secondAttribute="trailing" constant="20" id="8yL-hP-HPT"/>
+                    <constraint firstItem="XDM-Ac-Ldk" firstAttribute="leading" secondItem="ue9-pr-VQ0" secondAttribute="trailing" constant="11" id="Bqf-FX-cqi"/>
+                    <constraint firstItem="X9r-rA-GES" firstAttribute="top" secondItem="fho-8q-iv2" secondAttribute="top" id="LTF-fA-AgO"/>
+                    <constraint firstItem="5ve-Mn-y0a" firstAttribute="leading" secondItem="X9r-rA-GES" secondAttribute="leading" id="MRk-Zp-O8A"/>
+                    <constraint firstItem="ue9-pr-VQ0" firstAttribute="leading" secondItem="5ve-Mn-y0a" secondAttribute="trailing" constant="5" id="VKb-9A-OSn"/>
+                    <constraint firstItem="fho-8q-iv2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ywa-vD-JOO"/>
+                    <constraint firstItem="go4-MQ-F9a" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="a9M-fk-C2G"/>
+                    <constraint firstItem="XDM-Ac-Ldk" firstAttribute="centerY" secondItem="5ve-Mn-y0a" secondAttribute="centerY" id="b5v-c2-dWH"/>
+                    <constraint firstItem="5ve-Mn-y0a" firstAttribute="bottom" secondItem="fho-8q-iv2" secondAttribute="bottom" id="bND-ct-aUC"/>
+                    <constraint firstItem="X9r-rA-GES" firstAttribute="leading" secondItem="fho-8q-iv2" secondAttribute="trailing" constant="10" id="cLa-OG-Fg6"/>
+                    <constraint firstItem="ue9-pr-VQ0" firstAttribute="centerY" secondItem="5ve-Mn-y0a" secondAttribute="centerY" id="doC-4q-SfW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="go4-MQ-F9a" secondAttribute="trailing" constant="20" id="itJ-sw-gdG"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="8yL-hP-HPT"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImage" destination="fho-8q-iv2" id="uGl-uE-20R"/>
+                <outlet property="nameLabel" destination="X9r-rA-GES" id="K7L-zY-qdQ"/>
+                <outlet property="subCountLabel" destination="5ve-Mn-y0a" id="G2D-Tb-3fa"/>
+                <outlet property="topicsCountLabel" destination="XDM-Ac-Ldk" id="Pp0-Fp-17l"/>
+            </connections>
+            <point key="canvasLocation" x="577.5" y="354.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="FollowBtnBg" width="51" height="25"/>
+        <image name="FollowBtnClickBg" width="51" height="25"/>
+    </resources>
+</document>

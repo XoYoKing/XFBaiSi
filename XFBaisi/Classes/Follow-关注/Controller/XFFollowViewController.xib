@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
@@ -15,15 +14,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快快登录吧，关注百思最in牛人" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmO-Ua-g6V" userLabel="中间的文字描述">
-                    <rect key="frame" x="70" y="84" width="235" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="dIK-5Z-EaJ"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p3-dA-QQW" userLabel="登录按钮">
                     <rect key="frame" x="35" y="568" width="135" height="35"/>
                     <constraints>
@@ -78,11 +68,20 @@
                         <constraint firstAttribute="width" constant="235" id="qco-BI-cxw"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快快登录吧，关注百思最in牛人" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmO-Ua-g6V" userLabel="中间的文字描述">
+                    <rect key="frame" x="70" y="120" width="235" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="dIK-5Z-EaJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="QnU-LA-4nm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4J1-oq-gzS"/>
-                <constraint firstItem="YmO-Ua-g6V" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="84" id="6po-ek-T1V"/>
+                <constraint firstItem="YmO-Ua-g6V" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="120" id="6po-ek-T1V"/>
                 <constraint firstAttribute="bottom" secondItem="VfV-Fi-xGZ" secondAttribute="bottom" constant="64" id="76y-HL-H6N"/>
                 <constraint firstAttribute="trailing" secondItem="VfV-Fi-xGZ" secondAttribute="trailing" constant="35" id="9OG-0C-RtC"/>
                 <constraint firstItem="YmO-Ua-g6V" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Db1-8b-gnv"/>

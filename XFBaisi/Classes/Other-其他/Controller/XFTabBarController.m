@@ -10,9 +10,10 @@
 #import "XFTabBar.h"
 #import "XFEssenceViewController.h"
 #import "XFNewViewController.h"
-#import "XFFollowViewController.h"
+//#import "XFFollowViewController.h"
 #import "XFMeViewController.h"
 #import "XFNavigationController.h"
+#import "XFFollwController.h"
 
 
 #define TabBar_Width 
@@ -66,7 +67,7 @@
     
     [self setupOneChildViewController:[[XFNavigationController alloc] initWithRootViewController:[[XFNewViewController alloc] init]] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
-    [self setupOneChildViewController:[[XFNavigationController alloc] initWithRootViewController:[[XFFollowViewController alloc] init]] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    [self setupOneChildViewController:[[XFNavigationController alloc] initWithRootViewController:[[XFFollwController alloc] init]] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
     [self setupOneChildViewController:[[XFNavigationController alloc] initWithRootViewController:[[XFMeViewController alloc] init]] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];  
 }
