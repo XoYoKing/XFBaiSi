@@ -69,23 +69,25 @@ static NSString *const XFTopicCellId = @"topic";
     
     NSString *url = [NSString stringWithFormat:@"%@0-20.json", self.url];
     
+    __weak typeof(self) weakSelf = self;
+    
     // 请求
     [self.manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
         // 存储np(方便用来加载下一页数据)
-        self.np = responseObject[@"info"][@"np"];
+        weakSelf.np = responseObject[@"info"][@"np"];
         
         // 字典转模型
-        self.topics  = [XFTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        weakSelf.topics  = [XFTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         // 刷新表格
-        [self.tableView reloadData];
+        [weakSelf.tableView reloadData];
         
         // 控件结束刷新
-        [self.tableView.mj_header endRefreshing];
+        [weakSelf.tableView.mj_header endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         XFLog(@"请求失败 - %@", error);
         // 控件结束刷新
-        [self.tableView.mj_header endRefreshing];
+        [weakSelf.tableView.mj_header endRefreshing];
     }];
 }
 

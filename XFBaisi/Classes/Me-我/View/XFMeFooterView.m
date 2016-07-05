@@ -23,12 +23,14 @@
     
     if (self) {
         
+        __weak typeof(self) weakSelf = self;
+        
         // 请求
         [[XFHTTPSessionManager manager] GET:ME_HOME_URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
             // 字典转模型
             NSArray *squares = [XFMeSquare mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];
             
-            [self createSquares:squares];
+            [weakSelf createSquares:squares];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             XFLog(@"请求失败 - %@", error);

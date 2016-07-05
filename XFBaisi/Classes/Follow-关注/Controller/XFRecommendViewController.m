@@ -20,23 +20,39 @@
     self.view.backgroundColor = XFBaseBgColor;
     self.navigationItem.title = @"推荐关注";
     
+    [self loadRecommendSub];
     
+}
+
+//
+- (void)loadRecommendSub {
+    [SVProgressHUD showWithStatus:@"加载中..."];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    // 测试
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [SVProgressHUD dismiss];
+    });
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
     
+    [SVProgressHUD dismiss];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+

@@ -66,6 +66,7 @@ static NSString *const XFSubscribeCellID = @"XFSubscribeCell";
 - (void)loadSubscribeTags {
     
     [SVProgressHUD showWithStatus:@"加载中..."];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     
     __weak typeof(self) weakSelf = self;
     
@@ -79,6 +80,7 @@ static NSString *const XFSubscribeCellID = @"XFSubscribeCell";
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         XFLog(@"error:%@", error);
         [SVProgressHUD showErrorWithStatus:@"网络繁忙，请稍候再试"];
+        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     }];
     
     
