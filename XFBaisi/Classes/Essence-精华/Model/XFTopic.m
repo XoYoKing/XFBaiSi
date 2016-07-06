@@ -12,6 +12,7 @@
 #import "XFImage.h"
 #import "XFGif.h"
 #import "XFVideo.h"
+#import "XFAudio.h"
 
 
 
@@ -52,6 +53,11 @@ static NSCalendar *calendar_;
         _cellHeight += contentH + XFMargin;
     } else if ([self.type isEqualToString:@"video"]) {
         CGFloat contentH = textMaxW * self.video.height / self.video.width;
+        
+        self.contentFrame = CGRectMake(XFMargin, _cellHeight, textMaxW, contentH);
+        _cellHeight += contentH + XFMargin;
+    } else if ([self.type isEqualToString:@"audio"]) {
+        CGFloat contentH = textMaxW * self.audio.height / self.audio.width;
         
         self.contentFrame = CGRectMake(XFMargin, _cellHeight, textMaxW, contentH);
         _cellHeight += contentH + XFMargin;

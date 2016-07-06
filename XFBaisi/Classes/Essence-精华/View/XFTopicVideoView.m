@@ -28,7 +28,7 @@
 - (void)setTopic:(XFTopic *)topic {
     _topic = topic;
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.video.thumbnail.firstObject]];
-    
+   
     self.playCountLabel.text = [NSString stringWithFormat:@"%zd播放", topic.video.playcount];
     
     NSInteger minute = topic.video.duration / 60;

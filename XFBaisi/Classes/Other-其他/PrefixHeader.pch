@@ -78,6 +78,18 @@
 #define JING_SHEHUI_URL  @"http://s.budejie.com/topic/tag-topic/473/hot/bs0315-iphone-4.2/"
 #define JING_BEAUTY_URL  @"http://s.budejie.com/topic/tag-topic/117/hot/bs0315-iphone-4.2/"
 
+
+// 最新
+#define NEW_ALL_URL     @"http://s.budejie.com/topic/list/zuixin/1/bs0315-iphone-4.2/"
+#define NEW_VIDEO_URL   @"http://s.budejie.com/topic/list/zuixin/41/bs0315-iphone-4.2/"
+#define NEW_PICTURE_URL @"http://s.budejie.com/topic/list/zuixin/10/bs0315-iphone-4.2/"
+#define NEW_WORD_URL    @"http://s.budejie.com/topic/list/zuixin/29/bs0315-iphone-4.2/"
+#define NEW_WANGHOT_URL @"http://s.budejie.com/topic/tag-topic/3096/new/bs0315-iphone-4.2/"
+#define NEW_BEAUTY_URL  @"http://s.budejie.com/topic/tag-topic/117/new/bs0315-iphone-4.2/"
+#define NEW_GAME_URL    @"http://s.budejie.com/topic/tag-topic/164/new/bs0315-iphone-4.2/"
+#define NEW_VOICE_URL   @"http://s.budejie.com/topic/list/zuixin/31/bs0315-iphone-4.2/"
+
+
 //穿越 URL
 #define CHUANYUE_ALL_URL @"http://d.api.budejie.com/topic/list/chuanyue/1/bs0315-iphone-4.2/0-20.json"
 #define CHUANYUE_VIDEO_URL @"http://d.api.budejie.com/topic/list/chuanyue/41/bs0315-iphone-4.2/0-20.json"
@@ -87,11 +99,6 @@
 
 // 关注-订阅 URL
 #define SUBSCRIBE_URL @"http://d.api.budejie.com/tag/subscribe/bs0315-iphone-4.2.json?appname=bs0315&asid=24210121-1265-4989-A2E4-2F545FB432F4&client=iphone&device=iPhone%204S&from=ios&jbk=0&mac=&market=&openudid=dcadd482e5028525a8cd576d6dfec9dcfb486091&udid=&ver=4.2"
-
-
-
-
-
 
 
 #endif

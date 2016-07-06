@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class XFComment, XFImage, XFUser, XFGif, XFVideo;
+@class XFComment, XFImage, XFUser, XFGif, XFVideo, XFAudio;
 
 @interface XFTopic : NSObject
 
@@ -36,7 +36,8 @@
 @property (nonatomic, strong) XFGif *gif;
 /** 视频 */
 @property (nonatomic, strong) XFVideo *video;
-
+/** 音频 */
+@property (nonatomic, strong) XFAudio *audio;
 
 /** 帖子类型 */
 @property (nonatomic, copy)   NSString  *type;

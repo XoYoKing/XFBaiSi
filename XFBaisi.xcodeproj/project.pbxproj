@@ -82,9 +82,11 @@
 		BDE3C7441D2D0E000092CB15 /* XFNWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7431D2D0E000092CB15 /* XFNWordViewController.m */; };
 		BDE3C7471D2D0E110092CB15 /* XFNWangHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7461D2D0E110092CB15 /* XFNWangHotViewController.m */; };
 		BDE3C74A1D2D0E280092CB15 /* XFNBeautyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7491D2D0E280092CB15 /* XFNBeautyViewController.m */; };
-		BDE3C74D1D2D0E3D0092CB15 /* XFNLengMenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C74C1D2D0E3D0092CB15 /* XFNLengMenViewController.m */; };
 		BDE3C7501D2D0E470092CB15 /* XFNGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C74F1D2D0E470092CB15 /* XFNGameViewController.m */; };
 		BDE3C7531D2D0E520092CB15 /* XFNVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7521D2D0E520092CB15 /* XFNVoiceViewController.m */; };
+		BDE3C7561D2D19330092CB15 /* XFTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7551D2D19330092CB15 /* XFTopicVoiceView.m */; };
+		BDE3C7581D2D19410092CB15 /* XFTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE3C7571D2D19410092CB15 /* XFTopicVoiceView.xib */; };
+		BDE3C75B1D2D1F450092CB15 /* XFAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C75A1D2D1F450092CB15 /* XFAudio.m */; };
 		BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */; };
 		BDE490AB1D1EC8330029E919 /* XFLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE490A91D1EC8330029E919 /* XFLoginRegisterViewController.m */; };
 		BDE490AC1D1EC8330029E919 /* XFLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE490AA1D1EC8330029E919 /* XFLoginRegisterViewController.xib */; };
@@ -264,12 +266,15 @@
 		BDE3C7461D2D0E110092CB15 /* XFNWangHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNWangHotViewController.m; sourceTree = "<group>"; };
 		BDE3C7481D2D0E280092CB15 /* XFNBeautyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNBeautyViewController.h; sourceTree = "<group>"; };
 		BDE3C7491D2D0E280092CB15 /* XFNBeautyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNBeautyViewController.m; sourceTree = "<group>"; };
-		BDE3C74B1D2D0E3D0092CB15 /* XFNLengMenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNLengMenViewController.h; sourceTree = "<group>"; };
-		BDE3C74C1D2D0E3D0092CB15 /* XFNLengMenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNLengMenViewController.m; sourceTree = "<group>"; };
 		BDE3C74E1D2D0E470092CB15 /* XFNGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNGameViewController.h; sourceTree = "<group>"; };
 		BDE3C74F1D2D0E470092CB15 /* XFNGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNGameViewController.m; sourceTree = "<group>"; };
 		BDE3C7511D2D0E520092CB15 /* XFNVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNVoiceViewController.h; sourceTree = "<group>"; };
 		BDE3C7521D2D0E520092CB15 /* XFNVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNVoiceViewController.m; sourceTree = "<group>"; };
+		BDE3C7541D2D19330092CB15 /* XFTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTopicVoiceView.h; sourceTree = "<group>"; };
+		BDE3C7551D2D19330092CB15 /* XFTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTopicVoiceView.m; sourceTree = "<group>"; };
+		BDE3C7571D2D19410092CB15 /* XFTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFTopicVoiceView.xib; sourceTree = "<group>"; };
+		BDE3C7591D2D1F440092CB15 /* XFAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFAudio.h; sourceTree = "<group>"; };
+		BDE3C75A1D2D1F450092CB15 /* XFAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFAudio.m; sourceTree = "<group>"; };
 		BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFFollowViewController.xib; sourceTree = "<group>"; };
 		BDE490A81D1EC8330029E919 /* XFLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLoginRegisterViewController.h; sourceTree = "<group>"; };
 		BDE490A91D1EC8330029E919 /* XFLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFLoginRegisterViewController.m; sourceTree = "<group>"; };
@@ -511,14 +516,12 @@
 				BDE3C7431D2D0E000092CB15 /* XFNWordViewController.m */,
 				BDE3C7451D2D0E110092CB15 /* XFNWangHotViewController.h */,
 				BDE3C7461D2D0E110092CB15 /* XFNWangHotViewController.m */,
-				BDE3C74B1D2D0E3D0092CB15 /* XFNLengMenViewController.h */,
-				BDE3C74C1D2D0E3D0092CB15 /* XFNLengMenViewController.m */,
-				BDE3C7511D2D0E520092CB15 /* XFNVoiceViewController.h */,
-				BDE3C7521D2D0E520092CB15 /* XFNVoiceViewController.m */,
-				BDE3C74E1D2D0E470092CB15 /* XFNGameViewController.h */,
-				BDE3C74F1D2D0E470092CB15 /* XFNGameViewController.m */,
 				BDE3C7481D2D0E280092CB15 /* XFNBeautyViewController.h */,
 				BDE3C7491D2D0E280092CB15 /* XFNBeautyViewController.m */,
+				BDE3C74E1D2D0E470092CB15 /* XFNGameViewController.h */,
+				BDE3C74F1D2D0E470092CB15 /* XFNGameViewController.m */,
+				BDE3C7511D2D0E520092CB15 /* XFNVoiceViewController.h */,
+				BDE3C7521D2D0E520092CB15 /* XFNVoiceViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -526,6 +529,8 @@
 		BDBDA1A31D1E43B300BA01B1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BDE3C7591D2D1F440092CB15 /* XFAudio.h */,
+				BDE3C75A1D2D1F450092CB15 /* XFAudio.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -602,6 +607,9 @@
 				BD9D04271D26028900692F89 /* XFTopicVideoView.h */,
 				BD9D04281D26028900692F89 /* XFTopicVideoView.m */,
 				BD9D042A1D26029200692F89 /* XFTopicVideoView.xib */,
+				BDE3C7541D2D19330092CB15 /* XFTopicVoiceView.h */,
+				BDE3C7551D2D19330092CB15 /* XFTopicVoiceView.m */,
+				BDE3C7571D2D19410092CB15 /* XFTopicVoiceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -889,6 +897,7 @@
 				BD2382EB1D20CB8A00DE1EB3 /* XFWebViewController.xib in Resources */,
 				BD9D042B1D26029200692F89 /* XFTopicVideoView.xib in Resources */,
 				BDC0B31D1D240BD70068B2F5 /* XFTopicCell.xib in Resources */,
+				BDE3C7581D2D19410092CB15 /* XFTopicVoiceView.xib in Resources */,
 				BD8382021D2784250093CF2D /* XFTopicPictureView.xib in Resources */,
 				BDF7C0CB1D22836800947EAD /* XFDayOrNightCell.xib in Resources */,
 			);
@@ -1046,7 +1055,6 @@
 				BD347AC11D2B5238009C6F79 /* XFSubscribeViewController.m in Sources */,
 				BD8382051D278B100093CF2D /* XFGif.m in Sources */,
 				BD9D04331D265D8900692F89 /* XFTopicViewController.m in Sources */,
-				BDE3C74D1D2D0E3D0092CB15 /* XFNLengMenViewController.m in Sources */,
 				BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */,
 				BD0A07A51D24E2DE004E9478 /* XFUser.m in Sources */,
 				BDE3C7501D2D0E470092CB15 /* XFNGameViewController.m in Sources */,
@@ -1091,6 +1099,7 @@
 				BD347AD21D2B9EE0009C6F79 /* UIImageView+XFExtension.m in Sources */,
 				BDC157901D26683F009E3DC6 /* XFSheHuiViewController.m in Sources */,
 				BDE3C7441D2D0E000092CB15 /* XFNWordViewController.m in Sources */,
+				BDE3C75B1D2D1F450092CB15 /* XFAudio.m in Sources */,
 				BD94A6841D223AE900EC5208 /* XFVideoViewController.m in Sources */,
 				BDBDA1B71D1E446900BA01B1 /* XFNewViewController.m in Sources */,
 				BDE3C7531D2D0E520092CB15 /* XFNVoiceViewController.m in Sources */,
@@ -1101,6 +1110,7 @@
 				BD347AC51D2B59F4009C6F79 /* XFSubscribeCell.m in Sources */,
 				BDC157931D26686D009E3DC6 /* XFBeautyViewController.m in Sources */,
 				BDA664351D235ED5004D5967 /* XFTopic.m in Sources */,
+				BDE3C7561D2D19330092CB15 /* XFTopicVoiceView.m in Sources */,
 				BDF7C0C51D227B2D00947EAD /* XFTextFontCell.m in Sources */,
 				BD8382081D27952D0093CF2D /* XFVideo.m in Sources */,
 				BDB6C6551D29F86300F0E9D9 /* XFSeeBigViewController.m in Sources */,

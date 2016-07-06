@@ -12,6 +12,7 @@
 #import "XFUser.h"
 #import "XFTopicPictureView.h"
 #import "XFTopicVideoView.h"
+#import "XFTopicVoiceView.h"
 
 
 @interface XFTopicCell ()
@@ -33,6 +34,8 @@
 /** 中间控件 */
 @property (nonatomic, weak) XFTopicPictureView   *pictureView;       // 图片 view
 @property (nonatomic, weak) XFTopicVideoView     *videoView;         // 视频 view
+@property (nonatomic, weak) XFTopicVoiceView     *voiceView;         // 音频 view
+
 
 
 
@@ -52,12 +55,22 @@
 }
 
 - (XFTopicVideoView *)videoView {
-    if (!_pictureView) {
+    if (!_videoView) {
         XFTopicVideoView *videoView = [XFTopicVideoView xf_viewFromXib];
         [self.contentView addSubview:videoView];
         _videoView = videoView;
     }
     return _videoView;
+}
+
+- (XFTopicVoiceView *)voiceView {
+    if (_voiceView) {
+        XFLogFunc
+        XFTopicVoiceView *voiceView = [XFTopicVoiceView xf_viewFromXib];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
 }
 
 #pragma mark - 初始化
@@ -96,32 +109,34 @@
     
 #pragma mark - 处理 cell 中间的内容
     
-    if ([topic.type isEqualToString:@"image"] ) {         // 图片
+    if ([topic.type isEqualToString:@"image"] ) {           // 图片
         self.pictureView.hidden = NO;
         self.videoView.hidden   = YES;
-        self.pictureView.frame = topic.contentFrame;
-        self.pictureView.topic = topic;
-        //XFLog(@"这里是所有图片");
-        
-    } else if ([topic.type isEqualToString:@"text"]) {     // 段子
+        self.voiceView.hidden   = YES;
+        self.pictureView.frame  = topic.contentFrame;
+        self.pictureView.topic  = topic;
+    } else if ([topic.type isEqualToString:@"text"]) {      // 段子
         self.pictureView.hidden = YES;
         self.videoView.hidden   = YES;
-        
-        //XFLog(@"段子");
-    } else if ([topic.type isEqualToString:@"video"]) {    // 视频
+        self.voiceView.hidden   = YES;
+    } else if ([topic.type isEqualToString:@"video"]) {     // 视频
         self.videoView.hidden   = NO;
         self.pictureView.hidden = YES;
-        self.videoView.frame = topic.contentFrame;
-        self.videoView.topic = topic;
-        
-        //XFLog(@"视频");
+        self.voiceView.hidden   = YES;
+        self.videoView.frame    = topic.contentFrame;
+        self.videoView.topic    = topic;
     } else if ([topic.type isEqualToString:@"gif"]) {       // gif
         self.pictureView.hidden = NO;
         self.videoView.hidden   = YES;
-        self.pictureView.frame = topic.contentFrame;
-        self.pictureView.topic = topic;
-        
-        //XFLog(@"GIF");
+        self.voiceView.hidden   = YES;
+        self.pictureView.frame  = topic.contentFrame;
+        self.pictureView.topic  = topic;
+    } else if ([topic.type isEqualToString:@"audio"]) {     // 音频
+        self.voiceView.hidden   = NO;
+        self.pictureView.hidden = YES;
+        self.videoView.hidden   = YES;
+        self.voiceView.topic    = topic;
+        self.voiceView.frame    = topic.contentFrame;
     }
 }
 
