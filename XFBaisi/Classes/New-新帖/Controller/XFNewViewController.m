@@ -29,7 +29,7 @@
 
 #pragma mark - 监听导航左边按钮
 - (void)tagClick {
-    XFLogFunc;
+    XFLogFunc
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
