@@ -8,6 +8,6 @@
 
 #import "XFTopicViewController.h"
 
-@interface XFNVoiceViewController : XFTopicViewController
+@interface XFNAudioViewController : XFTopicViewController
 
 @end

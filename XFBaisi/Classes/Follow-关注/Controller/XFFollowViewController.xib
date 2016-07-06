@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XFFollowViewController">
@@ -15,11 +16,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p3-dA-QQW" userLabel="登录按钮">
-                    <rect key="frame" x="35" y="568" width="135" height="35"/>
+                    <rect key="frame" x="30" y="568" width="145" height="35"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="OKk-sV-uLJ"/>
                         <constraint firstAttribute="height" constant="35" id="i7p-3A-MHn"/>
-                        <constraint firstAttribute="width" constant="135" id="syr-bb-2XK"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="登录" backgroundImage="loginBtnBg">
@@ -28,20 +27,13 @@
                     <state key="highlighted" backgroundImage="loginBtnBgClick">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="loginRegisterAction" destination="-1" eventType="touchUpInside" id="YXT-v0-ge2"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfV-Fi-xGZ" userLabel="注册按钮">
-                    <rect key="frame" x="205" y="568" width="135" height="35"/>
+                    <rect key="frame" x="200" y="568" width="145" height="35"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="135" id="Lge-FE-6ha"/>
                         <constraint firstAttribute="height" constant="35" id="kPe-v2-t03"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -51,43 +43,41 @@
                     <state key="highlighted">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="loginRegisterAction" destination="-1" eventType="touchUpInside" id="jdp-jq-vy1"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="QnU-LA-4nm" userLabel="顶部图标">
-                    <rect key="frame" x="70" y="216" width="235" height="235"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="235" id="oid-VP-Fmp"/>
-                        <constraint firstAttribute="width" constant="235" id="qco-BI-cxw"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快快登录吧，关注百思最in牛人" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmO-Ua-g6V" userLabel="中间的文字描述">
-                    <rect key="frame" x="70" y="120" width="235" height="20"/>
+                    <rect key="frame" x="70" y="118" width="235" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="dIK-5Z-EaJ"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="QnU-LA-4nm" userLabel="顶部图标">
+                    <rect key="frame" x="70" y="230" width="235" height="235"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="QnU-LA-4nm" secondAttribute="height" multiplier="70:70" id="j6s-4n-Oa1"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="QnU-LA-4nm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4J1-oq-gzS"/>
-                <constraint firstItem="YmO-Ua-g6V" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="120" id="6po-ek-T1V"/>
+                <constraint firstItem="VfV-Fi-xGZ" firstAttribute="leading" secondItem="9p3-dA-QQW" secondAttribute="trailing" constant="25" id="19I-0S-DYq"/>
+                <constraint firstItem="QnU-LA-4nm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="14" id="4J1-oq-gzS"/>
+                <constraint firstItem="YmO-Ua-g6V" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="118" id="6po-ek-T1V"/>
                 <constraint firstAttribute="bottom" secondItem="VfV-Fi-xGZ" secondAttribute="bottom" constant="64" id="76y-HL-H6N"/>
-                <constraint firstAttribute="trailing" secondItem="VfV-Fi-xGZ" secondAttribute="trailing" constant="35" id="9OG-0C-RtC"/>
+                <constraint firstAttribute="trailing" secondItem="VfV-Fi-xGZ" secondAttribute="trailing" constant="30" id="9OG-0C-RtC"/>
                 <constraint firstItem="YmO-Ua-g6V" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Db1-8b-gnv"/>
-                <constraint firstItem="9p3-dA-QQW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="35" id="XrG-md-d3J"/>
+                <constraint firstItem="VfV-Fi-xGZ" firstAttribute="width" secondItem="9p3-dA-QQW" secondAttribute="width" id="MtX-9B-bYN"/>
+                <constraint firstAttribute="trailing" secondItem="QnU-LA-4nm" secondAttribute="trailing" constant="70" id="UCj-9C-9lH"/>
+                <constraint firstItem="QnU-LA-4nm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="70" id="VeZ-d7-fJN"/>
+                <constraint firstItem="9p3-dA-QQW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="XrG-md-d3J"/>
                 <constraint firstItem="QnU-LA-4nm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aju-nU-Jpp"/>
                 <constraint firstAttribute="bottom" secondItem="9p3-dA-QQW" secondAttribute="bottom" constant="64" id="cVb-dg-k9r"/>
+                <constraint firstItem="VfV-Fi-xGZ" firstAttribute="height" secondItem="9p3-dA-QQW" secondAttribute="height" id="sxa-xB-6eK"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="304.5" y="399.5"/>

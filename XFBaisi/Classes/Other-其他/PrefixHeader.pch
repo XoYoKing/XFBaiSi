@@ -87,7 +87,7 @@
 #define NEW_WANGHOT_URL @"http://s.budejie.com/topic/tag-topic/3096/new/bs0315-iphone-4.2/"
 #define NEW_BEAUTY_URL  @"http://s.budejie.com/topic/tag-topic/117/new/bs0315-iphone-4.2/"
 #define NEW_GAME_URL    @"http://s.budejie.com/topic/tag-topic/164/new/bs0315-iphone-4.2/"
-#define NEW_VOICE_URL   @"http://s.budejie.com/topic/list/zuixin/31/bs0315-iphone-4.2/"
+#define NEW_AUDIO_URL   @"http://s.budejie.com/topic/list/zuixin/31/bs0315-iphone-4.2/"
 
 
 //穿越 URL

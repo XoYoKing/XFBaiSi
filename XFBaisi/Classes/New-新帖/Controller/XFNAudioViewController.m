@@ -6,17 +6,17 @@
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
-#import "XFNVoiceViewController.h"
+#import "XFNAudioViewController.h"
 
-@interface XFNVoiceViewController ()
+@interface XFNAudioViewController ()
 
 @end
 
-@implementation XFNVoiceViewController
+@implementation XFNAudioViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.url = NEW_VOICE_URL;
+    self.url = NEW_AUDIO_URL;
 }
 
 @end

@@ -12,7 +12,7 @@
 #import "XFUser.h"
 #import "XFTopicPictureView.h"
 #import "XFTopicVideoView.h"
-#import "XFTopicVoiceView.h"
+#import "XFTopicAudioView.h"
 
 
 @interface XFTopicCell ()
@@ -34,7 +34,8 @@
 /** 中间控件 */
 @property (nonatomic, weak) XFTopicPictureView   *pictureView;       // 图片 view
 @property (nonatomic, weak) XFTopicVideoView     *videoView;         // 视频 view
-@property (nonatomic, weak) XFTopicVoiceView     *voiceView;         // 音频 view
+@property (nonatomic, weak) XFTopicAudioView     *audioView;         // 音频 view
+
 
 
 
@@ -63,15 +64,15 @@
     return _videoView;
 }
 
-- (XFTopicVoiceView *)voiceView {
-    if (_voiceView) {
-        XFLogFunc
-        XFTopicVoiceView *voiceView = [XFTopicVoiceView xf_viewFromXib];
-        [self.contentView addSubview:voiceView];
-        _voiceView = voiceView;
+- (XFTopicAudioView *)audioView {
+    if (!_audioView) {
+        XFTopicAudioView *audioView = [XFTopicAudioView xf_viewFromXib];
+        [self.contentView addSubview:audioView];
+        _audioView = audioView;
     }
-    return _voiceView;
+    return _audioView;
 }
+
 
 #pragma mark - 初始化
 
@@ -112,31 +113,31 @@
     if ([topic.type isEqualToString:@"image"] ) {           // 图片
         self.pictureView.hidden = NO;
         self.videoView.hidden   = YES;
-        self.voiceView.hidden   = YES;
+        self.audioView.hidden   = YES;
         self.pictureView.frame  = topic.contentFrame;
         self.pictureView.topic  = topic;
     } else if ([topic.type isEqualToString:@"text"]) {      // 段子
         self.pictureView.hidden = YES;
         self.videoView.hidden   = YES;
-        self.voiceView.hidden   = YES;
+        self.audioView.hidden   = YES;
     } else if ([topic.type isEqualToString:@"video"]) {     // 视频
         self.videoView.hidden   = NO;
         self.pictureView.hidden = YES;
-        self.voiceView.hidden   = YES;
+        self.audioView.hidden   = YES;
         self.videoView.frame    = topic.contentFrame;
         self.videoView.topic    = topic;
     } else if ([topic.type isEqualToString:@"gif"]) {       // gif
         self.pictureView.hidden = NO;
         self.videoView.hidden   = YES;
-        self.voiceView.hidden   = YES;
+        self.audioView.hidden   = YES;
         self.pictureView.frame  = topic.contentFrame;
         self.pictureView.topic  = topic;
     } else if ([topic.type isEqualToString:@"audio"]) {     // 音频
-        self.voiceView.hidden   = NO;
+        self.audioView.hidden   = NO;
         self.pictureView.hidden = YES;
         self.videoView.hidden   = YES;
-        self.voiceView.topic    = topic;
-        self.voiceView.frame    = topic.contentFrame;
+        self.audioView.topic    = topic;
+        self.audioView.frame    = topic.contentFrame;
     }
 }
 

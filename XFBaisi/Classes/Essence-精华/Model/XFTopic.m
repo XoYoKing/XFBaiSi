@@ -16,9 +16,6 @@
 
 
 
-static NSDateFormatter *fmt_;
-static NSCalendar *calendar_;
- 
 @implementation XFTopic
 
 #pragma mark - cell 高度

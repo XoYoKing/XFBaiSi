@@ -1,5 +1,5 @@
 //
-//  XFTopicVoiceView.h
+//  XFTopicAudioView.h
 //  XFBaisi
 //
 //  Created by xiaofans on 16/7/6.
@@ -10,7 +10,7 @@
 
 @class XFTopic;
 
-@interface XFTopicVoiceView : UIView
+@interface XFTopicAudioView : UIView
 
 /** topic */
 @property (nonatomic, strong) XFTopic *topic;

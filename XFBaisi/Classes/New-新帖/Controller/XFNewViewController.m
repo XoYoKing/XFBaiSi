@@ -13,7 +13,7 @@
 #import "XFNPictureViewController.h"
 #import "XFNWordViewController.h"
 #import "XFNWangHotViewController.h"
-#import "XFNVoiceViewController.h"
+#import "XFNAudioViewController.h"
 #import "XFNGameViewController.h"
 #import "XFNBeautyViewController.h"
 
@@ -69,8 +69,8 @@
     XFNGameViewController *gameView = [[XFNGameViewController alloc] init];
     [self addChildViewController:gameView];
     
-    XFNVoiceViewController *voiceView = [[XFNVoiceViewController alloc] init];
-    [self addChildViewController:voiceView];
+    XFNAudioViewController *audioView = [[XFNAudioViewController alloc] init];
+    [self addChildViewController:audioView];
 }
 
 /**
