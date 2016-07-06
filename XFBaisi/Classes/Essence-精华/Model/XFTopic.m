@@ -12,12 +12,10 @@
 #import "XFImage.h"
 #import "XFGif.h"
 #import "XFVideo.h"
+#import "XFAudio.h"
 
 
 
-static NSDateFormatter *fmt_;
-static NSCalendar *calendar_;
- 
 @implementation XFTopic
 
 #pragma mark - cell 高度
@@ -35,26 +33,31 @@ static NSCalendar *calendar_;
     _cellHeight += textSize.height + XFMargin;
     
     // 中间的内容
-    if ([self.type isEqualToString:@"image"]) { // 图片视频算中间内容
+    if ([self.type isEqualToString:XFTopicImage]) { // 图片视频算中间内容
         // 中间图片真是宽度 * 图片真是高度 / 图片真是宽度
-        CGFloat contentH = textMaxW * self.image.height / self.image.width;
+        CGFloat contentH    = textMaxW * self.image.height / self.image.width;
         
         if (contentH > SCREEN.height) {
-            contentH = 300;
+            contentH        = 300;
             self.bigPicture = YES;
         }
-        self.contentFrame = CGRectMake(XFMargin, _cellHeight, textMaxW, contentH);
-        _cellHeight += contentH + XFMargin;
-    } else if ([self.type isEqualToString:@"gif"]) {
-        CGFloat contentH = textMaxW * self.gif.height / self.gif.width;
+        self.contentFrame   = CGRectMake(XFMargin, _cellHeight, textMaxW, contentH);
+        _cellHeight         += contentH + XFMargin;
+    } else if ([self.type isEqualToString:XFTopicGif]) {
+        CGFloat contentH    = textMaxW * self.gif.height / self.gif.width;
         
-        self.contentFrame = CGRectMake(XFMargin, _cellHeight, textMaxW, contentH);
-        _cellHeight += contentH + XFMargin;
-    } else if ([self.type isEqualToString:@"video"]) {
-        CGFloat contentH = textMaxW * self.video.height / self.video.width;
+        self.contentFrame   = CGRectMake(XFMargin, _cellHeight, textMaxW, contentH);
+        _cellHeight         += contentH + XFMargin;
+    } else if ([self.type isEqualToString:XFTopicVideo]) {
+        CGFloat contentH    = textMaxW * self.video.height / self.video.width;
         
-        self.contentFrame = CGRectMake(XFMargin, _cellHeight, textMaxW, contentH);
-        _cellHeight += contentH + XFMargin;
+        self.contentFrame   = CGRectMake(XFMargin, _cellHeight, textMaxW, contentH);
+        _cellHeight         += contentH + XFMargin;
+    } else if ([self.type isEqualToString:XFTopicAudio]) {
+        CGFloat contentH    = textMaxW * self.audio.height / self.audio.width;
+        
+        self.contentFrame   = CGRectMake(XFMargin, _cellHeight, textMaxW, contentH);
+        _cellHeight         += contentH + XFMargin;
     }
     
     // 最热评论

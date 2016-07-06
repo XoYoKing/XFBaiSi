@@ -11,10 +11,9 @@
 
 @interface XFTopicViewController : UITableViewController
 
-/** url */
+/** 接收每个控制器的 URL */
 @property (nonatomic, copy) NSString *url;
 
-//- (XFTopicType)type;
 
 @end
 

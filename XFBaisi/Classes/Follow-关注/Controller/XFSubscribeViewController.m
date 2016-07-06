@@ -15,7 +15,7 @@
 /** 订阅标签数组 */
 @property (nonatomic, strong) NSArray<XFSubscribeTag *> *subscribeTags;
 /** manager */
-@property (nonatomic, strong) XFHTTPSessionManager *manager;
+@property (nonatomic, strong) XFHTTPSessionManager      *manager;
 
 @end
 

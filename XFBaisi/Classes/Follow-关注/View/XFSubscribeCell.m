@@ -22,6 +22,9 @@
 
 @implementation XFSubscribeCell
 
+- (void)awakeFromNib {
+    self.autoresizingMask = UIViewAutoresizingNone;
+}
 
 - (void)setSubscribeTag:(XFSubscribeTag *)subscribeTag {
     _subscribeTag = subscribeTag;
@@ -34,13 +37,17 @@
     
     // 订阅数
     if (subscribeTag.sub_number >= 10000) {
-        self.subCountLabel.text = [NSString stringWithFormat:@"%.1f万人订阅", subscribeTag.sub_number / 10000.0];
+        self.subCountLabel.text = [NSString stringWithFormat:@"%.1f万人订阅",
+                                   subscribeTag.sub_number / 10000.0];
     } else {
-        self.subCountLabel.text = [NSString stringWithFormat:@"%zd人订阅", subscribeTag.sub_number];
+        self.subCountLabel.text = [NSString stringWithFormat:@"%zd人订阅",
+                                   subscribeTag.sub_number];
     }
     
     // 总帖数
-    self.topicsCountLabel.text = [NSString stringWithFormat:@"总帖数 %zd", subscribeTag.post_num];
+    self.topicsCountLabel.text  = [NSString stringWithFormat:@"%zd",
+                                   subscribeTag.post_num];
+    //self.topicsCountLabel.textColor 
     
 }
 

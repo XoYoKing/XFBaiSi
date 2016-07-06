@@ -1,15 +1,14 @@
 //
-//  XFVideo.h
+//  XFAudio.h
 //  XFBaisi
 //
-//  Created by xiaofans on 16/7/2.
+//  Created by xiaofans on 16/7/6.
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface XFVideo : NSObject
-
+@interface XFAudio : NSObject
 
 @property (nonatomic, assign) CGFloat   width;
 @property (nonatomic, assign) CGFloat   height;
@@ -21,5 +20,6 @@
 
 /** 视频缩略图 */
 @property (nonatomic, strong) NSArray   *thumbnail;
+
 
 @end

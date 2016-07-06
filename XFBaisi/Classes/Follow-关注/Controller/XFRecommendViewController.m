@@ -21,7 +21,6 @@
     self.navigationItem.title = @"推荐关注";
     
     [self loadRecommendSub];
-    
 }
 
 //

@@ -12,6 +12,7 @@
 #import "XFUser.h"
 #import "XFTopicPictureView.h"
 #import "XFTopicVideoView.h"
+#import "XFTopicAudioView.h"
 
 
 @interface XFTopicCell ()
@@ -33,6 +34,9 @@
 /** 中间控件 */
 @property (nonatomic, weak) XFTopicPictureView   *pictureView;       // 图片 view
 @property (nonatomic, weak) XFTopicVideoView     *videoView;         // 视频 view
+@property (nonatomic, weak) XFTopicAudioView     *audioView;         // 音频 view
+
+
 
 
 
@@ -52,13 +56,23 @@
 }
 
 - (XFTopicVideoView *)videoView {
-    if (!_pictureView) {
+    if (!_videoView) {
         XFTopicVideoView *videoView = [XFTopicVideoView xf_viewFromXib];
         [self.contentView addSubview:videoView];
         _videoView = videoView;
     }
     return _videoView;
 }
+
+- (XFTopicAudioView *)audioView {
+    if (!_audioView) {
+        XFTopicAudioView *audioView = [XFTopicAudioView xf_viewFromXib];
+        [self.contentView addSubview:audioView];
+        _audioView = audioView;
+    }
+    return _audioView;
+}
+
 
 #pragma mark - 初始化
 
@@ -71,57 +85,59 @@
     
     [self.profileImageView xf_setHeader:topic.user.header.firstObject];
     
-    self.nameLabel.text = topic.user.name;
+    self.nameLabel.text      = topic.user.name;
     
     self.createdAtLabel.text = topic.passtime;
-    self.text_label.text = topic.text;
+    self.text_label.text     = topic.text;
     
-    [self setupButton:self.dingButton number:topic.up placeholder:@"顶"];
-    [self setupButton:self.caiButton number:topic.down placeholder:@"踩"];
-    [self setupButton:self.repostButton number:topic.forward placeholder:@"分享"];
+    [self setupButton:self.dingButton    number:topic.up      placeholder:@"顶"];
+    [self setupButton:self.caiButton     number:topic.down    placeholder:@"踩"];
+    [self setupButton:self.repostButton  number:topic.forward placeholder:@"分享"];
     [self setupButton:self.commentButton number:topic.comment placeholder:@"评论"];
     
 #pragma mark - 是否显示最热评论
     if (topic.top_comment) {    // 有
-        self.topCmtView.hidden = NO;
+        self.topCmtView.hidden  = NO;
         
-        NSString *username = topic.top_comment.user.name;
-        NSString *content = topic.top_comment.content;
+        NSString *username      = topic.top_comment.user.name;
+        NSString *content       = topic.top_comment.content;
         
         self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@: %@", username, content];
         
     } else {                // 没有
-        self.topCmtView.hidden = YES;
+        self.topCmtView.hidden  = YES;
     }
     
 #pragma mark - 处理 cell 中间的内容
     
-    if ([topic.type isEqualToString:@"image"] ) {         // 图片
+    if ([topic.type isEqualToString:XFTopicImage] ) {           // 图片
         self.pictureView.hidden = NO;
         self.videoView.hidden   = YES;
-        self.pictureView.frame = topic.contentFrame;
-        self.pictureView.topic = topic;
-        //XFLog(@"这里是所有图片");
-        
-    } else if ([topic.type isEqualToString:@"text"]) {     // 段子
+        self.audioView.hidden   = YES;
+        self.pictureView.frame  = topic.contentFrame;
+        self.pictureView.topic  = topic;
+    } else if ([topic.type isEqualToString:XFTopicWord]) {      // 段子
         self.pictureView.hidden = YES;
         self.videoView.hidden   = YES;
-        
-        //XFLog(@"段子");
-    } else if ([topic.type isEqualToString:@"video"]) {    // 视频
+        self.audioView.hidden   = YES;
+    } else if ([topic.type isEqualToString:XFTopicVideo]) {     // 视频
+        self.pictureView.hidden = YES;
         self.videoView.hidden   = NO;
-        self.pictureView.hidden = YES;
-        self.videoView.frame = topic.contentFrame;
-        self.videoView.topic = topic;
-        
-        //XFLog(@"视频");
-    } else if ([topic.type isEqualToString:@"gif"]) {       // gif
+        self.audioView.hidden   = YES;
+        self.videoView.frame    = topic.contentFrame;
+        self.videoView.topic    = topic;
+    } else if ([topic.type isEqualToString:XFTopicGif]) {       // gif
         self.pictureView.hidden = NO;
         self.videoView.hidden   = YES;
-        self.pictureView.frame = topic.contentFrame;
-        self.pictureView.topic = topic;
-        
-        //XFLog(@"GIF");
+        self.audioView.hidden   = YES;
+        self.pictureView.frame  = topic.contentFrame;
+        self.pictureView.topic  = topic;
+    } else if ([topic.type isEqualToString:XFTopicAudio]) {     // 音频
+        self.pictureView.hidden = YES;
+        self.videoView.hidden   = YES;
+        self.audioView.hidden   = NO;
+        self.audioView.topic    = topic;
+        self.audioView.frame    = topic.contentFrame;
     }
 }
 

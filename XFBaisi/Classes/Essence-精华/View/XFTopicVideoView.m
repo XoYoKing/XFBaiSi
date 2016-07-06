@@ -13,8 +13,8 @@
 @interface XFTopicVideoView ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *playCountLabel;
-@property (weak, nonatomic) IBOutlet UILabel *videoTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel     *playCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel     *videoTimeLabel;
 
 
 @end
@@ -28,7 +28,7 @@
 - (void)setTopic:(XFTopic *)topic {
     _topic = topic;
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.video.thumbnail.firstObject]];
-    
+   
     self.playCountLabel.text = [NSString stringWithFormat:@"%zd播放", topic.video.playcount];
     
     NSInteger minute = topic.video.duration / 60;

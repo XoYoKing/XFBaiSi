@@ -19,13 +19,17 @@
 
 @interface XFEssenceViewController () <UIScrollViewDelegate>
 
-@property (nonatomic, weak) XFTitleButton *selectedTitleBtn;    // 当前选中的标题按钮
-@property (nonatomic, weak) UIView *indicatorView;              // 标题按钮底部指示器
-@property (nonatomic, weak) UIScrollView *scrollView;           // 滚动视图
-@property (nonatomic, weak) UIView *titleView;                  // 顶部标题栏
+/** 当前选中的标题按钮 */
+@property (nonatomic, weak) XFTitleButton *selectedTitleBtn;
+/** 标题按钮底部指示器 */
+@property (nonatomic, weak) UIView        *indicatorView;
+/** 滚动视图 */
+@property (nonatomic, weak) UIScrollView  *scrollView;
+/** 顶部标题栏 */
+@property (nonatomic, weak) UIView        *titleView;
 
 /** 滚动titleSView */
-@property (nonatomic, weak) UIScrollView *titleSView;
+@property (nonatomic, weak) UIScrollView  *titleSView;
 
 
 @end
@@ -49,28 +53,28 @@
 #pragma mark - 初始化
 
 - (void)setupChildViewControllers {
-    XFRecomViewController *recomView = [[XFRecomViewController alloc] init];
+    XFRecomViewController   *recomView      = [[XFRecomViewController alloc] init];
     [self addChildViewController:recomView];
     
-    XFVideoViewController *videoView = [[XFVideoViewController alloc] init];
+    XFVideoViewController   *videoView      = [[XFVideoViewController alloc] init];
     [self addChildViewController:videoView];
     
-    XFPictureViewController *pictureView = [[XFPictureViewController alloc] init];
+    XFPictureViewController *pictureView    = [[XFPictureViewController alloc] init];
     [self addChildViewController:pictureView];
     
-    XFWordViewController *wordView = [[XFWordViewController alloc] init];
+    XFWordViewController    *wordView       = [[XFWordViewController alloc] init];
     [self addChildViewController:wordView];
     
-    XFWangHotViewController *wangHotView = [[XFWangHotViewController alloc] init];
+    XFWangHotViewController *wangHotView    = [[XFWangHotViewController alloc] init];
     [self addChildViewController:wangHotView];
     
-    XFPaiHangViewController *paiHangView = [[XFPaiHangViewController alloc] init];
+    XFPaiHangViewController *paiHangView    = [[XFPaiHangViewController alloc] init];
     [self addChildViewController:paiHangView];
     
-    XFSheHuiViewController *sheHuiView = [[XFSheHuiViewController alloc] init];
+    XFSheHuiViewController  *sheHuiView     = [[XFSheHuiViewController alloc] init];
     [self addChildViewController:sheHuiView];
     
-    XFBeautyViewController *beautView = [[XFBeautyViewController alloc] init];
+    XFBeautyViewController  *beautView      = [[XFBeautyViewController alloc] init];
     [self addChildViewController:beautView];
 }
 
@@ -101,9 +105,9 @@
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.frame = self.view.bounds;
-    scrollView.contentSize = CGSizeMake(self.childViewControllers.count * scrollView.xf_width, 0);
     scrollView.delegate = self;
     scrollView.scrollEnabled = NO;
+    scrollView.contentSize = CGSizeMake(self.childViewControllers.count * scrollView.xf_width, 0);
     [self.view addSubview:scrollView];
     self.scrollView = scrollView;
 }

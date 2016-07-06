@@ -17,7 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
-@property (weak, nonatomic) IBOutlet UIButton *seeBigButton;
+@property (weak, nonatomic) IBOutlet UIButton    *seeBigButton;
 
 
 @end
@@ -40,18 +40,18 @@
     _topic = topic;
     
     // 点击查看大图按钮
-    self.seeBigButton.hidden = !topic.isBigPicture;
+    self.seeBigButton.hidden         = !topic.isBigPicture;
     if (topic.isBigPicture) {
-        self.seeBigButton.hidden = NO;
+        self.seeBigButton.hidden     = NO;
         
         // 取消拉伸图片
-        self.imageView.contentMode = UIViewContentModeTop;
+        self.imageView.contentMode   = UIViewContentModeTop;
         self.imageView.clipsToBounds = YES;
         
     } else {
-        self.seeBigButton.hidden = YES;
+        self.seeBigButton.hidden     = YES;
         
-        self.imageView.contentMode = UIViewContentModeScaleToFill;
+        self.imageView.contentMode   = UIViewContentModeScaleToFill;
         self.imageView.clipsToBounds = NO;
     }
     
@@ -71,10 +71,10 @@
     }
      */
     
-    if ([topic.type isEqualToString:@"image"]) {
+    if ([topic.type isEqualToString:XFTopicImage]) {
         self.gifView.hidden = YES;
         [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.image.big.firstObject]];
-    } else if ([topic.type isEqualToString:@"gif"]) {
+    } else if ([topic.type isEqualToString:XFTopicGif]) {
         self.gifView.hidden = NO;
         [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.gif.images.firstObject]];
     }

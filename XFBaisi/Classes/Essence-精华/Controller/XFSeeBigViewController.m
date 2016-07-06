@@ -16,11 +16,11 @@
 
 /** imageView */
 @property (nonatomic, strong) UIImageView     *imageView;
-
+/** 保存按钮 */
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
-
+/** 转发按钮 */
 @property (weak, nonatomic) IBOutlet UIButton *forwardButton;
-
+/** 评论按钮 */
 @property (weak, nonatomic) IBOutlet UIButton *commontButton;
 
 
@@ -33,7 +33,6 @@ static NSString *XFAssetCollectionTitle = @"仿百思不得姐";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.frame = [UIScreen mainScreen].bounds;
@@ -46,9 +45,9 @@ static NSString *XFAssetCollectionTitle = @"仿百思不得姐";
     imageView.xf_width = scrollView.xf_width;
     imageView.xf_x = 0;
     
-    if ([self.topic.type isEqualToString:@"image"]) {
+    if ([self.topic.type isEqualToString:XFTopicImage]) {
         [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.image.big.firstObject] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            if (image == nil) return;// 图片加载失败
+            if (image == nil) return;
             self.saveButton.enabled = YES;
         }];
         
@@ -60,9 +59,9 @@ static NSString *XFAssetCollectionTitle = @"仿百思不得姐";
             scrollView.maximumZoomScale = scale;
         }
         
-    } else if ([self.topic.type isEqualToString:@"gif"]) {
+    } else if ([self.topic.type isEqualToString:XFTopicGif]) {
         [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.gif.images.firstObject] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            if (image == nil) return;// 图片加载失败
+            if (image == nil) return;
             self.saveButton.enabled = YES;
         }];
         

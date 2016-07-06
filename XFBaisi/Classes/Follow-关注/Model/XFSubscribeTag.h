@@ -11,11 +11,11 @@
 @interface XFSubscribeTag : NSObject
 
 /** name */
-@property (nonatomic, copy) NSString *theme_name;
+@property (nonatomic, copy)   NSString  *theme_name;
 /** iconurl */
-@property (nonatomic, copy) NSString *image_list;
+@property (nonatomic, copy)   NSString  *image_list;
 /** 详情图片 */
-@property (nonatomic, copy) NSString *image_detail;
+@property (nonatomic, copy)   NSString  *image_detail;
 /** 订阅数 */
 @property (nonatomic, assign) NSInteger sub_number;
 /** 总帖数 */

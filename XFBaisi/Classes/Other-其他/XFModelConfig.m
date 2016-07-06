@@ -14,6 +14,7 @@
 #import "XFGif.h"
 #import "XFVideo.h"
 #import "XFCommentUser.h"
+#import "XFAudio.h"
 
 @implementation XFModelConfig
 
@@ -29,7 +30,8 @@
         return @{@"top_comment" : [XFComment class],
                  @"image" : [XFImage class],
                  @"gif" : [XFGif class],
-                 @"video" : [XFVideo class]};
+                 @"video" : [XFVideo class],
+                 @"audio" : [XFAudio class]};
         
     }];
     

@@ -1,5 +1,5 @@
 //
-//  XFNLengMenViewController.h
+//  XFNVoiceViewController.h
 //  XFBaisi
 //
 //  Created by xiaofans on 16/7/6.
@@ -8,6 +8,6 @@
 
 #import "XFTopicViewController.h"
 
-@interface XFNLengMenViewController : XFTopicViewController
+@interface XFNAudioViewController : XFTopicViewController
 
 @end
