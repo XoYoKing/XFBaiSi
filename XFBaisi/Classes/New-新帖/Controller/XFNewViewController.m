@@ -48,28 +48,28 @@
 #pragma mark - 初始化
 
 - (void)setupChildViewControllers {
-    XFAllViewController *allView = [[XFAllViewController alloc] init];
+    XFAllViewController         *allView        = [[XFAllViewController alloc] init];
     [self addChildViewController:allView];
     
-    XFNVideoViewController *videoView = [[XFNVideoViewController alloc] init];
+    XFNVideoViewController      *videoView      = [[XFNVideoViewController alloc] init];
     [self addChildViewController:videoView];
     
-    XFNPictureViewController *pictureView = [[XFNPictureViewController alloc] init];
+    XFNPictureViewController    *pictureView    = [[XFNPictureViewController alloc] init];
     [self addChildViewController:pictureView];
     
-    XFNWordViewController *wordView = [[XFNWordViewController alloc] init];
+    XFNWordViewController       *wordView       = [[XFNWordViewController alloc] init];
     [self addChildViewController:wordView];
     
-    XFNWangHotViewController *wangHotView = [[XFNWangHotViewController alloc] init];
+    XFNWangHotViewController    *wangHotView    = [[XFNWangHotViewController alloc] init];
     [self addChildViewController:wangHotView];
     
-    XFNBeautyViewController *beautyView = [[XFNBeautyViewController alloc] init];
+    XFNBeautyViewController     *beautyView     = [[XFNBeautyViewController alloc] init];
     [self addChildViewController:beautyView];
     
-    XFNGameViewController *gameView = [[XFNGameViewController alloc] init];
+    XFNGameViewController       *gameView       = [[XFNGameViewController alloc] init];
     [self addChildViewController:gameView];
     
-    XFNAudioViewController *audioView = [[XFNAudioViewController alloc] init];
+    XFNAudioViewController      *audioView      = [[XFNAudioViewController alloc] init];
     [self addChildViewController:audioView];
 }
 

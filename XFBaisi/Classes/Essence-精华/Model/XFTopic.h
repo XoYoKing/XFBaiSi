@@ -13,7 +13,7 @@
 @interface XFTopic : NSObject
 
 /** 帖子 id */
-@property (nonatomic, copy) NSString *ID;
+@property (nonatomic, copy)   NSString  *ID;
 /** 帖子的文字内容 */
 @property (nonatomic, copy)   NSString  *text;
 /** 帖子审核通过的时间 */
@@ -27,24 +27,24 @@
 /** 评论数量 */
 @property (nonatomic, assign) NSInteger comment;
 /** 用户信息 */
-@property (nonatomic, strong) XFUser *user;
+@property (nonatomic, strong) XFUser    *user;
 /** 最热评论 */
 @property (nonatomic, strong) XFComment *top_comment;
 /** 图片 */
-@property (nonatomic, strong) XFImage *image;
+@property (nonatomic, strong) XFImage   *image;
 /**  GIF 图片 */
-@property (nonatomic, strong) XFGif *gif;
+@property (nonatomic, strong) XFGif     *gif;
 /** 视频 */
-@property (nonatomic, strong) XFVideo *video;
+@property (nonatomic, strong) XFVideo   *video;
 /** 音频 */
-@property (nonatomic, strong) XFAudio *audio;
+@property (nonatomic, strong) XFAudio   *audio;
 
 /** 帖子类型 */
 @property (nonatomic, copy)   NSString  *type;
 /** cell 高度 */
-@property (nonatomic, assign) CGFloat cellHeight;
+@property (nonatomic, assign) CGFloat   cellHeight;
 /** 中间内容 frame */
-@property (nonatomic, assign) CGRect contentFrame;
+@property (nonatomic, assign) CGRect    contentFrame;
 
 /** 中间是否为超长大图 */
 @property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;

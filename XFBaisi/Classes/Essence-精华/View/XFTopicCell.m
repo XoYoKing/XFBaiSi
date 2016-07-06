@@ -85,57 +85,57 @@
     
     [self.profileImageView xf_setHeader:topic.user.header.firstObject];
     
-    self.nameLabel.text = topic.user.name;
+    self.nameLabel.text      = topic.user.name;
     
     self.createdAtLabel.text = topic.passtime;
-    self.text_label.text = topic.text;
+    self.text_label.text     = topic.text;
     
-    [self setupButton:self.dingButton number:topic.up placeholder:@"顶"];
-    [self setupButton:self.caiButton number:topic.down placeholder:@"踩"];
-    [self setupButton:self.repostButton number:topic.forward placeholder:@"分享"];
+    [self setupButton:self.dingButton    number:topic.up      placeholder:@"顶"];
+    [self setupButton:self.caiButton     number:topic.down    placeholder:@"踩"];
+    [self setupButton:self.repostButton  number:topic.forward placeholder:@"分享"];
     [self setupButton:self.commentButton number:topic.comment placeholder:@"评论"];
     
 #pragma mark - 是否显示最热评论
     if (topic.top_comment) {    // 有
-        self.topCmtView.hidden = NO;
+        self.topCmtView.hidden  = NO;
         
-        NSString *username = topic.top_comment.user.name;
-        NSString *content = topic.top_comment.content;
+        NSString *username      = topic.top_comment.user.name;
+        NSString *content       = topic.top_comment.content;
         
         self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@: %@", username, content];
         
     } else {                // 没有
-        self.topCmtView.hidden = YES;
+        self.topCmtView.hidden  = YES;
     }
     
 #pragma mark - 处理 cell 中间的内容
     
-    if ([topic.type isEqualToString:@"image"] ) {           // 图片
+    if ([topic.type isEqualToString:XFTopicImage] ) {           // 图片
         self.pictureView.hidden = NO;
         self.videoView.hidden   = YES;
         self.audioView.hidden   = YES;
         self.pictureView.frame  = topic.contentFrame;
         self.pictureView.topic  = topic;
-    } else if ([topic.type isEqualToString:@"text"]) {      // 段子
+    } else if ([topic.type isEqualToString:XFTopicWord]) {      // 段子
         self.pictureView.hidden = YES;
         self.videoView.hidden   = YES;
         self.audioView.hidden   = YES;
-    } else if ([topic.type isEqualToString:@"video"]) {     // 视频
-        self.videoView.hidden   = NO;
+    } else if ([topic.type isEqualToString:XFTopicVideo]) {     // 视频
         self.pictureView.hidden = YES;
+        self.videoView.hidden   = NO;
         self.audioView.hidden   = YES;
         self.videoView.frame    = topic.contentFrame;
         self.videoView.topic    = topic;
-    } else if ([topic.type isEqualToString:@"gif"]) {       // gif
+    } else if ([topic.type isEqualToString:XFTopicGif]) {       // gif
         self.pictureView.hidden = NO;
         self.videoView.hidden   = YES;
         self.audioView.hidden   = YES;
         self.pictureView.frame  = topic.contentFrame;
         self.pictureView.topic  = topic;
-    } else if ([topic.type isEqualToString:@"audio"]) {     // 音频
-        self.audioView.hidden   = NO;
+    } else if ([topic.type isEqualToString:XFTopicAudio]) {     // 音频
         self.pictureView.hidden = YES;
         self.videoView.hidden   = YES;
+        self.audioView.hidden   = NO;
         self.audioView.topic    = topic;
         self.audioView.frame    = topic.contentFrame;
     }

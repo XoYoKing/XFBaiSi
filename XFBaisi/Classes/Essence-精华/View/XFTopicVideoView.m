@@ -13,8 +13,8 @@
 @interface XFTopicVideoView ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *playCountLabel;
-@property (weak, nonatomic) IBOutlet UILabel *videoTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel     *playCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel     *videoTimeLabel;
 
 
 @end

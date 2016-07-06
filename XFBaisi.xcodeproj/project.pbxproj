@@ -440,6 +440,7 @@
 		BDBDA19C1D1E430E00BA01B1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BDDC09541D2D62870049F7BB /* Public-公共类 */,
 				BD5A11D01D2BBCB9002FD341 /* Comment-评论 */,
 				BDBDA19D1D1E433400BA01B1 /* Essence-精华 */,
 				BDBDA19E1D1E434300BA01B1 /* New-新帖 */,
@@ -743,6 +744,37 @@
 				BD347AD11D2B9EE0009C6F79 /* UIImageView+XFExtension.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		BDDC09541D2D62870049F7BB /* Public-公共类 */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC09551D2D62870049F7BB /* Controller */,
+				BDDC09561D2D62870049F7BB /* Model */,
+				BDDC09571D2D62870049F7BB /* View */,
+			);
+			path = "Public-公共类";
+			sourceTree = "<group>";
+		};
+		BDDC09551D2D62870049F7BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDDC09561D2D62870049F7BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BDDC09571D2D62870049F7BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E92BCD9E80CE56375FC7D0B0 /* Pods */ = {

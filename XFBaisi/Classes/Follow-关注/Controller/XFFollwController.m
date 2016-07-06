@@ -13,16 +13,18 @@
 #import "XFRecommendViewController.h"
 
 @interface XFFollwController () <UIScrollViewDelegate>
-
-@property (nonatomic, weak) XFTitleButton *selectedTitleBtn;    // 当前选中的标题按钮
-@property (nonatomic, weak) UIView *indicatorView;              // 标题按钮底部指示器
-@property (nonatomic, weak) UIScrollView *scrollView;           // 滚动视图
+/** 当前选中的标题按钮 */
+@property (nonatomic, weak) XFTitleButton *selectedTitleBtn;
+/** 标题按钮底部指示器 */
+@property (nonatomic, weak) UIView        *indicatorView;
+/** 滚动视图 */
+@property (nonatomic, weak) UIScrollView  *scrollView;
 
 /** 顶部滚动titleSView */
-@property (nonatomic, weak) UIScrollView *titleSView;
+@property (nonatomic, weak) UIScrollView  *titleSView;
 
-/**  */
-@property (nonatomic, assign) CGFloat titleBtnX;
+/** titleBtnX坐标 */
+@property (nonatomic, assign) CGFloat     titleBtnX;
 
 @end
 
@@ -61,7 +63,10 @@
     self.view.backgroundColor = XFBaseBgColor;
     
     // 左边
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem xf_itemWithImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon-click" target:self action:@selector(followClick)];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem xf_itemWithImage:@"friendsRecommentIcon"
+                 highImage:@"friendsRecommentIcon-click"
+                 target:self
+                 action:@selector(followClick)];
     
     
 }

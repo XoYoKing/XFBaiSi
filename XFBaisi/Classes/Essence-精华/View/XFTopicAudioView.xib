@@ -36,7 +36,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BG1-1g-Xmx" userLabel="播放按钮">
-                    <rect key="frame" x="142" y="228" width="63" height="63"/>
+                    <rect key="frame" x="142" y="236" width="63" height="63"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="BG1-1g-Xmx" secondAttribute="height" multiplier="1:1" id="ziq-xf-c3n"/>
                     </constraints>
@@ -61,7 +61,7 @@
                 <constraint firstAttribute="trailing" secondItem="cGU-O5-oI0" secondAttribute="trailing" id="Y4J-AL-wnJ"/>
                 <constraint firstAttribute="bottom" secondItem="cGU-O5-oI0" secondAttribute="bottom" id="Z1J-Ow-7IL"/>
                 <constraint firstItem="i6U-qA-FLK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bhi-Z8-RB4"/>
-                <constraint firstAttribute="bottom" secondItem="BG1-1g-Xmx" secondAttribute="bottom" id="uY6-fy-nO9"/>
+                <constraint firstAttribute="bottom" secondItem="BG1-1g-Xmx" secondAttribute="bottom" constant="-8" id="uY6-fy-nO9"/>
                 <constraint firstAttribute="trailing" secondItem="rP2-zN-OCp" secondAttribute="trailing" id="wx7-eG-8Hg"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

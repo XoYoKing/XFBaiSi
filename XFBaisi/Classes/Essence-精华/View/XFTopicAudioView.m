@@ -14,8 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
-@property (weak, nonatomic) IBOutlet UILabel *playCountLabel;
-@property (weak, nonatomic) IBOutlet UILabel *audioTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel     *playCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel     *audioTimeLabel;
 
 
 @end
@@ -37,14 +37,7 @@
     
     self.audioTimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minute, second];
     
-    //self.imageView.image = [UIImage imageNamed:@"Login_bg"];
-    //self.playCountLabel.text = @"7676播放";
-    
-    //self.audioTimeLabel.text = @"09:35";
-    
-    
 }
-
 
 - (IBAction)playButtonClick:(UIButton *)sender {
     XFLog(@"playButton");

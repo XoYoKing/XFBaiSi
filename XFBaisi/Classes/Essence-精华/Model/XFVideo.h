@@ -11,8 +11,8 @@
 @interface XFVideo : NSObject
 
 
-@property (nonatomic, assign) CGFloat width;
-@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) CGFloat   width;
+@property (nonatomic, assign) CGFloat   height;
 
 /** 播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
@@ -20,6 +20,6 @@
 @property (nonatomic, assign) NSInteger duration;
 
 /** 视频缩略图 */
-@property (nonatomic, strong) NSArray *thumbnail;
+@property (nonatomic, strong) NSArray   *thumbnail;
 
 @end

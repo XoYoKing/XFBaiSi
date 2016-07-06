@@ -58,7 +58,6 @@
     
     for (UIView *subview in self.subviews) {
         // 过滤掉非 UITabBarButton
-        // if (![@"UITabBarButton" isEqualToString:NSStringFromClass(subview.class)]) continue;
         if (subview.class != NSClassFromString(@"UITabBarButton")) continue;
         
         CGFloat tabBarButtonX = tabBarButtonIndex * buttonW;

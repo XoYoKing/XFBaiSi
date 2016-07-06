@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fho-8q-iv2" userLabel="头像">
-                        <rect key="frame" x="18" y="21" width="50" height="50"/>
+                        <rect key="frame" x="13" y="21" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="Ggp-2n-57U"/>
                             <constraint firstAttribute="height" constant="50" id="yOg-MM-GK5"/>
@@ -28,24 +28,30 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9r-rA-GES" userLabel="名称">
-                        <rect key="frame" x="78" y="21" width="40" height="20"/>
+                        <rect key="frame" x="73" y="21" width="40" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="556.6万人订阅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ve-Mn-y0a" userLabel="订阅数">
-                        <rect key="frame" x="78" y="55" width="90" height="16"/>
+                        <rect key="frame" x="73" y="56" width="81" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="90" id="CuX-aa-ra6"/>
+                            <constraint firstAttribute="width" constant="75" id="CuX-aa-ra6"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CuX-aa-ra6"/>
+                            </mask>
+                        </variation>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go4-MQ-F9a">
-                        <rect key="frame" x="298" y="34" width="51" height="25"/>
+                        <rect key="frame" x="316" y="35" width="48" height="23"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="51" id="vkj-Ui-IkU"/>
+                            <constraint firstAttribute="height" constant="23" id="PKu-hA-ZQx"/>
+                            <constraint firstAttribute="width" constant="48" id="vkj-Ui-IkU"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <state key="normal" title="+ 订阅" backgroundImage="FollowBtnBg">
@@ -56,27 +62,37 @@
                             <action selector="sucscribeBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bRt-6I-Y72"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总帖数 246798" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDM-Ac-Ldk" userLabel="订阅数">
-                        <rect key="frame" x="185" y="55" width="91" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="246798" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDM-Ac-Ldk" userLabel="订阅数量">
+                        <rect key="frame" x="205" y="56" width="78" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="91" id="MTb-kY-XvO"/>
+                            <constraint firstAttribute="width" constant="78" id="MTb-kY-XvO"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ue9-pr-VQ0" userLabel="分割线">
-                        <rect key="frame" x="173" y="55" width="1" height="16"/>
+                        <rect key="frame" x="159" y="58" width="1" height="12"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="16" id="G3W-12-0Je"/>
+                            <constraint firstAttribute="height" constant="12" id="G3W-12-0Je"/>
                             <constraint firstAttribute="width" constant="1" id="cZm-Ha-ieE"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总帖数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2D-XP-LNQ" userLabel="订阅数label">
+                        <rect key="frame" x="165" y="56" width="40" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="vYU-6q-K03"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="fho-8q-iv2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="7hb-JM-WmP"/>
-                    <constraint firstItem="XDM-Ac-Ldk" firstAttribute="leading" secondItem="ue9-pr-VQ0" secondAttribute="trailing" constant="11" id="Bqf-FX-cqi"/>
+                    <constraint firstItem="Z2D-XP-LNQ" firstAttribute="centerY" secondItem="5ve-Mn-y0a" secondAttribute="centerY" id="6oL-1s-yY4"/>
+                    <constraint firstItem="XDM-Ac-Ldk" firstAttribute="leading" secondItem="Z2D-XP-LNQ" secondAttribute="trailing" id="75z-Vy-Mdh"/>
+                    <constraint firstItem="fho-8q-iv2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="7hb-JM-WmP"/>
                     <constraint firstItem="X9r-rA-GES" firstAttribute="top" secondItem="fho-8q-iv2" secondAttribute="top" id="LTF-fA-AgO"/>
                     <constraint firstItem="5ve-Mn-y0a" firstAttribute="leading" secondItem="X9r-rA-GES" secondAttribute="leading" id="MRk-Zp-O8A"/>
                     <constraint firstItem="ue9-pr-VQ0" firstAttribute="leading" secondItem="5ve-Mn-y0a" secondAttribute="trailing" constant="5" id="VKb-9A-OSn"/>
@@ -86,7 +102,8 @@
                     <constraint firstItem="5ve-Mn-y0a" firstAttribute="bottom" secondItem="fho-8q-iv2" secondAttribute="bottom" id="bND-ct-aUC"/>
                     <constraint firstItem="X9r-rA-GES" firstAttribute="leading" secondItem="fho-8q-iv2" secondAttribute="trailing" constant="10" id="cLa-OG-Fg6"/>
                     <constraint firstItem="ue9-pr-VQ0" firstAttribute="centerY" secondItem="5ve-Mn-y0a" secondAttribute="centerY" id="doC-4q-SfW"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="go4-MQ-F9a" secondAttribute="trailing" constant="20" id="itJ-sw-gdG"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="go4-MQ-F9a" secondAttribute="trailing" constant="5" id="itJ-sw-gdG"/>
+                    <constraint firstItem="Z2D-XP-LNQ" firstAttribute="leading" secondItem="ue9-pr-VQ0" secondAttribute="trailing" constant="5" id="zc8-zh-0tl"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
