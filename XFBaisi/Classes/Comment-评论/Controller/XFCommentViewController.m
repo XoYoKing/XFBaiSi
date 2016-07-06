@@ -8,11 +8,11 @@
 
 #import "XFCommentViewController.h"
 
-@interface XFCommentViewController ()<UITableViewDelegate>
+@interface XFCommentViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomMargin;
-
-@property (weak, nonatomic) IBOutlet UITextField *writeCommentTextField;
+@property (weak, nonatomic) IBOutlet UITextField        *writeCommentTextField;
+@property (weak, nonatomic) IBOutlet UITableView        *tableView;
 
 @end
 
@@ -70,10 +70,34 @@
     XFLog(@"@谁呀");
 }
 
+#pragma mark - <UITableViewDateSource>
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 3;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 0) return 1;
+    if (section == 1) return 4;
+    return 10;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) return nil;
+    if (section == 1) return @"最热评论";
+    return @"最新评论";
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    return nil;
+}
+
 #pragma mark - <UITableViewDelegate>
 
 /**
- *  开始拖拽时
+ *  开始拖拽时关闭键盘
  */
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [self.view endEditing:YES];

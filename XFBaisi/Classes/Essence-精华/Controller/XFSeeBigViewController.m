@@ -15,7 +15,7 @@
 @interface XFSeeBigViewController ()<UIScrollViewDelegate>
 
 /** imageView */
-@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UIImageView     *imageView;
 
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
@@ -174,12 +174,20 @@ static NSString *XFAssetCollectionTitle = @"仿百思不得姐";
 - (void)showSuccess:(NSString *)successText {
     dispatch_async(dispatch_get_main_queue(), ^{
         [SVProgressHUD showSuccessWithStatus:successText];
+        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
     });
 }
 
 - (void)showError:(NSString *)errorText {
     dispatch_async(dispatch_get_main_queue(), ^{
         [SVProgressHUD showErrorWithStatus:errorText];
+        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
     });
 }
 

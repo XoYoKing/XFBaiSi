@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XFCommentViewController">
             <connections>
                 <outlet property="bottomMargin" destination="USW-CF-QeH" id="6gH-3t-6He"/>
+                <outlet property="tableView" destination="v4I-dI-5ld" id="RdZ-l6-7hz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="writeCommentTextField" destination="bBb-H4-b1a" id="d6Q-k2-vHz"/>
             </connections>
@@ -20,6 +21,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
+                        <outlet property="dataSource" destination="-1" id="Aqm-01-BpQ"/>
                         <outlet property="delegate" destination="-1" id="QVk-FV-Jg7"/>
                     </connections>
                 </tableView>
