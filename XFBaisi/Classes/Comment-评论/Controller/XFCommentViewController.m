@@ -11,6 +11,7 @@
 #import "XFComment.h"
 #import "XFComSectionHeaderView.h"
 #import "XFCommentCell.h"
+#import "XFTopicCell.h"
 
 @interface XFCommentViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -20,10 +21,13 @@
 
 /** 任务管理者 */
 @property (nonatomic, strong) XFHTTPSessionManager *manager;
-/** 最热评论 */
+/** 最热评论数据 */
 @property (nonatomic, strong) NSArray<XFComment *> *hotComments;
-/** 最新评论 */
+/** 全部最新评论数据 */
 @property (nonatomic, strong) NSMutableArray<XFComment *> *lastComments;
+
+/** 最热评论 */
+@property (nonatomic, strong) XFComment *savedTopCmt;
 
 @end
 
@@ -51,6 +55,8 @@ static NSString *const XFComSectionHeaderViewID = @"XFComSectionHeaderViewID";
     [self setupTableView];
     
     [self setupRefresh];
+    
+    [self setupHeaderView];
 }
 
 - (void)setupTableView {
@@ -61,24 +67,37 @@ static NSString *const XFComSectionHeaderViewID = @"XFComSectionHeaderViewID";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XFCommentCell class]) bundle:nil] forCellReuseIdentifier:XFCommentCellID];
     [self.tableView registerClass:[XFComSectionHeaderView class] forHeaderFooterViewReuseIdentifier:XFComSectionHeaderViewID];
     
-    UIView *headerView = [[UIView alloc] init];
-    headerView.backgroundColor = [UIColor orangeColor];
-    headerView.xf_height = 200;
-    self.tableView.tableHeaderView = headerView;
-    
+    // headerview 高度
     self.tableView.sectionHeaderHeight = XFComSectionHeaderTestFont.lineHeight + 2;
     
     // 设置 cell 高度
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 44;
-    
 }
 
 - (void)setupBase {
     self.navigationItem.title = @"评论";
-    
+    // 键盘变化的通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+
+- (void)setupHeaderView {
+    // 先处理模型数据
+    self.savedTopCmt = self.topic.top_comment;
+    self.topic.top_comment = nil;
+    self.topic.cellHeight = 0;
     
+    // 创建一个 UIView 用来从放 cell
+    UIView *headerView = [[UIView alloc] init];
+    
+    XFTopicCell *cell = [XFTopicCell xf_viewFromXib];
+    cell.topic = self.topic;
+    cell.frame = CGRectMake(0, 0, SCREEN.width, self.topic.cellHeight);
+    [headerView addSubview:cell];
+    
+    headerView.xf_height = cell.xf_height + XFMargin * 2;
+    
+    self.tableView.tableHeaderView = headerView;
 }
 
 - (void)setupRefresh {
@@ -88,7 +107,7 @@ static NSString *const XFComSectionHeaderViewID = @"XFComSectionHeaderViewID";
     self.tableView.mj_footer = [XFRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComment)];
 }
 
-//  移除通知
+//  移除键盘通知
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -109,23 +128,25 @@ static NSString *const XFComSectionHeaderViewID = @"XFComSectionHeaderViewID";
     
     // 请求
     [self.manager GET:BASE_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
-        //XFWriteToPlist(responseObject, @"评论9");
         
         // 没有评论数据，结束刷新并直接返回
         if (![responseObject isKindOfClass:[NSDictionary class]]) {
             [weakSelf.tableView.mj_header endRefreshing];
             return;
         }
-        
+        // 字典转模型
         weakSelf.lastComments = [XFComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
         weakSelf.hotComments = [XFComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
-        
-        
         // 刷新表格
         [weakSelf.tableView reloadData];
         
-        // 控件结束刷新
-        [weakSelf.tableView.mj_header endRefreshing];
+        int total = [responseObject[@"total"] intValue];
+        if (weakSelf.lastComments.count == total) {         // 没有更多数据
+            [weakSelf.tableView.mj_header endRefreshing];
+            weakSelf.tableView.mj_footer.hidden = YES;
+        } else {                                            // 有数据，结束刷新
+            [weakSelf.tableView.mj_header endRefreshing];
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         XFLog(@"请求失败 - %@", error);
         // 控件结束刷新
@@ -134,31 +155,44 @@ static NSString *const XFComSectionHeaderViewID = @"XFComSectionHeaderViewID";
 }
  
 - (void)loadMoreComment {
-    //// 取消所有请求
-    //[self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    // 取消所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
-    //NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    //params[@"a"] = @"dataList";
-    //params[@"c"] = @"comment";
-    //params[@"data_id"] = self.topic.ID;
-    //params[@"hot"] = @"1";
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"dataList";
+    params[@"c"] = @"comment";
+    params[@"data_id"] = self.topic.ID;
+    params[@"lastcid"] = self.lastComments.lastObject.ID;
     
-    //__weak typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     
-    //// 请求
-    //[self.manager GET:BASE_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
-        //XFLog(@"success");
-        ////XFWriteToPlist(responseObject, @"评论3");
-        //// 刷新表格
-        //[weakSelf.tableView reloadData];
+    // 请求
+    [self.manager GET:BASE_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
         
-        //// 控件结束刷新
-        //[weakSelf.tableView.mj_header endRefreshing];
-    //} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        //XFLog(@"请求失败 - %@", error);
-        //// 控件结束刷新
-        //[weakSelf.tableView.mj_header endRefreshing];
-    //}];
+        // 没有评论数据，结束刷新并直接返回
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            [weakSelf.tableView.mj_footer endRefreshing];
+            return;
+        }
+        // 字典转模型
+        NSArray *moreComments = [XFComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        [weakSelf.lastComments addObjectsFromArray:moreComments];
+        
+        // 刷新表格
+        [weakSelf.tableView reloadData];
+        
+        int total = [responseObject[@"total"] intValue];
+        if (weakSelf.lastComments.count == total) {         // 没有更多数据
+            [weakSelf.tableView.mj_footer endRefreshing];
+            weakSelf.tableView.mj_footer.hidden = YES;
+        } else {                                            // 有数据，结束刷新
+            [weakSelf.tableView.mj_footer endRefreshing];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        XFLog(@"请求失败 - %@", error);
+        // 控件结束刷新
+        [weakSelf.tableView.mj_footer endRefreshing];
+    }];
 }
 
 #pragma mark - 监听事件
@@ -167,7 +201,7 @@ static NSString *const XFComSectionHeaderViewID = @"XFComSectionHeaderViewID";
     
     // 修改约束
     CGFloat keyboardY = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
-    CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
+    CGFloat screenH = SCREEN.height;
     self.bottomMargin.constant = screenH - keyboardY;
     
     // 动画显示
@@ -175,9 +209,6 @@ static NSString *const XFComSectionHeaderViewID = @"XFComSectionHeaderViewID";
     [UIView animateWithDuration:duration animations:^{
         [self.view layoutIfNeeded];
     }];
-    
-    
-
 }
 
 - (IBAction)voiceBtnClick:(UIButton *)sender {
@@ -185,7 +216,7 @@ static NSString *const XFComSectionHeaderViewID = @"XFComSectionHeaderViewID";
 }
 
 - (IBAction)rightBtnClick:(UIButton *)sender {
-    XFLog(@"@谁呀");
+    XFLog(@"确定发送");
 }
 
 #pragma mark - <UITableViewDataSource>
@@ -218,6 +249,7 @@ static NSString *const XFComSectionHeaderViewID = @"XFComSectionHeaderViewID";
     } else {
         cell.commetn = self.lastComments[indexPath.row];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }

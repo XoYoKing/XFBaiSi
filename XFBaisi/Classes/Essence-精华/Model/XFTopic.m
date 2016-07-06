@@ -29,7 +29,7 @@ static NSCalendar *calendar_;
     _cellHeight = 55;
     
     // 文字
-    CGFloat textMaxW = [UIScreen mainScreen].bounds.size.width - 2 * XFMargin;
+    CGFloat textMaxW = SCREEN.width - 2 * XFMargin;
     CGSize textMaxSize = CGSizeMake(textMaxW, MAXFLOAT);
     CGSize textSize = [self.text boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil].size;
     _cellHeight += textSize.height + XFMargin;
@@ -39,7 +39,7 @@ static NSCalendar *calendar_;
         // 中间图片真是宽度 * 图片真是高度 / 图片真是宽度
         CGFloat contentH = textMaxW * self.image.height / self.image.width;
         
-        if (contentH > [UIScreen mainScreen].bounds.size.height) {
+        if (contentH > SCREEN.height) {
             contentH = 300;
             self.bigPicture = YES;
         }

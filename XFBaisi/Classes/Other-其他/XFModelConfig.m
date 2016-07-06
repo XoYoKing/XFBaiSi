@@ -21,7 +21,8 @@
     
     [XFComment mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{@"user" : @"u",
-                 @"comUser" : @"user"};
+                 @"comUser" : @"user",
+                 @"ID" : @"id"};
     }];
     
     [XFTopic mj_setupObjectClassInArray:^NSDictionary *{

@@ -35,10 +35,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6o-fS-3KS" userLabel="点赞按钮">
-                        <rect key="frame" x="353" y="18" width="30" height="30"/>
+                        <rect key="frame" x="358" y="18" width="25" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="6ZA-Ko-zxz"/>
-                            <constraint firstAttribute="height" constant="30" id="qrc-qX-TRb"/>
+                            <constraint firstAttribute="width" constant="25" id="6ZA-Ko-zxz"/>
+                            <constraint firstAttribute="height" constant="25" id="qrc-qX-TRb"/>
                         </constraints>
                         <state key="normal" image="commentLikeButton">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,8 +48,8 @@
                             <action selector="likeButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cw2-9d-oS7"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLk-eX-Qvp" userLabel="点赞数量">
-                        <rect key="frame" x="343" y="58" width="40" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLk-eX-Qvp" userLabel="点赞数量">
+                        <rect key="frame" x="351" y="45" width="40" height="16"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="21p-Tf-mW4"/>
                         </constraints>
@@ -58,7 +58,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabe" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfy-0h-qDK" userLabel="评论内容">
-                        <rect key="frame" x="61" y="43" width="277" height="72"/>
+                        <rect key="frame" x="63" y="46" width="285" height="69"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="SUS-cH-3As"/>
@@ -68,7 +68,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6U-IF-zs4" userLabel="Voice Button">
-                        <rect key="frame" x="61" y="43" width="66" height="22"/>
+                        <rect key="frame" x="63" y="56" width="66" height="22"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="8YE-Cd-KeI"/>
                             <constraint firstAttribute="width" constant="66" id="tSW-Mm-7Dd"/>
@@ -82,24 +82,30 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="nfy-0h-qDK" firstAttribute="leading" secondItem="ylY-pz-Pxr" secondAttribute="trailing" constant="8" id="0GM-cV-EXX"/>
+                    <constraint firstItem="nfy-0h-qDK" firstAttribute="leading" secondItem="ylY-pz-Pxr" secondAttribute="trailing" constant="10" id="0GM-cV-EXX"/>
                     <constraint firstItem="rcf-ur-bnd" firstAttribute="bottom" secondItem="ffe-Tb-HWr" secondAttribute="bottom" id="7pZ-zV-ZQC"/>
                     <constraint firstItem="ffe-Tb-HWr" firstAttribute="leading" secondItem="rcf-ur-bnd" secondAttribute="trailing" id="8hy-xS-4xy"/>
                     <constraint firstItem="ylY-pz-Pxr" firstAttribute="top" secondItem="rcf-ur-bnd" secondAttribute="top" id="9tQ-ty-BG1"/>
                     <constraint firstItem="rcf-ur-bnd" firstAttribute="top" secondItem="ffe-Tb-HWr" secondAttribute="top" id="CM7-et-wcZ"/>
                     <constraint firstItem="rcf-ur-bnd" firstAttribute="leading" secondItem="ylY-pz-Pxr" secondAttribute="trailing" id="J3x-H9-25K"/>
-                    <constraint firstItem="nfy-0h-qDK" firstAttribute="top" secondItem="ffe-Tb-HWr" secondAttribute="bottom" constant="5" id="L6F-gO-Mkq"/>
+                    <constraint firstItem="nfy-0h-qDK" firstAttribute="top" secondItem="ffe-Tb-HWr" secondAttribute="bottom" constant="8" id="L6F-gO-Mkq"/>
                     <constraint firstAttribute="trailingMargin" secondItem="W6o-fS-3KS" secondAttribute="trailing" constant="10" id="MIS-vF-0RI"/>
                     <constraint firstItem="ylY-pz-Pxr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="NnJ-W9-5ee"/>
                     <constraint firstItem="W6o-fS-3KS" firstAttribute="trailing" secondItem="yLk-eX-Qvp" secondAttribute="trailing" id="U96-Hc-6Dz"/>
                     <constraint firstItem="ylY-pz-Pxr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="XGR-1s-znX"/>
                     <constraint firstAttribute="bottomMargin" secondItem="nfy-0h-qDK" secondAttribute="bottom" constant="10" id="e6K-9q-IZX"/>
-                    <constraint firstItem="yLk-eX-Qvp" firstAttribute="top" secondItem="W6o-fS-3KS" secondAttribute="bottom" constant="10" id="ex4-kv-LrR"/>
-                    <constraint firstItem="R6U-IF-zs4" firstAttribute="leading" secondItem="rcf-ur-bnd" secondAttribute="leading" constant="8" id="fsN-hv-DGV"/>
-                    <constraint firstItem="yLk-eX-Qvp" firstAttribute="leading" secondItem="nfy-0h-qDK" secondAttribute="trailing" constant="5" id="jDd-HU-0yT"/>
+                    <constraint firstItem="yLk-eX-Qvp" firstAttribute="top" secondItem="W6o-fS-3KS" secondAttribute="bottom" constant="2" id="ex4-kv-LrR"/>
+                    <constraint firstItem="R6U-IF-zs4" firstAttribute="leading" secondItem="rcf-ur-bnd" secondAttribute="leading" constant="10" id="fsN-hv-DGV"/>
+                    <constraint firstItem="yLk-eX-Qvp" firstAttribute="centerX" secondItem="W6o-fS-3KS" secondAttribute="centerX" id="hkq-uU-Nxv"/>
+                    <constraint firstItem="yLk-eX-Qvp" firstAttribute="leading" secondItem="nfy-0h-qDK" secondAttribute="trailing" constant="3" id="jDd-HU-0yT"/>
                     <constraint firstItem="W6o-fS-3KS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="zfU-mF-OZq"/>
-                    <constraint firstItem="R6U-IF-zs4" firstAttribute="top" secondItem="nfy-0h-qDK" secondAttribute="top" id="zpM-Sr-a7R"/>
+                    <constraint firstItem="R6U-IF-zs4" firstAttribute="top" secondItem="nfy-0h-qDK" secondAttribute="top" constant="10" id="zpM-Sr-a7R"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="U96-Hc-6Dz"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="contentLabel" destination="nfy-0h-qDK" id="KNj-2d-lEN"/>

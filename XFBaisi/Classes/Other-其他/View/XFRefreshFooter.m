@@ -17,11 +17,11 @@
     [self setTitle:@"松开立即刷新" forState:MJRefreshStatePulling];
     [self setTitle:@"正在加载更多的数据..." forState:MJRefreshStateRefreshing];
     
-    // 控件出现一半就自动刷新
-    //self.triggerAutomaticallyRefreshPercent = 0.5;
+    // 自动隐藏刷新控件
+    self.automaticallyHidden = YES;
     
     // 自动刷新
-    self.automaticallyRefresh = NO;
+    //self.automaticallyRefresh = NO;
     
     // 自定义字体颜色
     //self.stateLabel.textColor = [UIColor redColor];

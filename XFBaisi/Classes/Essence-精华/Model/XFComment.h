@@ -11,7 +11,8 @@
 @class XFUser, XFCommentUser;
 
 @interface XFComment : NSObject
-
+/** 最后一条评论 id */
+@property (nonatomic, copy) NSString *ID;
 /** 评论内容 */
 @property (nonatomic, copy) NSString *content;
 /** 帖子界面的用户数据 */
