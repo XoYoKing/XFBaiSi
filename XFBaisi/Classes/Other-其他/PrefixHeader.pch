@@ -24,43 +24,7 @@
 #import "XFRefreshHeader.h"
 #import "XFRefreshFooter.h"
 #import "UIImageView+XFExtension.h"
-
-/*** 我 页面 URL ***/
-#define ME_HOME_URL      @"http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json"
-
-#define SETTING_HELP_URL @"http://www.budejie.com/budejie/help.html"
-#define SETTING_ABOUTUS_URL @"http://www.budejie.com/budejie/aboutus.html?client=iphone&market=&ver=4.2&device=iPhone%204S&uid=&sex=m&udid=&mac=&openudid=dcadd482e5028525a8cd576d6dfec9dcfb486091&asid=24210121-1265-4989-A2E4-2F545FB432F4&jbk=0&appname=bs0315&1467301533"
-#define SETTING_POLICY_URL @"http://www.budejie.com/budejie/privacy.html?client=iphone&market=&ver=4.2&device=iPhone%204S&uid=&sex=m&udid=&mac=&openudid=dcadd482e5028525a8cd576d6dfec9dcfb486091&asid=24210121-1265-4989-A2E4-2F545FB432F4&jbk=0&appname=bs0315"
-
-/*** 精华各个页面 URL ***/
-#define JING_RECO_URL    @"http://s.budejie.com/topic/list/jingxuan/1/bs0315-iphone-4.2/"
-#define JING_VIDEO_URL   @"http://s.budejie.com/topic/list/jingxuan/41/bs0315-iphone-4.2/"
-#define JING_PICTURE_URL @"http://s.budejie.com/topic/list/jingxuan/10/bs0315-iphone-4.2/"
-#define JING_WORD_URL    @"http://s.budejie.com/topic/tag-topic/64/hot/bs0315-iphone-4.2/"
-#define JING_WANGHOT_URL @"http://s.budejie.com/topic/tag-topic/3096/hot/bs0315-iphone-4.2/"
-#define JING_PAIHANG_URL @"http://s.budejie.com/topic/list/remen/1/bs0315-iphone-4.2/"
-#define JING_SHEHUI_URL  @"http://s.budejie.com/topic/tag-topic/473/hot/bs0315-iphone-4.2/"
-#define JING_BEAUTY_URL  @"http://s.budejie.com/topic/tag-topic/117/hot/bs0315-iphone-4.2/"
-
-/*** 穿越 URL ***/
-#define CHUANYUE_ALL_URL @"http://d.api.budejie.com/topic/list/chuanyue/1/bs0315-iphone-4.2/0-20.json"
-#define CHUANYUE_VIDEO_URL @"http://d.api.budejie.com/topic/list/chuanyue/41/bs0315-iphone-4.2/0-20.json"
-#define CHUANYUE_PICTURE_URL @"http://d.api.budejie.com/topic/list/chuanyue/10/bs0315-iphone-4.2/0-20.json"
-#define CHUANYUE_WORD_URL @"http://d.api.budejie.com/topic/list/chuanyue/29/bs0315-iphone-4.2/0-20.json"
-#define CHUANYUE_VOICE_URL @"http://d.api.budejie.com/topic/list/chuanyue/31/bs0315-iphone-4.2/0-20.json"
-
-/*** 关注-订阅 URL ***/
-#define SUBSCRIBE_URL @"http://d.api.budejie.com/tag/subscribe/bs0315-iphone-4.2.json?appname=bs0315&asid=24210121-1265-4989-A2E4-2F545FB432F4&client=iphone&device=iPhone%204S&from=ios&jbk=0&mac=&market=&openudid=dcadd482e5028525a8cd576d6dfec9dcfb486091&udid=&ver=4.2"
-
-
-/*** 将服务器返回的数据写入plist ***/
-#define XFWriteToPlist(data, filename) [data writeToFile:[NSString stringWithFormat:@"/Users/zhyks/Desktop/iOS开发/模仿项目和demo/百思不得姐/Plist文件/%@.plist", filename] atomically:YES];
-
-/*** 当前系统版本判断 ***/
-#define iOS(version) ([UIDevice currentDevice].systemVersion.doubleValue >= (version))
-
-
-
+#import "XFComSectionHeaderView.h"
 
 
 /*** 日志 ***/
@@ -78,6 +42,57 @@
 #define XFRandomColor XFColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 #define XFGrayColor(v) XFColor((v), (v), (v))
 #define XFBaseBgColor XFGrayColor(246)
+
+/*** section headerview 字体 **/
+#define XFComSectionHeaderTestFont [UIFont systemFontOfSize:15]
+
+/*** 屏幕 size ***/
+#define SCREEN [UIScreen mainScreen].bounds.size
+
+
+
+/*** 将服务器返回的数据写入plist ***/
+#define XFWriteToPlist(data, filename) [data writeToFile:[NSString stringWithFormat:@"/Users/zhyks/Desktop/iOS开发/模仿项目和demo/百思不得姐/Plist文件/%@.plist", filename] atomically:YES];
+
+/*** 当前系统版本判断 ***/
+#define iOS(version) ([UIDevice currentDevice].systemVersion.doubleValue >= (version))
+
+/*** URL ***/
+// 公用 URL
+#define BASE_URL @"http://api.budejie.com/api/api_open.php"
+
+//我 页面
+#define ME_HOME_URL      @"http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json"
+
+#define SETTING_HELP_URL @"http://www.budejie.com/budejie/help.html"
+#define SETTING_ABOUTUS_URL @"http://www.budejie.com/budejie/aboutus.html?client=iphone&market=&ver=4.2&device=iPhone%204S&uid=&sex=m&udid=&mac=&openudid=dcadd482e5028525a8cd576d6dfec9dcfb486091&asid=24210121-1265-4989-A2E4-2F545FB432F4&jbk=0&appname=bs0315&1467301533"
+#define SETTING_POLICY_URL @"http://www.budejie.com/budejie/privacy.html?client=iphone&market=&ver=4.2&device=iPhone%204S&uid=&sex=m&udid=&mac=&openudid=dcadd482e5028525a8cd576d6dfec9dcfb486091&asid=24210121-1265-4989-A2E4-2F545FB432F4&jbk=0&appname=bs0315"
+
+// 精华各个页面
+#define JING_RECO_URL    @"http://s.budejie.com/topic/list/jingxuan/1/bs0315-iphone-4.2/"
+#define JING_VIDEO_URL   @"http://s.budejie.com/topic/list/jingxuan/41/bs0315-iphone-4.2/"
+#define JING_PICTURE_URL @"http://s.budejie.com/topic/list/jingxuan/10/bs0315-iphone-4.2/"
+#define JING_WORD_URL    @"http://s.budejie.com/topic/tag-topic/64/hot/bs0315-iphone-4.2/"
+#define JING_WANGHOT_URL @"http://s.budejie.com/topic/tag-topic/3096/hot/bs0315-iphone-4.2/"
+#define JING_PAIHANG_URL @"http://s.budejie.com/topic/list/remen/1/bs0315-iphone-4.2/"
+#define JING_SHEHUI_URL  @"http://s.budejie.com/topic/tag-topic/473/hot/bs0315-iphone-4.2/"
+#define JING_BEAUTY_URL  @"http://s.budejie.com/topic/tag-topic/117/hot/bs0315-iphone-4.2/"
+
+//穿越 URL
+#define CHUANYUE_ALL_URL @"http://d.api.budejie.com/topic/list/chuanyue/1/bs0315-iphone-4.2/0-20.json"
+#define CHUANYUE_VIDEO_URL @"http://d.api.budejie.com/topic/list/chuanyue/41/bs0315-iphone-4.2/0-20.json"
+#define CHUANYUE_PICTURE_URL @"http://d.api.budejie.com/topic/list/chuanyue/10/bs0315-iphone-4.2/0-20.json"
+#define CHUANYUE_WORD_URL @"http://d.api.budejie.com/topic/list/chuanyue/29/bs0315-iphone-4.2/0-20.json"
+#define CHUANYUE_VOICE_URL @"http://d.api.budejie.com/topic/list/chuanyue/31/bs0315-iphone-4.2/0-20.json"
+
+// 关注-订阅 URL
+#define SUBSCRIBE_URL @"http://d.api.budejie.com/tag/subscribe/bs0315-iphone-4.2.json?appname=bs0315&asid=24210121-1265-4989-A2E4-2F545FB432F4&client=iphone&device=iPhone%204S&from=ios&jbk=0&mac=&market=&openudid=dcadd482e5028525a8cd576d6dfec9dcfb486091&udid=&ver=4.2"
+
+
+
+
+
+
 
 #endif
 

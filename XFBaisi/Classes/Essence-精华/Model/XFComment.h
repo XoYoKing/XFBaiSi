@@ -8,11 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
-@class XFTopCmtUser;
+@class XFUser, XFCommentUser;
 
 @interface XFComment : NSObject
+/** 最后一条评论 id */
+@property (nonatomic, copy) NSString *ID;
+/** 评论内容 */
+@property (nonatomic, copy) NSString *content;
+/** 帖子界面的用户数据 */
+@property (nonatomic, strong) XFUser *user;
 
-@property (nonatomic, copy) NSString *content;      // 评论内容
-@property (nonatomic, strong) XFTopCmtUser *u;         // 发表评论的用户
+/** 评论里的用户数据 */
+@property (nonatomic, strong) XFCommentUser *comUser;
+
+/** 点赞数 */
+@property (nonatomic, assign) NSInteger like_count;
+/** 音频评论时长 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 音频评论路径 */
+@property (nonatomic, copy) NSString *voiceuri;
 
 @end

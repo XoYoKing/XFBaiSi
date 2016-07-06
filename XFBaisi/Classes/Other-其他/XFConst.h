@@ -14,5 +14,9 @@ UIKIT_EXTERN CGFloat const XFMargin;
 /** 通用的小间距值 */
 UIKIT_EXTERN CGFloat const XFSmallMargin;
 
+/** 用户性别- m */
+UIKIT_EXTERN NSString * const XFUserSexMale;
 
+/** 用户性别- f */
+UIKIT_EXTERN NSString * const XFUserSexFemale;
 

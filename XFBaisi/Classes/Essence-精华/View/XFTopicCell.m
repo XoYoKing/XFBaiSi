@@ -12,7 +12,6 @@
 #import "XFUser.h"
 #import "XFTopicPictureView.h"
 #import "XFTopicVideoView.h"
-#import "XFTopCmtUser.h"
 
 
 @interface XFTopicCell ()
@@ -86,7 +85,7 @@
     if (topic.top_comment) {    // 有
         self.topCmtView.hidden = NO;
         
-        NSString *username = topic.top_comment.u.name;
+        NSString *username = topic.top_comment.user.name;
         NSString *content = topic.top_comment.content;
         
         self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@: %@", username, content];

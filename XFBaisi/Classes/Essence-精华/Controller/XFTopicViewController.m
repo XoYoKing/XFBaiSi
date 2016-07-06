@@ -8,6 +8,7 @@
 
 #import "XFTopicViewController.h"
 #import "XFTopicCell.h"
+#import "XFCommentViewController.h"
 
 @interface XFTopicViewController ()
 
@@ -142,7 +143,9 @@ static NSString *const XFTopicCellId = @"topic";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    XFLogFunc
+    XFCommentViewController *commentView = [[XFCommentViewController alloc] init];
+    commentView.topic = self.topics[indexPath.row];
+    [self.navigationController pushViewController:commentView animated:YES];
 }
 
 
