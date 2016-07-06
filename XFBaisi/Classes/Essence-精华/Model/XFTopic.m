@@ -9,7 +9,6 @@
 #import "XFTopic.h"
 #import "XFComment.h"
 #import "XFUser.h"
-#import "XFTopCmtUser.h"
 #import "XFImage.h"
 #import "XFGif.h"
 #import "XFVideo.h"
@@ -63,7 +62,7 @@ static NSCalendar *calendar_;
         // 最热评论标题
         _cellHeight += 20;
         // 最热评论内容
-        NSString *topCmtConernt = [NSString stringWithFormat:@"%@ : %@", self.top_comment.u.name, self.top_comment.content];
+        NSString *topCmtConernt = [NSString stringWithFormat:@"%@ : %@", self.top_comment.user.name, self.top_comment.content];
         CGSize tocCmtContentSize = [topCmtConernt boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size;
         _cellHeight += tocCmtContentSize.height + XFMargin;
     }

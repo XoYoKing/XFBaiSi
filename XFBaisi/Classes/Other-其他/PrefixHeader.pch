@@ -24,6 +24,10 @@
 #import "XFRefreshHeader.h"
 #import "XFRefreshFooter.h"
 #import "UIImageView+XFExtension.h"
+#import "XFComSectionHeaderView.h"
+
+
+#define BASE_URL @"http://api.budejie.com/api/api_open.php"
 
 /*** 我 页面 URL ***/
 #define ME_HOME_URL      @"http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json"
@@ -59,10 +63,6 @@
 /*** 当前系统版本判断 ***/
 #define iOS(version) ([UIDevice currentDevice].systemVersion.doubleValue >= (version))
 
-
-
-
-
 /*** 日志 ***/
 #ifdef DEBUG
 #define XFLog(...) NSLog(__VA_ARGS__)
@@ -78,6 +78,13 @@
 #define XFRandomColor XFColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 #define XFGrayColor(v) XFColor((v), (v), (v))
 #define XFBaseBgColor XFGrayColor(246)
+
+/*** section headerview 字体 **/
+#define XFComSectionHeaderTestFont [UIFont systemFontOfSize:15]
+
+
+
+
 
 #endif
 

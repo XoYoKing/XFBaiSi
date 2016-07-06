@@ -12,6 +12,8 @@
 
 @interface XFTopic : NSObject
 
+/** 帖子 id */
+@property (nonatomic, copy) NSString *ID;
 /** 帖子的文字内容 */
 @property (nonatomic, copy)   NSString  *text;
 /** 帖子审核通过的时间 */

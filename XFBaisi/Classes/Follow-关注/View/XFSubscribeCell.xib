@@ -42,8 +42,11 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go4-MQ-F9a">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go4-MQ-F9a">
                         <rect key="frame" x="298" y="34" width="51" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="51" id="vkj-Ui-IkU"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <state key="normal" title="+ 订阅" backgroundImage="FollowBtnBg">
                             <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -74,9 +77,11 @@
                 <constraints>
                     <constraint firstItem="fho-8q-iv2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="7hb-JM-WmP"/>
                     <constraint firstItem="XDM-Ac-Ldk" firstAttribute="leading" secondItem="ue9-pr-VQ0" secondAttribute="trailing" constant="11" id="Bqf-FX-cqi"/>
+                    <constraint firstItem="go4-MQ-F9a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="26" id="CTK-Ia-IoM"/>
                     <constraint firstItem="X9r-rA-GES" firstAttribute="top" secondItem="fho-8q-iv2" secondAttribute="top" id="LTF-fA-AgO"/>
                     <constraint firstItem="5ve-Mn-y0a" firstAttribute="leading" secondItem="X9r-rA-GES" secondAttribute="leading" id="MRk-Zp-O8A"/>
                     <constraint firstItem="ue9-pr-VQ0" firstAttribute="leading" secondItem="5ve-Mn-y0a" secondAttribute="trailing" constant="5" id="VKb-9A-OSn"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="go4-MQ-F9a" secondAttribute="bottom" constant="25" id="Yvf-5Q-3Zw"/>
                     <constraint firstItem="fho-8q-iv2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ywa-vD-JOO"/>
                     <constraint firstItem="go4-MQ-F9a" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="a9M-fk-C2G"/>
                     <constraint firstItem="XDM-Ac-Ldk" firstAttribute="centerY" secondItem="5ve-Mn-y0a" secondAttribute="centerY" id="b5v-c2-dWH"/>
@@ -85,6 +90,12 @@
                     <constraint firstItem="ue9-pr-VQ0" firstAttribute="centerY" secondItem="5ve-Mn-y0a" secondAttribute="centerY" id="doC-4q-SfW"/>
                     <constraint firstAttribute="trailingMargin" secondItem="go4-MQ-F9a" secondAttribute="trailing" constant="20" id="itJ-sw-gdG"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="CTK-Ia-IoM"/>
+                        <exclude reference="Yvf-5Q-3Zw"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="iconImage" destination="fho-8q-iv2" id="uGl-uE-20R"/>

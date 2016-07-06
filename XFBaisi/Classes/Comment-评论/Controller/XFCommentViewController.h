@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class XFTopic;
+
 @interface XFCommentViewController : UIViewController
+
+/** topic */
+@property (nonatomic, strong) XFTopic *topic;
 
 @end

@@ -144,6 +144,7 @@ static NSString *const XFTopicCellId = @"topic";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     XFCommentViewController *commentView = [[XFCommentViewController alloc] init];
+    commentView.topic = self.topics[indexPath.row];
     [self.navigationController pushViewController:commentView animated:YES];
 }
 

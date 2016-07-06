@@ -72,7 +72,10 @@
 		BDC1578D1D266811009E3DC6 /* XFPaiHangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1578C1D266811009E3DC6 /* XFPaiHangViewController.m */; };
 		BDC157901D26683F009E3DC6 /* XFSheHuiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1578F1D26683F009E3DC6 /* XFSheHuiViewController.m */; };
 		BDC157931D26686D009E3DC6 /* XFBeautyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC157921D26686D009E3DC6 /* XFBeautyViewController.m */; };
-		BDC1579F1D26D4DE009E3DC6 /* XFTopCmtUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1579E1D26D4DE009E3DC6 /* XFTopCmtUser.m */; };
+		BDE3C7301D2CC5CB0092CB15 /* XFComSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C72F1D2CC5CB0092CB15 /* XFComSectionHeaderView.m */; };
+		BDE3C7341D2CDE0D0092CB15 /* XFCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7321D2CDE0D0092CB15 /* XFCommentCell.m */; };
+		BDE3C7351D2CDE0D0092CB15 /* XFCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE3C7331D2CDE0D0092CB15 /* XFCommentCell.xib */; };
+		BDE3C7381D2CEDBB0092CB15 /* XFCommentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7371D2CEDBB0092CB15 /* XFCommentUser.m */; };
 		BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */; };
 		BDE490AB1D1EC8330029E919 /* XFLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE490A91D1EC8330029E919 /* XFLoginRegisterViewController.m */; };
 		BDE490AC1D1EC8330029E919 /* XFLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE490AA1D1EC8330029E919 /* XFLoginRegisterViewController.xib */; };
@@ -233,8 +236,13 @@
 		BDC1578F1D26683F009E3DC6 /* XFSheHuiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSheHuiViewController.m; sourceTree = "<group>"; };
 		BDC157911D26686D009E3DC6 /* XFBeautyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFBeautyViewController.h; sourceTree = "<group>"; };
 		BDC157921D26686D009E3DC6 /* XFBeautyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFBeautyViewController.m; sourceTree = "<group>"; };
-		BDC1579D1D26D4DE009E3DC6 /* XFTopCmtUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTopCmtUser.h; sourceTree = "<group>"; };
-		BDC1579E1D26D4DE009E3DC6 /* XFTopCmtUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTopCmtUser.m; sourceTree = "<group>"; };
+		BDE3C72E1D2CC5CB0092CB15 /* XFComSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComSectionHeaderView.h; sourceTree = "<group>"; };
+		BDE3C72F1D2CC5CB0092CB15 /* XFComSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFComSectionHeaderView.m; sourceTree = "<group>"; };
+		BDE3C7311D2CDE0D0092CB15 /* XFCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFCommentCell.h; sourceTree = "<group>"; };
+		BDE3C7321D2CDE0D0092CB15 /* XFCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFCommentCell.m; sourceTree = "<group>"; };
+		BDE3C7331D2CDE0D0092CB15 /* XFCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFCommentCell.xib; sourceTree = "<group>"; };
+		BDE3C7361D2CEDBB0092CB15 /* XFCommentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFCommentUser.h; sourceTree = "<group>"; };
+		BDE3C7371D2CEDBB0092CB15 /* XFCommentUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFCommentUser.m; sourceTree = "<group>"; };
 		BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFFollowViewController.xib; sourceTree = "<group>"; };
 		BDE490A81D1EC8330029E919 /* XFLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLoginRegisterViewController.h; sourceTree = "<group>"; };
 		BDE490A91D1EC8330029E919 /* XFLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFLoginRegisterViewController.m; sourceTree = "<group>"; };
@@ -330,6 +338,11 @@
 		BD5A11D61D2BBCB9002FD341 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BDE3C72E1D2CC5CB0092CB15 /* XFComSectionHeaderView.h */,
+				BDE3C72F1D2CC5CB0092CB15 /* XFComSectionHeaderView.m */,
+				BDE3C7311D2CDE0D0092CB15 /* XFCommentCell.h */,
+				BDE3C7321D2CDE0D0092CB15 /* XFCommentCell.m */,
+				BDE3C7331D2CDE0D0092CB15 /* XFCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -518,8 +531,8 @@
 				BD0A07A41D24E2DE004E9478 /* XFUser.m */,
 				BD0A07A61D24E307004E9478 /* XFComment.h */,
 				BD0A07A71D24E307004E9478 /* XFComment.m */,
-				BDC1579D1D26D4DE009E3DC6 /* XFTopCmtUser.h */,
-				BDC1579E1D26D4DE009E3DC6 /* XFTopCmtUser.m */,
+				BDE3C7361D2CEDBB0092CB15 /* XFCommentUser.h */,
+				BDE3C7371D2CEDBB0092CB15 /* XFCommentUser.m */,
 				BD8381FE1D2775150093CF2D /* XFImage.h */,
 				BD8381FF1D2775150093CF2D /* XFImage.m */,
 				BD8382031D278B100093CF2D /* XFGif.h */,
@@ -827,6 +840,7 @@
 				BD347AC61D2B59F4009C6F79 /* XFSubscribeCell.xib in Resources */,
 				BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */,
 				BDE490AC1D1EC8330029E919 /* XFLoginRegisterViewController.xib in Resources */,
+				BDE3C7351D2CDE0D0092CB15 /* XFCommentCell.xib in Resources */,
 				BD2382EB1D20CB8A00DE1EB3 /* XFWebViewController.xib in Resources */,
 				BD9D042B1D26029200692F89 /* XFTopicVideoView.xib in Resources */,
 				BDC0B31D1D240BD70068B2F5 /* XFTopicCell.xib in Resources */,
@@ -981,7 +995,9 @@
 			files = (
 				BD0A07951D24D1DD004E9478 /* UIBarButtonItem+XFExtension.m in Sources */,
 				BD0A07981D24D23A004E9478 /* UITextField+XFExtension.m in Sources */,
+				BDE3C7341D2CDE0D0092CB15 /* XFCommentCell.m in Sources */,
 				BD2382E31D20B86B00DE1EB3 /* XFMeSquareButton.m in Sources */,
+				BDE3C7301D2CC5CB0092CB15 /* XFComSectionHeaderView.m in Sources */,
 				BD347AC11D2B5238009C6F79 /* XFSubscribeViewController.m in Sources */,
 				BD8382051D278B100093CF2D /* XFGif.m in Sources */,
 				BD9D04331D265D8900692F89 /* XFTopicViewController.m in Sources */,
@@ -1015,6 +1031,7 @@
 				BDA6643B1D237D99004D5967 /* XFRefreshFooter.m in Sources */,
 				BDBDA1C81D1E458900BA01B1 /* AppDelegate.m in Sources */,
 				BD94A6811D223ACD00EC5208 /* XFRecomViewController.m in Sources */,
+				BDE3C7381D2CEDBB0092CB15 /* XFCommentUser.m in Sources */,
 				BD347ACF1D2B9729009C6F79 /* UIImage+XFExtension.m in Sources */,
 				BDE490AF1D1ED6210029E919 /* XFTabBar.m in Sources */,
 				BDBDA1E21D1E67B300BA01B1 /* XFNavigationController.m in Sources */,
@@ -1031,7 +1048,6 @@
 				BDC157931D26686D009E3DC6 /* XFBeautyViewController.m in Sources */,
 				BDA664351D235ED5004D5967 /* XFTopic.m in Sources */,
 				BDF7C0C51D227B2D00947EAD /* XFTextFontCell.m in Sources */,
-				BDC1579F1D26D4DE009E3DC6 /* XFTopCmtUser.m in Sources */,
 				BD8382081D27952D0093CF2D /* XFVideo.m in Sources */,
 				BDB6C6551D29F86300F0E9D9 /* XFSeeBigViewController.m in Sources */,
 				BD0A07AB1D250BA6004E9478 /* XFModelConfig.m in Sources */,
