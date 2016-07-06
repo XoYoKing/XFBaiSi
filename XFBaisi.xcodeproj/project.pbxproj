@@ -76,6 +76,15 @@
 		BDE3C7341D2CDE0D0092CB15 /* XFCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7321D2CDE0D0092CB15 /* XFCommentCell.m */; };
 		BDE3C7351D2CDE0D0092CB15 /* XFCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE3C7331D2CDE0D0092CB15 /* XFCommentCell.xib */; };
 		BDE3C7381D2CEDBB0092CB15 /* XFCommentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7371D2CEDBB0092CB15 /* XFCommentUser.m */; };
+		BDE3C73B1D2D0D400092CB15 /* XFAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C73A1D2D0D400092CB15 /* XFAllViewController.m */; };
+		BDE3C73E1D2D0D8E0092CB15 /* XFNVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C73D1D2D0D8E0092CB15 /* XFNVideoViewController.m */; };
+		BDE3C7411D2D0DA90092CB15 /* XFNPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7401D2D0DA90092CB15 /* XFNPictureViewController.m */; };
+		BDE3C7441D2D0E000092CB15 /* XFNWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7431D2D0E000092CB15 /* XFNWordViewController.m */; };
+		BDE3C7471D2D0E110092CB15 /* XFNWangHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7461D2D0E110092CB15 /* XFNWangHotViewController.m */; };
+		BDE3C74A1D2D0E280092CB15 /* XFNBeautyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7491D2D0E280092CB15 /* XFNBeautyViewController.m */; };
+		BDE3C74D1D2D0E3D0092CB15 /* XFNLengMenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C74C1D2D0E3D0092CB15 /* XFNLengMenViewController.m */; };
+		BDE3C7501D2D0E470092CB15 /* XFNGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C74F1D2D0E470092CB15 /* XFNGameViewController.m */; };
+		BDE3C7531D2D0E520092CB15 /* XFNVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7521D2D0E520092CB15 /* XFNVoiceViewController.m */; };
 		BDE490A71D1EBF0F0029E919 /* XFFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */; };
 		BDE490AB1D1EC8330029E919 /* XFLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE490A91D1EC8330029E919 /* XFLoginRegisterViewController.m */; };
 		BDE490AC1D1EC8330029E919 /* XFLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE490AA1D1EC8330029E919 /* XFLoginRegisterViewController.xib */; };
@@ -243,6 +252,24 @@
 		BDE3C7331D2CDE0D0092CB15 /* XFCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFCommentCell.xib; sourceTree = "<group>"; };
 		BDE3C7361D2CEDBB0092CB15 /* XFCommentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFCommentUser.h; sourceTree = "<group>"; };
 		BDE3C7371D2CEDBB0092CB15 /* XFCommentUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFCommentUser.m; sourceTree = "<group>"; };
+		BDE3C7391D2D0D400092CB15 /* XFAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFAllViewController.h; sourceTree = "<group>"; };
+		BDE3C73A1D2D0D400092CB15 /* XFAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFAllViewController.m; sourceTree = "<group>"; };
+		BDE3C73C1D2D0D8E0092CB15 /* XFNVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNVideoViewController.h; sourceTree = "<group>"; };
+		BDE3C73D1D2D0D8E0092CB15 /* XFNVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNVideoViewController.m; sourceTree = "<group>"; };
+		BDE3C73F1D2D0DA90092CB15 /* XFNPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNPictureViewController.h; sourceTree = "<group>"; };
+		BDE3C7401D2D0DA90092CB15 /* XFNPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNPictureViewController.m; sourceTree = "<group>"; };
+		BDE3C7421D2D0E000092CB15 /* XFNWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNWordViewController.h; sourceTree = "<group>"; };
+		BDE3C7431D2D0E000092CB15 /* XFNWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNWordViewController.m; sourceTree = "<group>"; };
+		BDE3C7451D2D0E110092CB15 /* XFNWangHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNWangHotViewController.h; sourceTree = "<group>"; };
+		BDE3C7461D2D0E110092CB15 /* XFNWangHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNWangHotViewController.m; sourceTree = "<group>"; };
+		BDE3C7481D2D0E280092CB15 /* XFNBeautyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNBeautyViewController.h; sourceTree = "<group>"; };
+		BDE3C7491D2D0E280092CB15 /* XFNBeautyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNBeautyViewController.m; sourceTree = "<group>"; };
+		BDE3C74B1D2D0E3D0092CB15 /* XFNLengMenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNLengMenViewController.h; sourceTree = "<group>"; };
+		BDE3C74C1D2D0E3D0092CB15 /* XFNLengMenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNLengMenViewController.m; sourceTree = "<group>"; };
+		BDE3C74E1D2D0E470092CB15 /* XFNGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNGameViewController.h; sourceTree = "<group>"; };
+		BDE3C74F1D2D0E470092CB15 /* XFNGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNGameViewController.m; sourceTree = "<group>"; };
+		BDE3C7511D2D0E520092CB15 /* XFNVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNVoiceViewController.h; sourceTree = "<group>"; };
+		BDE3C7521D2D0E520092CB15 /* XFNVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNVoiceViewController.m; sourceTree = "<group>"; };
 		BDE490A61D1EBF0F0029E919 /* XFFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFFollowViewController.xib; sourceTree = "<group>"; };
 		BDE490A81D1EC8330029E919 /* XFLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLoginRegisterViewController.h; sourceTree = "<group>"; };
 		BDE490A91D1EC8330029E919 /* XFLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFLoginRegisterViewController.m; sourceTree = "<group>"; };
@@ -474,6 +501,24 @@
 			children = (
 				BDBDA1B51D1E446900BA01B1 /* XFNewViewController.h */,
 				BDBDA1B61D1E446900BA01B1 /* XFNewViewController.m */,
+				BDE3C7391D2D0D400092CB15 /* XFAllViewController.h */,
+				BDE3C73A1D2D0D400092CB15 /* XFAllViewController.m */,
+				BDE3C73C1D2D0D8E0092CB15 /* XFNVideoViewController.h */,
+				BDE3C73D1D2D0D8E0092CB15 /* XFNVideoViewController.m */,
+				BDE3C73F1D2D0DA90092CB15 /* XFNPictureViewController.h */,
+				BDE3C7401D2D0DA90092CB15 /* XFNPictureViewController.m */,
+				BDE3C7421D2D0E000092CB15 /* XFNWordViewController.h */,
+				BDE3C7431D2D0E000092CB15 /* XFNWordViewController.m */,
+				BDE3C7451D2D0E110092CB15 /* XFNWangHotViewController.h */,
+				BDE3C7461D2D0E110092CB15 /* XFNWangHotViewController.m */,
+				BDE3C74B1D2D0E3D0092CB15 /* XFNLengMenViewController.h */,
+				BDE3C74C1D2D0E3D0092CB15 /* XFNLengMenViewController.m */,
+				BDE3C7511D2D0E520092CB15 /* XFNVoiceViewController.h */,
+				BDE3C7521D2D0E520092CB15 /* XFNVoiceViewController.m */,
+				BDE3C74E1D2D0E470092CB15 /* XFNGameViewController.h */,
+				BDE3C74F1D2D0E470092CB15 /* XFNGameViewController.m */,
+				BDE3C7481D2D0E280092CB15 /* XFNBeautyViewController.h */,
+				BDE3C7491D2D0E280092CB15 /* XFNBeautyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1001,14 +1046,17 @@
 				BD347AC11D2B5238009C6F79 /* XFSubscribeViewController.m in Sources */,
 				BD8382051D278B100093CF2D /* XFGif.m in Sources */,
 				BD9D04331D265D8900692F89 /* XFTopicViewController.m in Sources */,
+				BDE3C74D1D2D0E3D0092CB15 /* XFNLengMenViewController.m in Sources */,
 				BDBDA1C61D1E456F00BA01B1 /* XFTabBarController.m in Sources */,
 				BD0A07A51D24E2DE004E9478 /* XFUser.m in Sources */,
+				BDE3C7501D2D0E470092CB15 /* XFNGameViewController.m in Sources */,
 				BD5A11D71D2BBCB9002FD341 /* XFCommentViewController.m in Sources */,
 				BD94A67E1D222B9C00EC5208 /* XFTitleButton.m in Sources */,
 				BD8382001D2775150093CF2D /* XFImage.m in Sources */,
 				BDF7C0CA1D22836800947EAD /* XFDayOrNightCell.m in Sources */,
 				BDBDA1DC1D1E64B800BA01B1 /* XFSettingViewController.m in Sources */,
 				BDC1578D1D266811009E3DC6 /* XFPaiHangViewController.m in Sources */,
+				BDE3C73B1D2D0D400092CB15 /* XFAllViewController.m in Sources */,
 				BDA6643E1D239629004D5967 /* XFHTTPSessionManager.m in Sources */,
 				BD2382F71D21146700DE1EB3 /* XFClearCacheCell.m in Sources */,
 				BD0A07A81D24E307004E9478 /* XFComment.m in Sources */,
@@ -1019,6 +1067,7 @@
 				BDC0B31C1D240BD70068B2F5 /* XFTopicCell.m in Sources */,
 				BD347ABD1D2B513F009C6F79 /* XFFollwController.m in Sources */,
 				BD3830F71D20255B0060CEB0 /* XFMeFooterView.m in Sources */,
+				BDE3C7411D2D0DA90092CB15 /* XFNPictureViewController.m in Sources */,
 				BD9D041E1D25FF8400692F89 /* XFTopicPictureView.m in Sources */,
 				BD347ACC1D2B6CFF009C6F79 /* XFSubscribeTag.m in Sources */,
 				BD94A6871D223AFA00EC5208 /* XFWangHotViewController.m in Sources */,
@@ -1036,14 +1085,19 @@
 				BDE490AF1D1ED6210029E919 /* XFTabBar.m in Sources */,
 				BDBDA1E21D1E67B300BA01B1 /* XFNavigationController.m in Sources */,
 				BD2382F11D20FA2E00DE1EB3 /* XFMoreViewController.m in Sources */,
+				BDE3C74A1D2D0E280092CB15 /* XFNBeautyViewController.m in Sources */,
 				BD94A68D1D223B2600EC5208 /* XFWordViewController.m in Sources */,
 				BD660A401D1EF19B006E5BC0 /* XFLoginRegisterTextField.m in Sources */,
 				BD347AD21D2B9EE0009C6F79 /* UIImageView+XFExtension.m in Sources */,
 				BDC157901D26683F009E3DC6 /* XFSheHuiViewController.m in Sources */,
+				BDE3C7441D2D0E000092CB15 /* XFNWordViewController.m in Sources */,
 				BD94A6841D223AE900EC5208 /* XFVideoViewController.m in Sources */,
 				BDBDA1B71D1E446900BA01B1 /* XFNewViewController.m in Sources */,
+				BDE3C7531D2D0E520092CB15 /* XFNVoiceViewController.m in Sources */,
 				BDBDA1BD1D1E447B00BA01B1 /* XFMeViewController.m in Sources */,
+				BDE3C73E1D2D0D8E0092CB15 /* XFNVideoViewController.m in Sources */,
 				BDBDA1CC1D1E459400BA01B1 /* main.m in Sources */,
+				BDE3C7471D2D0E110092CB15 /* XFNWangHotViewController.m in Sources */,
 				BD347AC51D2B59F4009C6F79 /* XFSubscribeCell.m in Sources */,
 				BDC157931D26686D009E3DC6 /* XFBeautyViewController.m in Sources */,
 				BDA664351D235ED5004D5967 /* XFTopic.m in Sources */,
