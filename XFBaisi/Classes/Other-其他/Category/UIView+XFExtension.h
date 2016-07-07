@@ -1,8 +1,7 @@
 //
 //  UIView+XFExtension.h
-//  XFBaiSi
 //
-//  Created by xiaofans on 16/6/25.
+//  Created by xiaofan on 16/6/25.
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
@@ -19,6 +18,14 @@
 @property (nonatomic, assign) CGFloat xf_right;
 @property (nonatomic, assign) CGFloat xf_bottom;
 
+/**
+ *  从 nib 创建 view
+ */
 + (instancetype)xf_viewFromXib;
+
+/**
+ *  判断两个 view 是否有重叠
+ */
+- (BOOL)xf_intersectWithView:(UIView *)view;
 
 @end

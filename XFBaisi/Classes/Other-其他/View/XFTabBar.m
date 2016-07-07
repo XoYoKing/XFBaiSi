@@ -80,8 +80,9 @@
 }
 
 #pragma mark - 监听发布按钮
+
 - (void)publishClick {
-    XFLogFunc;
+    XFLogFunc
 }
 
 

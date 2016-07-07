@@ -19,7 +19,7 @@
         // 点击选中状态颜色
         [self setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
         
-        self.titleLabel.font = [UIFont systemFontOfSize:14];
+        self.titleLabel.font = [UIFont systemFontOfSize:15];
     }
     return self;
 }

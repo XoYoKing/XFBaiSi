@@ -1,8 +1,7 @@
 //
 //  UIView+XFExtension.m
-//  XFBaiSi
 //
-//  Created by xiaofans on 16/6/25.
+//  Created by xiaofan on 16/6/25.
 //  Copyright © 2016年 xiaofan. All rights reserved.
 //
 
@@ -108,4 +107,23 @@
                                        options:nil].lastObject;
 }
 
+- (BOOL)xf_intersectWithView:(UIView *)view {
+    CGRect selfRect = [self convertRect:self.bounds toView:nil];
+    CGRect viewRect = [view convertRect:view.bounds toView:nil];
+    
+    return CGRectIntersectsRect(selfRect, viewRect);
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+

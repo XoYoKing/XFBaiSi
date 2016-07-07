@@ -72,6 +72,7 @@
 		BDC1578D1D266811009E3DC6 /* XFPaiHangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1578C1D266811009E3DC6 /* XFPaiHangViewController.m */; };
 		BDC157901D26683F009E3DC6 /* XFSheHuiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1578F1D26683F009E3DC6 /* XFSheHuiViewController.m */; };
 		BDC157931D26686D009E3DC6 /* XFBeautyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC157921D26686D009E3DC6 /* XFBeautyViewController.m */; };
+		BDCC10E11D2E62F300A8CC15 /* XFTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC10E01D2E62F300A8CC15 /* XFTopWindow.m */; };
 		BDE3C7301D2CC5CB0092CB15 /* XFComSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C72F1D2CC5CB0092CB15 /* XFComSectionHeaderView.m */; };
 		BDE3C7341D2CDE0D0092CB15 /* XFCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE3C7321D2CDE0D0092CB15 /* XFCommentCell.m */; };
 		BDE3C7351D2CDE0D0092CB15 /* XFCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE3C7331D2CDE0D0092CB15 /* XFCommentCell.xib */; };
@@ -247,6 +248,8 @@
 		BDC1578F1D26683F009E3DC6 /* XFSheHuiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSheHuiViewController.m; sourceTree = "<group>"; };
 		BDC157911D26686D009E3DC6 /* XFBeautyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFBeautyViewController.h; sourceTree = "<group>"; };
 		BDC157921D26686D009E3DC6 /* XFBeautyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFBeautyViewController.m; sourceTree = "<group>"; };
+		BDCC10DF1D2E62F300A8CC15 /* XFTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTopWindow.h; sourceTree = "<group>"; };
+		BDCC10E01D2E62F300A8CC15 /* XFTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTopWindow.m; sourceTree = "<group>"; };
 		BDE3C72E1D2CC5CB0092CB15 /* XFComSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComSectionHeaderView.h; sourceTree = "<group>"; };
 		BDE3C72F1D2CC5CB0092CB15 /* XFComSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFComSectionHeaderView.m; sourceTree = "<group>"; };
 		BDE3C7311D2CDE0D0092CB15 /* XFCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFCommentCell.h; sourceTree = "<group>"; };
@@ -723,6 +726,8 @@
 				BDA664371D237475004D5967 /* XFRefreshHeader.m */,
 				BDA664391D237D99004D5967 /* XFRefreshFooter.h */,
 				BDA6643A1D237D99004D5967 /* XFRefreshFooter.m */,
+				BDCC10DF1D2E62F300A8CC15 /* XFTopWindow.h */,
+				BDCC10E01D2E62F300A8CC15 /* XFTopWindow.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1140,6 +1145,7 @@
 				BDBDA1CC1D1E459400BA01B1 /* main.m in Sources */,
 				BDE3C7471D2D0E110092CB15 /* XFNWangHotViewController.m in Sources */,
 				BD347AC51D2B59F4009C6F79 /* XFSubscribeCell.m in Sources */,
+				BDCC10E11D2E62F300A8CC15 /* XFTopWindow.m in Sources */,
 				BDC157931D26686D009E3DC6 /* XFBeautyViewController.m in Sources */,
 				BDE3C75E1D2D55E00092CB15 /* XFTopicAudioView.m in Sources */,
 				BDA664351D235ED5004D5967 /* XFTopic.m in Sources */,

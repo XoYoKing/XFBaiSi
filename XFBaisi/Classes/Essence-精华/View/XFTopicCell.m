@@ -16,29 +16,34 @@
 
 
 @interface XFTopicCell ()
-
-@property (nonatomic, weak) IBOutlet UIImageView *profileImageView;  // 头像
-
-@property (nonatomic, weak) IBOutlet UILabel     *nameLabel;         // 名字
-@property (nonatomic, weak) IBOutlet UILabel     *createdAtLabel;    // 审核通过时间
-@property (nonatomic, weak) IBOutlet UILabel     *text_label;        // 内容文字
-
-@property (nonatomic, weak) IBOutlet UIButton    *dingButton;        // 顶 按钮
-@property (nonatomic, weak) IBOutlet UIButton    *caiButton;         // 踩 按钮
-@property (nonatomic, weak) IBOutlet UIButton    *repostButton;      // 转发/分享 按钮
-@property (nonatomic, weak) IBOutlet UIButton    *commentButton;     // 评论按钮
-
-@property (nonatomic, weak) IBOutlet UIView      *topCmtView;        // 最热评论整体 view
-@property (nonatomic, weak) IBOutlet UILabel     *topCmtContentLabel;// 最热评论内容
+/** 头像 */
+@property (nonatomic, weak) IBOutlet UIImageView *profileImageView;
+/** 名字 */
+@property (nonatomic, weak) IBOutlet UILabel     *nameLabel;
+/** 审核通过时间 */
+@property (nonatomic, weak) IBOutlet UILabel     *createdAtLabel;
+/** 内容文字 */
+@property (nonatomic, weak) IBOutlet UILabel     *text_label;
+/** 顶 按钮 */
+@property (nonatomic, weak) IBOutlet UIButton    *dingButton;
+/** 踩 按钮 */
+@property (nonatomic, weak) IBOutlet UIButton    *caiButton;
+/** 转发/分享 按钮 */
+@property (nonatomic, weak) IBOutlet UIButton    *repostButton;
+/** 评论按钮 */
+@property (nonatomic, weak) IBOutlet UIButton    *commentButton;
+/** 最热评论整体 view */
+@property (nonatomic, weak) IBOutlet UIView      *topCmtView;
+/** 最热评论内容 */
+@property (nonatomic, weak) IBOutlet UILabel     *topCmtContentLabel;
 
 /** 中间控件 */
-@property (nonatomic, weak) XFTopicPictureView   *pictureView;       // 图片 view
-@property (nonatomic, weak) XFTopicVideoView     *videoView;         // 视频 view
-@property (nonatomic, weak) XFTopicAudioView     *audioView;         // 音频 view
-
-
-
-
+/** 图片 view */
+@property (nonatomic, weak) XFTopicPictureView   *pictureView;
+/** 视频 view */
+@property (nonatomic, weak) XFTopicVideoView     *videoView;
+/** 音频 view */
+@property (nonatomic, weak) XFTopicAudioView     *audioView;
 
 @end
 

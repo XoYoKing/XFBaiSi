@@ -78,13 +78,6 @@
 #define JING_SHEHUI_URL  @"http://s.budejie.com/topic/tag-topic/473/hot/bs0315-iphone-4.2/"
 #define JING_BEAUTY_URL  @"http://s.budejie.com/topic/tag-topic/117/hot/bs0315-iphone-4.2/"
 
-<<<<<<< HEAD
-// 最新各个页面
-#define NEW_ALL_URL @""
-#define NEW_VIDEO_URL @""
-
-#define NEW_VOICE_URL @"http://s.budejie.com/topic/list/zuixin/31/bs0315-iphone-4.2/"
-=======
 
 // 最新
 #define NEW_ALL_URL     @"http://s.budejie.com/topic/list/zuixin/1/bs0315-iphone-4.2/"
@@ -96,7 +89,7 @@
 #define NEW_GAME_URL    @"http://s.budejie.com/topic/tag-topic/164/new/bs0315-iphone-4.2/"
 #define NEW_AUDIO_URL   @"http://s.budejie.com/topic/list/zuixin/31/bs0315-iphone-4.2/"
 
->>>>>>> new
+
 
 //穿越 URL
 #define CHUANYUE_ALL_URL @"http://d.api.budejie.com/topic/list/chuanyue/1/bs0315-iphone-4.2/0-20.json"
