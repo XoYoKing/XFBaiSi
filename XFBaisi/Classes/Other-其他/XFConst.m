@@ -30,3 +30,30 @@ NSString * const XFUserSexMale   = @"m";
 
 /** 用户性别- f */
 NSString * const XFUserSexFemale = @"f";
+
+
+/*** 通知 ***/
+/** TabBar按钮被重复点击的通知 */
+NSString * const XFTabBarButtonDidRepeatClickNotification = @"XFTabBarButtonDidRepeatClickNotification";
+/** 标题按钮被重复点击的通知 */
+NSString * const XFTitleButtonDidRepeatClickNotification = @"XFTitleButtonDidRepeatClickNotification";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

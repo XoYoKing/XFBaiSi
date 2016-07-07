@@ -41,6 +41,16 @@ static NSString *const XFTopicCellId = @"topic";
     [self setupTabelView];
     
     [self setupRefresh];
+    
+    [self setupNotification];
+}
+
+/**
+ *  创建 tabbar 和 titlebtn 重复点击通知
+ */
+- (void)setupNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:XFTabBarButtonDidRepeatClickNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonDidRepeatClick) name:XFTitleButtonDidRepeatClickNotification object:nil];
 }
 
 - (void)setupTabelView {
@@ -58,6 +68,30 @@ static NSString *const XFTopicCellId = @"topic";
     
     self.tableView.mj_footer = [XFRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
 }
+
+/**
+ *  移除通知
+ */
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - 监听事件
+
+// tabBar 的重复点击
+- (void)tabBarButtonDidRepeatClick {
+    if (self.view.window == nil) return;
+    
+    if (![self.view xf_intersectWithView:self.view.window]) return;
+    
+    [self.tableView.mj_header beginRefreshing];
+}
+
+- (void)titleButtonDidRepeatClick {
+    [self tabBarButtonDidRepeatClick];
+}
+
 
 #pragma mark - 加载数据
 

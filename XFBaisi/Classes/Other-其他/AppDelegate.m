@@ -11,17 +11,38 @@
 #import "XFTopWindow.h"
 
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarControllerDelegate>
+
+/** 记录上一次选中的子控制器的索引 */
+@property (nonatomic, assign) NSUInteger lastSelectedIndex;
 
 @end
 
 @implementation AppDelegate
 
+#pragma mark - UITabBarControllerDelegate
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    
+    // 重复点击
+    if (tabBarController.selectedIndex == self.lastSelectedIndex) {
+        // 发出通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:XFTabBarButtonDidRepeatClickNotification object:nil];
+    }
+    // 记下当前选中的索引
+    self.lastSelectedIndex = tabBarController.selectedIndex;
+}
+
+#pragma mark - UIApplicationDelegate
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.window.rootViewController = [[XFTabBarController alloc] init];
+    XFTabBarController *rootVC = [[XFTabBarController alloc] init];
+    rootVC.delegate = self;
+    
+    self.window.rootViewController = rootVC;
     
     [self.window makeKeyAndVisible];
     

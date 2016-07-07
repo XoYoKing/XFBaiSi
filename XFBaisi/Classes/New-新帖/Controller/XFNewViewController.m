@@ -167,6 +167,12 @@
  *  顶部标题按钮点击事件
  */
 - (void)titleClick:(XFTitleButton *)titleButton {
+    
+    // 按钮重复点击 发出通知
+    if (titleButton == self.selectedTitleBtn) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:XFTitleButtonDidRepeatClickNotification object:nil];
+    }
+    
     // 控制按钮状态
     self.selectedTitleBtn.selected = NO;
     titleButton.selected = YES;
