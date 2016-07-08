@@ -15,11 +15,14 @@
 
 /** 播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
-/** 视频长度 */
+/** 音频长度 */
 @property (nonatomic, assign) NSInteger duration;
 
-/** 视频缩略图 */
+/** 音频缩略图 */
 @property (nonatomic, strong) NSArray   *thumbnail;
+
+/** url */
+@property (nonatomic, copy)   NSArray   *audio;
 
 
 @end

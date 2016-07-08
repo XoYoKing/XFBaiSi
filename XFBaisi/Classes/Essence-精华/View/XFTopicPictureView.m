@@ -55,22 +55,6 @@
         self.imageView.clipsToBounds = NO;
     }
     
-    // 真机判断网络状态显示不同图片
-    /*
-    AFNetworkReachabilityStatus status = [AFNetworkReachabilityManager sharedManager].networkReachabilityStatus;
-    switch (status) {
-        case AFNetworkReachabilityStatusReachableViaWWAN:   // 手机网络
-            [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.small_image]];
-            break;
-        case AFNetworkReachabilityStatusReachableViaWiFi:   // WiFi
-            [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image]];
-            break;
-        default:                                            // 没有网络
-            self.imageView.image = nil;
-            break;
-    }
-     */
-    
     if ([topic.type isEqualToString:XFTopicImage]) {
         self.gifView.hidden = YES;
         [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.image.big.firstObject]];
@@ -78,13 +62,6 @@
         self.gifView.hidden = NO;
         [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.gif.images.firstObject]];
     }
-}
-
-#pragma mark - 监听按钮点击
-- (IBAction)seeBigBtnClick:(UIButton *)sender {
-    XFSeeBigViewController *bigView = [[XFSeeBigViewController alloc] init];
-    bigView.topic = self.topic;
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:bigView animated:YES completion:nil];
 }
 
 @end

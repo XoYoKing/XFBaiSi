@@ -20,6 +20,7 @@
 		BD2382EB1D20CB8A00DE1EB3 /* XFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2382E91D20CB8A00DE1EB3 /* XFWebViewController.xib */; };
 		BD2382F11D20FA2E00DE1EB3 /* XFMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382F01D20FA2E00DE1EB3 /* XFMoreViewController.m */; };
 		BD2382F71D21146700DE1EB3 /* XFClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2382F61D21146700DE1EB3 /* XFClearCacheCell.m */; };
+		BD26D5F11D2F4A4A00ED72ED /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD26D5F01D2F4A4A00ED72ED /* AVFoundation.framework */; };
 		BD347ABD1D2B513F009C6F79 /* XFFollwController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD347ABC1D2B513F009C6F79 /* XFFollwController.m */; };
 		BD347AC11D2B5238009C6F79 /* XFSubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD347AC01D2B5238009C6F79 /* XFSubscribeViewController.m */; };
 		BD347AC51D2B59F4009C6F79 /* XFSubscribeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD347AC31D2B59F4009C6F79 /* XFSubscribeCell.m */; };
@@ -147,6 +148,7 @@
 		BD2382F01D20FA2E00DE1EB3 /* XFMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMoreViewController.m; sourceTree = "<group>"; };
 		BD2382F51D21146700DE1EB3 /* XFClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFClearCacheCell.h; sourceTree = "<group>"; };
 		BD2382F61D21146700DE1EB3 /* XFClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFClearCacheCell.m; sourceTree = "<group>"; };
+		BD26D5F01D2F4A4A00ED72ED /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BD347ABB1D2B513F009C6F79 /* XFFollwController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFollwController.h; sourceTree = "<group>"; };
 		BD347ABC1D2B513F009C6F79 /* XFFollwController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFFollwController.m; sourceTree = "<group>"; };
 		BD347ABF1D2B5238009C6F79 /* XFSubscribeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSubscribeViewController.h; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD26D5F11D2F4A4A00ED72ED /* AVFoundation.framework in Frameworks */,
 				D82C942630EED7F0F1C4F766 /* libPods-XFBaisi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -798,6 +801,7 @@
 		F98CC775A23121D6BDF913D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD26D5F01D2F4A4A00ED72ED /* AVFoundation.framework */,
 				8564B4053D229525B01D725E /* libPods-XFBaisi.a */,
 				FAF2CE5070612EF3BD1AAAA2 /* libPods-XFBaisiTests.a */,
 				43DF40AF7129666B974784DD /* libPods-XFBaisiUITests.a */,

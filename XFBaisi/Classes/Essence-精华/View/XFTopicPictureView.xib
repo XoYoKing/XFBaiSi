@@ -26,16 +26,13 @@
                         <constraint firstAttribute="height" constant="31" id="zn6-xD-2he"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxI-xi-CYh" userLabel="SeeBig Button">
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxI-xi-CYh" userLabel="SeeBig Button">
                     <rect key="frame" x="0.0" y="251" width="437" height="43"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="4rb-AN-EXI"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="点击查看全图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
-                    <connections>
-                        <action selector="seeBigBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="LKU-9X-yYm"/>
-                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

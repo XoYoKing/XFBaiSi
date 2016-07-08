@@ -69,6 +69,7 @@
             <connections>
                 <outlet property="audioTimeLabel" destination="cGU-O5-oI0" id="W0j-pA-5G8"/>
                 <outlet property="imageView" destination="rP2-zN-OCp" id="WdS-A0-OTx"/>
+                <outlet property="playButton" destination="BG1-1g-Xmx" id="Ndl-Oq-fi2"/>
                 <outlet property="playCountLabel" destination="i6U-qA-FLK" id="1Tc-lO-i2k"/>
             </connections>
             <point key="canvasLocation" x="271.5" y="279.5"/>
