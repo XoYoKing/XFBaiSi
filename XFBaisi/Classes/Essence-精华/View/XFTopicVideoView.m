@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel     *playCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel     *videoTimeLabel;
+@property (weak, nonatomic) IBOutlet UIButton    *playButton;
 
 
 @end
@@ -39,7 +40,10 @@
 
 #pragma mark - 监听按钮点击
 - (IBAction)playButtonClick:(UIButton *)sender {
-    XFLogFunc
+    
+    XFLog(@"播放视频");
+    
+    
 }
 
 @end

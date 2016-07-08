@@ -17,7 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel     *playCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel     *audioTimeLabel;
-@property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UIButton    *playButton;
 
 
 /**  音频播放器 */
@@ -56,17 +56,12 @@
 - (AVAudioPlayer *)audioPlayer {
     if (!_audioPlayer) {
         _audioPlayer = [[AVAudioPlayer alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.topic.audio.audio.firstObject]] error:nil];
-        //_audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:self.topic.audio.audio.firstObject] error:nil];
         _audioPlayer.delegate = self;
-
     }
     return _audioPlayer;
 }
 
-
-
 - (IBAction)playButtonClick:(UIButton *)sender {
-    
     if (!self.flag) {
         [self.audioPlayer play];
         [sender setImage:[UIImage imageNamed:@"playButtonPause"] forState:UIControlStateNormal];

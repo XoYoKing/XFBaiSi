@@ -22,4 +22,7 @@
 /** 视频缩略图 */
 @property (nonatomic, strong) NSArray   *thumbnail;
 
+/** 视频 url */
+@property (nonatomic, strong) NSArray   *video;
+
 @end

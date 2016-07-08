@@ -71,6 +71,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="imageView" destination="bj4-mt-OG5" id="P5v-V9-gAt"/>
+                <outlet property="playButton" destination="ec2-NM-7NW" id="vnu-9u-gmg"/>
                 <outlet property="playCountLabel" destination="Anc-IL-dRH" id="sSp-Mk-plk"/>
                 <outlet property="videoTimeLabel" destination="KM8-W3-JaX" id="KT9-x9-bl8"/>
             </connections>

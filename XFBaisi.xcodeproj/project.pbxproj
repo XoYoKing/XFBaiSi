@@ -149,6 +149,7 @@
 		BD2382F51D21146700DE1EB3 /* XFClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFClearCacheCell.h; sourceTree = "<group>"; };
 		BD2382F61D21146700DE1EB3 /* XFClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFClearCacheCell.m; sourceTree = "<group>"; };
 		BD26D5F01D2F4A4A00ED72ED /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BD26D5F21D2F59E800ED72ED /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		BD347ABB1D2B513F009C6F79 /* XFFollwController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFollwController.h; sourceTree = "<group>"; };
 		BD347ABC1D2B513F009C6F79 /* XFFollwController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFFollwController.m; sourceTree = "<group>"; };
 		BD347ABF1D2B5238009C6F79 /* XFSubscribeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSubscribeViewController.h; sourceTree = "<group>"; };
@@ -801,6 +802,7 @@
 		F98CC775A23121D6BDF913D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD26D5F21D2F59E800ED72ED /* MediaPlayer.framework */,
 				BD26D5F01D2F4A4A00ED72ED /* AVFoundation.framework */,
 				8564B4053D229525B01D725E /* libPods-XFBaisi.a */,
 				FAF2CE5070612EF3BD1AAAA2 /* libPods-XFBaisiTests.a */,

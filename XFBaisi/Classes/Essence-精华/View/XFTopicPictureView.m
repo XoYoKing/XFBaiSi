@@ -29,7 +29,7 @@
     self.autoresizingMask = UIViewAutoresizingNone;
     
     self.imageView.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigBtnClick:)];
+    UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigView)];
     [self.imageView addGestureRecognizer:tapGR];
     
     
@@ -62,6 +62,13 @@
         self.gifView.hidden = NO;
         [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.gif.images.firstObject]];
     }
+}
+
+#pragma mark - 监听点击
+- (void)seeBigView {
+    XFSeeBigViewController *bigView = [[XFSeeBigViewController alloc] init];
+    bigView.topic = self.topic;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:bigView animated:YES completion:nil];
 }
 
 @end
